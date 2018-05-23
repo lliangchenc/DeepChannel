@@ -1,0 +1,1 @@
+StanfordTokenizer is used to preprocess the data, so before running "process.py", you should use "export CLASSPATH=/path_of_the_stanford-postagger/stanford-postagger.jar" command to locate the "stanford-postagger.jar"
