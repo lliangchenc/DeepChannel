@@ -1,1 +1,0 @@
-export CLASSPATH=/home/liangchen/Code/NLPtools/stanford-postagger/stanford-postagger.jar
