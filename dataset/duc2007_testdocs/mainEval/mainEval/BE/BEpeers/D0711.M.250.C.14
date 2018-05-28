@@ -1,0 +1,146 @@
+renewed|justice department|subj
+scrutiny|its|gen
+renewed|scrutiny|obj
+violations|alleged|mod
+violations|antitrust|mod
+scrutiny|violations|of
+microsoft corp.|software|nn
+microsoft corp.|giant|nn
+violations|microsoft corp.|by
+newspapers|u.s.|nn
+microsoft corp.|newspapers|appo
+newspapers|reported|vrel
+reported|newspapers|obj
+reported|today|mod
+set|schedule|nn
+filed|set|under
+set|jackson|by
+jackson|april|in
+justice department|and|punc
+states|17|num
+justice department|states|conj
+filed|justice department|subj
+filed|brief|obj
+brief|court|with
+court|april 28|on
+april 28|asking|rel
+asking|april 28|subj
+asking|judge|obj
+judge|break|rel
+break|judge|subj
+break|microsoft|obj
+companies|two|nn
+microsoft|companies|into
+companies|remedy|as
+behavior|illegal|mod
+remedy|behavior|for
+behavior|found|vrel
+found|behavior|obj
+antitrust|long|mod
+trial|antitrust|mod
+found|trial|in
+are|milestones|pred
+dealings|microsoft|gen
+dealings|antitrust|mod
+milestones|dealings|in
+dealings|government|with
+quit|microsoft corp.|subj
+association|nation|gen
+association|oldest|mod
+oldest|and|punc
+oldest|largest|conj
+association|software|nn
+association|industry|nn
+association|trade|nn
+quit|association|obj
+quit|tuesday|mod
+dispute|long-running|mod
+quit|dispute|after
+support|group|gen
+dispute|support|over
+support|government|for
+antitrust case|microsoft|nn
+government|antitrust case|in
+lawyers|antitrust|mod
+justice department|u.s.|nn
+lawyers|justice department|from
+summoned|lawyers|obj
+summoned|white house|to
+white house|brief|rel
+brief|tuesday|subj
+advisers|president|gen
+president|bill clinton|person
+advisers|legal|mod
+legal|and|punc
+legal|economic|conj
+brief|advisers|obj
+advisers|range|about
+range|options|of
+options|dealing with|for
+dealing with|tuesday|subj
+dealing with|microsoft corp.|obj
+dealing with|including|mod
+including|splitting|guest
+splitting|up|mod
+giant|software|nn
+including|giant|obj
+judge|u.s.|nn
+judge|district|mod
+judge|dee benson|person
+judge|thursday|on
+postponed|judge|subj
+postponed|trial|obj
+trial|jan 17|until
+postponed|after|mod
+after|said|comp1
+said|microsoft|subj
+attorneys|its|gen
+attorneys|key|mod
+said|enmeshed|fc
+enmeshed|attorneys|obj
+action|federal|mod
+action|antitrust|mod
+enmeshed|action|in
+action|microsoft|against
+microsoft|washington|in
+lawsuit|caldera inc.|gen
+lawsuit|antitrust|mod
+trial|lawsuit|of
+lawsuit|microsoft corp.|against
+postponed|trial|obj
+postponed|june|from
+january|next|post
+postponed|january|until
+trial|its|gen
+trial|antitrust|mod
+expected|trial|in
+introduce|microsoft corp.|subj
+introduce|documents|obj
+intended|week|mod-before
+documents|intended|vrel
+contradict|documents|subj
+contradict|testimony|obj
+executive|ibm|nn
+testimony|executive|by
+executive|who|whn
+said|executive|subj
+said|offer|fc
+offer|microsoft|subj
+maker|computer|nn
+offer|maker|obj1
+price|favorable|mod
+offer|price|obj2
+operating system|its|gen
+operating system|windows|nn
+price|operating system|on
+offer|only|mod
+offer|if|c
+agreed|ibm|subj
+eliminate|"|punc
+agreed|eliminate|fc
+eliminate|ibm|subj
+eliminate|"|punc
+operating system|its|gen
+operating system|competing|mod
+eliminate|operating system|obj
+operating system|os/2|appo

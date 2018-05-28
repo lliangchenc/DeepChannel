@@ -1,0 +1,130 @@
+decision|russell henderson|gen
+decision|plead|rel
+plead|decision|subj
+plead|guilty|desc
+guilty|kidnapping|to
+kidnapping|and|punc
+kidnapping|murder|conj
+murder|matthew shepard|of
+is|consolation|pred
+family|shepard|nn
+consolation|family|to
+killed|winter|mod-before
+killed|wyoming legislature|subj
+killed|effort|obj
+effort|pass|comp1
+pass|wyoming legislature|subj
+bill|state|gen
+bill|first|post
+bill|hate-crimes|nn
+pass|bill|obj
+father|matthew shepard|of
+urged|father|subj
+urged|congress|obj
+congress|adopt|rel
+adopt|monday|subj
+adopt|legislation|obj
+legislation|that|whn
+extend|legislation|subj
+protection|federal|mod
+protection|hate-crime|mod
+extend|protection|obj
+protection|gays|to
+gays|and|punc
+gays|lesbians|conj
+face|he|subj
+penalty|death|nn
+face|penalty|obj
+convicted|now|guest
+convicted|jury|subj
+convicted|aaron mckinney|obj
+aaron mckinney|murder|of
+murder|kidnapping|conj
+kidnapping|and|punc
+kidnapping|robbery|conj
+robbery|case|in
+did|matthew shepard|obj
+allowed|plea|subj
+avoid|henderson|subj
+penalty|death|nn
+avoid|penalty|obj
+play|death|about
+student|gay|mod
+student|university of wyoming|nn
+student|college|nn
+death|student|of
+was|brainchild|pred
+brainchild|moises kaufman|of
+death|shepard|gen
+death|october 1998|in
+received|death|subj
+attention|national|mod
+received|attention|obj
+young men|two|nn
+young men|aaron mckinney|conj
+aaron mckinney|and|punc
+aaron mckinney|russell henderson|conj
+sentences|life|nn
+sentences|murder|for
+charged|mckinney|obj
+murder|first-degree|nn
+charged|murder|with
+mckinney|and|punc
+mckinney|russell henderson|conj
+lured|mckinney|subj
+lured|shepard|obj
+bar|downtown|mod
+shepard|bar|out of
+made|matthew shepard|subj
+attempt|frail|mod
+made|attempt|obj
+attempt|fight back|rel
+fight back|attempt|subj
+fight back|said|mod
+cal rerucha|prosecutor|nn
+said|cal rerucha|subj
+statements|opening|mod
+cal rerucha|statements|during
+freshman|21-year-old|mod
+freshman|university of wyoming|nn
+driven|freshman|obj
+area|remote|mod
+driven|area|to
+area|pistol -|vrel
+pistol -|area|obj
+pistol -|and|punc
+pistol -|left|conj
+left|area|obj
+left|overnight|mod
+temperatures|near-freezing|mod
+overnight|temperatures|in
+was|witness|pred
+witness|beating|to
+beating|matthew shepard|of
+shepard|mrs.|title
+declined|shepard|subj
+declined|discuss|mod
+discuss|shepard|subj
+discuss|trial|obj
+told|st. clair|subj
+shepard|jurors|nn
+told|asked|fc
+asked|shepard|subj
+asked|sit|mod
+sit|shepard|subj
+sit|him|with
+sit|fireside lounge|inside
+murder|shepard|gen
+unsettled|murder|before
+increase|sharp|mod
+reports|police|nn
+increase|reports|in
+crimes|anti-gay|mod
+crimes|bias|mod
+reports|crimes|of
+crimes|new york city|in
+unsettled|increase|subj
+people|gay|mod
+unsettled|people|obj
+head|family research council|of
+is|gary bauer|pred

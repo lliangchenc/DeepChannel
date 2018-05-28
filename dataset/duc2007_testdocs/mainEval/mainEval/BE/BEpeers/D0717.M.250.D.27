@@ -1,0 +1,157 @@
+begin|testimony|subj
+begin|today|mod
+teacher|52-year-old|mod
+teacher|former|mod
+sought|teacher|subj
+sought|$110 million|obj
+attorneys|sides|for
+met|attorneys|subj
+met|wednesday|mod
+met|houston|in
+said|hill|subj
+met|said|mod
+company|madison , n.j.-based|mod
+company|nation|gen
+company|seventh-largest|mod
+company|pharmaceutical|mod
+is|company|pred
+thought|he|subj
+thought|settled|fc
+settled|case|obj
+became|combination|subj
+became|known|desc
+known|fen-phen|as
+approval|judge|gen
+begin|approval|pending
+payments|initial|mod
+begin|payments|subj
+begin|later|mod
+begin|year|mod
+is|now|guest
+is|facing|pred
+facing|more|pnmod
+lawsuits|2,000|num
+more|lawsuits|than
+lawsuits|related|vrel
+related|lawsuits|obj
+related|redux|to
+finalized|not|guest
+but|finalized|comp1
+finalized|settlement|obj
+said|attorneys|subj
+said|opt|fc
+opt|clients|subj
+opt|agreement|of
+agreement|sue|rel
+sue|agreement|obj
+sue|they|subj
+sue|their own|on
+home products|cambridge|nn
+home products|american|mod
+division|home products|gen
+division|wyeth-ayerst laboratories|nn
+marketed|division|subj
+fenfluramine|"|punc
+fenfluramine|fen|nn
+fenfluramine|"|punc
+fenfluramine|drugs|nn
+marketed|fenfluramine|obj
+fenfluramine|and|punc
+fenfluramine|dexfenfluramine|conj
+dexfenfluramine|which|whn
+combined|dexfenfluramine|obj
+combined|phentermine|with
+phentermine|make|rel
+make|phentermine|subj
+make|"|punc
+make|fen-phen|obj1
+fen-phen|"|punc
+did|not|neg
+fen-phen|cover|rel
+cover|fen-phen|obj
+cover|it|subj
+make|linnen|desc
+linnen|who|whn
+suffered|linnen|subj
+hypertension|primary|mod
+hypertension|pulmonary|mod
+suffered|hypertension|obj
+suffered|said|mod
+said|alex zisson|subj
+analyst|industry|nn
+alex zisson|analyst|appo
+analyst|hambrecht quist|with
+edward f. blizzard|attorney|appo
+attorney|group|for
+users|fen-phen|mod
+group|users|of
+users|who|whn
+object|users|subj
+object|settlement|to
+wants|edward f. blizzard|subj
+wants|judge|obj
+judge|throw|rel
+throw|judge|subj
+throw|it|obj
+throw|out|mod
+amounts|'the|nn
+amounts|offered|rel
+offered|settle|mod
+settle|claims|obj
+are|inadequate|pred
+are|compensate|mod
+compensate|amount|subj
+compensate|people|obj
+injuries|their|gen
+people|injuries|for
+compensate|'|punc
+compensate|more|mod
+compensate|than|mod
+lawsuits|9,000|num
+than|filed|comp1
+filed|lawsuits|obj
+products|american|nn
+products|home|nn
+filed|products|against
+products|maker|appo
+maker|fenfluramine|of
+'fen|'|punc
+'fen|'|punc
+'fen|'|punc
+diet|fen-phen|mod
+'fen|diet|in
+drug|'fen|subj
+drug|combination|obj
+withdrawn|drugs|obj
+withdrawn|september 1997|in
+withdrawn|after|mod
+study|mayo clinic|nn
+after|linked|comp1
+linked|study|subj
+linked|fen-phen|obj
+fatal|potentially|mod
+damage|fatal|mod
+damage|heart valve|nn
+fen-phen|damage|to
+includes|also|amod
+includes|settlement|subj
+includes|money|obj
+medical|their|gen
+medical|future|mod
+money|medical|for
+name|also|mod-before
+name|plaintiffs|subj
+name|manufacturers|obj
+phen|`|punc
+phen|`|punc
+manufacturers|phen|of
+name|'|punc
+name|'|punc
+name|part|punc
+name|combination|of
+name|but|mod
+judges|state|nn
+judges|district|mod
+panel|judges|of
+but|ruled|comp1
+ruled|panel|subj

@@ -1,0 +1,157 @@
+adopted|senate|subj
+legislation|hate-crimes|nn
+adopted|legislation|obj
+legislation|last|vrel
+last|legislation|obj
+last|year|mod
+last|part|as
+bill|spending|nn
+part|bill|of
+bill|commerce|for
+commerce|justice|conj
+justice|and|punc
+departments|state|nn
+justice|departments|conj
+departments|but|punc
+departments|it|conj
+bill|stalled|vrel
+stalled|bill|obj
+stalled|house|in
+is|guarantee|pred
+guarantee|that|c
+stop|laws|subj
+crimes|hate|nn
+stop|crimes|obj
+crimes|happening|from
+happening|law|subj
+add|legislation|subj
+add|offenses|obj
+offenses|motivated|vrel
+motivated|offenses|obj
+motivated|by|by-subj
+orientation|sexual|mod
+motivated|orientation|by
+orientation|sex|conj
+sex|or|punc
+sex|disability|conj
+disability|list|to
+crimes|hate|nn
+list|crimes|of
+covered|already|mod-before
+crimes|covered|vrel
+covered|crimes|obj
+law|1968|num
+law|federal|mod
+covered|law|under
+crimes|112|num
+crimes|gay-related|mod
+crimes|hate|nn
+were|crimes|pred
+none|them|of
+san francisco|last|vrel
+last|san francisco|obj
+last|year|mod
+hate crimes unit|city|nn
+last|hate crimes unit|according to
+lawmakers|federal|mod
+dropped|last week|mod-before
+dropped|lawmakers|subj
+dropped|provisions|obj
+provisions|bill|of
+bill|that|whn
+expanded|bill|subj
+expanded|definition|obj
+crimes|hate|nn
+definition|crimes|of
+crimes|include|rel
+include|crime|subj
+include|crimes|obj
+crimes|motivated|vrel
+motivated|crimes|obj
+motivated|by|by-subj
+orientation|victim|gen
+orientation|sexual|mod
+motivated|orientation|by
+mounted|aftermath|in
+killing|wyoming|nn
+aftermath|killing|of
+groups|same|post
+groups|that|whn
+worked|groups|subj
+worked|overtime|obj
+overtime|stigmatize|rel
+stigmatize|overtime|subj
+people|gay|mod
+stigmatize|people|obj
+mounted|groups|subj
+defense|furious|mod
+defense|propaganda|nn
+mounted|defense|obj
+defense|assert|rel
+assert|defense|subj
+assert|that|c
+words|their|gen
+words|and|punc
+words|ads|conj
+ads|demeaning|rel
+demeaning|ad|subj
+people|gay|mod
+demeaning|people|obj
+have|words|subj
+have|nothing|obj
+nothing|do|rel
+do|nothing|subj
+do|with|guest
+do|any|with
+crimes|anti-gay|mod
+do|crimes|obj
+ordered|evening|in
+judge|visiting|mod
+judge|county|mod
+robert denhardt|judge|appo
+ordered|robert denhardt|subj
+ordered|aaron mckinney|obj
+ordered|stand|mod
+stand|robert denhardt|subj
+stand|trial|obj
+trial|charges|on
+murder|first-degree|nn
+charges|murder|of
+murder|robbery|conj
+robbery|and|punc
+robbery|kidnapping|conj
+defendant|other|mod
+defendant|russell henderson|appo
+pleaded|defendant|subj
+pleaded|guilty|desc
+guilty|murder|to
+murder|and|punc
+murder|kidnapping|conj
+pleaded|earlier|mod
+pleaded|and|punc
+pleaded|serving|conj
+serving|defendant|subj
+sentences|two|nn
+sentences|life|nn
+serving|sentences|obj
+asked for|originally|amod
+asked for|prosecution|subj
+penalty|death|nn
+asked for|penalty|obj
+penalty|aaron mckinney|for
+aaron mckinney|killing|for
+student|21-year-old|mod
+student|college|nn
+matthew shepard|student|conj
+student|but|punc
+shepard|later|mod
+parents|shepard|gen
+student|parents|conj
+killing|agreed|rel
+agreed|matthew shepard|subj
+agreed|spare|fc
+spare|killing|obj1
+spare|matthew shepard|subj
+spare|him|obj2
+injection|lethal|mod
+spare|injection|from

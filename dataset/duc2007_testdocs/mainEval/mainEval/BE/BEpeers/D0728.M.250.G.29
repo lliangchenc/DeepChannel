@@ -1,0 +1,150 @@
+2.7 million|at least|num-mod
+americans|2.7 million|nn
+carry|americans|subj
+virus|hepatitis|nn
+virus|c|nn
+carry|virus|obj
+carry|making|mod
+making|american|subj
+making|it|obj1
+common|most|mod
+infection|common|mod
+infection|blood-borne|mod
+making|infection|desc
+infection|united states|in
+making|study|according to
+journal|today|gen
+journal|new england|nn
+study|journal|in
+journal|medicine|of
+approved|food and drug administration|subj
+combination|powerful|mod
+approved|combination|obj
+drugs|two|nn
+drugs|antiviral|mod
+combination|drugs|of
+drugs|treat|rel
+treat|drug|subj
+c.|chronic|mod
+c.|hepatitis|nn
+treat|c.|obj
+component|interferon|nn
+component|treatment|of
+c.|causes|rel
+causes|c.|obj1
+causes|component|subj
+symptoms|flulike|mod
+causes|symptoms|obj2
+specialized pharmacy services|fisher|gen
+began|specialized pharmacy services|subj
+began|selling|mod
+selling|specialized pharmacy services|subj
+version|its|gen
+selling|version|obj
+version|drugs|of
+treatment|schering-plough|gen
+consists of|treatment|subj
+interferon|ribavirin|nn
+consists of|interferon|obj
+fight|virus|obj
+drug|called|vrel
+called|drug|obj1
+called|interferon|desc
+helps|drug|subj
+helps|40 percent|in
+40 percent|cases|of
+reason|leading|mod
+is|reason|pred
+transplants|liver|mod
+reason|transplants|for
+treatment|rebetron|nn
+combines|treatment|subj
+injections|interferon|nn
+combines|injections|obj
+drug|second|post
+drug|anti-viral|mod
+injections|drug|with
+market|-a-year|mod
+treatment|multiple sclerosis|nn
+market|treatment|for
+research|its|gen
+did|not|neg
+include|research|subj
+trials|head-to-head|mod
+include|trials|obj
+trials|comparing|rel
+comparing|trial|subj
+comparing|avonex|obj
+avonex|and|punc
+avonex|rebif|conj
+have|they|subj
+side-effects|fewer|mod
+have|side-effects|obj
+side-effects|compared|vrel
+compared|side-effects|obj
+compared|interferons|to
+interferons|that|whn
+cause|interferons|subj
+cause|fever|obj
+fever|and|punc
+fever|lethargy|conj
+virus|aids|nn
+virus|and|punc
+b|hepatitis|nn
+virus|b|conj
+use|virus|subj
+use|enzyme|obj
+cause|virus|subj
+cause|cirrhosis|obj
+cirrhosis|and|punc
+cancer|liver|mod
+cirrhosis|cancer|conj
+patients|treated|vrel
+treated|patients|obj
+treated|interferon|with
+relapse|eventually|mod-before
+relapse|patients|subj
+patients|more|mod
+patients|who|whn
+received|patients|subj
+therapy|new|mod
+received|therapy|obj
+suffered|patients|subj
+effects|side|nn
+suffered|effects|from
+drug|other|mod
+drug|kit|in
+brand|schering-plough|gen
+is|brand|pred
+interferon|alpha|mod
+brand|interferon|of
+like|people|subj
+buchanan|mrs.|title
+like|buchanan|obj
+signs|clear|mod
+like|signs|with
+damage|liver|mod
+signs|damage|of
+recommend|strongly|mod-before
+recommend|doctors|subj
+recommend|treatment|obj
+was|time|at
+treatment|only|mod
+was|treatment|pred
+bundled|schering-plough|subj
+drugs|two|nn
+bundled|drugs|obj
+infected|patient|obj
+overwhelmed|it|subj
+half|one|nn
+overwhelmed|half|obj
+system|immune|mod
+defenses|system|gen
+half|defenses|of
+test|specific|mod
+test|blood|nn
+identify|test|subj
+c.|hepatitis|nn
+identify|c.|obj
+drug|choice|of
+is|interferon|pred

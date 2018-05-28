@@ -1,0 +1,142 @@
+plane|small|mod
+plane|carrying|rel
+carrying|plane|subj
+carrying|john f. kennedy jr.|obj
+wife|his|gen
+john f. kennedy jr.|wife|conj
+wife|carolyn bessette kennedy|conj
+carolyn bessette kennedy|and|punc
+sister|her|gen
+carolyn bessette kennedy|sister|conj
+disappeared|plane|subj
+disappeared|late|mod
+disappeared|friday|mod
+coast|massachusetts|nn
+disappeared|coast|off
+afternoon|saturday|nn
+recovered|afternoon|by
+recovered|authorities|subj
+recovered|debris|obj
+debris|airplane|from
+vineyard|martha|gen
+airplane|vineyard|off
+called|president|subj
+called|members|obj
+family|kennedy|nn
+members|family|of
+called|including|mod
+including|president|subj
+sister|kennedy|gen
+including|sister|obj
+sister|caroline kennedy|appo
+uncle|his|gen
+edward kennedy|sen.|title
+uncle|edward kennedy|appo
+secretary|housing|nn
+secretary|andrew m. cuomo|person
+secretary|husband|appo
+husband|kerry kennedy|of
+sister|rory kennedy|of
+investigators|federal|mod
+concluded|investigators|subj
+error|pilot|mod
+concluded|caused|fc
+caused|error|subj
+crash|plane|nn
+caused|crash|obj1
+crash|that|whn
+killed|crash|subj
+killed|john f. kennedy jr.|obj
+wife|his|gen
+john f. kennedy jr.|wife|conj
+wife|and|punc
+wife|his|conj
+caused|sister-in-law|obj2
+sister-in-law|nbc news|appo
+nbc news|reported|vrel
+reported|nbc news|obj
+reported|thursday|mod
+wife|his|gen
+john f. kennedy jr.|wife|conj
+wife|and|punc
+sister|her|gen
+wife|sister|conj
+died|john f. kennedy jr.|subj
+when|instantly|mod
+died|when|wha
+plane|their|gen
+plunged into|plane|subj
+plunged into|ocean|obj
+ocean|coast|off
+vineyard|martha|gen
+coast|vineyard|of
+coroner|massachusetts|nn
+said|coroner|subj
+plunged into|said|mod
+plunged into|thursday|mod
+dispatched|air national guard|subj
+plane|c-130|nn
+plane|cargo|nn
+dispatched|plane|obj
+family|kennedy|nn
+members|family|of
+gathered|members|subj
+summer|their|gen
+gathered|summer|at
+here|home|nn
+gathered|here|mod
+here|pray|rel
+pray|saturday|subj
+pray|and|punc
+pray|await|conj
+await|saturday|subj
+await|word|obj
+search|massive|mod
+word|search|from
+airplane|missing|mod
+search|airplane|for
+airplane|carrying|rel
+carrying|airplane|subj
+carrying|john f. kennedy jr.|obj
+wife|his|gen
+john f. kennedy jr.|wife|conj
+wife|and|punc
+wife|sister-in-law|conj
+trucks|two|nn
+trucks|flatbed|mod
+escort|police|nn
+trucks|escort|under
+transported|trucks|subj
+transported|wreckage|obj
+crash|john f. kennedy jr.|nn
+crash|plane|nn
+wreckage|crash|from
+hangar|coast guard|nn
+crash|hangar|to
+hangar|where|wha
+examined|it|obj
+examined|detail|in
+investigators|federal|mod
+detail|investigators|by
+crashed|plane|subj
+carrying|plane|subj
+carrying|kennedy|obj
+wife|his|gen
+kennedy|wife|appo
+wife|carolyn bessette kennedy|conj
+carolyn bessette kennedy|and|punc
+sister|her|gen
+carolyn bessette kennedy|sister|conj
+sister|lauren bessette|person
+wife|34|appo
+held|service|obj
+held|roman catholic church|at
+roman catholic church|that|c
+mother|kennedy|gen
+mother|late|mod
+mother|jacqueline kennedy onassis|appo
+attended|roman catholic church|obj
+attended|mother|subj
+roman catholic church|church of st. thomas|appo
+church of st. thomas|more|pnmod
+more|manhattan|in

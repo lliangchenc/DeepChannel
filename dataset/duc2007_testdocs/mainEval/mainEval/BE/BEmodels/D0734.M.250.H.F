@@ -1,0 +1,160 @@
+concluded|november 1997|in
+panel|national institutes of health ( nih )-sponsored|mod
+concluded|panel|subj
+concluded|for|guest
+time|first|post
+concluded|time|for
+concluded|that|c
+evidence|clear|mod
+is|evidence|pred
+evidence|that|c
+treats|effectively|mod-before
+treats|acupuncture|subj
+treats|pain|obj
+pain|surgery|after
+surgery|or|punc
+procedures|dental|mod
+surgery|procedures|conj
+procedures|and|punc
+nausea|controls|nn
+procedures|nausea|conj
+nausea|and|punc
+nausea|vomiting|conj
+vomiting|caused|vrel
+caused|vomiting|obj
+caused|by|by-subj
+caused|chemotherapy|by
+chemotherapy|or|punc
+chemotherapy|pregnancy|conj
+called|panel|subj
+called|for|guest
+called|research|for
+called|money|obj1
+money|determine|rel
+determine|money|subj
+determine|integrate|fc
+integrate|acupuncture|obj
+acupuncture|american|into
+system|healthcare|nn
+called|system|desc
+is|effective|pred
+effective|patients|in
+patients|tennis elbow|for
+pain|muscle|nn
+tennis elbow|pain|conj
+pain|and|punc
+cramps|menstrual|mod
+pain|cramps|conj
+used|also|guest
+used|acupuncture|obj
+therapy|cosmetic|mod
+used|therapy|for
+therapy|addictions|appo
+problems|weight|nn
+addictions|problems|appo
+using|veterinarians|subj
+using|acupuncture|obj
+acupuncture|treating|in
+treating|veterinarian|subj
+treating|animals|obj
+offers|acupuncture|subj
+offers|advantages|obj
+effects|fewer|mod
+effects|side|nn
+advantages|effects|of
+lower|relatively|mod
+cost|lower|mod
+effects|cost|conj
+cost|and|punc
+cost|usability|conj
+women|pregnant|mod
+usability|women|with
+sees|nih|subj
+sees|acupuncture|obj
+sees|when|mod
+treatment|comprehensive|mod
+treatment|medical|mod
+incorporated|treatment|into
+incorporated|potentially|mod
+potentially|as|mod
+therapies|mainstream|nn
+therapies|accepted|mod
+accepted|and|punc
+accepted|conventional|conj
+effective|therapies|as
+have|they|subj
+money|spent|mod
+money|considerable|mod
+have|money|obj
+research|acupuncture|nn
+research|therapy|nn
+money|research|on
+doctors|hospitals|conj
+hospitals|medical centers|conj
+medical centers|and|punc
+centers|senior|mod
+medical centers|centers|conj
+centers|united states|in
+integrating|increasingly|amod
+integrating|doctors|subj
+integrating|alternative|obj
+alternative|and|punc
+medicines|traditional|mod
+alternative|medicines|conj
+thirds|two|nn
+schools|us|nn
+schools|medical|nn
+thirds|schools|of
+teach|thirds|subj
+teach|acupuncture|obj
+offered|1999|in
+hospitals|us|nn
+about nine percent|hospitals|of
+offered|about nine percent|subj
+centers|complementary-care|mod
+offered|centers|obj
+number|doctors|of
+doctors|trained|pnmod
+trained|acupuncture|in
+grown|number|subj
+grown|200|from
+200|1991 to 1550|in
+1991 to 1550|1999|in
+offer|hospitals|subj
+patients|cardiac|mod
+offer|patients|obj1
+offer|option|obj2
+option|acupuncture|of
+acupuncture|or|punc
+therapy|massage|nn
+acupuncture|therapy|conj
+therapy|following|rel
+following|therapy|subj
+following|surgery|obj
+hmos|kaiser|such as
+offer|hmos|subj
+offer|acupuncture|obj
+pain|chronic|mod
+acupuncture|pain|for
+requires|california|subj
+policies|workers|gen
+policies|comp|nn
+requires|policies|obj
+policies|cover|rel
+cover|policy|subj
+cover|acupuncture|obj
+companies|six|nn
+companies|major|mod
+companies|california|nn
+companies|health|nn
+companies|insurance|nn
+opted|companies|subj
+opted|cover|fc
+cover|company|subj
+cover|acupuncture|obj
+california|1998 two|nn
+opened|california|in
+opened|medical centers|subj
+opened|alternative|obj1
+programs|patient-care|mod
+opened|programs|obj2

@@ -1,0 +1,148 @@
+lawyer|simpson|gen
+says|lawyer|subj
+says|yes|obj
+children|who|whn
+live|children|subj
+live|simpson|with
+visit|children|subj
+visit|brown|obj
+brown|and|punc
+wife|his|gen
+brown|wife|conj
+brown|juditha|appo
+satisfy|partially|amod
+satisfy|auction|subj
+judgment|civil|mod
+satisfy|judgment|obj
+judgment|owed|vrel
+owed|judgment|obj
+owed|by|by-subj
+owed|simpson|by
+simpson|families|to
+families|goldman|of
+goldman|and|punc
+ex-wife|his|gen
+goldman|ex-wife|conj
+jury|civil|mod
+held|jury|subj
+held|simpson|obj
+simpson|liable|pnmod
+liable|their|for
+simpson|stabbing|rel
+stabbing|simpson|subj
+stabbing|deaths|obj
+deaths|1997|num
+years|two|amount-value
+deaths|years|appo
+sister|nicole|gen
+denise brown|sister|appo
+sister|which|whn
+helps|sister|subj
+helps|victims|obj
+violence|domestic|mod
+victims|violence|of
+said|goldman|subj
+said|granted|fc
+granted|simpson|subj
+interview|paid|mod
+granted|interview|obj1
+interview|german|to
+station|television|nn
+granted|station|obj2
+granted|and|punc
+granted|asked|conj
+asked|simpson|subj
+asked|station|obj
+station|pay|rel
+pay|station|subj
+pay|money|obj
+money|third party|to
+appearances|all|pre
+discuss|appearances|in
+discuss|simpson|subj
+discuss|start-up|obj
+askoj.com|web|nn
+askoj.com|site|nn
+start-up|askoj.com|of
+askoj.com|established|vrel
+established|askoj.com|obj
+established|by|by-subj
+network|entertainment|nn
+established|network|by
+network|company|appo
+company|that|whn
+operates|company|subj
+sites|adult-oriented|mod
+sites|web|nn
+operates|sites|obj
+lost|simpson|subj
+lawsuit|civil|mod
+lost|lawsuit|obj
+lawsuit|deaths|over
+wife|his|gen
+deaths|wife|of
+wife|nicole|conj
+nicole|and|punc
+ron goldman|her|gen
+ron goldman|friend|nn
+nicole|ron goldman|conj
+sent|simpson|subj
+lawyers|his|gen
+sent|lawyers|obj
+lawyers|court|rel
+court|lawyer|subj
+court|seeking|mod
+injunction|preliminary|mod
+seeking|injunction|obj
+injunction|halt|rel
+halt|injunction|subj
+halt|production|obj
+tragedy|american|nn
+production|tragedy|on
+completed|luck|with
+completed|production|obj
+schiller|who|whn
+collaborated|schiller|subj
+collaborated|simpson|with
+book|jailhouse|nn
+simpson|book|on
+want|tell|to
+directed|recently|mod-before
+tell|directed|rel
+directed|you|subj
+miniseries|his|from
+directed|book|fc
+book|tell|obj1
+book|miniseries|subj
+book|perfect murder|obj2
+perfect murder|perfect town|appo
+case|jon benet ramsey|nn
+case|murder|nn
+recounting|case|of
+lawyer|simpson|gen
+lawyer|bernard leckie|appo
+told|lawyer|subj
+told|associated press|obj
+told|that|c
+agreement|giving|rel
+giving|agreement|subj
+giving|custody|obj
+custody|simpson|to
+was|ready|pred
+was|signed|mod
+seen|it|obj
+seen|win|conj
+win|it|subj
+win|lose|conj
+lose|it|subj
+lose|or|punc
+lose|draw|conj
+draw|it|subj
+said|bailey|subj
+said|that|c
+received|he|subj
+received|telephone call|obj
+attorney|los angeles|nn
+attorney|defense|nn
+telephone call|attorney|from
+attorney|robert shapiro|person

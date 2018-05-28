@@ -1,0 +1,144 @@
+fen-phen|diet|mod
+fen-phen|drug|nn
+fen-phen|combination|nn
+manufacturer|fen-phen|of
+is|in|pred
+is|talks|in
+talks|settle|rel
+settle|talk|subj
+settle|millions|obj
+claims|health|nn
+millions|claims|of
+claims|brought|vrel
+brought|claims|obj
+brought|by|by-subj
+brought|people|by
+people|who|whn
+contend|people|subj
+contend|caused|fc
+caused|drug|subj
+valves|leaky|mod
+valves|heart|nn
+caused|valves|obj
+valves|and|punc
+problems|often-fatal|mod
+problems|lung|nn
+valves|problems|conj
+withdrawn|drugs|obj
+withdrawn|september 1997|in
+withdrawn|after|mod
+study|mayo clinic|nn
+after|linked|comp1
+linked|study|subj
+combination|fen-phen|mod
+linked|combination|obj
+fatal|potentially|mod
+damage|fatal|mod
+damage|heart valve|nn
+combination|damage|to
+made|pondimin|obj
+made|by|by-subj
+home|american|nn
+made|home|by
+made|while|mod
+while|developed|comp1
+developed|redux|obj
+developed|by|by-subj
+developed|interneuron|by
+developed|and|punc
+developed|marketed|conj
+marketed|redux|obj
+marketed|by|by-subj
+home|american|nn
+marketed|home|by
+took|woman|subj
+products|american|nn
+products|home|nn
+took|products|obj
+products|court|rel
+court|product|subj
+damage|heart-valve|nn
+court|damage|over
+trial|first|post
+damage|heart-valve|nn
+trial|damage|over
+damage|fen-phen|from
+ended|trial|subj
+settlement|reported|mod
+settlement|$500,000|nn
+ended|settlement|in
+settlement|woman|for
+woman|who|whn
+used|woman|subj
+combination|diet|mod
+combination|drug|nn
+used|combination|obj
+products|madison , n.j.-based|mod
+products|american|nn
+products|home|nn
+announced|products|subj
+announced|pay|fc
+pay|it|subj
+pay|$4.8 billion|obj
+$4.8 billion|settle|rel
+settle|$4.8 billion|subj
+lawsuits|fen-phen|mod
+settle|lawsuits|obj
+more|9,000|than
+filed|lawsuits|obj
+products|american|nn
+products|home|nn
+filed|products|against
+products|maker|appo
+maker|fenfluramine|of
+'fen|'|punc
+fenfluramine|'fen|appo
+'fen|'|punc
+'fen|'|punc
+combination|fen-phen|mod
+combination|diet|mod
+combination|drug|nn
+'fen|combination|in
+products|american|nn
+products|home|nn
+agreed|products|subj
+agreed|pay|fc
+pay|product|subj
+pay|$3.75 billion|obj
+$3.75 billion|settle|rel
+settle|$3.75 billion|subj
+settle|thousands|obj
+thousands|lawsuits|of
+lawsuits|filed|vrel
+filed|lawsuits|obj
+filed|nationwide|mod
+nationwide|people|by
+people|claiming|rel
+claiming|people|subj
+problems|health|nn
+claiming|problems|obj
+problems|fen-phen|due to
+doug petkus|spokesman|appo
+products|american|nn
+products|home|nn
+spokesman|products|for
+declined|doug petkus|subj
+declined|comment on|mod
+comment on|doug petkus|subj
+comment on|lawsuit|obj
+home|american|nn
+reached|home|subj
+reached|settlement|obj
+trial|first|post
+settlement|trial|in
+damage|heart-valve|nn
+trial|damage|over
+damage|fen-phen|from
+products|american|nn
+products|home|nn
+officials|products|with
+company|drug|nn
+products|company|appo
+declined|officials|subj
+declined|comment|fc
+comment|official|subj

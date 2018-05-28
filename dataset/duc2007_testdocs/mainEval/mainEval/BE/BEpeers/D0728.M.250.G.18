@@ -1,0 +1,154 @@
+drug|standard|mod
+drug|aids|nn
+appears|drug|subj
+damage|slow|mod
+damage|liver|mod
+appears|damage|to
+damage|caused|vrel
+caused|damage|obj1
+caused|by|by-subj
+b.|hepatitis|nn
+caused|b.|by
+caused|study|obj2
+study|thursday|in
+journal|new england|nn
+journal|medicine|of
+looked at|journal|subj
+looked at|effects|obj
+3tc|drug|nn
+effects|3tc|of
+3tc|people|on
+infections|long-standing|mod
+people|infections|with
+infections|virus|with
+taking|also|mod-before
+taking|she|subj
+taking|pill|obj
+pill|that|whn
+be|drug|pred
+drug|called|vrel
+called|drug|obj1
+called|ribavirin|desc
+ribavirin|which|whn
+boost|ribavirin|subj
+boost|effectiveness|obj
+effectiveness|interferon|of
+boost|and|punc
+boost|double|conj
+double|ribavirin|subj
+rate|its|gen
+rate|cure|nn
+double|rate|obj
+one|studies|of
+studies|led|vrel
+led|studies|obj
+led|by|by-subj
+john g. mchutchison|dr.|title
+led|john g. mchutchison|by
+scripps clinic and research foundation|la jolla|in
+compared|scripps clinic and research foundation|subj
+compared|effects|obj
+effects|combination|of
+combination|interferon|with
+compared|alone|mod
+treatment|initial|mod
+alone|treatment|in
+patients|912|num
+treatment|patients|of
+signs|all|pre
+signs|virus|of
+disappeared|signs|subj
+disappeared|38 percent|in
+38 percent|patients|of
+patients|who|whn
+given|patients|obj1
+given|drugs|obj2
+months|11|amount-value
+drugs|months|for
+months|compared|vrel
+compared|months|obj
+compared|13 percent|with
+13 percent|those|of
+those|treated|vrel
+treated|those|obj
+interferon|only|mod
+treated|interferon|with
+patients|more|mod
+patients|who|whn
+received|patients|subj
+therapy|new|mod
+received|therapy|obj
+suffered|patients|subj
+effects|side|nn
+suffered|effects|from
+effects|which|whn
+included|effects|subj
+breathing|difficulty|nn
+included|breathing|obj
+sore throat|rashes|appo
+included|itching|mod
+itching|sore throat|subj
+nausea|insomnia|conj
+insomnia|and|punc
+insomnia|anorexia|conj
+interferon|best|mod
+interferon|produced|vrel
+produced|interferon|obj
+produced|by|by-subj
+produced|genes|by
+times|285,000|num
+was|times|pred
+was|as|mod
+alpha-2b|interferon|nn
+potent|alpha-2b|as
+alpha-2b|which|whn
+marketed|alpha-2b|obj
+marketed|drug|as
+marketed|as|mod
+ability|its|gen
+measured|ability|by
+ability|protect|rel
+protect|ability|subj
+cells|cultured|mod
+protect|cells|obj
+virus|mouse|nn
+cells|virus|against
+accuse|they|subj
+accuse|schering|obj
+schering|bundling|of
+bundling|they|subj
+bundling|products|obj
+products|order|in
+order|maintain|rel
+maintain|order|subj
+price|high|mod
+maintain|price|obj
+price|drugs|of
+maintain|and|punc
+maintain|compel|conj
+compel|order|subj
+use|patients|subj
+interferon|its|gen
+use|interferon|obj
+specialized pharmacy services|fisher|gen
+specialized pharmacy services|pittsburgh|in
+announced|specialized pharmacy services|subj
+announced|plans|obj
+plans|fill|comp1
+fill|specialized pharmacy services|subj
+fill|prescriptions|obj
+prescriptions|nationwide|pnmod
+ribavirin|anti-viral|mod
+ribavirin|drug|nn
+nationwide|ribavirin|for
+ribavirin|used|vrel
+used|ribavirin|obj
+used|by|by-subj
+numbers|growing|mod
+used|numbers|by
+patients|hepatitis|nn
+patients|c|nn
+numbers|patients|of
+patients|combination|in
+interferon|drug|nn
+combination|interferon|with

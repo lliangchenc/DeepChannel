@@ -1,0 +1,153 @@
+judge|us|nn
+judge|federal|mod
+ordered|judge|subj
+ordered|wednesday|guest
+ordered|microsoft corp|obj
+be|split|pred
+companies|two|nn
+companies|separate|mod
+split|companies|in
+companies|correct|rel
+correct|company|subj
+violations|antitrust|mod
+correct|violations|obj
+judge|federal|mod
+judge|described|vrel
+described|judge|obj
+practices|company|gen
+practices|monopolistic|mod
+described|practices|as
+paid|microsoft|subj
+fees|membership|nn
+paid|fees|obj
+fees|$125000|of
+remained|it|subj
+remained|litigation|in
+remained|and|punc
+remained|appealed|conj
+appealed|it|obj
+appealed|by|by-subj
+appealed|microsoft|by
+nation|major|mod
+nation|industrial|mod
+investigated|nation|subj
+investigated|many|obj
+practices|same|post
+many|practices|of
+practices|those|as
+those|dispute|in
+trial|microsoft|nn
+dispute|trial|in
+trial|washington|in
+investigated|and|punc
+found|not|amod
+investigated|found|conj
+found|nation|subj
+effect|anticompetitive|mod
+found|effect|obj
+take|microsoft|gen
+proved|government|subj
+proved|wrongdoing|obj
+trial|eight-month|nn
+wrongdoing|trial|in
+charges|microsoft|subj
+makers|pc|nn
+charges|makers|obj
+operating system|its|gen
+operating system|windows|nn
+makers|operating system|for
+competing|microsoft|subj
+competing|vigorously|mod
+vigorously|and|punc
+vigorously|legally|conj
+()|bundling|by
+browser|its|gen
+browser|internet explorer|nn
+bundling|browser|obj
+operating system|its|gen
+operating system|windows|nn
+browser|operating system|with
+claims|company|nn
+undermine|claims|subj
+performance|computer|nn
+undermine|performance|obj
+did|not|neg
+intend|microsoft|subj
+intend|make|fc
+make|microsoft|subj
+changes|substantive|mod
+make|changes|obj
+justice department|and|punc
+19|at least|num-mod
+plan|19|nn
+plan|states|nn
+justice department|plan|conj
+plan|file|rel
+file|plan|subj
+antitrust cases|historic|mod
+file|antitrust cases|obj
+file|thursday|mod
+file|microsoft|against
+violate|microsoft|subj
+law|tying|nn
+violate|law|obj
+used|illegally|mod-before
+used|microsoft|subj
+dominance|its|gen
+used|dominance|obj
+market|operating systems|nn
+dominance|market|in
+market|hurt|rel
+hurt|market|subj
+hurt|competition|obj
+competition|rough-and-tumble|mod
+hurts|competition|subj
+rivals|company|gen
+hurts|rivals|obj
+accepted|microsoft|subj
+restrictions|behavioral|mod
+accepted|restrictions|obj
+competed|dr-dos|subj
+ms-dos|microsoft|gen
+competed|ms-dos|with
+engaged in|microsoft|subj
+acts|numerous|mod
+acts|illegal|mod
+engaged in|acts|obj
+acts|found|vrel
+found|acts|obj
+case|current|mod
+found|case|in
+view|jackson|subj
+view|case|obj
+view|differently|mod
+view|than|mod
+than|viewed|comp1
+viewed|he|subj
+viewed|case|obj
+company|smokestack|nn
+case|company|against
+record|voluminous|mod
+record|including|rel
+including|record|subj
+including|volumes|obj
+volumes|e-mail|of
+documents|internal|mod
+documents|microsoft|nn
+e-mail|documents|conj
+documents|and|punc
+testimony|witness|nn
+documents|testimony|conj
+show|record|subj
+show|microsoft|obj
+monopolist|arm-twisting|mod
+been|monopolist|pred
+behavior|monopolist|gen
+behavior|corporate|mod
+monopolist|behavior|whn
+stifled|behavior|subj
+stifled|competition|obj
+stifled|and|punc
+stifled|harmed|conj
+harmed|behavior|subj
+harmed|consumers|obj

@@ -1,0 +1,151 @@
+amnesty international|london-based|mod
+amnesty international|human rights|nn
+amnesty international|group|nn
+accused|amnesty international|subj
+government|south korean|nn
+accused|government|obj
+accused|saturday|guest
+trying|amnesty international|subj
+trying|control|fc
+was|supposed|pred
+commission|independent|mod
+commission|national|mod
+commission|human rights|nn
+be|commission|pred
+ai|(|punc
+amensty international|ai|abbrev
+ai|)|punc
+launched|amensty international|subj
+campaign|worldwide|mod
+launched|campaign|obj
+launched|today|mod
+launched|attempt|in
+attempt|force|comp1
+force|amensty international|subj
+government|nigerian|mod
+force|government|obj
+called|what|obj1
+called|organization|subj
+called|"|punc
+called|comtempt|desc
+rights|human|nn
+comtempt|rights|for
+response|memorandum|to
+memorandum|amnesty international|by
+situation|human rights|nn
+amnesty international|situation|on
+situation|kenya|in
+leader|kenyan|mod
+kenya|leader|appo
+leader|told|vrel
+told|leader|obj
+delegation|visiting|mod
+delegation|amnesty international|nn
+told|led|fc
+led|delegation|subj
+pierre sane|secretary general|title
+led|pierre sane|by
+pierre sane|that|c
+criticism|-president|gen
+-president|george saitoti|person
+criticism|government|nn
+criticism|appreciated|mod
+criticism|constructive|mod
+made|pierre sane|obj
+made|criticism|subj
+faith|good|mod
+made|faith|in
+called|amnesty international|subj
+called|rwanda|on
+called|monday|mod
+monday|reinstate|rel
+reinstate|monday|subj
+mission|u.n.|nn
+mission|human rights|nn
+reinstate|mission|obj
+mission|suspended|rel
+suspended|mission|obj
+suspended|it|subj
+suspended|may|in
+suspended|disagreement|because of
+operations|agency|gen
+disagreement|operations|over
+operations|country|in
+secretary general|amnesty international pierre sane|of
+warned|secretary general|subj
+warned|today|obj
+today|that|c
+set|today|obj1
+set|israel|subj
+precedent|sinister|mod
+set|precedent|obj2
+set|if|c
+legalizes|it|subj
+legalizes|forms|obj
+forms|torture|of
+detainees|palestinian|mod
+torture|detainees|against
+denounced|amnesty international|subj
+climate|human rights|nn
+denounced|climate|obj
+climate|cambodia|in
+denounced|as|mod
+elections|parliamentary|mod
+campaigning|elections|for
+as|drew|comp1
+drew|campaigning|subj
+friday|close|mod
+drew|friday|to
+drew|and|punc
+drew|urged|conj
+urged|campaigning|subj
+community|international|mod
+wake up|community|subj
+wake up|intimidation|to
+intimidation|and|punc
+intimidation|violence|conj
+violence|opposition|against
+lawyers|amnesty international|for
+sought|lawyers|subj
+injunction|court|nn
+sought|injunction|obj
+injunction|stop|rel
+stop|wednesday|subj
+augusto pinochet|gen.|title
+stop|augusto pinochet|obj
+augusto pinochet|fleeing|rel
+fleeing|augusto pinochet|subj
+fleeing|country|obj
+fleeing|if|c
+government|british|mod
+blocks|government|subj
+extradition|his|gen
+blocks|extradition|obj
+extradition|spain|to
+spain|face|rel
+face|spain|subj
+face|charges|obj
+charges|genocide|of
+genocide|and|punc
+genocide|torture|conj
+amnesty international|friday|on
+demanded|amnesty international|subj
+probe|government|nn
+said|what|obj
+said|it|subj
+demanded|were|fc
+camps|unauthorized|mod
+camps|detention|nn
+were|camps|pred
+camps|run|vrel
+run|camps|obj
+run|by|by-subj
+groups|two|nn
+groups|armed|mod
+groups|tamil|mod
+run|groups|by
+groups|opposed|vrel
+opposed|groups|obj
+rebels|secessionist|nn
+rebels|tamil tiger|nn
+opposed|rebels|to

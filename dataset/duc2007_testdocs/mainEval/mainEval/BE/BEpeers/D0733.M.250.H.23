@@ -1,0 +1,119 @@
+spread|word|obj
+library|congress|of
+begun|library|subj
+begun|program|obj
+program|show|rel
+show|program|subj
+show|teachers|obj1
+teachers|use|rel
+use|teacher|subj
+collection|its|gen
+use|collection|obj
+american|their|gen
+american|[|punc
+collection|american|in
+show|]|punc
+show|classrooms|obj2
+disk|video|nn
+shift|disk|from
+disk|and|punc
+disk|cd-rom|conj
+cd-rom|internet|to
+meant|also|amod
+meant|shift|subj
+meant|that|c
+library|congress|of
+been|able|pred
+been|shift|mod
+shift|library|subj
+library|its|gen
+library|[|punc
+shift|library|obj
+audience|congress|nn
+audience|site|nn
+audience|]|punc
+audience|potential|mod
+audience|electronic|mod
+library|audience|of
+audience|schools|from
+schools|universities|conj
+universities|and|punc
+libraries|school|nn
+universities|libraries|conj
+libraries|desk|to
+desk|person|of
+person|computer|with
+computer|and|punc
+computer|modem|conj
+persuaded|1990|in
+james billington|librarian|appo
+librarian|congress|of
+persuaded|james billington|subj
+provide|congress|subj
+$1 million|first|post
+provide|$1 million|obj
+$1 million|start|rel
+start|$1 million|subj
+start|building|mod
+library|national|mod
+building|library|obj
+library|walls|without
+$13 million|donations|in
+gave|$13 million|subj
+gave|library|obj1
+library|congress|of
+start|such|pre
+start|jump|nn
+gave|start|obj2
+start|that|c
+reached|start|obj1
+reached|it|subj
+goal|its|gen
+reached|goal|obj2
+goal|raising|of
+raising|it|subj
+raising|$45 million|obj
+$45 million|project|for
+sector|private|mod
+project|sector|from
+raising|while|mod
+while|added|comp1
+added|congress|subj
+added|$15 million|obj
+said|letter|in
+letter|response|in
+scholars|24|num
+response|scholars|to
+james billington|librarian|appo
+librarian|congress|of
+said|james billington|subj
+said|that|c
+has|library|subj
+control|no|subj
+control|whatsoever|obj
+control|use|over
+use|that|whn
+made|use|obj
+given|interpretation|subj
+materials|many|nn
+materials|that|c
+presents|materials|obj
+presents|it|subj
+presents|public|to
+officer|public|mod
+officer|affairs|nn
+jill brett|officer|appo
+officer|library|at
+library|congress|of
+said|jill brett|subj
+said|that|c
+collection|its|gen
+99 percent|collection|of
+donated|99 percent|obj
+accepts|library|subj
+requests|donor|nn
+accepts|requests|obj
+control|copyright|nn
+requests|control|for
+circumstances|certain|mod
+control|circumstances|in

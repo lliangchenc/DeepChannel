@@ -1,0 +1,157 @@
+wants|also|mod-before
+wants|pentagon|subj
+wants|exempt|fc
+exempt|pentagon|subj
+mines|anti-personnel|mod
+exempt|mines|obj
+mines|designed|vrel
+designed|mines|obj
+designed|deter|mod
+deter|tampering|obj
+anti-tank|larger|mod
+mines|anti-tank|mod
+tampering|mines|with
+covered|not|mod-before
+mines|covered|vrel
+covered|mines|obj
+covered|by|by-subj
+covered|treaty|by
+nations|-three|mod
+far|so|mod
+ratified|far|amod
+ratified|nations|subj
+ratified|treaty|obj
+treaty|which|whn
+ratified|treaty|obj
+ratified|by|by-subj
+states|40|num
+ratified|states|by
+states|take effect|rel
+take effect|state|subj
+ratified|treaty|obj
+ratified|by|by-subj
+countries|40|num
+ratified|countries|by
+countries|become|rel
+become|country|subj
+become|official|obj
+requires|also|amod
+requires|treaty|subj
+states|member|nn
+requires|states|obj
+states|destroy|rel
+destroy|state|subj
+mines|existing|mod
+destroy|mines|obj
+treaty|allowed|vrel
+allowed|treaty|obj1
+years|four|amount-value
+allowed|years|obj2
+years|destruction|for
+destruction|all|of
+stockpiled|treaty|subj
+mines|land|nn
+stockpiled|mines|obj
+mines|and|punc
+years|10|amount-value
+mines|years|conj
+years|deactivation|for
+deactivation|minefields|of
+nations|that|whn
+ratify|nations|subj
+ratify|treaty|obj
+stockpiles|all|pre
+destroy|stockpiles|obj
+stockpiles|mines|of
+years|four|amount-value
+mines|years|within
+destroy|and|punc
+destroy|clear away|conj
+mines|all|pre
+clear away|mines|obj
+territory|their|gen
+mines|territory|from
+years|10|amount-value
+territory|years|within
+countries|forty|nn
+needed|countries|subj
+needed|ratify|fc
+ratify|country|subj
+ratify|treaty|obj
+treaty|it|for
+treaty|take effect|rel
+take effect|treaty|subj
+required|treaty|subj
+required|ratification|obj
+nations|40|num
+ratification|nations|by
+nations|and|punc
+legislatures|their|gen
+nations|legislatures|conj
+legislatures|go into|rel
+go into|legislature|subj
+go into|effect|obj
+effect|countries|in
+nations|mid-five|mod
+nations|more|mod
+since|ratified|comp1
+ratified|nations|subj
+ratified|treaty|obj
+recently|most|mod
+ratified|recently|mod
+12|about|num-mod
+countries|12|nn
+destroyed|countries|subj
+stocks|their|gen
+stocks|entire|mod
+destroyed|stocks|obj
+mines|land|nn
+stocks|mines|of
+countries|that|whn
+ratified|countries|subj
+ratified|treaty|obj
+were|meet|pred
+meet|switzerland|in
+week|next|post
+meet|week|mod
+planted|also|mod-before
+planted|guerrillas|subj
+planted|mines|obj
+goes into|treaty|subj
+months|effect|nn
+months|six|amount-value
+goes into|months|obj
+goes into|after|mod
+countries|40|num
+after|ratify|comp1
+ratify|countries|subj
+ratify|it|obj
+states|133|num
+signed|states|subj
+signed|treaty|obj
+country|122nd|nn
+was|country|pred
+country|sign|rel
+sign|country|subj
+sign|1997|in
+42|about|num-mod
+countries|42|nn
+states|53|num
+states|member|nn
+countries|states|out of
+states|organization|of
+organization|african unity|of
+endorsed|countries|subj
+endorsed|treaty|obj
+nations|53|num
+-five|nations|of
+nations|africa|in
+signed|-five|subj
+treaty|which|whn
+prohibits|treaty|subj
+prohibits|use|obj
+use|production|appo
+signed|trade|fc
+trade|treaty|subj
+mines|antipersonnel|mod
+stockpiling|mines|of

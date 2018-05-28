@@ -1,0 +1,152 @@
+wife|estranged|mod
+speaker|former|mod
+speaker|u.s. house|nn
+wife|speaker|of
+speaker|newt gingrich|person
+wants|wife|subj
+judge|cobb county|subj
+judge|freeze|mod
+freeze|cobb county|subj
+assets|couple|gen
+freeze|assets|obj
+freeze|until|mod
+divorce|their|gen
+until|is|comp1
+is|final|pred
+speaker|former|mod
+speaker|u.s.|nn
+speaker|house|nn
+attorneys|speaker|for
+speaker|newt gingrich|person
+speaker|and|punc
+ex-wife|his|gen
+ex-wife|soon-to-be|mod
+speaker|ex-wife|conj
+expect|attorneys|subj
+approve|judge|subj
+divorce|couple|gen
+approve|divorce|obj
+divorce|month|within
+wife|estranged|mod
+speaker|former|mod
+speaker|u.s. house|nn
+wife|speaker|of
+speaker|newt gingrich|person
+wants|wife|subj
+judge|cobb county|subj
+judge|freeze|mod
+freeze|cobb county|subj
+assets|couple|gen
+freeze|assets|obj
+freeze|until|mod
+divorce|their|gen
+until|is|comp1
+is|final|pred
+lawyer|newt gingrich|for
+says|lawyer|subj
+speaker|former|mod
+speaker|u.s. house|nn
+speaker|and|punc
+wife|his|gen
+speaker|wife|conj
+says|signed|fc
+signed|speaker|subj
+settlement|final|mod
+settlement|divorce|nn
+signed|settlement|obj
+signed|and|punc
+signed|are|conj
+are|ready|pred
+are|take|mod
+take|speaker|subj
+take|agreement|obj
+courtroom|cobb county|nn
+newt gingrich|and|punc
+newt gingrich|marianne gingrich|conj
+spent|newt gingrich|subj
+spent|thursday|obj
+spent|afternoon|mod
+spent|mediator|with
+attempt|their|gen
+attempt|first|post
+mediator|attempt|in
+attempt|resolve|rel
+resolve|attempt|subj
+divorce|their|gen
+divorce|bitter|mod
+resolve|divorce|obj
+newt gingrich|and|punc
+newt gingrich|marianne gingrich|conj
+agreed|newt gingrich|subj
+agreed|monday|guest
+agreed|keep|fc
+keep|newt gingrich|subj
+divorce|their|gen
+keep|divorce|obj
+arena|public|mod
+divorce|arena|out of
+gingrich|who|whn
+runs|gingrich|subj
+consulting firm|political|mod
+runs|consulting firm|obj
+filed|gingrich|subj
+request|his|gen
+filed|request|obj
+filed|after|mod
+wife|his|gen
+after|asked|comp1
+asked|wife|subj
+asked|judge|obj
+judge|freeze|rel
+freeze|judge|subj
+assets|couple|gen
+freeze|assets|obj
+freeze|until|mod
+divorce|their|gen
+until|is|comp1
+is|final|pred
+may|last|post
+told|newt gingrich|subj
+wife|his|gen
+told|wife|obj
+told|seeing|fc
+seeing|he|subj
+seeing|woman|obj
+seeing|and|punc
+seeing|wanted|conj
+wanted|he|subj
+wanted|divorce|obj
+gingrich|filed|vrel
+filed|gingrich|obj
+filed|divorce|for
+filed|july 29|mod
+filed|marianne gingrich|from
+speaker|former|mod
+speaker|house|nn
+speaker|newt gingrich|person
+reached|speaker|subj
+reached|agreement|obj
+wife|his|gen
+agreement|wife|with
+on|divide|pcomp-c
+divide|speaker|subj
+assets|their|gen
+divide|assets|obj
+divide|as|mod
+proceedings|their|gen
+proceedings|divorce|nn
+part|proceedings|of
+as|reported|comp1
+reported|atlanta journal-constitution|subj
+reported|tuesday|obj
+avoid|agreement|with
+agreement|newt|conj
+newt|and|punc
+newt|marianne gingrich end|conj
+standoff|tense|mod
+standoff|legal|mod
+embarrassing|potentially|mod
+trial|embarrassing|mod
+trial|public|mod
+trial|divorce|nn
+avoid|trial|obj

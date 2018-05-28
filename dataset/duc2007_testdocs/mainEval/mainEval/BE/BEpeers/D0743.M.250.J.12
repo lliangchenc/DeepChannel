@@ -1,0 +1,146 @@
+seven|at least|num-mod
+people|seven|nn
+died|people|subj
+died|monday|mod
+injured|hundreds|obj
+injured|when|wha
+tremor|severe|mod
+shook|tremor|subj
+shook|turkey|obj
+region|same|post
+turkey|region|in
+region|where|wha
+more|15,000|than
+killed|people|obj
+earthquake|huge|mod
+killed|earthquake|in
+killed|less|mod
+less|month ago|than
+tremor|which|whn
+came in|tremor|subj
+felt|mid-afternoon|mod-before
+felt|tremor|obj
+cities|turkey|gen
+cities|three|nn
+cities|biggest|mod
+felt|cities|in
+istanbul|ankara|conj
+ankara|and|punc
+ankara|izmir|conj
+separated|which|obj
+separated|by|by-subj
+separated|hundreds|by
+hundreds|miles|of
+observatory|istanbul|nn
+reported|observatory|subj
+reported|that|c
+5.8|quake|nn
+5.8|registered|mod
+5.8|richter scale|on
+last|(|punc
+last|5.8|subj
+7.4|month|gen
+7.4|quake|nn
+7.4|registered|mod
+last|7.4|obj
+caused|it|subj
+caused|dozens|obj
+dozens|buildings|of
+buildings|collapse|rel
+collapse|building|subj
+collapse|and|punc
+collapse|sent|conj
+sent|building|subj
+sent|thousands|obj
+racing|people|nn
+thousands|racing|of
+homes|their|gen
+racing|homes|from
+created|aftershocks|subj
+created|panic|obj
+created|'|punc
+created|'|punc
+created|said|mod
+said|president|subj
+president|suleyman demirel|person
+ap|istanbul|nn
+ap|(|punc
+earthquake|that|whn
+struck|earthquake|subj
+turkey|western|mod
+struck|turkey|obj
+struck|earlier|mod
+made|week|mod-before
+made|earthquake|obj
+made|up|mod
+quakes|two|nn
+quakes|consecutive|mod
+up|quakes|of
+geologist|leading|mod
+said|geologist|subj
+said|sunday|mod
+said|istanbul technical university|subj
+said|were|fc
+seconds|20|amount-value
+were|seconds|pred
+were|apart|mod
+epicenter|their|gen
+was|near|pred
+town|northwestern|mod
+was|town|near
+town|izmit|of
+miles|90|amount-value
+east|miles|nn
+izmit|east|appo
+east|istanbul|of
+bruce presgrave|geophysicist|appo
+geophysicist|u.s geological survey national earthquake information center|with
+u.s geological survey national earthquake information center|golden|in
+said|bruce presgrave|subj
+said|is|fc
+is|common|pred
+earthquakes|large|mod
+common|earthquakes|for
+earthquakes|occur|rel
+occur|earthquake|subj
+surges|multiple|mod
+occur|surges|in
+succession|rapid|mod
+surges|succession|in
+ap|istanbul|nn
+ap|(|punc
+minister|turkey|gen
+minister|prime|mod
+promised|minister|subj
+building|stricter|mod
+promised|building|obj1
+promised|rules|obj2
+rules|prevent|rel
+prevent|rule|subj
+prevent|any|obj
+any|more|pnmod
+construction|shoddy|mod
+more|construction|of
+construction|blamed|vrel
+blamed|construction|obj
+blamed|thousands|for
+thousands|deaths|of
+earthquake|last week|gen
+earthquake|massive|mod
+deaths|earthquake|from
+days|eight|amount-value
+temblor|powerful|mod
+temblor|7.4-magnitude|mod
+days|temblor|after
+reduced|days|subj
+swath|wide|mod
+reduced|swath|obj
+turkey|western|mod
+swath|turkey|of
+turkey|rubble|to
+said|searchers|subj
+held out|still|mod-before
+said|held out|fc
+held out|they|subj
+held out|hopes--|obj
+held out|though|mod

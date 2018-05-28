@@ -1,0 +1,136 @@
+planning|reversal|in
+planning|government|subj
+planning|issue|fc
+issue|government|subj
+issue|rules|obj
+rules|prohibiting|rel
+prohibiting|rule|subj
+prohibiting|label|obj
+label|`|punc
+label|`|punc
+label|organic|pnmod
+organic|'|punc
+organic|'|punc
+organic|food|for
+food|that|whn
+irradiated|food|obj
+engineered|genetically|amod
+irradiated|engineered|conj
+engineered|food|obj
+engineered|or|punc
+engineered|treated|conj
+treated|food|obj
+treated|antibiotics|with
+official|top|mod
+official|agriculture|nn
+told|official|subj
+told|farmers|obj
+told|thursday|mod
+telling|i|subj
+telling|you|obj
+telling|looking at|fc
+looking at|we|subj
+way|possible|mod
+looking at|way|obj
+way|protect|rel
+protect|way|subj
+protect|integrity|obj
+industry|your|gen
+integrity|industry|of
+protect|'|punc
+protect|'|punc
+protect|said|mod
+said|keith jones|subj
+national organic program|department of agriculture|gen
+keith jones|national organic program|of
+developing|department|subj
+standards|first|post
+standards|national|mod
+developing|standards|obj
+food|organic|mod
+standards|food|on
+replace|hodgepodge|obj
+rules|state|nn
+hodgepodge|rules|of
+rules|and|punc
+guidelines|industry|nn
+rules|guidelines|conj
+sales|u.s.|nn
+foods|organic|mod
+sales|foods|of
+grown|sales|subj
+grown|20 percent|by
+grown|annually|mod
+years|last|post
+years|seven|amount-value
+annually|years|for
+encouraged|very|amod
+encouraged|i|obj
+encouraged|'|punc
+encouraged|'|punc
+encouraged|by|by-subj
+promises|government|gen
+encouraged|promises|by
+encouraged|said|mod
+said|bob anderson|subj
+bob anderson|who|whn
+runs|bob anderson|subj
+acres|walnut|nn
+runs|acres|obj
+acres|penn creek|in
+runs|and|punc
+runs|is|conj
+is|on|pred
+is|national organic standards board|on
+farmers|organic|mod
+coalition|farmers|of
+ap|washington|nn
+ap|(|punc
+hunger|americans|nn
+hunger|food|for
+food|promoted|vrel
+promoted|food|obj
+promoted|natural|as
+promoted|consuming|mod
+worth|$6 billion|nn
+consuming|worth|obj
+worth|products|of
+often|guarantee|with
+grown|actually|mod-before
+grown|they|obj
+chemicals|synthetic|mod
+grown|chemicals|without
+change|that|subj
+change|release|with
+change|as|mod
+early|tuesday|as
+standards|first|post
+standards|national|mod
+change|standards|of
+food|organic|mod
+standards|food|for
+assurance|consumers|nn
+looking|they|subj
+looking|for|mod
+for|that|c
+meet|products|subj
+meet|set|obj
+set|standards|of
+standards|that|whn
+enforced|standards|obj
+are|same|pred
+are|regardless|mod
+regardless|state|of
+state|grown|rel
+grown|state|obj2
+grown|it|obj1
+said|katherine dimatteo|subj
+director|executive|nn
+katherine dimatteo|director|appo
+director|organic trade association|of
+farms|10,000|num
+claim|that|subj
+be|organic|pred
+6,600|only|mod
+claim|approved|fc
+approved|6,600|obj

@@ -1,0 +1,157 @@
+began|agriculture department|subj
+began|propose|fc
+propose|agriculture department|subj
+propose|standards|obj
+organic|all|mod
+foods|organic|mod
+standards|foods|for
+foods|late 1990 's|in
+propose|because|mod
+sale|their|gen
+because|grown|comp1
+grown|sale|subj
+20|more than|num-mod
+grown|20|obj
+year|decade|in
+approved|january 1999|in
+approved|usda|subj
+label|"|punc
+label|certified|mod
+label|organic|mod
+label|"|punc
+approved|label|obj
+label|meats|for
+meats|and|punc
+meats|poultry|conj
+poultry|that|whn
+raised|poultry|obj
+hormones|growth|nn
+raised|hormones|without
+feed|pesticide-treated|mod
+hormones|feed|conj
+feed|and|punc
+feed|antibiotics|conj
+companies|that|whn
+producing|companies|subj
+meats|organic|mod
+producing|meats|obj
+lines|state|nn
+meats|lines|within
+prepared|companies|subj
+prepared|expand|mod
+expand|company|subj
+markets|their|gen
+expand|markets|obj
+companies|three|nn
+companies|u.s.|nn
+agreed|companies|subj
+agreed|join|fc
+join|company|subj
+companies|international|mod
+join|companies|obj
+companies|promoting|in
+promoting|fish|obj
+fish|that|whn
+were|replenished|pred
+released|march 2000|in
+released|government|subj
+standards|federal|mod
+released|standards|obj
+standards|growing|for
+growing|government|subj
+standards|and|punc
+food|processing|nn
+food|organic|mod
+standards|food|conj
+food|that|whn
+barred|food|subj
+barred|use|obj
+use|genetic engineering|of
+genetic engineering|or|punc
+genetic engineering|irradiation|conj
+barred|and|punc
+barred|allowed|conj
+allowed|food|obj1
+allowed|foods|obj2
+foods|that|whn
+met|foods|subj
+met|standards|obj
+standards|carry|rel
+carry|standard|subj
+carry|seal|obj
+seal|that|whn
+read|seal|subj
+replaced|standards|subj
+replaced|mixture|obj
+rules|state|nn
+mixture|rules|of
+rules|and|punc
+guidelines|industry|nn
+rules|guidelines|conj
+set|first|post
+standards|national|mod
+set|standards|of
+met with|set|subj
+objections|strong|mod
+met with|objections|obj
+objections|farmers|from
+farmers|and|punc
+farmers|others|conj
+others|industry|in
+met with|because|mod
+because|allowed|comp1
+allowed|they|subj
+modification|genetic|mod
+allowed|modification|obj
+modification|irradiation|conj
+irradiation|and|punc
+irradiation|use|conj
+sludge|sewage|nn
+use|sludge|of
+were|signs|pred
+popularity|growing|mod
+signs|popularity|of
+foods|organic|mod
+popularity|foods|of
+began|they|subj
+began|appear|fc
+appear|they|subj
+supermarkets|regular|mod
+appear|supermarkets|in
+supermarkets|and|punc
+supermarkets|companies|conj
+companies|general|like
+general|mills|person
+general|and|punc
+general|h.j|conj
+getting into|heinz|subj
+business|natural|mod
+business|foods|nn
+getting into|business|obj
+food|organic|mod
+food|pet|nn
+appeared|food|subj
+appeared|market|on
+number|increasing|mod
+number|shoppers|of
+be|willing|pred
+be|pay|mod
+pay|number|subj
+price|additional|mod
+pay|price|obj
+price|organics|for
+pay|although|mod
+represented|still|mod-before
+although|represented|comp1
+represented|they|subj
+fraction|small|mod
+represented|fraction|obj
+sales|overall|mod
+fraction|sales|of
+time|first|post
+included|time|for
+budget|administration|gen
+included|budget|subj
+included|appropriations|obj
+research|organic|mod
+appropriations|research|for

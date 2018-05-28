@@ -1,0 +1,128 @@
+team|u.n.|from
+visiting|world heritage bureau|subj
+visiting|park|obj
+park|examine|rel
+examine|park|subj
+examine|claims|obj
+claims|that|c
+values|environmental|mod
+environmental|and|punc
+environmental|cultural|conj
+values|park|of
+are|threatened|pred
+threatened|by|by-subj
+mine|jabiluka|nn
+threatened|mine|by
+faces|australia|subj
+embarrassment|international|mod
+faces|embarrassment|obj
+mine|jabiluka|nn
+mine|uranium|nn
+embarrassment|mine|over
+committee|u.n.|nn
+faces|committee|with
+wednesday|demanding|rel
+demanding|wednesday|subj
+demanding|scrapped|fc
+scrapped|mine|obj
+committee|prevent|rel
+prevent|wednesday|subj
+prevent|it|obj
+prevent|endangering|mod
+endangering|wednesday|subj
+area|surrounding|mod
+area|kakadu world heritage|nn
+endangering|area|obj
+federal government|australian|mod
+rejected|thursday|mod-before
+rejected|federal government|subj
+report|unesco|nn
+rejected|report|obj
+report|which|whn
+called for|report|subj
+called for|kakadu national park|obj
+australia|northwest|mod
+kakadu national park|australia|in
+australia|placed|rel
+list|endangered|mod
+placed|list|on
+list|threat|because of
+threat|posed|vrel
+posed|threat|obj
+posed|by|by-subj
+mine|jabiluka|nn
+mine|uranium|nn
+posed|mine|by
+government|australian|mod
+year|next|post
+year|try|rel
+try|year|subj
+try|stop|fc
+stop|united nations|obj
+united nations|declaring|from
+declaring|kakadu national park|obj
+kakadu national park|endangered|vrel
+endangered|kakadu national park|obj
+mine|jabiluka|nn
+mine|uranium|nn
+endangered|mine|because of
+report|mission|nn
+findings|report|of
+were|inconsistent|pred
+inconsistent|fact|with
+mine|australian environment|nn
+mine|uranium|nn
+20|less than|num-mod
+km|20|amount-value
+km|kakadu national park|from
+operated|km|subj
+years|20|amount-value
+operated|years|for
+impact|adverse|mod
+years|impact|with
+sites|northwest|mod
+sites|australia archaeological|nn
+impact|sites|on
+sites|that|whn
+show|sites|subj
+show|humans|obj
+humans|lived|vrel
+lived|humans|obj
+lived|australia|in
+lived|up|mod
+up|60,000|to
+show|damaged|fc
+damaged|years ago|obj
+damaged|by|by-subj
+mine|uranium|nn
+damaged|mine|by
+mine|built|rel
+built|kakadu national park|within
+committee|high-level|mod
+committee|u.n.|nn
+told|committee|obj
+told|wednesday|mod
+report|world heritage committee|nn
+found|report|subj
+mine|xinhua|nn
+mine|uranium|nn
+found|threatened|fc
+threatened|mine|subj
+kakadu national park|surrounding|mod
+threatened|kakadu national park|obj
+area|world heritage|nn
+area|mission|nn
+prospect|kakadu national park|of
+placed|prospect|obj
+list|committee|gen
+list|endangered|mod
+placed|list|on
+government|australia|gen
+government|conservative|mod
+defied|government|subj
+body|u.n.|nn
+declaration|body|gen
+defied|declaration|obj
+declaration|that|c
+area|world heritage|nn
+is|area|pred

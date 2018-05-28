@@ -1,0 +1,7 @@
+The 1993 "Oslo Accords," signed by Israeli president Yitzhak Rabin and Palestinian leader Yasser Arafat, were based on the principles of "Land for Peace" and "Palestinian self-rule".
+Israel was to redeploy its forces in the West Bank in three phases, turning over most of the territory to the Palestinians by May 4th 1999 in exchange for security guarantees.
+As of late 2000, the Oslo terms were far from implemented with about 40 percent of the West Bank returned to full or partial Palestinian control.
+Two factors impeding implementation were the ascent to power in 1996 of the conservative Likud government led by Benjamin Netanyahu and a series of deadly suicide bombings sponsored by Hamas the same year.
+Israel abandoned the Labor Party's freeze on new settlements and delayed redeployment of its forces in the West Bank, saying the Palestinians were not doing enough to combat terrorism and that more Israelis had died since the Oslo accords than in the 15 years before.
+In attempts to salvage the principles of the Oslo accords, new agreements were signed in 1998 by Netanyahu and Arafat at the Wye Plantaion outside Washington, D.C. and in September 1999 at Sharm El Sheikh in Egypt outlining a framework for a final-status peace accord by September 2000.
+The final-status issues yet to be decided include the status of Jerusalem, borders of the Palestinian entity, fate of Palestinian refugees, the future of Jewish settlements in the West Bank and the Gaza Strip and water.

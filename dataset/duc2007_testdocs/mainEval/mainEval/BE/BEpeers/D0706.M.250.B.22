@@ -1,0 +1,124 @@
+agrees|government|subj
+agrees|release|fc
+release|government|subj
+members|jailed|mod
+release|members|obj
+political party|her|gen
+members|political party|of
+members|42|num
+members|nld|nn
+are|members|pred
+members|parliament|of
+prisons|myanmar|gen
+parliament|prisons|in
+are|all|according to
+group|exile|nn
+burma students democratic front|group|appo
+government|myanmar|gen
+government|military|mod
+continued|government|subj
+arrests|its|gen
+continued|arrests|obj
+activists|country|gen
+activists|democracy|nn
+arrests|activists|of
+government|us|nn
+issued|government|subj
+issued|statement|obj
+coincide|it|subj
+coincide|anniversary|with
+government|military|mod
+takeover|government|gen
+anniversary|takeover|of
+sought|government|subj
+sought|prevent|fc
+prevent|government|subj
+prevent|nld|obj
+nld|convening|from
+convening|parliament|obj
+scheduled|chetta thanajaro|obj
+scheduled|visit|mod
+visit|chetta thanajaro|subj
+visit|myanmar|obj
+visit|also known as|mod
+forbids|legislation|subj
+agencies|state|nn
+forbids|agencies|obj
+agencies|contracting|from
+contracting|companies|with
+companies|or|punc
+business|individuals|nn
+business|doing|nn
+companies|business|conj
+government|military|mod
+business|government|with
+government|burma|of
+majority|great|mod
+majority|people|of
+want|burma|nn
+people|want|in
+report|required|vrel
+required|report|obj
+required|by|by-subj
+required|congress|by
+updates|report|subj
+review|1998|num
+updates|review|obj
+conditions|labor|nn
+review|conditions|of
+conditions|myanmar|in
+updates|also known as|mod
+burma|which|whn
+reached|burma|subj
+conclusions|similar|mod
+reached|conclusions|obj
+provides|burma|subj
+provides|60 percent|obj
+60 percent|heroin|of
+peoples|ethnic|mod
+many|peoples|of
+are|financially|guest
+are|dependent|pred
+crop|opium|nn
+dependent|crop|on
+changing|burma|unlike
+changing|china|subj
+changing|rapidly|mod
+undermining|burma|subj
+triumphs|hard-won|mod
+undermining|triumphs|obj
+pressure|they|subj
+junta|burma|gen
+junta|military|mod
+pressure|junta|obj
+junta|enter|rel
+enter|junta|subj
+dialogue|political|mod
+enter|dialogue|obj
+dialogue|suu kyi|with
+suu kyi|and|punc
+suu kyi|national league for democracy|conj
+members|26|num
+total|members|of
+groups|various|mod
+groups|anti-government|mod
+groups|armed|mod
+members|groups|of
+surrendered|total|subj
+government|myanmar|nn
+surrendered|government|to
+government|march|in
+government|myanmar|nn
+release|government|subj
+release|all|guest
+release|political prisoners|obj
+release|recognize|conj
+recognize|government|subj
+recognize|results|obj
+election|1990|num
+election|general|nn
+results|election|of
+recognize|and|punc
+recognize|reshuffle|conj
+reshuffle|government|subj
+reshuffle|government|obj

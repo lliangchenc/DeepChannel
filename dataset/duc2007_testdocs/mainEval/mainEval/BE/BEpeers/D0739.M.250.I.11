@@ -1,0 +1,134 @@
+took up with|seinfeld|subj
+jessica sklar|26-year-old|mod
+took up with|jessica sklar|obj
+took up with|soon|mod
+took up with|after|mod
+after|married|comp1
+married|she|subj
+eric nederlander|broadway|nn
+eric nederlander|theater|nn
+eric nederlander|scion|nn
+married|eric nederlander|obj
+married|four months ago|mod
+new york post|and|punc
+new york post|daily news|conj
+reported|new york post|subj
+reported|week|obj
+people|twelve|nn
+competed|people|subj
+competed|lookalikes|as
+jerry|seinfeld|nn
+jerry|characters|nn
+lookalikes|jerry|of
+jerry|elaine|conj
+elaine|george|conj
+george|and|punc
+george|kramer|conj
+collecting|jerry seinfeld|subj
+kerouac-style|new|mod
+kerouac-style|material|nn
+kerouac-style|jack|nn
+collecting|kerouac-style|obj
+kerouac-style|driving|by
+driving|jerry seinfeld|subj
+driving|country|across
+took in|tuesday|on
+took in|seinfeld|subj
+took in|show|obj
+show|bobby vinton theater|at
+literature|new york--|mod
+was|only|guest
+script|sitcom|nn
+was|script|pred
+script|filled|vrel
+filled|script|obj
+faults|comma|nn
+filled|faults|with
+filled|and|punc
+misspelled|repeatedly|mod-before
+filled|misspelled|conj
+misspelled|script|subj
+misspelled|words|obj
+story|move|rel
+move|story|subj
+move|9|at
+10-day|10-show|nn
+10-day|sted|mod
+run|10-day|subj
+jerry|albany , n.y.--|mod
+run|jerry|obj
+jerry|thanks|conj
+thanks|laughs|for
+laughs|memories|conj
+memories|and|punc
+goodbyes|all|pre
+memories|goodbyes|conj
+say goodbye|never|mod-before
+say goodbye|people|subj
+'s|time|pred
+time|cut|rel
+cut|time|subj
+cut|check|obj
+check|jerry seinfeld|for
+worth|record|mod
+worth|cable|nn
+worth|deal|nn
+purchased|worth|in
+worth|more|pnmod
+more|$100 million|than
+purchased|tbs|subj
+cable|national|mod
+purchased|cable|obj
+cable|and|punc
+rights|metro|nn
+rights|atlanta|nn
+cable|rights|conj
+rights|syndicated|rel
+syndicated|right|subj
+syndicated|repeats|obj
+of|"|punc
+repeats|seinfeld|of
+seinfeld|"|punc
+seinfeld|begin|rel
+begin|seinfeld|subj
+begin|fall|in
+fall|2002|num
+begin|and|punc
+begin|last|conj
+last|seinfeld|subj
+years|four|amount-value
+last|years|obj
+station|atlanta-based|mod
+pay|reportedly|amod
+pay|station|subj
+pay|more|mod
+more|$600,000|than
+pay|apiece|mod
+episodes|180|num
+episodes|"|punc
+episodes|seinfeld|nn
+episodes|"|punc
+apiece|episodes|for
+pay|eclipsing|mod
+eclipsing|station|subj
+lifetime|price|nn
+eclipsing|lifetime|obj
+negotiated|earlier|mod-before
+lifetime|negotiated|vrel
+negotiated|lifetime|obj
+rights|cable|nn
+rights|syndication|nn
+negotiated|rights|for
+sitcom|ellen degeneres|gen
+rights|sitcom|to
+sitcom|"|punc
+sitcom|ellen|appo
+writer|hollywood-based|mod
+writer|free-lance|mod
+is|writer|pred
+actor|pasadena , calif.--|mod
+actor|michael richards|person
+is|reed|pred
+is|thin|mod
+actor|john goodman|person
+pasadena|calif.|appo

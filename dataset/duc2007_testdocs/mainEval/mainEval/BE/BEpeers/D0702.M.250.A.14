@@ -1,0 +1,163 @@
+developed|school|subj
+program|comprehensive|mod
+program|arts|nn
+developed|program|obj
+program|partnership|in
+partnership|several|with
+institutions|new york city|gen
+institutions|nonprofit|mod
+institutions|cultural|mod
+several|institutions|of
+employees|institutions|gen
+institutions|employees|whn
+advised|employees|subj
+advised|teachers|obj
+teachers|helped|vrel
+write|teachers|subj
+write|curriculum|obj
+write|and|punc
+visited|frequently|amod
+write|visited|conj
+visited|teachers|subj
+visited|classrooms|obj
+classrooms|teach|rel
+teach|classroom|subj
+teach|students|obj
+forms|different|mod
+forms|art|nn
+teach|forms|about
+schools|public|nn
+interests|struggling|mod
+constraints|budget|nn
+struggling|constraints|under
+struggling|and|punc
+struggling|competing|conj
+interests|academic|mod
+schools|interests|appo
+while|are|comp1
+programs|marginalizing|mod
+programs|arts|nn
+are|programs|pred
+eliminating|if not|amod
+are|eliminating|mod
+eliminating|school|subj
+eliminating|them|obj
+eliminating|altogether|mod
+happening|opposite|subj
+village|small|mod
+happening|village|in
+village|greenport|of
+greenport|tip|at
+fork|north|nn
+tip|fork|of
+fork|long island|on
+superintendent|state|nn
+delaine easton|superintendent|appo
+instruction|public|nn
+superintendent|instruction|of
+called for|delaine easton|subj
+called for|restoration|obj
+education|arts|nn
+restoration|education|of
+schools|california|nn
+schools|public|nn
+education|schools|in
+part|western|mod
+school|part|in
+china|east|mod
+fujian province|china|gen
+part|fujian province|of
+been|set up|pred
+been|provide|mod
+provide|school|subj
+qualified|more|mod
+professionals|qualified|mod
+provide|professionals|obj
+professionals|and|punc
+professionals|sports|conj
+sports|arts|conj
+arts|and|punc
+teachers|music|nn
+arts|teachers|conj
+teachers|primary|for
+primary|and|punc
+schools|middle|nn
+primary|schools|conj
+schools|rural areas|in
+goal|pew charitable trust|of
+is|give|pred
+give|money|obj
+money|support|rel
+support|money|subj
+financing|arts|nn
+support|financing|obj
+financing|zoning|conj
+areas|historic|mod
+zoning|areas|in
+areas|and|punc
+curriculum|arts|nn
+areas|curriculum|conj
+schools|public|nn
+curriculum|schools|for
+support|said|mod
+said|stephen k. urice|subj
+stephen k. urice|who|whn
+direct|stephen k. urice|subj
+initiative|pew|nn
+direct|initiative|obj
+part|indispensable|mod
+is|part|pred
+part|curriculum|of
+students|all|pre
+students|750|num
+curriculum|students|for
+students|public school 156|at
+is|music|along with
+music|art|conj
+art|and|punc
+writing|creative|mod
+art|writing|conj
+educators|arts|nn
+insist|educators|subj
+insist|that|c
+music|and|punc
+classes|art|nn
+music|classes|conj
+affect|music|subj
+achievement|overall|mod
+achievement|student|nn
+affect|achievement|obj
+()|reviewing|in
+studies|188|num
+reviewing|studies|obj
+50|past|num-mod
+years|50|amount-value
+studies|years|over
+researchers|harvard|nn
+found|researchers|subj
+evidence|that|whn
+playing|evidence|subj
+playing|and|punc
+playing|listening|conj
+listening|evidence|subj
+listening|music|to
+found|improves|fc
+improves|evidence|subj
+thinking|spatial|mod
+improves|thinking|obj
+thinking|but|punc
+thinking|proof|conj
+proof|that|c
+music|and|punc
+classes|art|nn
+music|classes|conj
+help|music|subj
+help|students|obj
+students|read|vrel
+read|students|obj
+read|better|mod
+read|or|punc
+read|score|conj
+score|students|subj
+score|higher|mod
+higher|tests|on

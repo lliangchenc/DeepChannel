@@ -1,0 +1,153 @@
+patient|disruptive|mod
+patient|mental|mod
+in|`|punc
+patient|girl|in
+girl|interrupted|vrel
+interrupted|girl|obj
+won|`|punc
+won|patient|subj
+award|academy|nn
+won|award|obj
+supporting|best|mod
+actress|supporting|mod
+award|actress|for
+actress|sunday|person
+won|night|mod
+father|her|gen
+generation|father|after
+took home|generation|subj
+took home|oscar|obj
+billy bob thornton|oscar|nn
+billy bob thornton|winners|nn
+billy bob thornton|and|punc
+billy bob thornton|angelina jolie|conj
+married|billy bob thornton|obj
+married|here|mod
+ceremony|quickie|nn
+no-frills|ceremony|appo
+of|`|punc
+love|shakespeare|nn
+love|in|nn
+gwyneth paltrow|love|of
+love|`|punc
+love|and|punc
+love|michael caine|conj
+honored|gwyneth paltrow|obj
+honored|sunday|mod
+honored|motion picture|for
+winner|funny|mod
+funny|but|punc
+funny|poignant|conj
+was|winner|pred
+actor|tv|nn
+actor|comedy|nn
+winner|actor|for
+actor|golden globes|at
+writer|chicago-based|mod
+writer|free-lance|mod
+is|writer|pred
+caper|car-heist|mod
+gone|`|punc
+gone|caper|subj
+seconds|60|amount-value
+gone|seconds|in
+seconds|`|punc
+seconds|raced|vrel
+raced|seconds|obj
+raced|top|to
+office|weekend|nn
+office|box|nn
+top|office|of
+raced|debuting|mod
+debuting|caper|subj
+debuting|$25.5 million|with
+debuting|and|punc
+debuting|pushing|conj
+pushing|caper|subj
+pushing|`|punc
+pushing|mission|obj
+impossible 2|`|punc
+impossible 2|pack|into
+estimates|studio|nn
+blinked|you|subj
+passed|it|subj
+passed|you|obj
+passed|movers|by
+movers|and|punc
+movers|shakers|conj
+shakers|and|punc
+shakers|writers|conj
+writers|and|punc
+writers|editors|conj
+newseum|freedom forum|gen
+editors|newseum|at
+newseum|arlington|in
+come up with|list|obj
+stories|100|num
+stories|least|post
+stories|significant|mod
+stories|news|nn
+list|stories|of
+stories|century|of
+was|also|mod-before
+also|honorees|among
+was|`|punc
+was|waking ned devine|pred
+waking ned devine|`|punc
+waking ned devine|comedy|appo
+winner|lottery|nn
+comedy|winner|about
+town|small|mod
+town|irish|nn
+winner|town|in
+town|which|whn
+named|town|obj
+actor|supporting|mod
+named|actor|for
+actor|david kelly|person
+for|and|punc
+for|for|conj
+cast|its|gen
+cast|ensemble|nn
+for|cast|for
+cast|which|whn
+included|cast|subj
+included|actress|obj
+actress|fionnula flanagan|person
+director|and|punc
+director|producer|conj
+thriller|serial-killer|nn
+producer|thriller|of
+thriller|`|punc
+collector|bone|nn
+collector|`|punc
+collector|due|pnmod
+due|friday|out
+admit|readily|mod-before
+thriller|admit|rel
+admit|thriller|obj
+admit|collector|subj
+executives|universal studios|nn
+want|executives|subj
+want|angelina jolie|obj
+agent|007|num
+agent|and|punc
+effort|massive|mod
+effort|restructuring|mod
+agent|effort|conj
+effort|helped|vrel
+drive|effort|subj
+drive|metro-goldwyn-mayer inc.|obj
+quarter|its|gen
+quarter|strongest|mod
+metro-goldwyn-mayer inc.|quarter|to
+years|dozen|mod
+officials|studio|nn
+said|officials|subj
+said|tuesday|mod
+father|jolie|gen
+father|actor|appo
+actor|jon voight|person
+encouraged|father|subj
+encouraged|her|obj
+encouraged|as well|mod

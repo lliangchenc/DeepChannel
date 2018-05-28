@@ -1,0 +1,136 @@
+court|high|nn
+case|decided|rel
+decided|case|obj
+decided|court|subj
+vs|clinton|nn
+case|vs|appo
+york city|marked|vrel
+time|second|post
+marked|time|mod
+time|considered|comp1
+considered|justices|subj
+considered|constitutionality|obj
+constitutionality|line item veto act|of
+title|line item veto act|of
+()|faking|in
+faking|out|guest
+faking|supreme court|obj
+ruling|historic|mod
+ruling|affecting|rel
+affecting|ruling|subj
+balance of power|constitutional|mod
+affecting|balance of power|obj
+balance of power|heart|at
+political system|american|mod
+heart|political system|of
+political system|struck|pnmod
+struck|legislation|down
+thursday|that|whn
+permits|thursday|subj
+permits|president|obj
+legislation|veto|rel
+veto|thursday|subj
+provisions|specific|mod
+veto|provisions|obj
+provisions|spending|of
+spending|and|punc
+bills|tax|nn
+spending|bills|conj
+veto|line-item|nn
+supporters|veto|of
+announced|supporters|subj
+offer|immediately|amod
+announced|offer|fc
+offer|they|subj
+offer|legislation|obj
+legislation|circumvent|rel
+circumvent|legislation|subj
+decision|justices|gen
+circumvent|decision|obj
+decision|requiring|by
+requiring|each|guest
+item|spending|nn
+requiring|item|obj
+item|approved|vrel
+approved|item|obj
+approved|by|by-subj
+approved|congress|by
+congress|listed|rel
+bill|separate|mod
+listed|bill|as
+signature|president|gen
+bill|signature|for
+signature|or|punc
+signature|veto|conj
+said|stevens|subj
+said|expressing|fc
+expressing|court|subj
+expressing|"|punc
+expressing|opinion|obj
+opinion|wisdom|about
+wisdom|"|punc
+procedure|line item|nn
+procedure|veto|nn
+wisdom|procedure|of
+supreme court|struck|vrel
+struck|supreme court|obj1
+struck|down|guest
+down|thursday|on
+john mccain|sen.|title
+hoped|what|obj
+hoped|john mccain|subj
+be|part|pred
+legacy|his|gen
+part|legacy|of
+law|giving|rel
+giving|law|subj
+giving|president|obj
+expanded|law|subj
+power|veto|nn
+expanded|power|obj
+power|harness|rel
+harness|power|subj
+harness|"|punc
+spending|pork-barrel|nn
+spending|"|punc
+harness|spending|obj
+spending|congress|by
+cancel|line item veto act|under
+cancel|president|subj
+breaks|tax|nn
+cancel|breaks|obj
+breaks|that|whn
+benefited|breaks|subj
+people|101|num
+fewer|people|than
+veto|line item|nn
+supported|strongly|amod
+veto|supported|vrel
+supported|veto|obj
+supported|by|by-subj
+supported|president|by
+president|bill clinton|person
+president|and|punc
+president|number|conj
+predecessors|his|gen
+number|predecessors|of
+passed|veto|obj
+passed|1996|in
+document|republican party|gen
+document|"|punc
+document|contract with america|nn
+document|"|punc
+document|policy|nn
+passed|document|under
+planning|justice department|subj
+planning|appeal to|fc
+appeal to|justice department|subj
+appeal to|u.s. supreme court|obj
+appeal to|after|mod
+judge|federal|mod
+after|struck down|comp1
+struck down|judge|subj
+veto|line-item|nn
+struck down|veto|obj
+struck down|thursday|mod
+struck down|as|mod

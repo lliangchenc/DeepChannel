@@ -1,0 +1,164 @@
+hid|company|subj
+hid|evidence|obj
+evidence|that|c
+combination|popular|mod
+combination|diet-drug|mod
+half|combination|of
+caused|fen-phen|subj
+problems|serious|mod
+problems|heart|nn
+caused|problems|obj
+lawyer|woman|for
+woman|suing|rel
+suing|woman|subj
+suing|american home products corp.|obj
+american home products corp.|$110 million|for
+said|lawyer|subj
+said|wednesday|mod
+attorneys|american home products corp.|for
+insist|attorneys|subj
+insist|is|fc
+is|not|neg
+is|liable|pred
+problems|health|nn
+liable|problems|for
+problems|woman|of
+woman|who|whn
+used|woman|subj
+fen-phen|diet-drug|mod
+fen-phen|combination|nn
+used|fen-phen|obj
+used|saying|mod
+saying|attorney|subj
+saying|misused|fc
+misused|she|subj
+misused|products|obj
+misused|and|punc
+misused|predisposed|conj
+predisposed|she|obj
+disease|heart|nn
+predisposed|disease|to
+products|american|nn
+products|home|nn
+sold|products|subj
+fen|`|punc
+fen|`|punc
+sold|fen|obj
+sold|'|punc
+sold|'|punc
+sold|half|punc
+sold|of|punc
+sold|the|punc
+sold|combination|punc
+name|brand|nn
+sold|name|under
+sold|and|punc
+sold|made|conj
+made|products|subj
+redux|pondimin|gen
+redux|chemical|mod
+redux|cousin|nn
+made|redux|obj
+products|american|nn
+products|home|nn
+agreed|products|subj
+agreed|pay|fc
+pay|product|subj
+pay|$3.75 billion|obj
+$3.75 billion|settle|rel
+settle|$3.75 billion|subj
+settle|thousands|obj
+thousands|lawsuits|of
+lawsuits|filed|vrel
+filed|lawsuits|obj
+filed|nationwide|mod
+nationwide|people|by
+people|claiming|rel
+claiming|people|subj
+problems|health|nn
+claiming|problems|obj
+combination|company|gen
+popular|once|mod
+combination|popular|mod
+combination|fen-phen|mod
+combination|diet|mod
+combination|drug|nn
+problems|combination|due to
+combination|company|appo
+company|announced|vrel
+announced|company|obj
+announced|today|mod
+step|major|mod
+said|step|in
+step|resolving|toward
+claims|health|nn
+resolving|claims|obj
+fen-phen|diet|mod
+fen-phen|drug|nn
+fen-phen|combination|nn
+claims|fen-phen|against
+american home products|drug maker|nn
+said|american home products|subj
+said|just|guest
+users|drug|gen
+1 percent|users|of
+said|opted out|fc
+opted out|1 percent|subj
+settlement|multibillion|nn
+settlement|dollar|nn
+opted out|settlement|of
+more|9,000|than
+filed|lawsuits|obj
+products|american|nn
+products|home|nn
+filed|products|against
+products|maker|appo
+maker|fenfluramine|of
+'fen|'|punc
+fenfluramine|'fen|appo
+'fen|'|punc
+'fen|'|punc
+combination|fen-phen|mod
+combination|diet|mod
+combination|drug|nn
+'fen|combination|in
+more|9,000|than
+filed|lawsuits|obj
+products|american|nn
+products|home|nn
+filed|products|against
+products|maker|conj
+maker|fenfluramine|of
+'fen|'|punc
+fenfluramine|'fen|conj
+'fen|'|punc
+'fen|'|punc
+pondimin|fen-phen|mod
+pondimin|diet|mod
+pondimin|drug|nn
+pondimin|combination.since|nn
+'fen|pondimin|in
+name|american home products|gen
+name|brand|nn
+pondimin|name|conj
+name|fenfluramine|for
+fenfluramine|_|punc
+fen|`|punc
+fen|`|punc
+fenfluramine|fen|appo
+fen|'|punc
+fen|'|punc
+fen|fen-phen|in
+name|_|punc
+name|and|punc
+name|redux|conj
+drug|similar|mod
+were|removed|pred
+removed|market|from
+market|september 1997|in
+lawsuits|6,500|num
+lawsuits|covering|rel
+covering|lawsuit|subj
+people|11,000|num
+covering|people|obj
+filed|lawsuits|obj

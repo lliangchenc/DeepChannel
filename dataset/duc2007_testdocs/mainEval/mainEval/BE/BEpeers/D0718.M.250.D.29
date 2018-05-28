@@ -1,0 +1,166 @@
+earvin|basketball|nn
+earvin|legend|nn
+earvin|"|punc
+johnson|magic|nn
+johnson|"|punc
+johnson|and|punc
+howard schultz|starbucks|nn
+howard schultz|boss|mod
+johnson|howard schultz|conj
+earvin|brought|rel
+brought|earvin|obj1
+brought|johnson|subj
+show|their|gen
+show|inner-city|nn
+show|road|nn
+brought|show|obj2
+neighborhood|seattle|gen
+neighborhood|columbia city|nn
+show|neighborhood|to
+brought|friday|mod
+opened|they|subj
+opened|latest|obj1
+50-50|their|gen
+latest|50-50|in
+stores|joint-venture|nn
+stores|starbucks coffee|nn
+opened|stores|obj2
+announced|starbucks coffee co.|subj
+announced|new|obj
+division|consumer products|nn
+ice cream|its|gen
+ice cream|specialty|nn
+division|ice cream|for
+drinks|bottled|mod
+drinks|coffee|nn
+ice cream|drinks|conj
+drinks|and|punc
+products|other|mod
+drinks|products|conj
+new|sold|rel
+sold|new|obj
+sold|division|subj
+sold|away|mod
+shops|its own|gen
+away|shops|from
+joined|time inc.|subj
+joined|forces|obj
+forces|starbucks|with
+starbucks corp.|coffee|nn
+starbucks corp.|giant|mod
+purchased|starbucks corp.|subj
+purchased|hear music|obj
+title|mackinnon|gen
+title|new|mod
+is|vice president|pred
+vice president|music|conj
+music|and|punc
+music|entertainment|conj
+is|starbucks|for
+formed|it|subj
+formed|partnerships|obj
+providers|web|nn
+providers|content|nn
+partnerships|providers|with
+formed|and|punc
+formed|attempted|conj
+attempted|it|subj
+attempted|buy|fc
+buy|it|subj
+buy|williams-sonoma inc.|obj
+starbucks|seattle-based|mod
+hopes|starbucks|subj
+hopes|that|c
+attract|tazo|with
+attract|it|subj
+customers|new|mod
+attract|customers|obj
+has|pasqua|subj
+outlets|56|num
+has|outlets|obj
+outlets|los angles|in
+los angles|new york|conj
+new york|and|punc
+areas|san francisco|nn
+new york|areas|conj
+starbucks|seattle|gen
+starbucks|proposed|vrel
+proposed|starbucks|obj
+proposed|buying|mod
+buying|williams-sonoma|obj
+starbucks|internet|as
+play|starbucks|subj
+overture|starbucks|nn
+raises|overture|subj
+raises|questions|obj
+future|williams-sonoma|gen
+questions|future|about
+company|independent|mod
+future|company|as
+chain|convenience-store|nn
+plans|chain|subj
+plans|install|fc
+install|chain|subj
+atms|internet-ready|mod
+install|atms|obj
+spokesman|starbucks|nn
+declined|spokesman|subj
+declined|comment|fc
+comment|spokesman|subj
+announced|starbucks|subj
+announced|partnership|obj
+media|oxygen|nn
+partnership|media|with
+media|develop|rel
+develop|media|subj
+portal|lifestyle-oriented|mod
+develop|portal|obj
+portal|and|punc
+business|cable television|nn
+portal|business|conj
+business|targeting|rel
+targeting|business|subj
+women|upscale|mod
+targeting|women|obj
+addition|perfect|mod
+addition|e-commerce|mod
+be|addition|pred
+stores|williams-sonoma|gen
+stores|larger|mod
+locales|good|mod
+be|locales|pred
+bars|small|mod
+bars|starbucks|nn
+bars|coffee|nn
+locales|bars|for
+chief executive|starbucks|of
+like|chief executive|subj
+like|siess|obj
+wants|also|amod
+wants|it|subj
+wants|expand|fc
+expand|it|subj
+expand|overseas|mod
+tapped|company|subj
+tapped|pepsi-cola co.|obj
+pepsi-cola co.|sell|rel
+sell|pepsi-cola co.|subj
+beverage|its|gen
+beverage|frappuccino|nn
+beverage|blended|mod
+beverage|coffee|nn
+sell|beverage|obj
+use|starbucks|according to
+base|its|gen
+base|10 million|nn
+base|weekly|mod
+base|customer|nn
+90 percent|base|of
+use|90 percent|subj
+use|internet|obj
+reported|alone|mod-before
+reported|starbucks|subj
+reported|$1.1 billion|obj
+sales|retail|nn
+$1.1 billion|sales|in
+sales|fiscal 1998|for

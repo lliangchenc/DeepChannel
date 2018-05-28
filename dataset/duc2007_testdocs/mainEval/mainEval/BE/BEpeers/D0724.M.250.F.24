@@ -1,0 +1,139 @@
+defined|obesity|obj
+defined|clinically|mod
+being|20 percent|pred
+20 percent|heavier|pnmod
+weight|your|gen
+weight|ideal|mod
+heavier|weight|than
+condition|serious|mod
+condition|health|nn
+is|condition|pred
+level|epidemic|mod
+said|level|at
+jeffrey koplan|dr.|title
+occurring|said|fc
+said|jeffrey koplan|subj
+control|adults|like
+adults|type 2|with
+children|disease|with
+control|children|subj
+levels|their|gen
+levels|blood glucose|nn
+control|levels|obj
+loss|weight|nn
+levels|loss|with
+loss|and|punc
+modification|diet|mod
+loss|modification|conj
+factor|known|mod
+factor|risk|nn
+is|factor|pred
+diabetes|adult-onset|mod
+factor|diabetes|for
+disease|heart|nn
+diabetes|disease|conj
+disease|and|punc
+disease|types|conj
+types|cancer|of
+experts|health|nn
+experts|and|punc
+experts|researchers|conj
+naming|experts|subj
+naming|nation|obj1
+naming|penchant|obj2
+portions|large|mod
+penchant|portions|for
+supersizing|'|punc
+supersizing|'|punc
+cause|leading|mod
+supersizing|cause|as
+cause|obesity|of
+are|more|mod-before
+more|half|than
+adults|all|pre
+half|adults|of
+54.9 percent--|united states--|mod
+adults|54.9 percent--|in
+are|now|pred
+overweight|or|punc
+overweight|obese|conj
+are|research|according to
+today|published|mod
+being|today|pred
+being|scientists|by
+scientists|centers|at
+control|disease|nn
+centers|control|for
+control|and|punc
+control|prevention|conj
+research|other|mod
+research|recent|mod
+found|research|subj
+50|more than|num-mod
+found|50|obj
+are|overweight|pred
+are|obese|pred
+are|even|mod
+are|though|mod
+products|weight-loss|nn
+products|and|punc
+products|services|conj
+though|are|comp1
+industry|$33 billion|nn
+are|industry|pred
+eating|americans|subj
+ever|more than|mod
+eating|ever|mod
+eating|increasing|mod
+increasing|american|subj
+number|their|gen
+number|average|mod
+increasing|number|obj
+number|calories|of
+increasing|year|mod
+increasing|year|by
+journal|american medical association|of
+exhorted|journal|subj
+counsel|doctors|subj
+patients|fat|mod
+counsel|patients|obj
+patients|diet|about
+diet|and|punc
+diet|exercise|conj
+gene|bad|mod
+increases|gene|subj
+increases|growth|obj
+cells|fat|nn
+growth|cells|in
+increases|and|punc
+increases|contributes to|conj
+contributes to|gene|subj
+contributes to|obesity|obj
+obesity|people|in
+measured|studies|in
+measured|obesity|obj
+measured|terms|in
+terms|body mass index|of
+bmi|(|punc
+body mass index|bmi|abbrev
+bmi|)|punc
+index|body|nn
+index|mass|nn
+someone|index|with
+index|30|of
+30|or|punc
+30|more|conj
+30|about|num-mod
+pounds|30|amount-value
+221 pounds|pounds|nn
+221 pounds|overweight-roughly|mod
+is|221 pounds|pred
+person|6-foot|nn
+221 pounds|person|in
+person|or|punc
+pounds|186|amount-value
+person|pounds|conj
+person|5-foot-6|nn
+pounds|person|in
+cause|major|mod
+is|cause|pred

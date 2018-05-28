@@ -1,0 +1,154 @@
+ap|vienna|nn
+ap|(|punc
+representatives|military|mod
+countries|33|num
+representatives|countries|of
+countries|as|punc
+countries|well|punc
+countries|as|punc
+organizations|non-governmental|mod
+countries|organizations|conj
+opened|representatives|subj
+conference|four-day|nn
+opened|conference|obj
+aimed|tuesday|mod-before
+conference|aimed|vrel
+aimed|conference|obj
+aimed|eliminating|mod
+eliminating|representative|subj
+mines|land|nn
+eliminating|mines|obj
+mines|europe|throughout
+become|namibia|subj
+country|24th|mod
+become|country|obj
+country|ratify|rel
+ratify|country|subj
+convention|ottawa|nn
+ratify|convention|obj
+convention|banning|rel
+banning|convention|subj
+mines|land|nn
+banning|mines|obj
+ban|use|on
+use|production|conj
+production|and|punc
+production|stockpiling|conj
+weapon|anti-personnel|mod
+stockpiling|weapon|of
+signed|ban|obj
+signed|by|by-subj
+countries|127|num
+signed|countries|by
+began|spain|subj
+began|destroying|mod
+destroying|spain|subj
+stockpile|its|gen
+destroying|stockpile|obj
+landmines|800,000|num
+landmines|anti-personal|mod
+'s|compliance|in
+compliance|last|with
+treaty|ottawa|nn
+'s|treaty|pred
+became|burkino faso|subj
+country|40th|mod
+became|country|obj
+country|ratify|rel
+ratify|country|subj
+treaty|international|nn
+ratify|treaty|obj
+treaty|ban|rel
+ban|treaty|subj
+mines|anti-personnel|mod
+mines|land|nn
+ban|mines|obj
+ban|wednesday|mod
+ban|meaning|mod
+meaning|go into|fc
+go into|treaty|subj
+go into|effect|obj
+months|six|amount-value
+effect|months|in
+announced|united nations|subj
+go into|announced|mod
+years|two|amount-value
+been|years|pred
+been|since|mod
+death|diana|of
+diana|princess|appo
+princess|wales|of
+since|gave|comp1
+gave|death|subj
+gave|last|obj
+boost|emotional|mod
+treaty|international|mod
+boost|treaty|to
+treaty|ban|rel
+ban|treaty|subj
+mines|anti-personnel|mod
+mines|land|nn
+ban|mines|obj
+negotiated|then|mod-before
+negotiated|feverishly|amod
+negotiated|boost|obj
+negotiated|oslo|in
+xinhua|december 2|nn
+xinhua|(|punc
+johannesburg|xinhua|appo
+is|join|pred
+100|more than|num-mod
+countries|100|nn
+join|countries|obj
+countries|canada|in
+canada|sign|rel
+sign|week|subj
+sign|treaty|obj
+treaty|banning|rel
+banning|treaty|subj
+banning|use|obj
+use|or|punc
+use|possession|conj
+mines|anti-personnel|mod
+possession|mines|of
+minister|south african|nn
+minister|foreign|mod
+minister|alfred nzo|person
+sign|minister|subj
+sign|treaty|obj
+treaty|wednesday|on
+treaty|ottawa|in
+statement|official|mod
+sign|statement|according to
+statement|issued|vrel
+issued|statement|obj
+issued|pretoria|in
+issued|today|mod
+official|first|post
+official|angolan|mod
+official|senior|mod
+is|official|pred
+official|make|rel
+make|official|subj
+make|speech|obj
+speech|meeting|at
+meeting|which|whn
+started|meeting|subj
+started|may 3.|on
+xinhua|october 23|nn
+xinhua|(|punc
+nairobi|xinhua|appo
+year|next|post
+ratify|year|guest
+ratify|kenya|subj
+treaty|ottawa|nn
+ratify|treaty|obj
+treaty|banning|rel
+banning|treaty|subj
+banning|use|obj
+mines|land|nn
+use|mines|of
+official|senior|mod
+official|kenyan|mod
+official|government|nn
+banning|official|according to

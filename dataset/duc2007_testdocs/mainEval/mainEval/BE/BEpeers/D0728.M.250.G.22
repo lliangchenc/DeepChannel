@@ -1,0 +1,133 @@
+15 percent|only|mod
+15 percent|20 percent|to
+20 percent|patients|of
+patients|who|whn
+get|patients|subj
+get|interferon|obj
+rid|15 percent|obj
+signs|all|pre
+rid|signs|of
+signs|virus|of
+patients|treated|vrel
+treated|patients|obj
+treated|interferon|with
+relapse|eventually|mod-before
+relapse|patients|subj
+food and drug administration|us|nn
+approved|food and drug administration|subj
+approach|new|mod
+approved|approach|obj
+approach|combination|conj
+combination|interferon|of
+combination|and|punc
+combination|ribavirin|conj
+had|patients|in
+patients|given|vrel
+given|patients|obj1
+given|interferon|obj2
+given|alone|mod
+had|5 percent|subj
+levels|undetectable|mod
+had|levels|obj
+specialized pharmacy services|fisher|gen
+specialized pharmacy services|pittsburgh|in
+announced|specialized pharmacy services|subj
+announced|plans|obj
+plans|fill|rel
+fill|plan|subj
+fill|prescriptions|obj
+prescriptions|nationwide|pnmod
+ribavirin|anti-viral|mod
+ribavirin|drug|nn
+nationwide|ribavirin|for
+food and drug administration|wednesday|on
+approved|food and drug administration|subj
+combination|powerful|mod
+approved|combination|obj
+drugs|two|nn
+drugs|antiviral|mod
+combination|drugs|of
+drugs|treat|rel
+treat|drug|subj
+hepatitis|chronic|mod
+treat|hepatitis|obj
+c.|but|punc
+c.|half|conj
+half|patients|of
+do|not|neg
+hepatitis|respond|rel
+respond|hepatitis|obj
+respond|c.|subj
+respond|interferon|to
+interferon|all|at
+all|and|punc
+buchanan|mrs|title
+all|buchanan|conj
+was|one|pred
+one|those|of
+but|say|comp1
+say|patients|subj
+say|that|c
+doctors|their|gen
+would like|doctors|subj
+would like|prescribe|fc
+prescribe|doctor|subj
+prescribe|ribavirin|obj
+ribavirin|brand|with
+brand|interferon|of
+proves|ultimately|mod-before
+proves|interferon|subj
+proves|ineffective|desc
+approved|rebetron|obj
+approved|june|in
+june|only|pnmod
+only|patients|for
+patients|who|whn
+relapsed|patients|subj
+taking|rebetron|subj
+drugs|interferon|nn
+taking|drugs|obj
+other|only|mod
+treatment|other|mod
+treatment|approved|mod
+drugs|treatment|appo
+treatment|disease|for
+was|time|at
+treatment|only|mod
+was|treatment|pred
+food and drug administration|us|nn
+decision|food and drug administration|by
+marks|decision|subj
+victory|major|mod
+marks|victory|obj
+inc.|biogen|nn
+victory|inc.|for
+tumor|giant-cell|mod
+tumor|jaw|of
+cured|tumor|obj
+cured|drug|with
+drug|that|whn
+inhibits|drug|subj
+inhibits|angiogenesis|obj
+saved|also|amod
+saved|interferon|subj
+saved|children|obj
+children|life|with
+succeeded|subsequently|mod-before
+succeeded|he|subj
+succeeded|in|guest
+developing|he|subj
+developing|recombinant|obj
+interferon|a-1b|nn
+succeeded|interferon|obj
+months|six|amount-value
+months|treatment|after
+treatment|combination|conj
+combination|interferon|of
+combination|and|punc
+combination|drug|conj
+drug|called|vrel
+called|drug|obj1
+called|ribavirin|desc
+was|31 to 38|pred
+effective|patients|among

@@ -1,0 +1,145 @@
+balloon|swiss|mod
+pilot|balloon|subj
+pilot|bertrand piccard|obj
+teammate|his|gen
+teammate|new|mod
+tony brown|british|mod
+tony brown|flight engineer|nn
+teammate|tony brown|appo
+said|teammate|subj
+said|be|fc
+be|ready|pred
+be|later|mod
+be|month|mod
+attempt|new|mod
+month|attempt|for
+attempt|fly|rel
+fly|attempt|subj
+fly|nonstop|desc
+nonstop|world|round
+swiss|and|punc
+balloonists|british|mod
+swiss|balloonists|conj
+balloonists|aiming|rel
+aiming|balloonist|subj
+be|first|pred
+first|circle|rel
+circle|first|subj
+circle|world|obj
+floated|nonstop|mod-before
+floated|swiss|subj
+floated|pacific ocean|over
+floated|thursday|mod
+making|swiss|subj
+making|it|obj
+making|china|across
+team|swiss-british|nn
+team|hoping|rel
+hoping|team|subj
+be|first|pred
+first|fly|rel
+fly|first|subj
+fly|balloon|obj
+balloon|world|around
+passed|nonstop|mod-before
+passed|team|subj
+passed|south|obj
+south|japan|of
+passed|today|mod
+passed|trying|mod
+trying|team|subj
+trying|avoid|fc
+avoid|thunderstorms|obj
+thunderstorms|that|whn
+ended|thunderstorms|subj
+ended|flight|obj
+team|rival|mod
+flight|team|of
+ended|week|mod
+adventurers|bertrand piccard|appo
+bertrand piccard|switzerland|of
+switzerland|and|punc
+switzerland|brian jones|conj
+brian jones|england|of
+steered|adventurers|subj
+balloon|their|gen
+steered|balloon|obj
+balloon|pacific ocean|over
+pacific ocean|hawaii|toward
+hawaii|and|punc
+hawaii|california|conj
+california|or|punc
+california|mexico|conj
+team|swiss-english|nn
+team|balloon|nn
+soared|team|subj
+soared|mexico|over
+today|early|mod
+soared|today|mod
+completing|team|subj
+journey|six-day|nn
+completing|journey|obj
+journey|pacific ocean|across
+pacific ocean|attempt|in
+attempt|become|comp1
+balloonists|first|post
+become|balloonists|obj
+balloonists|travel|rel
+travel|balloonist|subj
+travel|nonstop|mod
+nonstop|world|around
+pilots brian jones|england|of
+england|and|punc
+england|bertrand piccard|conj
+bertrand piccard|switzerland|of
+flown|pilots brian jones|subj
+flown|further|desc
+further|balloonist|than
+flown|before|mod
+flown|traveling|mod
+traveling|pilots brian jones|subj
+traveling|more|mod
+miles|21,625|num
+more|miles|than
+miles|leaving|after
+leaving|swiss alps|obj
+swiss alps|march 1.|on
+voyage|20-day|nn
+voyage|swiss bertrand piccard|conj
+swiss bertrand piccard|and|punc
+swiss bertrand piccard|british brian jones|conj
+after|completed|comp1
+completed|voyage|subj
+circumnavigation|their|gen
+circumnavigation|nonstop|mod
+completed|circumnavigation|obj
+circumnavigation|hot-air balloon|on
+completed|and|punc
+completed|landed|conj
+landed|voyage|obj
+egypt|southern|mod
+landed|egypt|in
+landed|smoothly|mod
+morning|sunday|nn
+landed|morning|mod
+said|international olympic committee|subj
+said|wednesday|mod
+wednesday|that|c
+award|wednesday|obj1
+award|they|subj
+award|olympic order|obj2
+bertrand piccard|balloonists|nn
+olympic order|bertrand piccard|to
+bertrand piccard|and|punc
+bertrand piccard|brian jones|conj
+brian jones|who|whn
+are|first|pred
+first|circumnavigate|rel
+circumnavigate|first|subj
+circumnavigate|world|obj
+world|balloon|in
+is|optimistic|pred
+grant|soon|amod
+grant|china|subj
+balloon|swiss-based|mod
+grant|balloon|obj

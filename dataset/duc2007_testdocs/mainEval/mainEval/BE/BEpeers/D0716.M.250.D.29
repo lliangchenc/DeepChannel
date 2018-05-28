@@ -1,0 +1,145 @@
+delegation|high-level|mod
+delegation|united nations|nn
+began|delegation|subj
+began|touring|guest
+touring|delegation|subj
+touring|australia|obj
+began|kakadu national park|obj
+kakadu national park|examine|rel
+examine|kakadu national park|subj
+examine|claims|obj
+mine|uranium|nn
+claims|threatens|comp1
+threatens|mine|subj
+values|unique|mod
+values|cultural|mod
+cultural|and|punc
+cultural|environmental|conj
+threatens|values|obj
+government|australian|mod
+gave|today|mod-before
+gave|government|subj
+light|green|nn
+gave|light|obj
+plan|country|gen
+plan|controversial|mod
+plan|uranium|nn
+plan|mining|nn
+light|plan|to
+report|world heritage committee|nn
+found|report|subj
+mine|jabiluka|nn
+mine|uranium|nn
+found|threatened|fc
+threatened|mine|subj
+area|surrounding|mod
+area|kakadu world heritage|nn
+threatened|area|obj
+threatened|and|punc
+threatened|raised|conj
+raised|mine|subj
+raised|prospect|obj
+prospect|kakadu|of
+want|protesters|subj
+want|development|obj1
+mine|jabiluka|nn
+development|mine|of
+want|stopped|desc
+mines|already|amod
+mines|company|subj
+ore|uranium|nn
+mines|ore|obj
+mine|nearby|mod
+mine|ranger|nn
+ore|mine|at
+damage|mine|subj
+damage|environment|obj
+located|northern territory|in
+australia|northwest|mod
+covers|kakadu national park|subj
+km|20,000|num
+km|square|mod
+covers|km|obj
+blasted|the sydney morning herald environment minister robert hill|subj
+blasted|report|obj
+report|as|mod
+lease|jabiluka|nn
+owners|lease|of
+oppose|owners|subj
+oppose|mine|obj
+thousands|tourists|of
+visit|thousands|subj
+visit|park|obj
+visit|year|mod
+site|government-approved|mod
+site|mine|mod
+is|in|pred
+is|area|in
+area|surrounded|vrel
+surrounded|area|obj
+surrounded|by|by-subj
+kakadu national park|aboriginal-owned|mod
+surrounded|kakadu national park|by
+called for|committee|subj
+called for|scrapping|obj
+scrapping|mine|of
+resources|energy|nn
+resources|australia ltd.|of
+begun|resources|subj
+begun|construction|obj
+mine|jabiluka|nn
+construction|mine|of
+groups|environmental|mod
+groups|and|punc
+aborigines|local|mod
+groups|aborigines|conj
+oppose|groups|subj
+oppose|mine|obj
+made|decision|obj
+meeting|bureau|gen
+made|meeting|at
+meeting|kyoto|in
+kyoto|december|in
+era|and|punc
+government|australia|gen
+era|government|conj
+claim|era|subj
+will|not|neg
+claim|hurt|fc
+hurt|jabiluka|subj
+hurt|park|obj
+project|jabiluka|nn
+considered|project|obj1
+test|litmus|nn
+considered|test|obj2
+projects|other|mod
+projects|potential|mod
+projects|uranium|nn
+projects|mine|nn
+test|projects|for
+projects|australia|in
+expects|it|subj
+expects|mine|obj
+mine|add|rel
+add|mine|subj
+3.7 billion|u.s.|nn
+3.7 billion|dlrs|nn
+add|3.7 billion|obj
+mine|(|punc
+mine|6.2 billion australian dollars|appo
+6.2 billion australian dollars|)|punc
+product|australia|gen
+product|gross|mod
+product|domestic|mod
+6.2 billion australian dollars|product|to
+30|about|num-mod
+years|30|amount-value
+product|years|over
+years|and|punc
+years|boost|conj
+share|country|gen
+uranium|world|nn
+share|uranium|of
+boost|market|rel
+market|boost|obj
+market|share|subj

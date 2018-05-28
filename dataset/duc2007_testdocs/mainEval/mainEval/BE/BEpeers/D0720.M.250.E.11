@@ -1,0 +1,138 @@
+time|first|post
+is|time|for
+history|israel|gen
+time|history|in
+election|its|gen
+election|upcoming|mod
+is|about|pred
+control|who|subj
+control|interior ministry|obj
+interior ministry|not|appo-mod
+interior ministry|foreign ministry|appo
+jerusalem|palestine|nn
+search|jerusalem|of
+xinhua|september 2|nn
+xinhua|(|punc
+jerusalem|xinhua|appo
+gave|today|mod-before
+gave|egypt|subj
+weeks|israel|nn
+weeks|three|amount-value
+gave|weeks|obj
+weeks|implement|rel
+implement|weeks|subj
+agreements|its|gen
+agreements|peace|nn
+implement|agreements|obj
+agreements|palestinians|with
+cancel|it|subj
+cancel|middle east|obj
+middle east|and|punc
+summit|north africa|nn
+summit|economic|mod
+middle east|summit|conj
+summit|due|pnmod
+due|held|fc
+held|cairo|in
+cairo|november|in
+issued|ultimatum|obj
+issued|by|by-subj
+ambassador|egyptian|mod
+issued|ambassador|by
+ambassador|israel mohammed bassiouny|to
+conference|press|nn
+israel mohammed bassiouny|conference|at
+issued|today|mod
+xinhua|july 12|nn
+xinhua|(|punc
+gaza city|xinhua|appo
+president|palestinian|mod
+president|yasser arafat|person
+warned|president|subj
+warned|that|obj
+palestinian-israeli|signed|mod
+failure|palestinian-israeli|of
+accords|peace|nn
+lead|accords|subj
+lead|region|obj
+region|violence|to
+xinhua|august 19|nn
+xinhua|(|punc
+jerusalem|xinhua|appo
+minister|prime|mod
+minister|benjamin netanyahu|person
+turned down|minister|subj
+turned down|invitation|obj
+invitation|attend|rel
+attend|invitation|subj
+attend|meeting|obj
+meeting|norway|in
+week|next|post
+attend|week|mod
+week|mark|rel
+mark|week|subj
+anniversary|fifth|post
+mark|anniversary|obj
+accords|oslo|nn
+anniversary|accords|of
+xinhua|september 13|nn
+xinhua|(|punc
+jerusalem|xinhua|appo
+accords|historic|mod
+accords|oslo|nn
+signed|accords|obj
+signed|washington|in
+five years ago|today|nn
+signed|five years ago|mod
+were|promised land|pred
+promised land|and|punc
+peace|israelis|nn
+promised land|peace|conj
+has|council|subj
+members|124|num
+has|members|obj
+xinhua|may 4|nn
+xinhua|(|punc
+jerusalem|xinhua|appo
+three|at least|num-mod
+students|three|nn
+students|palestinian|mod
+injured|students|obj
+injured|clashes|in
+soldiers|israeli|mod
+clashes|soldiers|with
+injured|tuesday|mod
+checkpoint|bitonia|nn
+injured|checkpoint|at
+city|west bank|nn
+checkpoint|city|near
+city|ramallah|of
+police|palestinian|mod
+police|security|nn
+said|police|subj
+xinhua|april 30|nn
+xinhua|(|punc
+eilat|xinhua|appo
+israeli|and|punc
+negotiators|palestinian|mod
+israeli|negotiators|conj
+negotiators|opened|vrel
+opened|negotiators|obj1
+opened|round|obj2
+round|final-status|of
+talks|israeli|subj
+talks|in|guest
+talks|israel|in
+city|southern|mod
+city|red sea|nn
+city|resort|nn
+talks|city|obj
+city|eilat|of
+eilat|sunday|on
+talks|effort|in
+effort|reach|comp1
+reach|israeli|subj
+agreement|framework|nn
+reach|agreement|obj
+issues|final-status|nn
+agreement|issues|on

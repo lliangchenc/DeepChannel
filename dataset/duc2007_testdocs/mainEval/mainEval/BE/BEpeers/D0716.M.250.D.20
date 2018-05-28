@@ -1,0 +1,163 @@
+ap|darwin|nn
+ap|(|punc
+ap|)|punc
+government|australian|mod
+ap|have|rel
+have|ap|obj
+have|government|subj
+have|april 15|until
+year|next|post
+have|year|of
+year|try|rel
+try|year|subj
+try|stop|fc
+stop|united nations|obj
+united nations|declaring|from
+declaring|government|subj
+declaring|kakadu national park|obj
+kakadu national park|endangered|vrel
+endangered|kakadu national park|obj
+mine|jabiluka|nn
+mine|uranium|nn
+endangered|mine|because of
+mine|jabiluka|nn
+construction|mine|of
+mine|australia|gen
+mine|first|post
+mine|new|mod
+mine|uranium|nn
+mine|decade|in
+mine|began|rel
+began|mine|obj
+began|mine|subj
+began|june|in
+battle|protracted|mod
+battle|legal|mod
+began|battle|after
+owners|aboriginal|mod
+owners|land|nn
+battle|owners|with
+with|and|punc
+with|amid|conj
+with|continuing|amid
+continuing|mine|subj
+protest|environmental|mod
+continuing|protest|obj
+report|world heritage committee|nn
+found|report|subj
+mine|jabiluka|nn
+mine|uranium|nn
+found|threatened|fc
+threatened|mine|subj
+area|surrounding|mod
+area|kakadu world heritage|nn
+threatened|area|obj
+threatened|and|punc
+threatened|raised|conj
+raised|mine|subj
+raised|prospect|obj
+prospect|kakadu|of
+kakadu|placed|rel
+list|committee|gen
+list|endangered|mod
+placed|list|on
+project|jabiluka|nn
+considered|project|obj1
+test|litmus|nn
+considered|test|obj2
+projects|other|mod
+projects|potential|mod
+projects|uranium|nn
+projects|mine|nn
+test|projects|for
+projects|australia|in
+conservationists|age australian|nn
+conservationists|and|punc
+owners|traditional|mod
+owners|aboriginal|mod
+conservationists|owners|conj
+threatened|conservationists|subj
+threatened|blockade|mod
+blockade|conservationist|subj
+blockade|development|obj
+mine|huge|mod
+mine|jabiluka|nn
+mine|uranium|nn
+development|mine|of
+kakadu national park|country|gen
+kakadu national park|vast|mod
+mine|kakadu national park|in
+kakadu national park|which|whn
+is|on|pred
+is|world heritage list|on
+is|after|mod
+after|approved|comp1
+approved|federal government|subj
+plan|mining|nn
+approved|plan|obj
+mine|jabilika|nn
+plan|mine|for
+approved|yesterday|mod
+expects|it|subj
+expects|mine|obj
+mine|add|rel
+add|mine|subj
+3.7 billion|u.s.|nn
+3.7 billion|dlrs|nn
+add|3.7 billion|obj
+mine|(|punc
+mine|6.2 billion australian dollars|appo
+6.2 billion australian dollars|)|punc
+product|australia|gen
+product|gross|mod
+product|domestic|mod
+6.2 billion australian dollars|product|to
+30|about|num-mod
+years|30|amount-value
+product|years|over
+years|and|punc
+years|boost|conj
+share|country|gen
+uranium|world|nn
+share|uranium|of
+boost|market|rel
+market|boost|obj
+market|share|subj
+police|canberra|nn
+police|(|punc
+police|ap|nn
+police|)|punc
+arrested|police|subj
+100|more than|num-mod
+protesters|100|nn
+arrested|protesters|obj
+arrested|tuesday|mod
+resources|energy|nn
+arrested|resources|at
+development|australia|gen
+development|jabiluka|nn
+development|mine|mod
+resources|development|of
+development|kakadu|at
+area|world|nn
+area|heritage|nn
+area|listed|mod
+development|area|appo
+area|northern territory|in
+resources|energy|nn
+resources|australia ltd.|of
+said|resources|subj
+said|expects|fc
+expects|it|subj
+expects|begin|fc
+begin|it|subj
+begin|digging|mod
+jabiluka|remote|mod
+digging|jabiluka|at
+jabiluka|mining|rel
+mining|jabiluka|subj
+mining|lease|obj
+lease|northern territory|in
+mining|month|mod
+government|territorial|mod
+mining|government|after

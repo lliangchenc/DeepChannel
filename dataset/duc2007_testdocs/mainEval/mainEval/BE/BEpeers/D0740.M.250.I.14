@@ -1,0 +1,145 @@
+balloon|swiss|mod
+pilot|balloon|subj
+pilot|bertrand piccard|obj
+teammate|his|gen
+teammate|new|mod
+tony brown|british|mod
+tony brown|flight engineer|nn
+teammate|tony brown|appo
+said|teammate|subj
+said|be|fc
+be|ready|pred
+be|later|mod
+be|month|mod
+attempt|new|mod
+month|attempt|for
+attempt|fly|rel
+fly|attempt|subj
+fly|nonstop|desc
+nonstop|world|round
+team|swiss-british|nn
+team|hoping|rel
+hoping|team|subj
+be|first|pred
+first|fly|rel
+fly|first|subj
+fly|balloon|obj
+balloon|world|around
+passed|nonstop|mod-before
+passed|team|subj
+passed|south|obj
+south|japan|of
+passed|today|mod
+passed|trying|mod
+trying|team|subj
+trying|avoid|fc
+avoid|thunderstorms|obj
+thunderstorms|that|whn
+ended|thunderstorms|subj
+ended|flight|obj
+team|rival|mod
+flight|team|of
+ended|week|mod
+team|swiss-english|nn
+team|balloon|nn
+soared|team|subj
+soared|mexico|over
+today|early|mod
+soared|today|mod
+completing|team|subj
+journey|six-day|nn
+completing|journey|obj
+journey|pacific ocean|across
+pacific ocean|attempt|in
+attempt|become|comp1
+balloonists|first|post
+become|balloonists|obj
+balloonists|travel|rel
+travel|balloonist|subj
+travel|nonstop|mod
+nonstop|world|around
+team|swiss-belgian|nn
+took off|team|subj
+mountain|lake-side|nn
+took off|mountain|from
+alps|swiss|mod
+mountain|alps|in
+took off|sunday|mod
+bid|latest|mod
+took off|bid|in
+bid|balloon|rel
+balloon|bid|subj
+balloon|non-stop|mod
+non-stop|world|around
+balloon|reports|according to
+'oex|chateau|nn
+'oex|d|mod
+reports|'oex|from
+capsule|that|whn
+carried|capsule|subj
+carried|balloonists|obj
+trip|first|post
+trip|nonstop|mod
+trip|hot air|nn
+balloonists|trip|on
+trip|globe|around
+went|capsule|subj
+display|permanent|mod
+went|display|on
+went|thursday|mod
+went|national air|in
+national air|and|punc
+museum|space|nn
+national air|museum|conj
+brothers|wright|nn
+plane|brothers|gen
+went|plane|next to
+plane|and|punc
+plane|craft|conj
+craft|that|whn
+carried|craft|subj
+carried|man|obj
+man|moon|to
+said|international olympic committee|subj
+said|wednesday|mod
+wednesday|that|c
+award|wednesday|obj1
+award|they|subj
+award|olympic order|obj2
+bertrand piccard|balloonists|nn
+olympic order|bertrand piccard|to
+bertrand piccard|and|punc
+bertrand piccard|brian jones|conj
+brian jones|who|whn
+are|first|pred
+first|circumnavigate|rel
+circumnavigate|first|subj
+circumnavigate|world|obj
+world|balloon|in
+achieving|what|obj
+called|promoters|subj
+milestone|last|post
+milestone|great|mod
+called|milestone|obj
+milestone|aviation|of
+aviation|bertrand piccard|conj
+bertrand piccard|and|punc
+legends|brian jones|nn
+legends|joined|mod
+bertrand piccard|legends|conj
+legends|wright brothers|like
+wright brothers|and|punc
+wright brothers|charles lindbergh|conj
+completion|saturday|gen
+charles lindbergh|completion|with
+manned|first|mod
+flight|manned|mod
+flight|round-the-world|mod
+flight|balloon|nn
+completion|flight|of
+trip|round|mod
+trip|world|nn
+take|trip|subj
+two|about|num-mod
+weeks|two|amount-value
+take|weeks|obj

@@ -1,0 +1,149 @@
+drug|also known as|appo-mod
+drug|lamivudine|appo
+lamivudine|or|punc
+lamivudine|epivir|conj
+is|one|pred
+block|that|subj
+block|production|obj
+protein|essential|mod
+protein|viral|mod
+production|protein|of
+protein|known|pnmod
+transcriptase|reverse|mod
+known|transcriptase|as
+had|patients|in
+patients|given|vrel
+given|patients|obj1
+given|interferon|obj2
+given|alone|mod
+had|5 percent|subj
+levels|undetectable|mod
+had|levels|obj
+said|hoofnagle|subj
+said|presented|fc
+presented|data|obj
+showing|medical|mod
+showing|meetings|nn
+presented|showing|at
+showing|that|whn
+given|combination|obj
+year|one|amount-value
+given|year|for
+year|people|rel
+people|year|subj
+people|year|obj
+treated|never|guest
+treated|showing|obj
+treated|before|mod
+rate|relapse|nn
+before|was|comp1
+was|only|guest
+was|20 percent|pred
+cause|also|amod
+cause|it|subj
+defects|birth|nn
+cause|defects|obj
+cause|so|mod
+so|avoid|comp1
+avoid|women|subj
+avoid|pregnancy|obj
+avoid|while|mod
+while|take|comp1
+take|they|subj
+take|it|obj
+months|six|amount-value
+age|aquarius|of
+undated-is|coming back to|rel
+coming back to|undated-is|obj
+coming back to|age|subj
+haunt|undated-is|subj
+flower children|its|gen
+haunt|flower children|obj
+experience|some|subj
+effects|serious|mod
+effects|physical|mod
+physical|and|punc
+physical|emotional|conj
+effects|side|nn
+experience|effects|obj
+experience|including|mod
+including|some|subj
+including|depression|obj
+studies|two|nn
+studies|published|vrel
+published|studies|obj
+journal|current|mod
+journal|new england|nn
+published|journal|in
+journal|medicine|of
+but|offer|comp1
+offer|studies|subj
+hope|new|mod
+offer|hope|obj
+says|tovaro|subj
+says|remove|fc
+remove|he|subj
+remove|lung|obj
+lung|using|rel
+using|lung|subj
+small|only|mod
+small|one|nn
+using|small|obj
+small|_|punc
+small|3-inch|appo
+3-inch|_|punc
+3-inch|incision|appo
+side|patient|gen
+incision|side|on
+anesthetizes|he|subj
+anesthetizes|nerves|obj
+nerves|area|in
+area|freezing|by
+freezing|he|subj
+is|not|neg
+is|cure|pred
+is|not|neg
+known|it|obj
+known|whether|c
+delay|treatment|subj
+delay|progression|obj
+disease|liver|nn
+progression|disease|of
+disease|caused|vrel
+caused|progression|obj
+caused|by|by-subj
+caused|virus|by
+suffered|serono laboratories inc.|subj
+blow|major|mod
+suffered|blow|obj
+suffered|monday|mod
+failing|serono laboratories inc.|subj
+failing|obtain|fc
+obtain|permission|obj
+permission|federal government|from
+federal government|sell|rel
+sell|federal government|subj
+drug|its|gen
+drug|multiple sclerosis|nn
+sell|drug|obj
+drug|united states|in
+neighbor|her|gen
+neighbor|who|whn
+tried|unsuccessfully|mod-before
+tried|neighbor|subj
+tried|interferon|obj
+told|neighbor|subj
+told|her|obj
+side-effects|gruesome|mod
+told|side-effects|about
+comes|hepatitis|with
+hysteria|c|nn
+comes|hysteria|subj
+days|dark|mod
+similarity|days|to
+days|aids|of
+aids|_|punc
+aids|shame|appo
+showed|test|subj
+showed|that|c
+was|right|pred

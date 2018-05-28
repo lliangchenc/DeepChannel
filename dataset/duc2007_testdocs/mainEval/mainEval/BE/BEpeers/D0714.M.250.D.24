@@ -1,0 +1,158 @@
+hank barry|chief executive|appo
+chief executive|napster|of
+napster|based|vrel
+based|napster|obj
+based|san mateo|in
+said|hank barry|subj
+site|company|gen
+site|web|nn
+said|attracted|fc
+attracted|site|subj
+20 million|nearly|num-mod
+users|20 million|nn
+attracted|users|obj
+said|ulrich|subj
+said|that|c
+is|free|pred
+free|downloading|for
+downloading|music|subj
+industry|music|nn
+is|not|neg
+is|viable|pred
+use|napster|nn
+use|users|nn
+majority|use|of
+service|download|rel
+download|service|subj
+copyrighted|service|subj
+copyrighted|music|obj
+copyrighted|'|punc
+copyrighted|'|punc
+said|judge|subj
+copyrighted|said|mod
+software|napster|gen
+allows|software|subj
+fans|music|nn
+share|easily|amod
+share|fans|subj
+files|their|gen
+files|mp3|nn
+files|music|nn
+share|files|obj
+files|internet|through
+surge|sharing|in
+sharing|and|punc
+music|trading|nn
+sharing|music|conj
+music|internet|over
+brought|surge|subj
+sites|online|mod
+sites|music|nn
+brought|sites|obj
+sites|conflict|into
+labels|record|mod
+conflict|labels|with
+metallica|heavy|mod
+metallica|metal|nn
+metallica|band|nn
+metallica|wednesday|on
+dropped|metallica|subj
+dropped|legal action|obj
+university|yale|nn
+legal action|university|against
+dropped|after|mod
+after|agreed|comp1
+agreed|school|subj
+block|school|subj
+block|access|obj
+network|their|gen
+network|computer|nn
+access|network|from
+network|internet|to
+site|that|whn
+allows|site|subj
+trade|people|subj
+agreed|copyrighted|fc
+copyrighted|site|subj
+copyrighted|music|obj
+lars ulrich|metallica|nn
+lars ulrich|drummer|nn
+plans|lars ulrich|subj
+plans|visit|fc
+visit|lars ulrich|subj
+visit|napster inc.|obj
+napster inc.|wednesday|on
+wednesday|deliver|rel
+deliver|wednesday|subj
+deliver|gift|obj
+users|335,435|num
+users|napster|nn
+list|users|of
+users|who|whn
+band|heavy|mod
+band|metal|nn
+claims|users|obj
+claims|band|subj
+offered|list|subj
+copies|illegal|mod
+offered|copies|obj
+songs|metallica|nn
+copies|songs|of
+songs|internet|on
+fighting|napster|subj
+suits|copyright|nn
+suits|infringement|nn
+fighting|suits|obj
+suits|filed|vrel
+filed|suits|obj
+filed|by|by-subj
+dre|rap|nn
+dre|artists|nn
+dre|dr.|title
+filed|dre|by
+dre|and|punc
+group|recording industry association of america|nn
+group|trade|mod
+dre|group|conj
+companies|major|mod
+companies|record|mod
+metallica|rock band|nn
+companies|metallica|along with
+metallica|and|punc
+dre|rap|nn
+dre|star|nn
+dre|dr.|title
+metallica|dre|conj
+sued|companies|subj
+sued|napster|obj
+napster|claiming|rel
+claiming|napster|subj
+claiming|promotes|fc
+promotes|program|subj
+piracy|music|nn
+promotes|piracy|obj
+promotes|and|punc
+promotes|cheats|conj
+cheats|program|subj
+cheats|artists|obj
+artists|royalties|out of
+company|san mateo|in
+san mateo|that|whn
+operates|san mateo|subj
+service|online|mod
+operates|service|obj
+cited|company|subj
+cited|exemptions|obj
+exemptions|defense|as
+defense|lawsuits|against
+companies|major|mod
+companies|record|mod
+lawsuits|companies|from
+metallica|heavy|mod
+metallica|metal|nn
+metallica|band|nn
+companies|metallica|conj
+metallica|and|punc
+metallica|rap|conj
+dre|artist|nn
+dre|dr.|title
