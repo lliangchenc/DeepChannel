@@ -1,0 +1,133 @@
+country|democratic|mod
+is|country|pred
+government|military|mod
+government|burma|in
+killed|government|subj
+killed|people|obj
+people|1988|in
+generals|leading|mod
+recently|also|mod
+stepped up|recently|amod
+stepped up|generals|subj
+attacks|their|gen
+attacks|verbal|mod
+stepped up|attacks|obj
+winner|1991|num
+winner|nobel|nn
+winner|peace|nn
+winner|prize|nn
+attacks|winner|against
+winner|who|whn
+married|winner|obj
+academic|british|mod
+married|academic|to
+married|calling|mod
+calling|general|subj
+calling|her|obj1
+calling|traitor|desc
+attempts|her|gen
+traitor|attempts|for
+attempts|bring|rel
+bring|attempt|subj
+bring|democracy|obj
+democracy|country|to
+military|1962|since
+ap|yangon|nn
+ap|(|punc
+government|myanmar|gen
+government|military|mod
+while|continued|comp1
+continued|government|subj
+arrests|its|gen
+continued|arrests|obj
+activists|country|gen
+activists|democracy|nn
+arrests|activists|of
+general|top|mod
+accused|general|subj
+winner|nobel|nn
+winner|peace|nn
+winner|prize|nn
+accused|winner|obj
+working|terrorists|with
+newspapers|state-run|mod
+reported|newspapers|subj
+reported|thursday|obj
+engaged|suu kyi|obj
+confrontation|her|gen
+confrontation|fourth|mod
+engaged|confrontation|in
+months|two|amount-value
+confrontation|months|in
+government|military|mod
+months|government|with
+right|her|gen
+government|right|over
+right|travel|rel
+travel|right|subj
+travel|freely|mod
+freely|myanmar|within
+travel|also known as|mod
+opposition|armed|mod
+operate|opposition|in
+opposition|myanmar|to
+government|lahu|conj
+lahu|absdf|conj
+absdf|and|punc
+absdf|mta|conj
+operate|reportedly|mod-before
+operate|government|subj
+areas|myanmar-thai|nn
+areas|border|nn
+operate|areas|in
+labor|washington|nn
+labor|(|punc
+labor|ap|nn
+labor|)|punc
+labor|forced|mod
+are|including|mod-before
+including|labor|subj
+labor|child|nn
+including|labor|obj
+are|widespread|pred
+widespread|myanmar|in
+ignores|government|subj
+rights|workers|gen
+ignores|rights|obj
+said|u.s. labor department|subj
+said|report|in
+said|monday|mod
+slorc state law and order restoration council|which|whn
+took over|slorc state law and order restoration council|subj
+took over|burma|obj
+burma|1988|in
+took over|and|punc
+took over|changed|conj
+changed|slorc state law and order restoration council|subj
+name|its|gen
+changed|name|obj
+name|myanmar|to
+threat|primary|mod
+suu kyi|threat|as
+abducting|united nations special rapporteur|according to
+united nations special rapporteur|myanmar|on
+troops|government|nn
+abducting|troops|subj
+abducting|increasing|mod
+increasing|troop|subj
+increasing|numbers|obj
+numbers|women|of
+increasing|including|mod
+girls|young|nn
+including|girls|obj
+subjecting|them|obj
+subjecting|rape|to
+rape|and|punc
+abuses|other|mod
+rape|abuses|conj
+said|he|subj
+said|are|fc
+camps|24|num
+camps|refugee|nn
+are|camps|pred
+are|along|mod

@@ -8,6 +8,8 @@ import random
 from tqdm import tqdm
 from collections import Counter
 from IPython import embed
+import xml.etree.ElementTree as et
+
 random.seed(666)
 
 pattern_of_num = re.compile(r'[0-9]+')
@@ -60,7 +62,46 @@ def read_cnn_dailymail(data_type, data_dir):
 
 
 def read_duc2007(data_dir):
-    pass
+    duc2007_doc_dir = data_dir + "/main/"
+    duc2007_eval_dir = data_dir + "/mainEval/mainEval/ROUGE/models/"
+    doc_dirs = [duc2007_doc_dir + x + "/" for x in os.listdir(duc2007_doc_dir)]
+
+    data = [[], [], []]
+    length = [[], [], []]
+
+    raw_data = []
+    d_length = []
+    raw_summ = [[],[],[],[]]
+    s_length = [[],[],[],[]]
+    for d in doc_dirs:
+        filenames = os.listdir(d)
+        temp = []
+        for filename in filenames:
+            content = open(d + filename).read().replace("&","")
+            root = et.fromstring(content)
+            raw = "".join([x.text.replace("\n", "").replace("\t", "") for x in root.findall("BODY/TEXT/P")])
+            doc = [sent_dealer(x.strip(" ")) for x in raw.split(".")]
+            
+        raw_data.append(doc)
+        d_length.append([len(x) for x in doc])
+
+        temp = []
+        temp_l = []
+        for filename in os.listdir(duc2007_eval_dir):
+            if(filename[:5] == prefix):
+                raw = open(duc2007_eval_dir + filename).read().replace("\n")
+                doc = [sent_dealer(x.strip(" ")) for x in raw.split(".")]
+                temp.append(open(duc2007_eval_dir + filename).read().replace("\n"))
+                temp_l.append([len(x) for x in temp[-1]])
+
+        for i in range(4):
+            raw_summ[i].append(temp[i])
+            s_length[i].append(temp_l[i])
+
+    data[2].append(raw_data).extend(raw_summ)
+    length[2].append(d_length).extend(s_length)
+
+    return data, length
 
 
 def main():
@@ -84,8 +125,8 @@ def main():
 
     print('Reading data......')
     data, length = datasets[args.data](args.data, args.data_dir)
-    print('train/valid/test: %d/%d/%d' % tuple([len(_) for _ in data]))
 
+    print('train/valid/test: %d/%d/%d' % tuple([len(_) for _ in data]))
     print('Count word frequency......')
     wtof = {}
     for i in range(len(data)): # train/valid/test

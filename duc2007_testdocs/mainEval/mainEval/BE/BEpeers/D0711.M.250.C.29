@@ -1,0 +1,136 @@
+quit|microsoft corp.|subj
+association|nation|gen
+association|oldest|mod
+oldest|and|punc
+oldest|largest|conj
+association|software|nn
+association|industry|nn
+association|trade|nn
+quit|association|obj
+support|group|gen
+association|support|over
+support|government|for
+antitrust case|microsoft|nn
+government|antitrust case|in
+are|milestones|pred
+milestones|microsoft|in
+microsoft|antitrust|mod
+milestones|reveals|rel
+reveals|milestones|obj
+reveals|microsoft|subj
+probing|justice department|subj
+probing|bundling|obj
+browser|its|gen
+browser|internet explorer|nn
+bundling|browser|of
+browser|windows|with
+sues|justice department|subj
+sues|microsoft|obj
+justice department|and|punc
+justice department|microsoft|conj
+reach|justice department|subj
+reach|settlement|obj
+charge|pending|mod
+charge|contempt|nn
+settlement|charge|on
+justice department|and|punc
+states|20|num
+justice department|states|conj
+file|justice department|subj
+suit|broad|mod
+suit|antitrust|mod
+file|suit|obj
+suit|microsoft|against
+take|microsoft|gen
+proved|government|subj
+proved|wrongdoing|obj
+trial|eight-month|nn
+wrongdoing|trial|in
+defeat|microsoft corp.|gen
+defeat|massive|mod
+suit|its|gen
+suit|federal|mod
+suit|antitrust|mod
+defeat|suit|in
+leaves|defeat|subj
+leaves|company|obj
+renewed|justice department|subj
+scrutiny|its|gen
+renewed|scrutiny|obj
+violations|alleged|mod
+violations|antitrust|mod
+scrutiny|violations|of
+microsoft corp.|software|nn
+microsoft corp.|giant|nn
+violations|microsoft corp.|by
+newspapers|u.s.|nn
+microsoft corp.|newspapers|appo
+newspapers|reported|vrel
+reported|newspapers|obj
+reported|today|mod
+trial|its|gen
+trial|antitrust|mod
+expected|trial|in
+introduce|microsoft corp.|subj
+introduce|documents|obj
+operating system|its|gen
+operating system|competing|mod
+won|microsoft|subj
+appeal|court|nn
+won|appeal|obj
+ruling|his|gen
+wrote|ruling|in
+judge|district|nn
+judge|thomas penfield jackson|person
+wrote|judge|subj
+violated|microsoft|subj
+violated|sherman antitrust act|obj
+was|part|pred
+record|public|mod
+part|record|of
+antitrust case|older|mod
+record|antitrust case|from
+antitrust case|microsoft|against
+suit|justice department|gen
+suit|first|post
+antitrust case|suit|appo
+suit|company|against
+filed|justice department|subj
+filed|reply|obj
+brief|microsoft|gen
+reply|brief|to
+filed|justice department|subj
+filed|brief|obj
+brief|quoted|rel
+quoted|brief|obj
+quoted|microsoft|subj
+justice department|and|punc
+general|17|num
+general|state attorneys|nn
+justice department|general|conj
+proposed|justice department|subj
+proposed|break|fc
+break|justice department|subj
+break|microsoft|obj
+companies|two|nn
+microsoft|companies|into
+year|last|post
+asked|year|mod-before
+asked|justice department|subj
+asked|jackson|obj
+jackson|force|rel
+force|jackson|subj
+reimburse|microsoft|subj
+costs|its|gen
+costs|legal|mod
+reimburse|costs|obj
+response|caldera|gen
+arguments|microsoft|gen
+response|arguments|to
+filed|response|obj
+competed|dr-dos|subj
+ms-dos|microsoft|gen
+competed|ms-dos|with
+turned down|ibm|subj
+proposal|microsoft|nn
+turned down|proposal|obj

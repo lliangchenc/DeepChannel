@@ -1,0 +1,141 @@
+expects|it|subj
+expects|mine|obj
+mine|add|rel
+add|mine|subj
+3.7 billion|us|nn
+3.7 billion|dlrs|nn
+add|3.7 billion|obj
+mine|(|punc
+mine|6.2 billion australian dollars|appo
+6.2 billion australian dollars|)|punc
+product|australia|gen
+product|gross|mod
+product|domestic|mod
+6.2 billion australian dollars|product|to
+30|about|num-mod
+years|30|amount-value
+product|years|over
+years|and|punc
+years|boost|conj
+share|country|gen
+uranium|world|nn
+share|uranium|of
+boost|market|rel
+market|boost|obj
+market|share|subj
+project|jabiluka|nn
+considered|project|obj1
+test|litmus|nn
+considered|test|obj2
+projects|other|mod
+projects|potential|mod
+projects|uranium|nn
+projects|mine|nn
+test|projects|for
+projects|australia|in
+identified|era|subj
+90000|more than|num-mod
+tons|90000|nn
+tons|(|punc
+tons|metric|mod
+tons|)|punc
+identified|tons|obj
+oxide|uranium|nn
+tons|oxide|of
+oxide|jabiluka|at
+untapped|largest|mod
+bodies|untapped|mod
+bodies|high-grade|mod
+bodies|uranium|nn
+bodies|ore|nn
+one|bodies|of
+bodies|world|in
+begun|already|amod
+begun|company|subj
+begun|construction|obj
+mine|its|gen
+mine|jabiluka|nn
+mine|uranium|nn
+construction|mine|of
+mine|which|whn
+is|within|pred
+is|boundaries|within
+is|but|punc
+not|technically|mod
+part|not|amod
+is|part|conj
+part|mine|subj
+part|kakadu|of
+metric tons|20 million|amount-value
+removal|metric tons|of
+years|radioactive|mod
+years|uranium|nn
+years|ore|nn
+28|over|num-mod
+years|28|amount-value
+metric tons|years|of
+will|not|neg
+harm|removal|subj
+harm|kakadu|obj
+mining|uranium|nn
+threatens|mining|subj
+told|park|obj
+told|tuesday|mod
+should|not|neg
+declare|united nations|subj
+declare|kakadu national park|obj
+kakadu national park|which|whn
+surrounds|kakadu national park|subj
+mine|jabiluka|nn
+mine|uranium|nn
+surrounds|mine|obj
+federal government|australian|mod
+rejected|thursday|mod-before
+rejected|federal government|subj
+report|unesco|nn
+rejected|report|obj
+report|which|whn
+called for|report|subj
+called for|kakadu national park|obj
+australia|northwest|mod
+kakadu national park|australia|in
+australia|placed|rel
+list|endangered|mod
+placed|list|on
+list|threat|because of
+threat|posed|vrel
+posed|threat|obj
+posed|by|by-subj
+mine|jabiluka|nn
+mine|uranium|nn
+posed|mine|by
+australia|jabiluka|nn
+australia|means|nn
+become|australia|subj
+supplier|leading|mod
+supplier|world|nn
+supplier|uranium|nn
+supplier|oxide|nn
+become|supplier|obj
+arrested|police|subj
+100|more than|num-mod
+protesters|100|nn
+arrested|protesters|obj
+arrested|tuesday|mod
+resources|energy|nn
+arrested|resources|at
+development|australia|gen
+development|jabiluka|nn
+development|mine|mod
+resources|development|of
+development|kakadu|at
+have|jabiluka|subj
+have|on|guest
+have|kakadu|on
+values|cultural|mod
+cultural|and|punc
+cultural|natural|conj
+have|values|obj
+humans|show|nn
+lived|humans|subj
+lived|australia|in

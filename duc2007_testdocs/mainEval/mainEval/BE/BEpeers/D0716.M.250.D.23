@@ -1,0 +1,159 @@
+has|era|subj
+approval|government|nn
+has|approval|obj
+approval|build|rel
+build|approval|subj
+mine|uranium|nn
+build|mine|obj
+mine|its|at
+mine|lease|rel
+lease|mine|obj
+lease|jabiluka|subj
+boundaries|park|gen
+lease|boundaries|within
+mine|uranium|nn
+lease|mine|near
+operates|already|mod-before
+mine|operates|rel
+operates|mine|obj
+operates|it|subj
+operates|park|inside
+begun|construction|subj
+begun|one week ago|mod
+begun|jabiluka|at
+lying|uranium|nn
+lying|mining|nn
+lying|lease|nn
+jabiluka|lying|appo
+lying|boundaries|within
+boundaries|kakadu national park|of
+government|australian|mod
+report|government|gen
+report|environmental|mod
+mine|jabiluka|nn
+mine|uranium|nn
+report|mine|on
+mine|(|punc
+mine|located|vrel
+located|mine|obj
+located|kakadu natural park|in
+located|)|punc
+located|found|conj
+found|mine|subj
+found|is|fc
+is|not|neg
+is|under|pred
+is|threat|under
+found|and|punc
+found|attacked|conj
+attacked|mine|subj
+report|unesco|nn
+attacked|report|obj
+report|that|whn
+said|report|subj
+said|was|fc
+was|in|pred
+was|danger|in
+calling on|environmentalists|subj
+government|australian|mod
+approve|government|subj
+project|uranium|nn
+project|mining|nn
+approve|project|obj
+project|adjacent|pnmod
+adjacent|park|to
+rejected|government|subj
+concerns|their|gen
+concerns|environmental|mod
+rejected|concerns|obj
+rejected|saying|mod
+saying|government|subj
+saying|jobs|obj
+income|export|nn
+income|generated|rel
+project|mining|nn
+generated|project|from
+is|important|pred
+conservationists|australian|mod
+conservationists|and|punc
+owners|traditional|mod
+owners|aboriginal|mod
+conservationists|owners|conj
+threatened|conservationists|subj
+threatened|blockade|mod
+blockade|conservationist|subj
+blockade|development|obj
+mine|huge|mod
+mine|jabiluka|nn
+mine|uranium|nn
+development|mine|of
+kakadu national park|country|gen
+kakadu national park|vast|mod
+mine|kakadu national park|in
+delegation|high-level|mod
+delegation|united nations|nn
+delegation|monday|on
+began|delegation|subj
+began|touring|guest
+touring|delegation|subj
+touring|australia|obj
+began|kakadu national park|obj
+kakadu national park|examine|rel
+examine|kakadu national park|subj
+examine|claims|obj
+mine|uranium|nn
+mine|built|rel
+built|region|in
+claims|threatens|comp1
+threatens|mine|subj
+values|unique|mod
+values|cultural|mod
+cultural|and|punc
+cultural|environmental|conj
+threatens|values|obj
+team|u.n.|nn
+submission|team|to
+team|which|whn
+investigating|team|subj
+threatens|mine|subj
+values|environmental|mod
+environmental|and|punc
+environmental|cultural|conj
+threatens|values|obj
+values|kakadu|of
+investigating|said|fc
+said|council|subj
+said|was|fc
+concerned|particularly|mod
+was|concerned|pred
+site|malakunanja 2|nn
+site|archaeological|mod
+concerned|site|about
+site|just|appo-mod
+miles|1.2|amount-value
+kilometers|miles|nn
+kilometers|(|punc
+kilometers|2|amount-value
+site|kilometers|appo
+kilometers|)|punc
+entrance|mine|mod
+kilometers|entrance|from
+noted|mission|subj
+dangers|severe|mod
+dangers|ascertained|mod
+ascertained|and|punc
+ascertained|potential|conj
+noted|dangers|obj
+values|cultural|mod
+cultural|and|punc
+cultural|natural|conj
+dangers|values|to
+values|kakadu national park|of
+kakadu national park|posed|vrel
+posed|kakadu national park|obj
+posed|primarily|mod
+primarily|proposal|by
+proposal|uranium|for
+uranium|mining|rel
+mining|uranium|subj
+mining|jabiluka|at

@@ -1,0 +1,135 @@
+system|currency|nn
+system|board|nn
+backed|system|under
+system|established|vrel
+established|system|obj
+established|july 1997|in
+supply|domestic|mod
+supply|money|nn
+backed|supply|obj
+backed|by|by-subj
+reserves|foreign|mod
+reserves|currency|nn
+backed|reserves|by
+xinhua|april 22|nn
+xinhua|(|punc
+lusaka|xinhua|appo
+benefit|zambia|subj
+benefit|establishment|from
+currency|european union common|nn
+establishment|currency|of
+currency|and|punc
+dollar|proposed|mod
+currency|dollar|conj
+currency|single|mod
+currency|currency|appo
+currency|common market for eastern and southern africa|of
+comesa|(|punc
+common market for eastern and southern africa|comesa|abbrev
+comesa|)|punc
+official|zambian|mod
+official|bank|nn
+said|official|subj
+xinhua|september 11|nn
+xinhua|(|punc
+bonn|xinhua|appo
+printing|mass|nn
+printing|banknotes|of
+currency|single|mod
+currency|european|mod
+banknotes|currency|of
+currency|euro|appo
+started|printing|obj
+started|beginning|at
+beginning|1999|of
+1999|european central bank|appo
+ecb|(|punc
+european central bank|ecb|abbrev
+ecb|)|punc
+european central bank|announced|vrel
+announced|european central bank|obj
+announced|frankfurt|in
+announced|friday|mod
+xinhua|october 22|nn
+xinhua|(|punc
+sofia|xinhua|appo
+working|bulgaria|subj
+working|link|mod
+link|bulgaria|subj
+currency|its|gen
+link|currency|obj
+currency|lev|appo
+currency|proposed|mod
+currency|european|mod
+currency|single|mod
+link|currency|with
+currency|euro|appo
+link|bid|in
+bid|speed|comp1
+speed|up|guest
+integration|country|gen
+integration|financial|mod
+speed|integration|obj
+economy|european|mod
+integration|economy|into
+xinhua|november 10|nn
+xinhua|(|punc
+bangkok|xinhua|appo
+considering|thailand|subj
+considering|using|guest
+using|thailand|subj
+using|european|obj
+currency|single|mod
+considering|currency|obj
+currency|euro|appo
+reserves|country|gen
+reserves|foreign|mod
+reported|reserves|in
+reported|nation|subj
+reported|tuesday|obj
+council|economic ministers|of
+economic ministers|thailand|of
+ordered|council|subj
+ordered|finance ministry|obj
+finance ministry|and|punc
+finance ministry|bank|conj
+bank|thailand|of
+thailand|study|rel
+study|thailand|subj
+study|possibility|obj
+study|as|mod
+currency|single|mod
+currency|european|mod
+as|is|comp1
+is|set|pred
+set|go into|rel
+go into|set|subj
+go into|circulation|obj
+circulation|january 1|on
+year|next|post
+go into|year|mod
+xinhua|november 21|nn
+xinhua|(|punc
+new delhi|xinhua|appo
+rbi|(|punc
+reserve bank of india|rbi|abbrev
+rbi|)|punc
+permitted|reserve bank of india|subj
+banks|indian|mod
+permitted|banks|obj
+banks|transact|rel
+transact|bank|subj
+transact|euro|in
+unit|new|mod
+unit|currency|nn
+euro|unit|appo
+unit|european monetary union|of
+emu|(|punc
+european monetary union|emu|abbrev
+emu|)|punc
+sources|rbi|nn
+said|sources|subj
+said|here|mod
+said|saturday|mod
+launched|euro|obj
+launched|january 1 , 1999|on

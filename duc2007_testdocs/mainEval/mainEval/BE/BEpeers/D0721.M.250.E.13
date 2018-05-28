@@ -1,0 +1,163 @@
+issued|judge|subj
+order|gag|nn
+issued|order|obj
+order|lawyers|for
+lawyers|involved|vrel
+involved|lawyers|obj
+trial|matthew shepard|nn
+trial|murder|nn
+involved|trial|in
+involved|saying|mod
+saying|judge|subj
+injured|gravely|mod-before
+saying|injured|fc
+injured|they|subj
+injured|defendant|obj
+defendant|right|pnmod
+trial|fair|mod
+right|trial|to
+matthew shepard|gay|nn
+matthew shepard|college student|nn
+pummeled|matthew shepard|obj
+pummeled|death|to
+death|aaron mckinney|by
+rage|drunken|mod
+rage|drug-induced|mod
+aaron mckinney|rage|in
+pummeled|after|mod
+after|made|comp1
+made|shepard|subj
+made|pass|obj
+pass|him|at
+attorney|mckinney|gen
+said|attorney|subj
+began|his|as
+said|began|fc
+began|trial|subj
+killed|aaron j. mckinney|subj
+student|gay|mod
+killed|student|obj
+student|university of wyoming|at
+university of wyoming|last|vrel
+last|university of wyoming|obj
+last|year|mod
+rage|five-minute|nn
+rage|emotional|mod
+last|rage|in
+last|because|mod
+student|matthew shepard|appo
+because|made|comp1
+made|student|subj
+advances|sexual|mod
+made|advances|obj
+advances|that|whn
+reminded|advances|subj
+reminded|him|obj
+abuse|homosexual|mod
+reminded|abuse|of
+abuse|suffered|rel
+suffered|abuse|obj
+suffered|he|subj
+suffered|child|as
+lawyer|mckinney|gen
+told|lawyer|subj
+told|jury|obj
+told|died|fc
+died|matthew shepard|subj
+died|result|as
+injuries|blunt|mod
+injuries|trauma|nn
+result|injuries|of
+injuries|sustained|rel
+sustained|injuries|obj
+sustained|he|subj
+head|his|gen
+sustained|head|to
+sustained|and|punc
+sustained|face|conj
+face|injuries|obj
+face|he|subj
+photographs|jurors|nn
+photographs|saw|nn
+face|matthew shepard|gen
+face|bloody|mod
+photographs|face|of
+face|prosecutors|as
+began|photographs|subj
+began|presenting|mod
+presenting|photograph|subj
+case|their|gen
+presenting|case|obj
+case|aaron mckinney|against
+aaron mckinney|accused|vrel
+accused|aaron mckinney|obj
+accused|beating|of
+student|gay|mod
+beating|student|obj
+student|death|to
+rage|drunken|mod
+rage|drug-induced|mod
+death|rage|in
+aaron mckinney|accused|vrel
+accused|aaron mckinney|obj
+beating|fatal|mod
+accused|beating|of
+matthew shepard|gay|mod
+matthew shepard|college student|nn
+beating|matthew shepard|of
+accused|pulled out|conj
+pulled out|aaron mckinney|subj
+pulled out|gun|obj
+pulled out|and|punc
+pulled out|clubbed|conj
+clubbed|aaron mckinney|subj
+hours|man|nn
+clubbed|hours|obj
+clubbed|after|mod
+after|attacked|comp1
+attacked|shepard|obj
+testified|teen-ager|subj
+testified|tuesday|mod
+barred|today|mod-before
+barred|judge|subj
+lawyers|defense|nn
+barred|lawyers|obj
+lawyers|using|from
+using|judge|subj
+defense|gay|mod
+defense|panic|nn
+using|defense|obj
+trial|murder|nn
+defense|trial|in
+trial|man|of
+man|accused|vrel
+accused|man|obj
+accused|beating|of
+matthew shepard|gay|mod
+matthew shepard|college student|nn
+beating|matthew shepard|obj
+lawmakers|republican|mod
+stemmed from|lawmakers|by
+lawmakers|father|appo
+father|matthew shepard|of
+student|college|nn
+student|whose|whn
+beating|student|subj
+beating|death|obj
+stemmed from|student|subj
+stemmed from|fact|obj
+fact|that|c
+was|homosexual|pred
+was|urged|mod
+urged|congress|subj
+congress|adopt|rel
+adopt|monday|subj
+adopt|legislation|obj
+legislation|that|whn
+extend|legislation|subj
+protection|federal|mod
+protection|hate-crime|mod
+extend|protection|obj
+protection|gays|to
+gays|and|punc
+gays|lesbians|conj

@@ -1,0 +1,143 @@
+amnesty international|london-based|mod
+amnesty international|human rights|nn
+amnesty international|group|nn
+accused|amnesty international|subj
+government|south korean|nn
+accused|government|obj
+accused|saturday|guest
+trying|amnesty international|subj
+trying|control|fc
+was|supposed|pred
+commission|independent|mod
+commission|national|mod
+commission|human rights|nn
+be|commission|pred
+amnesty international|human rights|nn
+amnesty international|group|nn
+amnesty international|tuesday|on
+called|amnesty international|subj
+called|countries|on
+countries|concerned|pnmod
+crisis|cambodia|gen
+crisis|political|mod
+concerned|crisis|about
+crisis|pressure|rel
+pressure|crisis|subj
+government|its|gen
+pressure|government|obj
+government|end|rel
+end|government|subj
+end|violence|obj
+violence|and|punc
+violence|intimidation|conj
+intimidation|directed|pnmod
+directed|opposition|against
+unacceptable|totally|mod
+is|unacceptable|pred
+unacceptable|that|c
+trying|time|at
+trying|people|subj
+trying|associate with|fc
+associate with|people|subj
+associate with|rwandan|obj
+rwandan|process|in
+process|recovery|of
+recovery|aftermath|from
+aftermath|genocide|of
+mud-slinging|busy|mod
+is|mud-slinging|pred
+government|northwest|mod
+noted|he|subj
+government|rwandan|mod
+expressed|government|subj
+outrage|deep|mod
+expressed|outrage|obj
+campaign|amnesty international|gen
+campaign|continued|mod
+outrage|campaign|about
+campaign|aimed at|vrel
+aimed at|campaign|obj
+aimed at|tarnishing|mod
+tarnishing|government|subj
+tarnishing|image|obj
+image|country|of
+statement|response|in
+said|kenyan international|to
+kenyan international|and|punc
+release|press|nn
+kenyan international|release|conj
+release|issued|vrel
+issued|by|by-subj
+arap|daniel|nn
+issued|arap|by
+arap|has|rel
+has|arap|obj
+has|moi|subj
+government|amnesty international|nn
+response|said|comp1
+said|government|subj
+said|that|c
+allegations|all|pre
+allegations|organization|by
+calculated|allegations|obj
+calculated|incite|mod
+incite|allegation|subj
+incite|kenyans|obj
+government|their|gen
+kenyans|government|against
+government|sri lanka|gen
+introduced|government|subj
+introduced|measures|obj
+measures|safeguard|rel
+safeguard|measure|subj
+safeguard|welfare|obj
+welfare|detainees|of
+said|amnesty international|subj
+said|enforced|fc
+enforced|measures|obj
+enforced|poorly|mod
+statement|amnesty international|nn
+said|statement|subj
+government|rwandan|mod
+set|government|subj
+set|deadline|obj
+deadline|july 27|of
+deadline|reaching|for
+reaching|government|subj
+reaching|agreement|obj
+mandate|mission|gen
+agreement|mandate|on
+reaching|otherwise|mod
+deadline|close|rel
+close|deadline|obj
+close|it|subj
+close|operation|down
+amnesty international|friday|on
+demanded|amnesty international|subj
+probe|government|nn
+said|what|obj
+said|it|subj
+demanded|were|fc
+camps|unauthorized|mod
+camps|detention|nn
+were|camps|pred
+camps|run|vrel
+run|camps|obj
+run|by|by-subj
+groups|two|nn
+groups|armed|mod
+groups|tamil|mod
+run|groups|by
+groups|opposed|vrel
+opposed|groups|obj
+rebels|secessionist|nn
+rebels|tamil|mod
+opposed|rebels|to
+uncovered|development|in
+government|amensty international|nn
+uncovered|government|subj
+uncovered|plans|obj
+plans|ai|by
+ai|organize|rel
+organize|ai|subj
+organize|massive|obj

@@ -1,0 +1,151 @@
+note|antitrust|mod
+note|experts|nn
+legal|certainly|mod
+is|legal|pred
+legal|microsoft|for
+microsoft|offer|rel
+offer|microsoft|subj
+offer|distributor--|obj1
+business|ibm pc|nn
+distributor--|business|as
+incentives|was--|mod
+offer|incentives|obj2
+distribute|aggressively|amod
+incentives|distribute|rel
+distribute|incentive|subj
+product|its|gen
+distribute|product|obj
+experts|antitrust|mod
+say|experts|subj
+brief|lessig|nn
+say|give|fc
+give|brief|subj
+give|jackson|obj1
+blueprint|legal|mod
+give|blueprint|obj2
+blueprint|needs|rel
+needs|blueprint|obj
+needs|he|subj
+concluding|expert|subj
+concluding|that|c
+violate|microsoft|subj
+law|tying|nn
+violate|law|obj
+scholar|harvard|nn
+scholar|legal|mod
+told|scholar|subj
+told|judge|obj
+antitrust case|microsoft|nn
+judge|antitrust case|in
+told|tuesday|guest
+told|that|c
+'s|decision|pred
+bundle|company|subj
+browser|its|gen
+browser|web|nn
+bundle|browser|obj
+browser|windows|into
+decision|had|comp1
+had|operating system|subj
+had|`|punc
+had|`|punc
+benefits|obvious|mod
+had|benefits|obj
+benefits|'|punc
+programmers|computer|nn
+benefits|programmers|to
+programmers|and|punc
+programmers|consumers|conj
+was|on|guest
+was|issue|on
+was|that|c
+court|federal|mod
+court|appeals|nn
+court|washington|in
+overruled|court|subj
+overruled|jackson|obj
+phase|earlier|mod
+jackson|phase|in
+battle|company|gen
+phase|battle|of
+battle|government|with
+of appeals|u.s.|nn
+agreed|of appeals|subj
+agreed|that|c
+injunction|lower court|gen
+injunction|microsoft|against
+was|improper|pred
+was|and|punc
+was|sent|conj
+sent|injunction|subj
+sent|matter|obj
+judge|federal|mod
+judge|trial|nn
+matter|judge|to
+judge|overseeing|rel
+overseeing|judge|subj
+overseeing|antitrust case|obj
+ruled|judge|subj
+ruled|that|c
+case|caldera-microsoft|nn
+go|case|subj
+go|trial|to
+trial|january|in
+caldera systems inc.|orem|appo
+orem|maker|appo
+software|linux|nn
+maker|software|of
+filed|caldera systems inc.|subj
+filed|antitrust case|obj
+antitrust case|microsoft|against
+microsoft|1996|in
+renewed|justice department|subj
+scrutiny|its|gen
+renewed|scrutiny|obj
+violations|alleged|mod
+violations|antitrust|mod
+scrutiny|violations|of
+giant|software|nn
+violations|giant|by
+may 18-after|microsoft corp.|nn
+negotiations|settlement|nn
+may 18-after|fail|rel
+fail|may 18-after|obj
+fail|negotiations|subj
+may 18-after|justice department|conj
+justice department|and|punc
+states|20|num
+justice department|states|conj
+file|may 18-after|subj
+suit|broad|mod
+suit|antitrust|mod
+file|suit|obj
+suit|microsoft|against
+victory|their|gen
+victory|legal|mod
+ebullient|victory|over
+victory|microsoft|against
+officials|justice department|nn
+officials|antitrust|mod
+said|officials|subj
+said|monday|guest
+said|that|c
+examine|they|subj
+remedies|possible|mod
+examine|remedies|obj
+remedies|put|rel
+put|remedy|subj
+put|end|obj
+judge|federal|mod
+described|what|obj
+described|judge|subj
+practices|company|gen
+practices|monopolistic|mod
+described|practices|as
+pleased|we|obj
+pleased|that|c
+agreed|court|subj
+agreed|department|with
+department|that|c
+abused|department|obj
+abused|microsoft|subj

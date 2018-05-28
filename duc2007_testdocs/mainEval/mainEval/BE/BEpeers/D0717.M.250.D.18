@@ -1,0 +1,154 @@
+hid|company|subj
+hid|evidence|obj
+evidence|that|c
+combination|popular|mod
+combination|diet-drug|mod
+half|combination|of
+caused|fen-phen|subj
+problems|serious|mod
+problems|heart|nn
+caused|problems|obj
+wyer|wom|for
+n|suing|rel
+suing|n|subj
+suing|american home products corp.|obj
+n|$110 million|for
+wom|said|rel
+said|wom|obj
+said|n|subj
+said|wednesday|mod
+individual|2,600|num
+more|individual|than
+filed|lawsuits|obj
+filed|fen-phen|against
+fen-phen|and|punc
+lawsuits|class-action|mod
+fen-phen|lawsuits|conj
+lawsuits|asking|rel
+asking|lawsuit|subj
+asking|company|obj
+company|pay|rel
+pay|company|subj
+pay|medical checkups|for
+medical checkups|and|punc
+medical checkups|future|conj
+treatments|medical|mod
+asking|certified|fc
+certified|treatments|obj
+certified|states|in
+lawyers|representing|rel
+representing|lawyer|subj
+representing|millions|obj
+millions|people|of
+people|who|whn
+used|people|subj
+fen-phen|diet|mod
+fen-phen|drug|nn
+fen-phen|combination|nn
+used|fen-phen|obj
+negotiating|lawyers|subj
+negotiating|n|obj
+settlement|l|mod
+claims|health|nn
+settlement|claims|of
+claims|manufacturer|against
+manufacturer|american home products corp.|appo
+confirmed|lawyer|subj
+confirmed|today|obj
+subsidiary|its|gen
+subsidiary|wyeth-ayerst laboratories|nn
+marketed|subsidiary|through
+products|american|nn
+products|home|nn
+marketed|products|subj
+half|fenfluramine|nn
+half|(|punc
+marketed|half|obj
+combination|fen-phen|mod
+half|combination|of
+combination|)|punc
+combination|and|punc
+combination|redux|conj
+product|similar|mod
+combination|product|appo
+settlement|burks|nn
+comes|settlement|subj
+comes|less|mod
+less|month|than
+comes|after|mod
+products|american|nn
+products|home|nn
+after|agreed|comp1
+agreed|products|subj
+agreed|pay|fc
+pay|product|subj
+pay|$6 million|between
+$6 million|and|punc
+$6 million|$7 million|conj
+$7 million|settle|rel
+settle|$7 million|subj
+lawsuit|harris county|nn
+settle|lawsuit|obj
+lawsuit|linking|rel
+linking|lawsuit|subj
+death|woman|gen
+linking|death|obj
+death|fen-phen|to
+shares|american home products corp.|of
+fell|shares|subj
+fell|sharply|mod
+sharply|friday|on
+fell|ruling|after
+judge|federal|mod
+ruling|judge|by
+judge|that|whn
+allow|judge|subj
+allow|patients|obj
+44|up to|num-mod
+states|44|nn
+patients|states|in
+sue|collectively|amod
+states|sue|rel
+sue|state|subj
+sue|company|obj
+sue|for|mod
+products|american|nn
+products|home|nn
+for|agreed|comp1
+agreed|products|subj
+agreed|pay|fc
+pay|product|subj
+pay|$3.75 billion|obj
+$3.75 billion|settle|rel
+settle|$3.75 billion|subj
+settle|thousands|obj
+thousands|lawsuits|of
+lawsuits|filed|vrel
+filed|lawsuits|obj
+filed|nationwide|mod
+nationwide|people|by
+people|claiming|rel
+claiming|people|subj
+problems|health|nn
+claiming|problems|obj
+combination|company|gen
+popular|once|mod
+combination|popular|mod
+combination|fen-phen|mod
+combination|diet|mod
+combination|drug|nn
+problems|combination|due to
+announced|company|subj
+announced|today|obj
+more|9,000|than
+filed|lawsuits|obj
+home|madison , n.j.-based|mod
+home|american|nn
+filed|home|against
+home|maker|appo
+maker|fenfluramine|of
+fen|"|punc
+fenfluramine|fen|appo
+fen|"|punc
+combination|fen-phen|mod
+fen|combination|in

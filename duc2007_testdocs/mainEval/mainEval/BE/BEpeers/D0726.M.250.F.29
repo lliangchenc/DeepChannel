@@ -1,0 +1,140 @@
+edward kennedy|sen.|title
+endorse|edward kennedy|subj
+endorse|al gore|obj
+al gore|president|for
+president|democrats|person
+endorse|nationwide|mod
+supporters|gore|nn
+pushed for|supporters|subj
+pushed for|endorsement|obj
+patrick kennedy|rep.|title
+endorsed|patrick kennedy|subj
+endorsed|president|obj
+president|al gore|person
+nomination|democratic|mod
+nomination|presidential|mod
+president|nomination|for
+nomination|2000|in
+chairs|kennedy|subj
+chairs|democratic congressional campaign committee|obj
+arm|fund-raising|mod
+democratic congressional campaign committee|arm|appo
+democrats|house|nn
+arm|democrats|of
+2000|president|gen
+president|al gore|person
+appointed|campaign|subj
+appointed|campaign|obj1
+appointed|pro|obj2
+connections|local|mod
+connections|washington|nn
+pro|connections|with
+director|its|gen
+director|political|mod
+connections|director|as
+president|al gore|person
+took|president|subj
+campaign|his|gen
+campaign|presidential|mod
+took|campaign|obj
+room|living|nn
+campaign|room|to
+room|that|whn
+helped|room|subj
+jimmy carter|launch|nn
+helped|jimmy carter|obj
+jimmy carter|and|punc
+jimmy carter|bill clinton|conj
+bill clinton|white house|into
+president|u.s.|nn
+president|al gore|person
+named|president|subj
+william daley|commerce secretary|nn
+named|william daley|obj
+william daley|take over|rel
+take over|william daley|subj
+campaign|his|gen
+campaign|presidential|mod
+take over|campaign|obj
+woman|stamford|nn
+become|woman|subj
+maker|official|mod
+maker|yarmulke|nn
+become|maker|obj
+ticket|gore-lieberman|nn
+ticket|presidential|mod
+maker|ticket|of
+yarmulke|campaign|nn
+'s|yarmulke|pred
+camped|bill bradley|subj
+democrat gore|washington|nn
+democrat gore|state|nn
+camped|democrat gore|in
+candidate|three-time|nn
+candidate|failed|mod
+candidate|presidential|mod
+poll|latest|mod
+poll|new york|nn
+poll|released|vrel
+released|poll|obj
+released|friday|mod
+showed|poll|subj
+lead|gore|gen
+showed|lead|obj
+began|villarreal|subj
+duties|his|gen
+duties|part-time|mod
+began|duties|obj
+treasurer|gore|gen
+treasurer|campaign|nn
+duties|treasurer|as
+transition|head|gen
+head|gore|person
+transition|tennessee|to
+is|one|pred
+organizers|democratic party|gen
+experienced|most|mod
+organizers|experienced|mod
+organizers|grass-roots|nn
+one|organizers|of
+is|father|pred
+father|george w. bush|of
+front-runner|gop|nn
+george w. bush|front-runner|appo
+campaign|2000|num
+campaign|presidential|mod
+front-runner|campaign|in
+move|gore|gen
+cut|move|subj
+campaign|his|gen
+cut|campaign|obj1
+cut|staff|obj2
+realized|klain|subj
+realized|that|c
+shifted|center of gravity|subj
+office|vice president|gen
+shifted|office|from
+office|campaign|to
+noted|tipper gore|subj
+noted|importance|obj
+importance|women|of
+husband|her|gen
+campaign|husband|gen
+women|campaign|to
+80|about|num-mod
+people|80|nn
+attended|people|subj
+attended|fund-raiser|obj
+fund-raiser|gore|for
+introduced|then|mod-before
+introduced|gore|subj
+introduced|clinton|obj
+as|"|punc
+friend|my|gen
+clinton|friend|as
+president|america|gen
+president|great|mod
+friend|president|appo
+popularity|gore|gen
+stems from|popularity|subj
+stems from|economy|obj

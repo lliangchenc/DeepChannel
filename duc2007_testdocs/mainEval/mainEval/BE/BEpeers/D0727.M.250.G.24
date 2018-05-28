@@ -1,0 +1,155 @@
+gingrich|filed|vrel
+filed|gingrich|obj
+filed|divorce|for
+filed|july 29|mod
+filed|marianne gingrich|from
+judge|cobb county|nn
+judge|dorothy robinson|person
+made|judge|subj
+final|gingriches|gen
+final|divorce|nn
+made|final|obj
+made|and|punc
+made|agreed|conj
+agreed|judge|subj
+agreed|seal|fc
+seal|judge|subj
+seal|agreement|obj
+lawyer|newt gingrich|for
+says|lawyer|subj
+speaker|former|mod
+speaker|u.s. house|nn
+speaker|and|punc
+wife|his|gen
+speaker|wife|conj
+says|signed|fc
+signed|speaker|subj
+settlement|final|mod
+settlement|divorce|nn
+signed|settlement|obj
+signed|and|punc
+signed|are|conj
+are|ready|pred
+are|take|mod
+take|speaker|subj
+take|agreement|obj
+courtroom|cobb county|nn
+marry|gingrich|subj
+marry|callista bisek|obj
+callista bisek|aug 18|on
+callista bisek|alexandria|in
+marry|said|mod
+said|randy evans|subj
+speaker|former|mod
+speaker|house|nn
+lawyer|speaker|gen
+lawyer|personal|mod
+randy evans|lawyer|appo
+said|evans|subj
+said|week|guest
+said|that|c
+prepared|gingrich|obj
+prepared|split|mod
+split|gingrich|subj
+assets|couple|gen
+assets|marital|mod
+split|assets|obj
+split|and|punc
+split|pay|conj
+pay|gingrich|subj
+alimony|his|gen
+alimony|wife|nn
+pay|alimony|obj
+says|marianne gingrich|subj
+says|been|fc
+been|hard|pred
+been|speak|mod
+speak|it|subj
+speak|end|of
+marriage|her|gen
+marriage|18-year|nn
+end|marriage|of
+marriage|and|punc
+husband|her|gen
+affair|husband|gen
+marriage|affair|conj
+attorneys|newt gingrich|gen
+when|separated|mod
+relationship|bisek|with
+began|relationship|subj
+asked|bisek|subj
+judge|washington|nn
+asked|judge|obj
+judge|block|rel
+block|judge|subj
+subpoena|marianne gingrich|gen
+block|subpoena|obj
+subpoena|asking|rel
+asking|subpoena|subj
+asking|her|obj
+asking|answer|mod
+answer|questions|obj
+relationship|her|gen
+questions|relationship|about
+speaker|former|mod
+relationship|speaker|with
+move|surprise|nn
+initiated|move|in
+initiated|newt gingrich|subj
+deposition|his own|gen
+initiated|deposition|obj
+aide|washington|nn
+aide|congressional|mod
+deposition|aide|of
+aide|named|vrel
+named|aide|obj
+divorce|his|gen
+named|divorce|in
+judge|ruled|vrel
+ruled|judge|obj
+ruled|thursday|mod
+thursday|that|c
+aide|congressional|mod
+linked|thursday|obj
+linked|aide|subj
+linked|romantically|mod
+speaker|former|mod
+speaker|house|nn
+romantically|speaker|with
+speaker|newt gingrich|person
+testify|judge|subj
+case|his|gen
+case|divorce|nn
+testify|case|in
+gives|agreement|subj
+gingrich|mrs.|title
+gives|gingrich|obj1
+gingrich|house|rel
+house|gingrich|obj
+house|couple|subj
+house|marietta|in
+marietta|and|punc
+marietta|gingrich|conj
+apartment|their|gen
+apartment|washington|nn
+gives|apartment|obj2
+gingrich|mrs.|title
+attorney|gingrich|gen
+attorney|john mayoue|appo
+denied|attorney|subj
+denied|allegations|obj
+attorney|gingrich|gen
+randy evans|attorney|appo
+filed|randy evans|subj
+filed|motion|obj
+filed|wednesday|mod
+filed|cobb county superior court|in
+cobb county superior court|asking|rel
+asking|cobb county superior court|subj
+asking|that|c
+transfer|marianne gingrich|subj
+transfer|money|obj
+account|joint|mod
+money|account|to
+days.|14|num
+account|days.|within

@@ -1,0 +1,139 @@
+sued|sandra moore|subj
+sued|company|obj
+company|$110 million|for
+trial|nation|gen
+trial|first|post
+$110 million|trial|in
+trial|involving|rel
+involving|trial|subj
+drugs|once-popular|mod
+drugs|weight-loss|nn
+involving|drugs|obj
+ap|dallas|nn
+ap|(|punc
+trial|first|post
+damage|heart-valve|nn
+trial|damage|over
+damage|fen-phen|from
+ended|trial|subj
+settlement|reported|mod
+settlement|$500,000|nn
+ended|settlement|in
+settlement|woman|for
+woman|who|whn
+used|woman|subj
+combination|diet|mod
+combination|drug|nn
+used|combination|obj
+ap|dallas|nn
+ap|(|punc
+lawyers|representing|rel
+representing|lawyer|subj
+representing|millions|obj
+millions|people|of
+people|who|whn
+used|people|subj
+fen-phen|diet|mod
+fen-phen|drug|nn
+fen-phen|combination|nn
+used|fen-phen|obj
+negotiating|lawyers|subj
+settlement|national|mod
+negotiating|settlement|obj
+claims|health|nn
+settlement|claims|of
+claims|manufacturer|against
+manufacturer|american home products corp.|appo
+confirmed|lawyer|subj
+confirmed|today|obj
+dismissed|judge|subj
+dismissed|jury|obj
+lawsuit|class-action|mod
+jury|lawsuit|in
+lawsuit|one|against
+one|makers|of
+combination|fen-phen|mod
+combination|diet|mod
+combination|drug|nn
+makers|combination|of
+raising|expections|obj
+out-of-court settlement|possible|mod
+expections|out-of-court settlement|of
+ap|macon|nn
+ap|(|punc
+trial|successful|mod
+trial|damage|nn
+trial|suit|nn
+trial|fayette|in
+american home products|fen-phen|mod
+american home products|maker|nn
+fayette|american home products|against
+turning to|again|amod
+turning to|attorneys|subj
+court|mississippi|nn
+turning to|court|obj
+court|claims|with
+damage|health|nn
+claims|damage|of
+damage|caused|vrel
+caused|damage|obj
+caused|by|by-subj
+drug|diet|mod
+caused|drug|by
+american home products|new york--|mod
+facing|already|amod
+sued|facing|mod-before
+facing|american home products|subj
+facing|thousands|obj
+thousands|lawsuits|of
+lawsuits|related|vrel
+related|lawsuits|obj
+drugs|its|gen
+popular|once|mod
+drugs|popular|mod
+drugs|diet|mod
+related|drugs|to
+sued|american home products|obj
+sued|monday|on
+sued|by|by-subj
+interneuron pharmaceuticals|its|gen
+interneuron pharmaceuticals|marketing|nn
+interneuron pharmaceuticals|partner|nn
+sued|interneuron pharmaceuticals|by
+concealing|allegedly|amod
+interneuron pharmaceuticals|concealing|for
+concealing|american home products|subj
+risks|health|nn
+concealing|risks|obj
+risks|pills|of
+attorneys|and|punc
+both|company|nn
+attorneys|both|conj
+declined|attorneys|subj
+declined|comment|mod
+comment|attorney|subj
+ap|philadelphia|nn
+ap|(|punc
+settlement|proposed|mod
+settlement|$3.75 billion|nn
+settlement|national|mod
+opponents|settlement|of
+claims|health|nn
+settlement|claims|of
+claims|diet|against
+drug|opponents|subj
+fen-phen|combination|nn
+drug|fen-phen|obj
+fen-phen|called|vrel
+called|fen-phen|obj1
+called|deal|desc
+tuesday|inadequate|mod
+called|tuesday|mod
+called|as|mod
+as|began|comp1
+began|judge|subj
+began|hearing|fc
+hearing|judge|subj
+hearing|testimony|obj
+testimony|fairness|on
+fairness|settlement|of

@@ -1,0 +1,148 @@
+says|study|subj
+says|that|c
+should|not|neg
+deploy|pentagon|subj
+missile defense system|national|mod
+deploy|missile defense system|obj
+missile defense system|2008|until
+ap|washington|nn
+ap|(|punc
+ap|)|punc
+two|pentagon|nn
+two|conducted|mod
+ap|tests|rel
+tests|ap|obj
+tests|two|subj
+tests|thursday|mod
+elements|important|mod
+tests|elements|of
+missile defense system|proposed|mod
+missile defense system|national|mod
+elements|missile defense system|of
+missile defense system|preparation|in
+preparation|attempt|for
+attempt|shoot down|rel
+shoot down|attempt|subj
+shoot down|target|obj
+target|space|in
+opposed|russia|subj
+opposed|construction|obj
+missile defense system|u.s.|nn
+construction|missile defense system|of
+opposed|saying|mod
+saying|russia|subj
+saying|violates|fc
+violates|it|subj
+violates|1972|guest
+treaty|anti-ballistic missile|nn
+violates|treaty|obj
+study|recent|mod
+study|congressional budget office|nn
+estimated|study|subj
+estimated|that|c
+cost|missile defense system|subj
+dollars|as much as|pre
+dollars|60 billion|nn
+dollars|u.s.|nn
+cost|dollars|obj
+stage|its|gen
+stage|first|post
+dollars|stage|at
+ap|washington|nn
+ap|(|punc
+cheaper|far|mod
+be|cheaper|pred
+cheaper|and|punc
+cheaper|quicker|conj
+be|deploy|mod
+deploy|it|subj
+missile defense system|sea-based|mod
+missile defense system|national|mod
+deploy|missile defense system|obj
+deploy|than|mod
+build|one|obj
+one|land|on
+build|as|mod
+envisioned|by|by-subj
+administration|clinton|nn
+envisioned|administration|by
+analysts|conservative|mod
+analysts|defense|nn
+group|analysts|of
+than|said|comp1
+said|group|subj
+said|report|in
+said|wednesday|mod
+britain|london|nn
+britain|(|punc
+britain|ap|nn
+britain|)|punc
+push|britain|subj
+push|united states|obj
+united states|halt|rel
+halt|united states|subj
+halt|plans|obj
+missile defense system|its|gen
+missile defense system|national|mod
+plans|missile defense system|for
+committee|parliament|nn
+missile defense system|committee|appo
+affairs|foreign|mod
+committee|affairs|on
+affairs|recommended|vrel
+recommended|affairs|obj
+recommended|tuesday|mod
+heritage commission on missile defense|which|whn
+included|heritage commission on missile defense|subj
+officers|14|num
+officers|retired|mod
+included|officers|obj
+officers|and|punc
+officers|defense|conj
+defense|and|punc
+officials|political|mod
+defense|officials|conj
+officials|who|whn
+served|officials|subj
+served|mostly|mod
+administrations|republican|mod
+mostly|administrations|in
+accused|heritage commission on missile defense|subj
+white house|current|mod
+accused|white house|obj
+white house|failing|of
+failing|heritage commission on missile defense|subj
+failing|make|fc
+defense|missile|nn
+make|defense|obj1
+priority|national|mod
+make|priority|desc
+president|clinton|person
+seeking|however|mod-before
+seeking|president|subj
+increase|major|mod
+seeking|increase|obj
+increase|spending|in
+defense|national|mod
+defense|missile|nn
+spending|defense|for
+seeking|urging|mod
+urging|president|subj
+approve|congress|subj
+approve|$ 6.6 billion|obj
+five|next|num-mod
+years|five|amount-value
+$ 6.6 billion|years|over
+development|program|nn
+years|development|for
+failures|six|nn
+failures|straight|mod
+scored|failures|after
+missile defense system|$ 3.8 billion|nn
+missile defense system|experimental|mod
+scored|missile defense system|subj
+hit|its|gen
+hit|first|post
+scored|hit|obj
+hit|test|in
+test|white sands missile|at

@@ -1,0 +1,150 @@
+leader|senate|nn
+leader|majority|nn
+leader|trent lott|person
+leader|r-miss.|appo
+agreed|take|to
+resolution|her|gen
+take|resolution|up
+resolution|following|rel
+following|resolution|subj
+action|senate|nn
+following|action|obj
+articles|two|nn
+action|articles|on
+articles|impeachment|of
+following|now|mod
+now|tried|rel
+moving|censure|obj
+resolution|floor|to
+require|resolution|subj
+two-thirds|senate|of
+senate|(|punc
+senate|67|num
+require|votes|fc
+votes|two-thirds|subj
+votes|)|punc
+votes|suspend|mod
+suspend|two-thirds|subj
+rules|senate|nn
+suspend|rules|obj
+suspend|after|mod
+after|voted|comp1
+voted|senate|subj
+acquit|senate|subj
+acquit|clinton|obj
+voted|tried|fc
+tried|feinstein|subj
+tried|bring up|fc
+bring up|feinstein|subj
+resolution|her|gen
+resolution|censure|nn
+bring up|resolution|obj
+dianne feinstein|sens.|title
+dianne feinstein|and|punc
+dianne feinstein|paul coverdell|conj
+conceding|that|c
+cancel|senate|subj
+cancel|clinton|obj
+decision|administration|gen
+clinton|certify|rel
+certify|decision|subj
+certify|mexico|obj
+ally|drug-fighting|mod
+certify|ally|as
+certify|proposed|mod
+proposed|ban|subj
+dealings|business|mod
+ban|dealings|on
+companies|foreign|mod
+dealings|companies|with
+companies|that|whn
+serve as|companies|subj
+serve as|fronts|obj
+smuggling|drug|nn
+smuggling|cartel|nn
+fronts|smuggling|for
+dianne feinstein|sen.|title
+dianne feinstein|d-calif.|appo
+have|democrats|subj
+issue|strong|mod
+issue|campaign|nn
+have|issue|obj
+election|coming|mod
+issue|election|in
+election|result|as
+result|republicans|of
+scuttling|fin|subj
+party|her|gen
+'s|proposals|pred
+proposals|boost|comp1
+boost|party|subj
+rights|patients|gen
+boost|rights|obj
+moderate|respected|mod
+moderate|political|mod
+is|moderate|pred
+is|as|mod
+candidate|republican senate|nn
+candidate|matt fong|person
+candidate|_|punc
+lost|who|subj
+lost|barbara boxer|to
+barbara boxer|last|vrel
+last|barbara boxer|obj
+last|year|mod
+seemed|_|punc
+as|seemed|comp1
+concede|candidate|subj
+commended|repeatedly|mod-before
+commended|he|subj
+concede|feinstein|obj
+stump speech|his|gen
+feinstein|stump speech|in
+concede|declaring|mod
+declaring|candidate|subj
+declaring|that|c
+is|dianne feinstein|pred
+husband|her|gen
+investments|husband|gen
+issue|investments|of
+dogged|issue|subj
+dogged|feinstein|obj
+dogged|since|mod
+since|elected|comp1
+elected|she|obj
+elected|senate|to
+senate|1992|in
+won|feinstein|subj
+election|her|gen
+won|election|obj
+won|year|mod
+year|serve|rel
+serve|year|subj
+serve|out|guest
+years|remaining|mod
+years|two|amount-value
+serve|years|obj
+term|pete wilson|gen
+years|term|of
+serve|when|wha
+resigned|he|subj
+seat|his|gen
+seat|senate|nn
+resigned|seat|obj
+seat|become|rel
+become|seat|subj
+become|governor|obj
+worker|social|nn
+went on|mikulski|subj
+went on|serve as|mod
+serve as|mikulski|subj
+serve as|city councilwoman|obj
+hometown|her|gen
+city councilwoman|hometown|in
+hometown|baltimore|of
+serving|house|in
+serving|from 1976 to 1986|mod
+serving|and|punc
+serving|elected|conj
+elected|senate|to
+senate|1986|in

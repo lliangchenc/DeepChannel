@@ -1,0 +1,146 @@
+are|excerpts|pred
+decision|thursday|gen
+decision|supreme court|nn
+excerpts|decision|from
+decision|striking down|rel
+striking down|decision|subj
+veto|presidential|mod
+veto|-item|nn
+striking down|veto|obj
+act|justice|nn
+justice|stevens the line|person
+act|item|nn
+act|veto|nn
+decision|act|by
+washington--|dissent|nn
+ruling|historic|mod
+ruling|affecting|rel
+affecting|ruling|subj
+balance of power|constitutional|mod
+affecting|balance of power|obj
+balance of power|heart|at
+political system|american|mod
+heart|political system|of
+political system|struck|pnmod
+struck|legislation|down
+thursday|that|whn
+permits|thursday|subj
+permits|president|obj
+legislation|veto|rel
+veto|thursday|subj
+provisions|specific|mod
+veto|provisions|obj
+provisions|spending|of
+spending|and|punc
+bills|tax|nn
+spending|bills|conj
+--|ruled|rel
+ruled|court|subj
+ruled|thursday|guest
+thursday|that|c
+prohibited|thursday|obj
+prohibited|constitution|subj
+president|rewriting|from
+rewriting|supreme court|subj
+rewriting|legislation|obj
+legislation|vetoing|by
+items|single|mod
+vetoing|items|obj
+items|spending|of
+spending|or|punc
+breaks|tax|nn
+spending|breaks|conj
+ruled|approved|fc
+approved|--|obj
+approved|president|subj
+approved|congress|by
+ruled|court|subj
+ruled|thursday|guest
+ruled|that|c
+prohibited|constitution|subj
+prohibited|president|obj
+president|rewriting|from
+rewriting|constitution|subj
+rewriting|legislation|obj
+legislation|vetoing|by
+items|single|mod
+vetoing|items|obj
+items|spending|of
+spending|or|punc
+breaks|specific|mod
+breaks|tax|nn
+spending|breaks|conj
+breaks|approved|vrel
+approved|by|by-subj
+approved|congress|by
+one|president|nn
+president|clinton|person
+one|lost|mod
+one|and|punc
+one|won one|conj
+supreme court|u.s.|nn
+won one|supreme court|at
+supreme court|thursday|on
+act|line item veto|nn
+was|struck|pred
+was|down|mod
+upheld|court|subj
+upheld|principle|obj
+does|not|neg
+unravel|death|subj
+unravel|confidentiality|obj
+confidentiality|communication|of
+communication|attorney|between
+attorney|and|punc
+attorney|client|conj
+xinhua|february 12|nn
+xinhua|(|punc
+washington|xinhua|appo
+planning|justice department|subj
+planning|appeal to|fc
+appeal to|justice department|subj
+appeal to|u.s. supreme court|obj
+appeal to|after|mod
+judge|federal|mod
+after|struck down|comp1
+struck down|judge|subj
+veto|line-item|nn
+struck down|veto|obj
+struck down|thursday|mod
+struck down|as|mod
+xinhua|february 27|nn
+xinhua|(|punc
+washington|xinhua|appo
+agreed|supreme court|subj
+agreed|on|guest
+agreed|friday|on
+agreed|hear|fc
+hear|supreme court|subj
+hear|argument|obj
+hear|and|punc
+hear|decide|conj
+decide|supreme court|subj
+decide|constitutionality|obj
+veto|president|nn
+veto|line-item|nn
+constitutionality|veto|of
+xinhua|june 25|nn
+xinhua|(|punc
+washington|xinhua|appo
+supreme court|u.s.|nn
+struck down|thursday|mod-before
+struck down|supreme court|subj
+struck down|as|guest
+law|line-item|nn
+law|veto|nn
+struck down|law|obj
+law|that|whn
+lets|law|subj
+president|u.s.|nn
+strike out|president|subj
+items|specific|mod
+strike out|items|obj
+items|tax|in
+tax|and|punc
+measures|spending|nn
+tax|measures|conj

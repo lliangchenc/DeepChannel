@@ -1,0 +1,151 @@
+scholar|presidential|mod
+scholar|campaign|nn
+white house clinton|scholar|appo
+scholar|gore|at
+says|white house clinton|subj
+says|has|fc
+has|clinton|subj
+has|distinguish|fc
+distinguish|clinton|subj
+distinguish|himself|obj
+distinguish|clinton|from
+delicacy|considerable|mod
+clinton|delicacy|with
+delicacy|avoid|rel
+avoid|delicacy|subj
+avoid|appearing|fc
+activist|civil rights|nn
+white house|activist|appo
+activist|who|whn
+campaigned for|twice|amod
+campaigned for|activist|subj
+nomination|democratic|mod
+nomination|presidential|mod
+campaigned for|nomination|obj
+says|white house|subj
+says|emerges|fc
+emerges|clinton|subj
+fight|gore|gen
+fight|impeachment|nn
+emerges|fight|from
+candidate|formidable|mod
+fight|candidate|as
+white house clinton|gore|conj
+gore|and|punc
+gore|clinton|conj
+white house clinton|clinton-george w.|appo
+announced|also|amod
+announced|white house clinton|subj
+announced|forego|fc
+forego|they|subj
+campaigns|presidential|mod
+forego|campaigns|obj
+campaigns|2000|in
+gore|who|whn
+worked|gore|subj
+worked|1992 and 1996|for
+campaigns|clinton|nn
+slot|empty|mod
+slot|press secretary|nn
+slot|gore|at
+gore|2000|num
+gore|starting|rel
+starting|gore|subj
+starting|sept 7|mod
+chairman|campaign|nn
+chairman|general|mod
+chairman|tony coelho|person
+said|chairman|subj
+making|gore|subj
+making|efforts|obj1
+efforts|add|rel
+add|effort|subj
+add|women|obj
+positions|prominent|mod
+women|positions|to
+campaign|gore|nn
+positions|campaign|on
+making|team|desc
+white house|who|whn
+opened|white house|subj
+opened|campaign|obj1
+opened|headquarters|obj2
+headquarters|clinton|in
+february|early|mod
+clinton|february|in
+building|white house|subj
+bid|white house|nn
+building|bid|obj
+bid|succeed|rel
+succeed|bid|subj
+succeed|gore|obj
+gore|powers|on
+powers|incumbency|of
+aide|longtime|mod
+aide|president|to
+recently|most|mod
+hired|recently|mod-before
+adviser|commission|nn
+adviser|political|mod
+recently|adviser|as
+hired|federal|obj
+manager|gore|gen
+manager|campaign|nn
+hired|manager|as
+sign|that|c
+intends|he|subj
+intends|draw|fc
+draw|sign|obj
+draw|he|subj
+draw|heavily|mod
+heavily|people|on
+people|and|punc
+organizations|grass-roots|nn
+people|organizations|conj
+organizations|that|whn
+helped|organizations|subj
+helped|federal|obj
+become|sign|subj
+democrat|first|post
+become|democrat|obj
+democrat|franklin d. dick gephardt|since
+franklin d. dick gephardt|win|rel
+win|franklin d. dick gephardt|subj
+terms|successive|mod
+win|terms|obj
+terms|president|as
+campaign|vice president|gen
+campaign|white house|for
+but|faces|comp1
+faces|campaign|subj
+challenge|fresh|mod
+faces|challenge|obj
+challenge|democrats|from
+democrats|clinton|in
+clinton|who|whn
+want|clinton|subj
+want|gore|obj
+gore|criticize|rel
+criticize|gore|subj
+conduct|president|gen
+criticize|conduct|obj
+conduct|help|rel
+help|conduct|subj
+distinguish|party|subj
+distinguish|itself|obj
+effectively|more|mod
+distinguish|effectively|mod
+effectively|clinton|from
+issue|hot-button|mod
+clinton|issue|on
+values|personal|mod
+issue|values|of
+president|al gore|person
+take|president|subj
+step|his|gen
+step|first|post
+step|formal|mod
+take|step|obj
+step|running|toward
+running|vice president|subj
+running|president|for

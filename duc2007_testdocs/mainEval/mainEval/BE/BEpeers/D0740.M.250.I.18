@@ -1,0 +1,153 @@
+balloon|swiss|mod
+pilot|balloon|subj
+pilot|bertrand piccard|obj
+teammate|his|gen
+teammate|new|mod
+tony brown|british|mod
+tony brown|flight engineer|nn
+teammate|tony brown|appo
+said|teammate|subj
+said|be|fc
+be|ready|pred
+be|later|mod
+be|month|mod
+attempt|new|mod
+month|attempt|for
+attempt|fly|rel
+fly|attempt|subj
+fly|nonstop|desc
+nonstop|world|round
+broke|february|in
+pilot|swiss|mod
+broke|along with|mod-before
+andy elson|british|mod
+andy elson|flight engineer|nn
+broke|andy elson|along with
+andy elson|and|punc
+wim verstraeten|belgian|mod
+wim verstraeten|pilot|mod
+andy elson|wim verstraeten|conj
+broke|pilot|subj
+broke|record|obj
+time|longest|mod
+record|time|for
+time|spent|pnmod
+spent|air|in
+air|balloon|by
+broke|landing|mod
+landing|pilot|subj
+landing|myanmar|in
+landing|also|mod
+announced|flight|after
+flight|lasting|rel
+lasting|flight|subj
+days|9|amount-value
+lasting|days|obj
+hours|17|amount-value
+bertrand piccard|hours|nn
+bertrand piccard|swiss|mod
+bertrand piccard|balloon|nn
+bertrand piccard|pilot|mod
+announced|bertrand piccard|subj
+announced|wednesday|guest
+announced|that|c
+chosen|he|subj
+chosen|brian jones|obj
+teammate|his|gen
+brian jones|teammate|as
+attempt|his|gen
+attempt|next|post
+teammate|attempt|for
+attempt|circling|at
+circling|he|subj
+circling|world|obj
+world|balloon|in
+bid|piccard|gen
+bid|last|post
+bid|round-the-world|mod
+abandoned|bid|obj
+abandoned|after|mod
+after|refused|comp1
+refused|china|subj
+refused|his|obj1
+entry|balloon|nn
+refused|entry|obj2
+abandoned|causing|mod
+causing|bid|subj
+causing|it|obj
+causing|miss|mod
+miss|out|mod
+winds|jet-stream|nn
+out|winds|on
+winds|needed|vrel
+needed|winds|obj
+needed|speed|mod
+speed|it|obj
+speed|pacific|over
+achieving|what|obj
+called|promoters|subj
+milestone|last|post
+milestone|great|mod
+called|milestone|obj
+milestone|aviation|of
+aviation|bertrand piccard|conj
+bertrand piccard|and|punc
+legends|brian jones|nn
+legends|joined|mod
+bertrand piccard|legends|conj
+legends|wright brothers|like
+wright brothers|and|punc
+wright brothers|charles lindbergh|conj
+completion|saturday|gen
+charles lindbergh|completion|with
+manned|first|mod
+flight|manned|mod
+flight|round-the-world|mod
+flight|balloon|nn
+completion|flight|of
+was|auguste piccard|pred
+grandfather|his|gen
+auguste piccard|grandfather|appo
+grandfather|who|whn
+became|1931|in
+became|grandfather|subj
+human|first|post
+became|human|obj
+human|reach|rel
+reach|human|subj
+reach|stratosphere|obj
+first|see|rel
+see|first|subj
+curvature|earth|gen
+see|curvature|obj
+cabin|pressurized|mod
+inventor|cabin|of
+cabin|which|whn
+opened|cabin|subj
+opened|up|guest
+opened|frontier|obj
+frontier|aviation|of
+travel|regular|mod
+travel|passenger|nn
+aviation|travel|to
+was|invention|pred
+balloon|modern|mod
+balloon|rozier|nn
+invention|balloon|of
+balloon|that|whn
+made|balloon|subj
+made|feat|obj1
+made|possible|desc
+using|it|subj
+plastics|modern|mod
+plastics|lightweight|mod
+using|plastics|obj
+plastics|balloon|for
+()|combining|by
+combining|advantages|obj
+types|two|nn
+types|principal|mod
+advantages|types|of
+types|balloons|of
+helium|and|punc
+helium|hot air|conj

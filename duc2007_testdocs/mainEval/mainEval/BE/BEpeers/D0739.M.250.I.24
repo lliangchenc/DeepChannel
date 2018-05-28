@@ -1,0 +1,174 @@
+'m|not|neg
+character|kramer|nn
+'m|character|pred
+'m|'|punc
+'m|'|punc
+said|he|subj
+'m|said|mod
+script|`|punc
+script|`|punc
+script|seinfeld|nn
+script|'|punc
+script|'|punc
+sale|christie 's|nn
+sale|east|mod
+script|sale|in
+bears|script|subj
+bears|signatures|obj1
+members|four|nn
+members|principal|mod
+members|cast|nn
+signatures|members|of
+bears|(|punc
+bears|not|punc
+bears|larry david|obj2
+larry david|who|whn
+wrote|larry david|subj
+wrote|it|obj
+resurrecting|he|subj
+resurrecting|his|obj
+character|seinfeld|nn
+lawyer|trigger-happy|mod
+named|lawyer|subj
+named|jackie chiles|obj
+named|star|mod
+star|lawyer|subj
+star|in|guest
+star|nbc|in
+executive-produced|sitcom|nn
+star|executive-produced|obj
+executive-produced|jerry seinfeld|by
+jerry seinfeld|and|punc
+larry david|seinfeld|nn
+larry david|co-creator|mod
+jerry seinfeld|larry david|conj
+casting|still|amod
+casting|richards|subj
+casting|series|obj
+casting|after|mod
+he|and|punc
+co-producers|his|gen
+he|co-producers|conj
+former|all|mod
+writers|former|mod
+writers|`|punc
+writers|`|punc
+writers|seinfeld|nn
+writers|'|punc
+writers|'|punc
+he|writers|appo
+after|decided|comp1
+decided|he|subj
+decided|be|fc
+effort|ensemble|nn
+be|effort|pred
+comedy|star-driven|mod
+effort|comedy|instead of
+is|way|by
+one|people|of
+people|watching|rel
+watching|people|subj
+watching|syndicated|fc
+syndicated|those|subj
+syndicated|reruns|obj
+is|seinfeld|pred
+vowed|seinfeld|subj
+vowed|that|c
+do|he|subj
+series|tv|nn
+do|series|obj
+before|bolts|comp1
+bolts|he|subj
+bolts|off|mod
+bolts|again|mod
+going|he|subj
+going|perform|mod
+perform|he|subj
+time|one|nn
+time|final|mod
+act|stand-up|mod
+act|comedy|nn
+time|act|appo
+act|developed|rel
+developed|act|obj
+developed|he|subj
+career|his|gen
+developed|career|throughout
+though|has|comp1
+has|seinfeld|subj
+routine|his|gen
+has|routine|obj
+routine|varies|rel
+varies|routine|obj
+varies|performance|subj
+varies|a bit|mod
+varies|so|mod
+so|televised|comp1
+televised|sunday|obj
+is|not|neg
+predictable|entirely|mod
+is|predictable|pred
+joke|just|pre
+joke|one|nn
+joke|clinton|nn
+joke|'|punc
+joke|'|punc
+joke|man|appo
+man|audience|in
+audience|called out|vrel
+called out|audience|obj
+called out|when|wha
+appeared|jerry seinfeld|subj
+encore|his|gen
+appeared|encore|for
+show|second|post
+encore|show|after
+show|wednesday|on
+is|in|pred
+hometown|his|gen
+is|hometown|in
+hometown|10-show-run|for
+comedy|stand-up|mod
+10-show-run|comedy|of
+comedy|broadway|on
+broadway|that|whn
+starts|broadway|subj
+starts|tonight|mod
+starts|and|punc
+starts|culminate|conj
+culminate|broadway|subj
+hbo|live|mod
+culminate|hbo|in
+hbo|special|pnmod
+special|sunday|on
+seinfeld|(|punc
+seinfeld|who|whn
+appeared|first|mod-before
+appeared|seinfeld|subj
+appeared|hbo|on
+appeared|17 years ago|mod
+appeared|as|mod
+part|series|of
+comedians|young|mod
+series|comedians|of
+comedians|and|punc
+comedians|last|conj
+as|seen|comp1
+seen|part|obj
+seen|there|on
+seen|1987|in
+show|stand-up|mod
+says|)|punc
+says|show|subj
+says|`|punc
+says|`|punc
+says|telling|fc
+telling|i|subj
+telling|you|obj
+time|last|nn
+means|time|for
+telling|means|fc
+means|he|subj
+means|it|obj
+child|first|post
+is|child|pred

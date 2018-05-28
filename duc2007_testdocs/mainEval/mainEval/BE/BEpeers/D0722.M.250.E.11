@@ -1,0 +1,121 @@
+ap|washington|nn
+ap|(|punc
+administration|clinton|nn
+selected|administration|subj
+selected|alaska|obj
+selected|as|mod
+site|likely|mod
+site|first|post
+site|its|for
+as|proposed|comp1
+proposed|site|subj
+network|anti-ballistic|mod
+network|missile|nn
+network|defense|nn
+proposed|network|obj
+working on|still|amod
+working on|pentagon|subj
+working on|estimate|obj
+estimate|its|gen
+recent|most|mod
+estimate|recent|mod
+spring|last|post
+put|spring|mod-before
+put|estimate|subj
+put|tally|obj
+tally|$36 billion|at
+$36 billion|system|for
+interceptors|100|num
+interceptors|missile|nn
+system|interceptors|with
+site|single|mod
+interceptors|site|at
+put|alaska|in
+ap|washington|nn
+ap|(|punc
+conducted|pentagon|subj
+tests|two|nn
+conducted|tests|obj
+conducted|thursday|mod
+elements|important|mod
+conducted|elements|of
+missile defense system|proposed|mod
+missile defense system|national|mod
+elements|missile defense system|of
+missile defense system|preparation|in
+preparation|attempt|for
+attempt|shoot down|rel
+shoot down|attempt|subj
+shoot down|target|obj
+target|space|in
+contract|1.6 billion dollar|nn
+design|contract|under
+design|boeing|subj
+design|variety|obj
+variety|components|of
+components|space-age|for
+nmd|(|punc
+national missile defense "|nmd|abbrev
+nmd|)|punc
+national missile defense "|guard|rel
+guard|national missile defense"|subj
+guard|nation|obj
+attack|ballistic missile|nn
+nation|attack|against
+design|research|during
+design|boeing|subj
+design|system|obj
+missiles|ground-based|mod
+missiles|interceptor|nn
+system|missiles|of
+satellites|space-based|mod
+satellites|missile|for
+launch|satellites|subj
+launch|detection|obj
+detection|and|punc
+detection|communications|conj
+xinhua|may 12|nn
+xinhua|(|punc
+washington|xinhua|appo
+system|pentagon|gen
+system|fifth|post
+failed|system|subj
+failed|intercept|fc
+intercept|missile defense system|subj
+intercept|target|obj
+target|tuesday|on
+said|defense department|subj
+said|statement|in
+test|theater high-altitude area defense|on
+theater high-altitude area defense|or|punc
+system|thaad|nn
+theater high-altitude area defense|system|conj
+sands|white|nn
+range|sands|at
+range|missile|subj
+xinhua|may 25|nn
+xinhua|(|punc
+washington|xinhua|appo
+scratched|u.s. army|subj
+flight|tuesday|gen
+flight|test|mod
+scratched|flight|obj
+missile|antimissile|mod
+flight|missile|of
+missile|problem|because of
+problem|one|with
+one|that|whn
+was|serve as|pred
+target|its|gen
+serve as|target|obj
+setback|apparent|mod
+is|setback|pred
+dive|pentagon|gen
+setback|dive|in
+dive|develop|rel
+develop|dive|subj
+system|national missile defense|nn
+nmd|(|punc
+national missile defense|nmd|abbrev
+nmd|)|punc
+develop|system|obj

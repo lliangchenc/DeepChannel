@@ -1,0 +1,159 @@
+jolie|ms.|title
+dress|jolie|gen
+turned up|by|mod-before
+turned up|randolph duke|by
+turned up|dress|subj
+show|his|gen
+turned up|show|in
+show|last|vrel
+last|show|obj
+last|friday|mod
+favorites|poll|gen
+favorites|other|mod
+reflect|favorites|subj
+wisdom|pre-oscar|nn
+wisdom|conventional|mod
+reflect|wisdom|obj
+leading|actor|obj
+in|'|punc
+hurricane|'the|nn
+actor|hurricane|in
+hurricane|'|punc
+hurricane|'|punc
+hurricane|hilary swank|appo
+hilary swank|leading|for
+in|'|punc
+actress|'boys|in
+cry|actress|subj
+hilary swank|'|punc
+hilary swank|'|punc
+hilary swank|michael caine|appo
+actor|supporting|mod
+michael caine|actor|for
+in|'|punc
+cider house rules|'the|nn
+actor|cider house rules|in
+cider house rules|'|punc
+cider house rules|'|punc
+cider house rules|and|punc
+cider house rules|jolie|conj
+actress|supporting|mod
+jolie|actress|for
+shakespeare|love|in
+love|'|punc
+love|'|punc
+love|and|punc
+love|`|punc
+love|`|punc
+love|truman show|conj
+were|'|punc
+were|'|punc
+nominees|leading|mod
+nominees|movie|nn
+were|nominees|pred
+were|six|with
+were|apiece|mod
+years|last|post
+years|16|amount-value
+went on|years|in
+films|12|num
+films|that|whn
+won|films|subj
+won|best|guest
+honors|motion picture|nn
+won|honors|obj
+honors|golden globes|at
+went on|films|subj
+went on|take|mod
+take|film|subj
+prize|same|post
+take|prize|obj
+prize|oscars|at
+won|angelina jolie|subj
+actress|best|mod
+won|actress|obj
+actress|miniseries|in
+miniseries|or|punc
+movie|tv|nn
+miniseries|movie|conj
+for|`|punc
+for|`|punc
+movie|gia|for
+gia|'|punc
+gia|'|punc
+gia|miniseries|conj
+miniseries|or|punc
+movie|tv|nn
+miniseries|movie|conj
+win|angelina jolie|gen
+supporting|best|mod
+actress|supporting|mod
+win|actress|for
+role|her|gen
+actress|role|for
+in|'|punc
+role|'girl|in
+years|21|amount-value
+years|father|after
+father|jon voight|person
+awarded|years|obj1
+actor|best|mod
+awarded|actor|obj2
+for|'|punc
+home|'coming|mod
+actor|home|for
+jolie|daughter|appo
+daughter|actor|of
+actor|jon voight|person
+won|jolie|subj
+won|oscar|obj
+won|year|mod
+role|her|gen
+year|role|for
+sociopath|hospitalized|mod
+role|sociopath|as
+in|'|punc
+sociopath|'girl|in
+daughter|academy|of
+actor|award-winning|mod
+actor|jon voight|person
+couple|emmys|of
+remake|sony pictures|nn
+remake|film|nn
+of|`|punc
+of|`|punc
+angels|charlie|gen
+remake|angels|of
+star|'|punc
+star|remake|subj
+star|drew barrymore|obj
+drew barrymore|cameron diaz|conj
+cameron diaz|and|punc
+cameron diaz|angelina jolie|conj
+star|says|mod
+says|bbc|subj
+when|generally|mod
+read|i|subj
+read|script|obj
+script|and|punc
+script|i|conj
+'m|scared|pred
+scared|play|fc
+play|role|obj
+know|i|subj
+know|'s|fc
+one|right|mod
+'s|one|pred
+chooses|she|subj
+chooses|role|obj
+said|jolie|subj
+said|is|fc
+model|good|mod
+model|role|nn
+is|model|pred
+care|actress|subj
+professional|her|gen
+professional|and|punc
+choices|personal|mod
+professional|choices|conj
+perceived|professional|obj

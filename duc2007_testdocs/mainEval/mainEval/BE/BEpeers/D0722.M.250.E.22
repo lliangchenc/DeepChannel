@@ -1,0 +1,123 @@
+administration|clinton|nn
+decided|administration|subj
+decided|deploy|fc
+deploy|administration|subj
+missile defense system|national|mod
+deploy|missile defense system|obj
+deploy|partly|mod
+deploy|because|mod
+because|violate|comp1
+violate|it|subj
+violate|anti-ballistic missile treaty|obj
+anti-ballistic missile treaty|moscow|with
+agreed|1972|in
+united states|and|punc
+united states|soviet union|conj
+agreed|united states|subj
+agreed|anti-ballistic missile treaty|in
+anti-ballistic missile treaty|construct|rel
+construct|anti-ballistic missile treaty|subj
+defense|national|mod
+construct|defense|obj
+missiles|such|pre
+defense|missiles|against
+determine|tests|subj
+determine|whether|c
+system|credible|mod
+system|defense|nn
+be|build|pred
+push|britain|subj
+push|united states|obj
+united states|halt|rel
+halt|united states|subj
+halt|plans|obj
+missile defense system|its|gen
+missile defense system|national|mod
+plans|missile defense system|for
+test|second|post
+involved|test|in
+hours|conducted|mod
+two|about|num-mod
+hours|two|amount-value
+hours|first|after
+involved|also|mod-before
+involved|hours|subj
+missile|minuteman iii|nn
+involved|missile|obj
+test|theater high-altitude area defense|on
+theater high-altitude area defense|or|punc
+system|thaad|nn
+theater high-altitude area defense|system|conj
+interceptor|us|nn
+interceptor|prototype|nn
+interceptor|missile|nn
+streaked|interceptor|subj
+streaked|space|into
+night|tuesday|nn
+space|night|on
+space|search|in
+warhead|mock|mod
+search|warhead|of
+streaked|but|punc
+streaked|failed|conj
+failed|interceptor|subj
+failed|hit|fc
+hit|interceptor|subj
+hit|target|obj
+skip|it|subj
+test|planned|mod
+test|third|post
+skip|test|obj
+missile|anti-missile|mod
+test|missile|of
+decision|presidential|mod
+decision|deploy|rel
+deploy|decision|subj
+defense|national|mod
+defense|missile|nn
+deploy|defense|obj
+taken|decision|obj
+taken|until|mod
+until|proves|comp1
+proves|system|subj
+proves|tests|in
+study|six-month|nn
+programs|bmd|nn
+study|programs|of
+led|study|subj
+led|by|guest
+led|us|by
+undersecretary|defense|nn
+led|undersecretary|obj
+undersecretary|paul kaminski|person
+develop|united states|subj
+develop|and|punc
+develop|deploy|conj
+deploy|united states|subj
+missile defense system|national|mod
+deploy|missile defense system|obj
+missile defense system|2003|by
+system|thaad|nn
+tested|system|obj
+missiles|faster|mod
+capable|more|mod
+missiles|capable|mod
+tested|missiles|against
+rockets|hera|nn
+missiles|rockets|than
+rockets|used|vrel
+used|rockets|obj
+used|testing|in
+testing|white sands missile range|at
+lost control|missile|subj
+lost control|shortly|mod
+shortly|launch|after
+missile|interceptor|nn
+launched|missile|obj
+range|us army|nn
+range|missile|nn
+launched|range|from
+range|kwajalein atoll|on
+kwajalein atoll|marshall islands|in
+missile|target|nn
+marshall islands|missile|after

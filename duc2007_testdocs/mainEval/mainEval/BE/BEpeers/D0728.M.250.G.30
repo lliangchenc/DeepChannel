@@ -1,0 +1,137 @@
+approved|wednesday|mod-before
+approved|food and drug administration|subj
+use|expanded|mod
+approved|use|obj
+use|rebetron|of
+already|market|on
+c|hepatitis|nn
+market|c|for
+infection|viral|mod
+c|infection|conj
+infection|liver|of
+liver|that|whn
+lead to|liver|subj
+lead to|cirrhosis|obj
+cancer|liver|mod
+infection|cancer|conj
+cancer|and|punc
+failure|liver|mod
+cancer|failure|conj
+food and drug administration|wednesday|on
+approved|food and drug administration|subj
+combination|powerful|mod
+approved|combination|obj
+drugs|two|nn
+drugs|antiviral|mod
+combination|drugs|of
+drugs|treat|rel
+treat|drug|subj
+c|chronic|mod
+c|hepatitis|nn
+treat|c|obj
+infection|liver|mod
+c|infection|conj
+infection|that|whn
+lead to|infection|subj
+lead to|cirrhosis|obj
+cancer|liver|mod
+infection|cancer|conj
+cancer|and|punc
+failure|liver|mod
+cancer|failure|conj
+drug|standard|mod
+drug|aids|nn
+appears|drug|subj
+damage|slow|mod
+damage|liver|mod
+appears|damage|to
+damage|caused|vrel
+caused|damage|obj1
+caused|by|by-subj
+b.|hepatitis|nn
+caused|b.|by
+caused|study|obj2
+study|thursday|in
+journal|new england|nn
+journal|medicine|of
+looked at|journal|subj
+looked at|effects|obj
+3tc|drug|nn
+effects|3tc|of
+3tc|people|on
+infections|long-standing|mod
+people|infections|with
+infections|virus|with
+one|studies|of
+studies|led|vrel
+led|studies|obj
+led|by|by-subj
+john g. mchutchison|dr.|title
+led|john g. mchutchison|by
+scripps clinic and research foundation|la jolla|in
+compared|scripps clinic and research foundation|subj
+compared|effects|obj
+effects|combination|of
+combination|interferon|with
+compared|alone|mod
+treatment|initial|mod
+alone|treatment|in
+patients|912|num
+treatment|patients|of
+developed|most|mod
+countries|developed|mod
+infected|countries|in
+1e|2 percent|to
+2 percent|population|of
+infected|1e|obj
+infected|virus|with
+adrian di bisceglie|dr|title
+of medicine|saint louis|nn
+of medicine|university|nn
+adrian di bisceglie|of medicine|of
+people|infected|vrel
+infected|people|obj
+c|hepatitis|nn
+infected|c|with
+have|people|subj
+chance|better|mod
+have|chance|obj
+chance|cure|of
+have|after|mod
+researchers|canada|in
+after|discovered|comp1
+discovered|researchers|subj
+combination|new|mod
+discovered|combination|obj
+combination|drugs|of
+drugs|treat|rel
+treat|drug|subj
+treat|disease|obj
+sponsors|valley|in
+chapter|arizona|nn
+chapter|liver foundation|of
+sponsors|chapter|subj
+sponsors|monthly|guest
+groups|support|nn
+sponsors|groups|obj
+groups|patients|for
+seminars|hosts|nn
+patients|seminars|conj
+seminars|patients|for
+patients|and|punc
+physicians|primary|mod
+physicians|care|nn
+patients|physicians|conj
+sponsors|and|punc
+sponsors|conducts|conj
+conducts|chapter|subj
+conducts|programs|obj
+programs|schools|in
+schools|that|whn
+alert|schools|subj
+alert|children|obj
+children|dangers|to
+dangers|drug|of
+drug|and|punc
+abuse|alcohol|nn
+drug|abuse|conj

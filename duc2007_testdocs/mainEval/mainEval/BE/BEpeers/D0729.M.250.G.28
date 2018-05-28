@@ -1,0 +1,121 @@
+reward|million dollar|nn
+is|offered|pred
+offered|information|for
+information|leading|pnmod
+arrest|rudolph|gen
+leading|arrest|to
+carpenter|32-year-old|mod
+carpenter|itinerant|mod
+rudolph|carpenter|appo
+carpenter|who|whn
+lived|carpenter|subj
+lived|while|for
+north carolina|western|mod
+while|north carolina|in
+is|sought|pred
+bombing|fatal|mod
+sought|bombing|in
+clinic|birmingham|nn
+clinic|abortion|nn
+bombing|clinic|of
+clinic|and|punc
+bombings|three|nn
+bombings|atlanta-area|mod
+clinic|bombings|conj
+bombings|three|nn
+bombings|atlanta-area|mod
+bombing|1996 olympic park|nn
+including|bombing|obj
+died|woman|subj
+clinic|birmingham|nn
+clinic|abortion|nn
+bombing|clinic|obj
+bombing|jan 29|nn
+clinic|birmingham|nn
+clinic|abortion|nn
+bombing|clinic|of
+clinic|that|whn
+killed|clinic|subj
+killed|robert sanderson|obj
+killed|and|punc
+killed|injured|conj
+injured|clinic|obj
+nurse|bombing|subj
+nurse|emily lyons|obj
+provider|only|mod
+provider|abortion|nn
+femcare clinic|provider|appo
+north carolina|western|mod
+provider|north carolina|in
+truck|gray|mod
+truck|nissan|nn
+truck|pickup|nn
+truck|registered|vrel
+registered|rudolph|to
+seen|truck|obj
+seen|clinic|near
+clinic|birmingham|in
+seen|shortly|mod
+shortly|attack|after
+day|bombing|after
+bombing|birmingham|of
+clinic|abortion|nn
+killed|clinic|subj
+officer|off-duty|mod
+officer|police|nn
+killed|officer|obj
+killed|and|punc
+injured|severely|mod-before
+killed|injured|conj
+injured|clinic|subj
+injured|nurse|obj
+disappeared|rudolph|subj
+wilderness|western|mod
+wilderness|north carolina|nn
+disappeared|wilderness|into
+told|he|subj
+told|them|obj
+told|stole|fc
+stole|rudolph|subj
+1977|his|gen
+stole|1977|guest
+truck|datsun|nn
+truck|pickup|nn
+stole|truck|obj
+truck|july 9|on
+stole|and|punc
+stole|took|conj
+took|rudolph|subj
+six|about|num-mod
+months|six|amount-value
+worth|months|gen
+took|worth|obj
+worth|food|of
+rented|rudolph|subj
+rented|video|obj
+video|murphy|in
+murphy|that|whn
+bought|murphy|subj
+cache|large|mod
+bought|cache|obj
+cache|food|of
+food|and|punc
+food|supplies|conj
+bought|and|punc
+bought|vanished|conj
+vanished|murphy|subj
+200|more than|num-mod
+state|200|nn
+state|local|conj
+local|and|punc
+local|federal agents|conj
+continued|state|subj
+continued|search|obj
+search|mountains|in
+north carolina|western|mod
+mountains|north carolina|of
+rudolph|eric robert|nn
+north carolina|rudolph|for
+continued|sunday|mod
+suspect|31-year-old|mod
+jan|fatal|mod

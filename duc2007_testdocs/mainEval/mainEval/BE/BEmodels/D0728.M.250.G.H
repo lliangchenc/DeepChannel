@@ -1,0 +1,143 @@
+drug|genetic engineering|nn
+drug|interferon|appo
+developed|drug|obj
+developed|protein|from
+protein|isolated|vrel
+isolated|protein|obj
+cells|human|mod
+isolated|cells|from
+proving|it|subj
+proving|effective|desc
+effective|treatment|in
+c|liver diseases|nn
+c|hepatitis|nn
+treatment|c|of
+c|and|punc
+b|hepatitis|nn
+c|b|conj
+b|multiple sclerosis|conj
+multiple sclerosis|and|punc
+tumors|life-threatening|mod
+multiple sclerosis|tumors|conj
+is|in|pred
+stages|early|mod
+is|stages|in
+stages|study|of
+study|treatment|in
+treatment|cancer|of
+results|promising|mod
+cancer|results|with
+until|was|comp1
+treatment|only|mod
+was|treatment|pred
+treatment|hepatitis|for
+was|but|mod
+but|is|comp1
+approach|new|mod
+approach|treatment|nn
+is|approach|pred
+approach|involving|rel
+involving|approach|subj
+involving|combinations|obj
+combinations|interferon|of
+interferon|and|punc
+interferon|ribavirin|conj
+manufactured|it|obj
+manufactured|rebetron|as
+rebetron|schering-plough corp.|by
+manufactured|and|punc
+manufactured|sold|conj
+sold|it|obj
+sold|kit|as
+sold|interferon|obj
+sold|intron|as
+type|only|mod
+approved|type|subj
+approved|use|for
+use|ribavirin|with
+forms|other|mod
+available|increasingly|mod
+are|available|pred
+manufacturers|different|mod
+available|manufacturers|from
+eliminates|alone|amod
+eliminates|interferon|subj
+c|hepatitis|nn
+eliminates|c|obj
+10-20|about|num-mod
+c|10-20|in
+respond|patients|of
+do|not|neg
+respond|about 50 percent|subj
+30-40|remaining|mod
+respond|and|punc
+relapse|then|mod-before
+respond|relapse|conj
+theory|combination|nn
+given|relapse|after
+given|patient|obj1
+given|ribavirin|obj2
+show|studies|subj
+months|six|amount-value
+all|months|nn
+signs|all|after
+show|signs|fc
+signs|that|subj
+signs|virus|of
+82 percent|those|of
+those|combination|on
+combination|compared|vrel
+compared|combination|obj
+compared|half|with
+half|interferon|on
+compared|alone|mod
+cause|interferon|subj
+effects|serious|mod
+effects|side|nn
+cause|effects|obj
+effects|fever|such as
+fever|lethargy|conj
+glands|clogged|mod
+glands|saliva|nn
+lethargy|glands|conj
+infection|chronic|mod
+infection|yeast|nn
+glands|infection|conj
+infections|urinary|mod
+infections|tract|nn
+infection|infections|conj
+infections|and|punc
+infections|depression|conj
+combination|drug|nn
+cause|combination|subj
+cause|breathing|obj1
+cause|difficulty|obj2
+sore throat|rashes|appo
+cause|itching|mod
+itching|sore throat|subj
+nausea|insomnia|appo
+insomnia|anemia|appo
+defects|birth|nn
+kit|schering-plough|gen
+kit|treat|nn
+costs|kit|subj
+costs|about $1,831|obj
+supply|six-week|nn
+about $1,831|supply|for
+treatment|six-month|nn
+costs|treatment|subj
+costs|$6,400|obj
+$6,400|$8,000|to
+accuse|patients|subj
+accuse|schering|obj
+of|"|punc
+schering|bundling|of
+bundling|patient|subj
+bundling|"|punc
+bundling|products|obj
+products|order|in
+order|compel|rel
+compel|order|subj
+use|them|subj
+interferon|its|gen
+use|interferon|obj

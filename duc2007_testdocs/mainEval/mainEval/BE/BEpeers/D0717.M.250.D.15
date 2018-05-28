@@ -1,0 +1,161 @@
+hid|company|subj
+hid|evidence|obj
+evidence|that|c
+combination|popular|mod
+combination|diet-drug|mod
+half|combination|of
+caused|fen-phen|subj
+problems|serious|mod
+problems|heart|nn
+caused|problems|obj
+problems|lawyer|appo
+lawyer|woman|for
+lawyer|suing|rel
+suing|lawyer|subj
+suing|american home products corp.|obj
+trial|first|post
+damage|heart-valve|nn
+trial|damage|over
+damage|fen-phen|from
+ended|trial|subj
+settlement|reported|mod
+settlement|$500,000|nn
+ended|settlement|in
+settlement|woman|for
+woman|who|whn
+used|woman|subj
+combination|diet|mod
+combination|drug|nn
+used|combination|obj
+settlement|one|nn
+settlement|possible|mod
+cases|class-action|mod
+settlement|cases|of
+involve|settlement|subj
+home|american|nn
+involve|home|obj
+home|paying|rel
+paying|home|subj
+paying|medical examinations|for
+users|fen-phen|mod
+medical examinations|users|of
+users|who|whn
+yet|not|mod
+reported|yet|amod
+reported|users|subj
+problems|health|nn
+reported|problems|obj
+subsidiary|its|gen
+subsidiary|wyeth-ayerst laboratories|nn
+marketed|subsidiary|through
+products|american|nn
+products|home|nn
+marketed|products|subj
+half|fenfluramine|nn
+marketed|half|obj
+combination|fen-phen|mod
+half|combination|of
+combination|and|punc
+combination|redux|conj
+product|similar|mod
+combination|product|appo
+pondimin|and|punc
+pondimin|redux|conj
+drugs|two|nn
+drugs|prescription|mod
+drugs|diet|mod
+pondimin|drugs|appo
+taken|often|mod-before
+drugs|taken|vrel
+taken|drugs|obj
+taken|combination|in
+taken|pondimin|obj
+taken|market|off
+market|1997|in
+market|request|at
+request|food and drug administration|of
+taken|after|mod
+after|developed|comp1
+developed|users|subj
+damage|heart-valve|nn
+developed|damage|obj
+woman|texas|nn
+woman|who|whn
+blamed|woman|subj
+fen-phen|diet|mod
+fen-phen|drug|nn
+fen-phen|combination|nn
+blamed|fen-phen|obj
+damage|her|gen
+damage|heart|nn
+fen-phen|damage|for
+agreed|woman|subj
+agreed|settle|fc
+settle|woman|subj
+settle|lawsuit|obj
+lawsuit|manufacturer|against
+manufacturer|fraction|for
+fraction|$23.3 million|of
+$23.3 million|awarded|rel
+awarded|$23.3 million|obj1
+awarded|jury|subj
+awarded|her|obj2
+products|american|nn
+products|home|nn
+agreed|products|subj
+agreed|pay|fc
+pay|product|subj
+pay|$3.75 billion|obj
+$3.75 billion|settle|rel
+settle|$3.75 billion|subj
+settle|thousands|obj
+thousands|lawsuits|of
+lawsuits|filed|vrel
+filed|lawsuits|obj
+filed|nationwide|mod
+nationwide|people|by
+people|claiming|rel
+claiming|people|subj
+problems|health|nn
+claiming|problems|obj
+combination|company|gen
+popular|once|mod
+combination|popular|mod
+combination|fen-phen|mod
+combination|diet|mod
+combination|drug|nn
+problems|combination|due to
+home|american|nn
+withdrew|home|subj
+withdrew|redux|obj
+redux|market|from
+market|1997|in
+withdrew|after|mod
+study|mayo clinic|nn
+after|linked|comp1
+linked|study|subj
+linked|fen-phen|obj
+fatal|potentially|mod
+damage|fatal|mod
+damage|heart valve|nn
+fen-phen|damage|to
+sold|company|subj
+sold|drug|obj
+name|brand|nn
+drug|name|under
+name|pondimin|of
+sold|and|punc
+made|also|mod-before
+sold|made|conj
+made|company|subj
+made|redux|obj
+cousin|chemical|mod
+redux|cousin|appo
+on|miss.|title
+trial|successful|mod
+trial|damage|nn
+trial|suit|nn
+trial|fayette|in
+american home products|fen-phen|mod
+american home products|maker|nn
+fayette|american home products|against

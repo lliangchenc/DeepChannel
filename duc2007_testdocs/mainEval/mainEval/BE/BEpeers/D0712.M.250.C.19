@@ -1,0 +1,153 @@
+made|rushdie|subj
+trips|overseas|mod
+made|trips|obj
+trips|1989|since
+sentence|death|nn
+issued|in|mod-before
+issued|form|in
+edict|religious|mod
+form|edict|of
+issued|sentence|obj
+issued|rushdie|against
+flown|rushdie|subj
+flown|salman rushdie|on
+sentence|death|nn
+'s|]|punc
+'s|monday|pred
+statement|ali khamenei|on
+drawn|statement|subj
+drawn|criticism|obj
+jomhuri salman rushdie|national|mod
+jomhuri salman rushdie|newspaper|nn
+criticism|jomhuri salman rushdie|from
+authorities|iranian|mod
+given|authorities|subj
+pressures|tremendous|mod
+given|pressures|into
+sentence|[|punc
+sentence|death|nn
+pressures|sentence|from
+sentence|]|punc
+sentence|death|after
+death|ali khamenei|of
+given|promising|mod
+promising|authority|subj
+promising|dispatch|fc
+dispatch|commandos|obj
+commandos|kill|rel
+kill|commando|subj
+kill|salman rushdie|obj
+foundation|iranian|mod
+added|foundation|subj
+added|dlrs|obj
+dlrs|300,000|num
+dlrs|reward|to
+death|salman rushdie|gen
+reward|death|for
+added|just|mod
+added|weeks|mod
+added|after|mod
+government|iranian|mod
+after|tried|comp1
+tried|government|subj
+tried|distance|fc
+distance|government|subj
+distance|itself|obj
+distance|bounty|from
+leader|iran|gen
+leader|supreme|mod
+leader|ali khamenei|person
+person|only|mod
+is|person|pred
+person|who|whn
+has|person|subj
+has|authority|obj
+authority|cancel|rel
+cancel|authority|subj
+sentence|death|nn
+cancel|sentence|obj
+sentence|salman rushdie|on
+official|high-ranking|mod
+said|official|subj
+office|presidential|mod
+official|office|at
+cancel|said|mod
+cancel|here|mod
+cancel|today|mod
+says|salman rushdie|subj
+life|his|gen
+says|improved|fc
+improved|life|subj
+improved|since|mod
+since|distanced|comp1
+distanced|iran|subj
+distanced|itself|obj
+year|last|post
+distanced|year|mod
+sentence|death|nn
+distanced|sentence|from
+sentence|his|against
+author|british|mod
+author|salman rushdie|person
+said|speaking|mod-before
+speaking|author|subj
+speaking|after|mod
+after|distanced|comp1
+distanced|iran|subj
+distanced|itself|obj
+sentence|islamic|mod
+sentence|death|nn
+distanced|sentence|from
+sentence|him|against
+said|author|subj
+said|thursday|guest
+said|that|c
+appeared|it|subj
+ordeal|10-year|nn
+ended|ordeal|subj
+()|stopping|while
+stopping|short|mod
+short|revoking|of
+revoking|death|obj
+sentence|rushdie|against
+says|sentence|subj
+says|adopt|fc
+adopt|it|subj
+adopt|measures|obj
+measures|that|whn
+threaten|measures|subj
+threaten|salman rushdie the satanic verses|obj
+sentence|only|mod
+sentence|[|punc
+sentence|death|nn
+revise|]|punc
+revise|as|mod-before
+revise|ali khamenei|as
+revise|sentence|subj
+revise|decrees|obj
+decrees|issued|vrel
+issued|decrees|obj
+issued|by|by-subj
+salman rushdie|late|mod
+issued|salman rushdie|by
+stressed|he|subj
+issued|stressed|mod
+half|more|mod
+week|half|appo
+parliament|iran|gen
+parliament|hard-line|mod
+members|parliament|of
+half|signed|rel
+signed|members|subj
+letter|saying|rel
+saying|letter|subj
+edict|death|nn
+saying|edict|obj
+edict|salman rushdie|against
+signed|stands|fc
+stands|half|obj
+stands|letter|subj
+minister|iranian|mod
+minister|foreign|mod
+thursday|minister|appo
+minister|kamal kharrazi|person

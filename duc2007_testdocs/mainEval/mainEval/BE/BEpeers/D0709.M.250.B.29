@@ -1,0 +1,133 @@
+director|and|punc
+director|producer|conj
+thriller|serial-killer|nn
+producer|thriller|of
+collector|bone|nn
+collector|"|punc
+collector|due|pnmod
+due|friday|out
+admit|readily|mod-before
+admit|collector|subj
+executives|universal studios|nn
+admit|want|fc
+want|executives|subj
+want|angelina jolie|obj
+billy bob thornton|oscar|nn
+billy bob thornton|winners|nn
+billy bob thornton|and|punc
+billy bob thornton|angelina jolie|conj
+married|billy bob thornton|obj
+married|here|mod
+ceremony|quickie|nn
+no-frills|ceremony|appo
+shakespeare|love|in
+led|shakespeare|subj
+nominees|movie|nn
+led|nominees|obj
+annual screen actors guild awards|5th|mod
+nominees|annual screen actors guild awards|for
+patient|disruptive|mod
+patient|mental|mod
+in|"|punc
+patient|girl|in
+girl|interrupted|vrel
+interrupted|girl|obj
+won|"|punc
+won|patient|subj
+award|academy|nn
+won|award|obj
+supporting|best|mod
+actress|supporting|mod
+award|actress|for
+actress|sunday|person
+won|night|mod
+father|her|gen
+generation|father|after
+took home|generation|subj
+took home|oscar|obj
+honor|jolie|gen
+award|night|gen
+award|first|post
+award|major|mod
+was|award|pred
+award|evening|of
+lives on|angelina jolie|subj
+lives on|edge|obj
+win|angelina jolie|gen
+actor|saving private ryan|nn
+actor|"|punc
+actor|musical|conj
+musical|or|punc
+musical|comedy|conj
+actress|miniseries|conj
+miniseries|or|punc
+miniseries|movie|conj
+made|actress|subj
+made|television|for
+jolie|angelina|nn
+jolie|"|punc
+actress|gia|nn
+actress|"|punc
+jolie|actress|conj
+actress|miniseries|conj
+miniseries|or|punc
+miniseries|movie|conj
+made|jolie|subj
+made|television|for
+jolie|angelina|nn
+of|"|punc
+ed harris|the truman show|of
+the truman show|"|punc
+the truman show|and|punc
+the truman show|lynn redgrave|conj
+of|"|punc
+lynn redgrave|gods|of
+gods|and|punc
+gods|monsters|conj
+won|"|punc
+won|ed harris|subj
+honors|motion picture|nn
+honors|supporting|mod
+honors|actor|nn
+won|honors|obj
+forget|visit|fc
+visit|new york times syndicate website|obj
+appeal|cover girl|gen
+jolie|ms.|title
+dress|jolie|gen
+turned up|by|mod-before
+turned up|randolph duke|by
+turned up|dress|subj
+show|his|gen
+turned up|show|in
+lost|year|for
+lost|mgm|subj
+lost|$530.9 million|obj
+denzel washington|movie stars|nn
+saga|prison|nn
+denzel washington|saga|in
+saga|boxer|of
+played|movie|subj
+played|well|mod
+areas|white|mod
+well|areas|in
+helped|also|amod
+helped|they|subj
+live|me|subj
+life|my|gen
+live|life|obj
+is|in|pred
+is|television|in
+golden globes|winning back-to-back|mod
+television|golden globes|appo
+interwoven|entirely|amod
+interwoven|life|obj
+david duchovny|timothy hutton|conj
+timothy hutton|and|punc
+timothy hutton|angelina jolie|conj
+news|-the-movies ( hollywood )--|mod
+screen|silver|nn
+news|screen|of
+is|all|guest
+people|show-business|nn
+is|people|pred

@@ -1,0 +1,131 @@
+agency|us|nn
+agency|federal|mod
+agency|tax|nn
+wants|agency|subj
+wants|estate|obj
+estate|nicole brown simpson|of
+nicole brown simpson|pay|rel
+pay|nicole brown simpson|subj
+6.5 million|dlrs|nn
+pay|6.5 million|obj
+6.5 million|taxes|in
+lawyers|simpson|for
+declined|also|mod-before
+declined|lawyers|subj
+declined|comment|obj
+acquitted|1995|in
+jury|criminal|mod
+acquitted|jury|subj
+acquitted|simpson|obj
+charges|murder|nn
+simpson|charges|of
+1968|simpson|gen
+valuable|most|mod
+item|valuable|mod
+is|item|pred
+item|auctioned|rel
+acquitted|simpson|obj
+charges|criminal|mod
+acquitted|charges|of
+murders|1994|num
+charges|murders|in
+murders|nicole brown simpson|of
+nicole brown simpson|and|punc
+friend|her|gen
+nicole brown simpson|friend|conj
+raised|tuesday|mod-before
+raised|auction|subj
+raised|$430000|obj
+raised|including|mod
+including|auction|subj
+including|$255500|obj
+heisman trophy|simpson|gen
+$255500|heisman trophy|for
+acquitted|he|obj
+acquitted|charges|on
+charges|murdering|of
+murdering|he|subj
+nicole brown simpson|ex-wife|nn
+murdering|nicole brown simpson|obj
+nicole brown simpson|and|punc
+nicole brown simpson|ronald goldman|conj
+ronald goldman|trial|after
+trial|defense|with
+become|simpson|subj
+become|adept|desc
+adept|shielding|at
+shielding|simpson|subj
+income|his|gen
+shielding|income|obj
+family|goldman|nn
+income|family|from
+shielding|as|mod
+as|try|comp1
+try|they|subj
+try|collect|fc
+collect|they|subj
+judgment|huge|mod
+collect|judgment|on
+referral|simpson|from
+help|referral|subj
+business|lawyer|gen
+help|business|obj
+failed|judge|subj
+failed|hear|fc
+hear|judge|subj
+hear|evidence|obj
+evidence|slayings|about
+wife|simpson|gen
+wife|former|mod
+slayings|wife|of
+wife|and|punc
+friend|her|gen
+wife|friend|conj
+agreement|giving|rel
+giving|agreement|subj
+giving|custody|obj
+custody|simpson|to
+was|ready|pred
+was|signed|mod
+children|justin|appo
+justin|13|num
+live|children|subj
+live|simpson|with
+incident|polygraph|nn
+accounting|incident|of
+case|simpson|nn
+incident|case|in
+came|accounting|subj
+accounting|bailey|gen
+accounting|lengthy|mod
+came|accounting|in
+time|his|gen
+was|spent|pred
+was|defending|mod
+defending|time|subj
+defending|client|obj
+suit|simpson|gen
+gets back|suit|subj
+gets back|court|to
+court|sept. 6.|on
+voice|simpson|nn
+heard|occasionally|amod
+heard|voice|obj
+heard|intercom|on
+remains|simpson|subj
+remains|flash point|obj
+murders|nicole brown simpson|of
+nicole brown simpson|and|punc
+nicole brown simpson|ronald goldman|conj
+ronald goldman|jury|after
+after|found|comp1
+found|murders|subj
+found|him|obj1
+found|responsible|desc
+responsible|deaths|for
+trial|civil|mod
+deaths|trial|in
+evokes|still|mod-before
+evokes|case|subj
+emotions|visceral|mod
+evokes|emotions|obj

@@ -1,0 +1,141 @@
+manufacturers|food|nn
+fear|manufacturers|subj
+labels|such|pre
+fear|scare|fc
+scare|labels|subj
+consumers|away|mod
+scare|consumers|obj
+proposed|agriculture department|subj
+regulations|organic|mod
+regulations|food|nn
+proposed|regulations|obj
+regulations|more|pnmod
+more|280,000|than
+filed|people|subj
+filed|comments|obj
+comments|protesting|rel
+protesting|comment|subj
+protesting|inclusion|obj
+modified|genetically|mod
+foods|modified|mod
+inclusion|foods|of
+foods|as|mod
+food|organic|mod
+attack|food|on
+organization|well-financed|mod
+organization|research|nn
+food|organization|by
+suggests|attack|subj
+suggests|that|obj
+suggests|even|mod
+suggests|though|mod
+food|organic|mod
+though|accounts for|comp1
+accounts for|food|subj
+accounts for|only|guest
+accounts for|1 percent|obj
+sales|food|nn
+1 percent|sales|of
+sales|country|in
+industry|conventional|mod
+industry|food|nn
+worried|industry|obj
+groups|only|mod
+groups|a few|nn
+groups|consumer|nn
+groups|seeking|rel
+seeking|group|subj
+seeking|wider|mod
+awareness|greatest|mod
+comes from|food|subj
+industry|organic-food|mod
+comes from|industry|obj
+others|eleven|nn
+have|including|mod-before
+including|others|subj
+including|california|obj
+have|others|subj
+standards|production|nn
+have|standards|obj
+standards|but|punc
+process|certification|nn
+standards|process|conj
+process|ensuring|for
+ensuring|others|subj
+ensuring|that|c
+comply with|farmers|subj
+comply with|them|obj
+farms|10,000|num
+claim|that|subj
+be|organic|pred
+6,600|only|mod
+claim|certified|fc
+certified|6,600|obj
+certified|by|by-subj
+certified|state|by
+state|or|punc
+agency|private|mod
+state|agency|conj
+foods|organic|mod
+sales|foods|of
+grown|sales|subj
+grown|20 percent|by
+grown|annually|mod
+years|last|post
+years|seven|amount-value
+annually|years|for
+products|grown|vrel
+grown|products|obj
+grown|standards|according to
+grown|and|punc
+grown|contain|conj
+contain|products|subj
+95|at least|num-mod
+contain|95|obj
+ingredients|organic|mod
+carry|ingredients|subj
+carry|seal of approval|obj
+seal of approval|that|whn
+says|seal of approval|subj
+seal of approval|'|punc
+certified organic|'usda|nn
+seal of approval|certified organic|appo
+developing|department|subj
+standards|first|post
+standards|national|mod
+developing|standards|obj
+food|organic|mod
+standards|food|on
+replace|hodgepodge|obj
+rules|state|nn
+hodgepodge|rules|of
+rules|and|punc
+guidelines|industry|nn
+rules|guidelines|conj
+development|rapid|mod
+industry|china|gen
+industry|organic|mod
+industry|food|nn
+development|industry|of
+attracted|development|subj
+attention|international|mod
+attracted|attention|obj
+organic|only|mod
+food|organic|mod
+be|food|pred
+process|certification|nn
+food|process|with
+process|approved|vrel
+approved|process|obj
+approved|by|by-subj
+approved|federal government|by
+food|organic|mod
+growth|food|of
+movement|fringe|mod
+food|movement|from
+industry|$5 billion|nn
+industry|nationwide|mod
+movement|industry|to
+based|growth|obj
+based|mostly|mod
+mostly|trust|on

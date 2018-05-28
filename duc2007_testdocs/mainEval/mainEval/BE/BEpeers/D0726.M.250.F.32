@@ -1,0 +1,156 @@
+2000|president|gen
+president|al gore|person
+appointed|campaign|subj
+appointed|campaign|obj1
+appointed|pro|obj2
+connections|local|mod
+connections|washington|nn
+pro|connections|with
+director|its|gen
+director|political|mod
+connections|director|as
+80|about|num-mod
+people|80|nn
+attended|people|subj
+attended|fund-raiser|obj
+fund-raiser|gore|for
+gore|where|wha
+campaign|his|gen
+campaign|presidential|mod
+spokesman|campaign|for
+said|spokesman|subj
+said|campaign|obj
+campaign|expected|vrel
+net|campaign|subj
+net|about $150,000|obj
+about $150,000|visit|from
+president|al gore|person
+received|president|subj
+received|endorsement|obj
+boss|his|gen
+wife|boss|gen
+endorsement|wife|of
+received|tuesday|mod
+received|as|mod
+as|sought|comp1
+sought|he|subj
+sought|rally|mod
+rally|he|subj
+rally|women|obj
+bid|his|gen
+women|bid|behind
+nomination|democratic|mod
+nomination|presidential|mod
+bid|nomination|for
+president|al gore|person
+named|president|subj
+named|veteran|obj1
+campaigns|clinton-gore|nn
+campaigns|presidential|mod
+veteran|campaigns|of
+be|his|pred
+press secretary|campaign|nn
+named|press secretary|obj2
+edward kennedy|sen.|title
+endorse|edward kennedy|subj
+endorse|al gore|obj
+al gore|president|for
+president|wednesday|person
+president|move|in
+hopes|gore|nn
+hopes|campaign|nn
+move|help|rel
+help|move|obj
+help|hopes|subj
+help|voters|with
+voters|new hampshire|in
+door|next|post
+new hampshire|door|appo
+massachusetts|kennedy|gen
+door|massachusetts|to
+in|and|punc
+in|with|conj
+democrats|wavering|mod
+in|democrats|with
+help|nationwide|mod
+issues|two|nn
+are|paramount|pred
+paramount|kennedy|to
+are|and|punc
+are|been|conj
+been|mainstays|pred
+campaign|gore|gen
+mainstays|campaign|of
+nomination|party|gen
+nomination|2000|num
+nomination|presidential|mod
+campaign|nomination|for
+official|senior|mod
+campaign|gore|gen
+campaign|presidential|mod
+official|campaign|in
+campaign|speaking|pnmod
+anonymity|condition|nn
+speaking|anonymity|on
+departure|klain|gen
+expected|departure|obj
+expected|weeks|for
+expected|since|mod
+since|named|comp1
+named|gore|subj
+named|tony coelho|obj1
+congressman|former|mod
+congressman|california|nn
+tony coelho|congressman|appo
+chairman|general|mod
+named|chairman|obj2
+campaign|his|gen
+campaign|presidential|mod
+chairman|campaign|of
+bradley|retired|pnmod
+retired|senate|from
+senate|1996|in
+mulled|briefly|mod-before
+mulled|bradley|subj
+mulled|independent|obj
+independent|run|vrel
+run|independent|obj
+run|president|for
+spent|then|mod
+time|spent|mod
+run|time|mod
+time|lecturing|rel
+lecturing|time|subj
+lecturing|stanford university|at
+stanford university|california|in
+california|deciding|before
+deciding|challenge|fc
+challenge|gore|obj
+nomination|democratic|mod
+nomination|presidential|mod
+gore|nomination|for
+president|al gore|person
+declared|president|subj
+declared|"|punc
+day|new|mod
+declared|day|obj
+day|"|punc
+bid|his|gen
+bid|presidential|mod
+day|bid|in
+declared|wednesday|mod
+homecoming|symbolic|mod
+declared|homecoming|with
+homecoming|and|punc
+homecoming|opening|conj
+headquarters|new|mod
+headquarters|campaign|nn
+opening|headquarters|of
+headquarters|far|pnmod
+intrigue|constant|mod
+intrigue|political|mod
+far|intrigue|from
+intrigue|and|punc
+odds-making|daily|mod
+intrigue|odds-making|conj
+odds-making|washington|of
