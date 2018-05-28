@@ -51,6 +51,8 @@ def read_cnn_dailymail(data_type, data_dir):
             docu = [sent_dealer(s.strip()) for s in parts[0].split('\n') if s.strip()] 
             # document is list of sentences, sentence is list of word tokens
             summ = [sent_dealer(s.strip()) for s in parts[1:]]
+            if len(docu)==0 or len(summ)==0:
+                continue
             docu_len = [len(s) for s in docu]
             summ_len = [len(s) for s in summ]
             data[i].append([docu, summ])
