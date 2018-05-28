@@ -1,0 +1,151 @@
+scholar|harvard|nn
+scholar|legal|mod
+told|scholar|subj
+told|judge|obj
+antitrust case|microsoft|nn
+judge|antitrust case|in
+told|tuesday|guest
+told|that|c
+'s|decision|pred
+bundle|company|subj
+browser|its|gen
+browser|web|nn
+bundle|browser|obj
+browser|windows|into
+decision|had|comp1
+had|operating system|subj
+had|`|punc
+benefits|obvious|mod
+had|benefits|obj
+benefits|`|punc
+programmers|computer|nn
+benefits|programmers|to
+programmers|and|punc
+programmers|consumers|conj
+renewed|justice department|subj
+scrutiny|its|gen
+renewed|scrutiny|obj
+violations|alleged|mod
+violations|antitrust|mod
+scrutiny|violations|of
+microsoft corp.|software|nn
+microsoft corp.|giant|nn
+violations|microsoft corp.|by
+newspapers|u.s.|nn
+microsoft corp.|newspapers|appo
+newspapers|reported|vrel
+reported|newspapers|obj
+reported|today|mod
+ruling|his|gen
+wrote|ruling|in
+judge|district|nn
+judge|thomas penfield jackson|person
+wrote|judge|subj
+violated|microsoft|subj
+violated|sherman antitrust act|obj
+judge|u.s.|nn
+judge|federal|mod
+ordered|judge|subj
+ordered|wednesday|guest
+ordered|microsoft corp.|obj
+be|split|pred
+companies|two|nn
+companies|separate|mod
+split|companies|in
+companies|correct|rel
+correct|company|subj
+violations|antitrust|mod
+correct|violations|obj
+proposed|until|guest
+proposed|friday|until
+friday|submit|rel
+submit|friday|subj
+proposed|each|subj
+proposed|remedies|obj
+judge|u.s.|nn
+judge|district|mod
+remedies|judge|to
+judge|thomas penfield jackson|person
+judge|who|whn
+ruled|judge|subj
+ruled|on|guest
+ruled|april 3|on
+ruled|that|c
+used|illegally|mod-before
+used|microsoft|subj
+dominance|its|gen
+used|dominance|obj
+market|operating systems|nn
+dominance|market|in
+market|hurt|rel
+hurt|market|subj
+hurt|competition|obj
+rival|microsoft|gen
+rival|major|mod
+netscape communication corp.|rival|appo
+market|u.s.|nn
+rival|market|in
+market|software|for
+wrote|netscape communication corp.|subj
+wrote|justice department|to
+justice department|last|vrel
+last|month|mod
+month|asking|rel
+asking|month|subj
+asking|regulators|obj
+regulators|examine|rel
+examine|regulator|subj
+violations|possible|mod
+violations|antitrust|mod
+examine|violations|obj
+violations|marketing|in
+marketing|and|punc
+marketing|distribution|conj
+software|microsoft|gen
+software|internet explorer|nn
+distribution|software|of
+victory|their|gen
+victory|legal|mod
+ebullient|victory|over
+victory|microsoft|against
+officials|justice department|nn
+officials|antitrust|mod
+said|officials|subj
+said|monday|guest
+said|that|c
+examine|they|subj
+remedies|possible|mod
+examine|remedies|obj
+remedies|put|rel
+put|remedy|subj
+put|end|obj
+judge|federal|mod
+described|what|obj
+described|judge|subj
+practices|company|gen
+practices|monopolistic|mod
+described|practices|as
+of appeals|u.s.|nn
+agreed|of appeals|subj
+agreed|that|c
+injunction|lower court|gen
+injunction|microsoft|against
+was|improper|pred
+was|and|punc
+was|sent|conj
+sent|injunction|subj
+sent|matter|obj
+judge|federal|mod
+judge|trial|nn
+matter|judge|to
+judge|overseeing|rel
+overseeing|judge|subj
+overseeing|antitrust case|obj
+lawsuit|caldera inc.|gen
+lawsuit|antitrust|mod
+trial|lawsuit|of
+lawsuit|microsoft corp.|against
+postponed|trial|obj
+postponed|june|from
+january|next|post
+postponed|january|until

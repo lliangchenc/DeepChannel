@@ -1,0 +1,135 @@
+mine|fourth|mod
+mine|uranium|nn
+approved|mine|obj
+approved|year|within
+approved|after|mod
+company|energy resources australia|nn
+after|moved|comp1
+moved|company|subj
+moved|fast-track|to
+mine|jabiluka|nn
+fast-track|mine|for
+mine|kakadu national park|in
+project|jabiluka|nn
+considered|project|obj1
+test|litmus|nn
+considered|test|obj2
+projects|other|mod
+projects|potential|mod
+projects|uranium|nn
+projects|mine|nn
+test|projects|for
+projects|australia|in
+car|old|mod
+car|dressed up|vrel
+dressed up|car|obj
+dressed up|look|mod
+lizard|frill-necked|mod
+look|lizard|like
+blocked|car|subj
+blocked|entrance|obj
+site|jabiluka|nn
+site|uranium|nn
+site|mine|nn
+entrance|site|to
+site|borders|inside
+borders|kakadu national park|of
+kakadu national park|september 1998|in
+said|she|subj
+said|represented|fc
+represented|it|subj
+represented|animals|obj
+kakadu park|surrounding|mod
+animals|kakadu park|in
+kakadu park|which|whn
+endangered|kakadu park|obj
+endangered|by|by-subj
+endangered|construction|by
+mine|uranium|nn
+construction|mine|of
+mine|which|whn
+extract|mine|subj
+20 million|almost|num-mod
+metric tons|20 million|amount-value
+extract|metric tons|obj
+years|uranium|nn
+years|ore|nn
+28|over|num-mod
+years|28|amount-value
+metric tons|years|of
+recommends|therefore|mod-before
+recommends|mission|subj
+recommends|that|c
+proposal|mine|comp1
+mine|mission|subj
+proposal|and|punc
+uranium|mill|nn
+proposal|uranium|conj
+uranium|jabiluka|at
+should|not|neg
+proceed|proposal|subj
+committee|united nations world heritage|nn
+called|committee|subj
+called|november 1998|in
+called|scrapping|for
+mine|proposed|mod
+mine|jabiluka|nn
+mine|uranium|nn
+scrapping|mine|of
+northern territory|australia|gen
+mine|northern territory|in
+recommends|therefore|mod-before
+recommends|mission|subj
+recommends|that|c
+proposal|mine|comp1
+mine|mission|subj
+proposal|and|punc
+uranium|mill|nn
+proposal|uranium|conj
+uranium|jabiluka|at
+should|not|neg
+proceed|proposal|subj
+said|committee|subj
+report|its|gen
+said|report|in
+report|following|rel
+following|report|subj
+following|visit|obj
+visit|kakadu|to
+kakadu|last|vrel
+last|kakadu|obj
+last|month|mod
+government|australian|mod
+year|next|post
+year|try|rel
+try|year|subj
+try|stop|fc
+stop|united nations|obj
+united nations|declaring|from
+declaring|kakadu national park|obj
+kakadu national park|endangered|vrel
+endangered|kakadu national park|obj
+mine|jabiluka|nn
+mine|uranium|nn
+endangered|mine|because of
+federal government|australian|mod
+rejected|in|mod-before
+rejected|april 1999|in
+rejected|federal government|subj
+report|unesco|nn
+rejected|report|obj
+report|which|whn
+called for|report|subj
+called for|kakadu national park|obj
+australia|northwest|mod
+kakadu national park|australia|in
+australia|placed|rel
+list|endangered|mod
+placed|list|on
+list|threat|because of
+threat|posed|vrel
+posed|threat|obj
+posed|by|by-subj
+mine|jabiluka|nn
+mine|uranium|nn
+posed|mine|by

@@ -1,0 +1,144 @@
+attempt|piccard|gen
+attempt|third|post
+be|attempt|pred
+attempt|become|rel
+become|attempt|subj
+become|first person|obj
+first person|pilot|rel
+pilot|first person|subj
+pilot|balloon|obj
+balloon|world|around
+pilot|nonstop|mod
+orbit|most|subj
+orbit|far|mod
+far|sun|from
+freeze|deep|mod
+sun|freeze|in
+orbit|pluto|gen
+freeze|orbit|beyond
+most|deaths--|mod
+spate|most|of
+surgeries|cosmetic|nn
+most|surgeries|from
+from|but|punc
+from|also|punc
+from|among|conj
+from|children|among
+children|undergoing|rel
+undergoing|child|subj
+work|dental|mod
+undergoing|work|obj
+work|or|punc
+work|mri|conj
+has|scans--|subj
+has|experts|obj
+experts|questioning|rel
+questioning|expert|subj
+questioning|safety|obj
+safety|sedation|of
+doctors|private|mod
+offices|doctors|gen
+sedation|offices|in
+rose|nikkei|subj
+points|12.23|amount-value
+rose|points|obj
+points|16,280.34|to
+16,280.34|midday|by
+officials|federation aeronautique internationale|from
+body|international|mod
+body|aeronautics|nn
+federation aeronautique internationale|body|conj
+presented|also|mod
+piccard|presented|mod
+body|piccard|conj
+piccard|and|punc
+piccard|jones|conj
+jones|papers|with
+papers|certifying|rel
+certifying|paper|subj
+records|three|nn
+records|world|nn
+certifying|records|obj
+distance|duration|conj
+duration|and|punc
+time|shortest|mod
+duration|time|conj
+time|world|around
+see|public|subj
+see|piece|obj
+piece|it|of
+pieces|other|mod
+displayed|pieces|obj
+displayed|museums|in
+museums|world|around
+team|breitling|nn
+team|ground|nn
+team|geneva|in
+forecast|team|subj
+forecast|that|c
+balloon|huge|mod
+balloon|swiss-registered|mod
+complete|balloon|subj
+circuit|its|gen
+complete|circuit|obj
+circuit|earth|of
+somewhere|north africa|in
+psychiatrist|41-year-old|mod
+psychiatrist|swiss|mod
+piccard|psychiatrist|appo
+is|latest|pred
+latest|family|in
+family|explorers|of
+explorers|and|punc
+explorers|record-setters|conj
+attempts|previous|mod
+came|attempts|subj
+close|even|mod
+came|close|desc
+attempt|uliassi|gen
+attempt|second|post
+is|attempt|pred
+attempt|fly|rel
+fly|attempt|subj
+fly|world|around
+bid|own|gen
+fly|bid|subj
+fly|world|around
+world|non-stop|pnmod
+days|18|amount-value
+non-stop|days|in
+hitch|technical|mod
+last|hitch|due to
+europeans|three|nn
+europeans|set|vrel
+set|europeans|obj
+set|off|mod
+off|switzerland|from
+quest|latest|mod
+switzerland|quest|in
+quest|circle|rel
+circle|quest|subj
+circle|world|obj
+world|non-stop|pnmod
+non-stop|balloon|in
+said|organizers|subj
+circle|said|mod
+richard branson|british|mod
+richard branson|entrepreneur|nn
+richard branson|set off|appo
+set off|who|obj
+set off|plans|subj
+set off|morocco|from
+days|a few|amount-value
+morocco|days|in
+attempt|rival|mod
+days|attempt|in
+attempt|circle|comp1
+circle|plan|subj
+circle|world|obj
+world|wished|vrel
+wished|world|obj1
+good luck|brietling orbiter|nn
+good luck|ii|mod
+good luck|team|nn
+wished|good luck|obj2

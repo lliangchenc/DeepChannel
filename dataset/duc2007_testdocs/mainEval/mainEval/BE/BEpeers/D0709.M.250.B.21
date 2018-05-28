@@ -1,0 +1,153 @@
+won|angelina jolie|subj
+actress|best|mod
+won|actress|obj
+actress|miniseries|in
+miniseries|or|punc
+movie|tv|nn
+miniseries|movie|conj
+for|`|punc
+for|`|punc
+movie|gia|for
+gia|'|punc
+gia|'|punc
+gia|which|whn
+earned|also|mod-before
+earned|gia|subj
+earned|faye dunaway|obj
+actress|supporting|mod
+award|actress|for
+actress|series|in
+series|miniseries|conj
+miniseries|or|punc
+movie|tv|nn
+miniseries|movie|conj
+actress|miniseries|conj
+miniseries|or|punc
+miniseries|movie|conj
+made|actress|subj
+made|television|for
+jolie|angelina|nn
+jolie|`|punc
+jolie|`|punc
+actress|gia|nn
+actress|'|punc
+actress|'|punc
+jolie|actress|conj
+movie|tv|nn
+actress|movie|in
+movie|or|punc
+movie|miniseries|conj
+life|party|of
+story|pamela|nn
+story|harriman|nn
+dance|baby|subj
+dukakis|olympia|nn
+maupin|armistead|nn
+tales|maupin|gen
+tales|more|mod
+tales|city|of
+jolie|angelina|nn
+steenburgen|mary|nn
+sarah|about|mod
+patient|disruptive|mod
+patient|mental|mod
+in|'|punc
+patient|'girl|in
+'girl|interrupted|vrel
+interrupted|'girl|obj
+won|'|punc
+won|'|punc
+won|patient|subj
+award|academy|nn
+won|award|obj
+supporting|best|mod
+actress|supporting|mod
+award|actress|for
+actress|sunday|person
+won|night|mod
+father|her|gen
+generation|father|after
+took home|generation|subj
+took home|oscar|obj
+favorites|poll|gen
+favorites|other|mod
+seemed|also|mod-before
+reflect|favorites|subj
+wisdom|pre-oscar|nn
+wisdom|conventional|mod
+reflect|wisdom|obj
+leading|actor|obj
+in|'|punc
+hurricane|'the|nn
+actor|hurricane|in
+hurricane|'|punc
+hurricane|'|punc
+hurricane|hilary swank|appo
+hilary swank|leading|for
+in|'|punc
+actress|'boys|in
+cry|actress|subj
+hilary swank|'|punc
+hilary swank|'|punc
+hilary swank|michael caine|appo
+actor|supporting|mod
+michael caine|actor|for
+in|'|punc
+cider house rules|'the|nn
+actor|cider house rules|in
+cider house rules|'|punc
+cider house rules|'|punc
+cider house rules|and|punc
+cider house rules|jolie|conj
+actress|supporting|mod
+jolie|actress|for
+know|'i|subj
+responsibility|my|gen
+know|is|fc
+is|to|pred
+work|my|gen
+is|work|to
+say|what|obj
+say|films|subj
+say|'|punc
+say|'|punc
+said|jolie|subj
+say|said|mod
+life|'my|nn
+life|personal|mod
+interpreted|it|obj
+'s|not|neg
+responsibility|my|gen
+'s|responsibility|pred
+responsibility|have|rel
+have|responsibility|subj
+life|personal|mod
+have|life|obj
+'s|comfortable|pred
+girl|little|mod
+was|girl|pred
+brother|her|gen
+point|brother|subj
+point|home|obj1
+camera|video|nn
+point|camera|obj2
+camera|her|at
+point|and|punc
+point|plead|conj
+plead|brother|subj
+'mon|c|mod
+'mon|ange|appo
+give|'mon|subj
+give|us|obj1
+give|show|obj2
+much|delight|to
+mother|her|gen
+mother|actress|nn
+delight|mother|of
+mother|marcheline bertrand|appo
+marcheline bertrand|who|whn
+provide|marcheline bertrand|subj
+provide|kids|obj
+kids|costumes|with
+performances|elaborate|mod
+costumes|performances|for

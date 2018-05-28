@@ -1,0 +1,173 @@
+wife|estranged|mod
+speaker|former|mod
+speaker|u.s. house|nn
+wife|speaker|of
+speaker|newt gingrich|person
+wants|wife|subj
+wants|cobb county|obj
+judge|freeze|rel
+freeze|judge|subj
+assets|couple|gen
+freeze|assets|obj
+divorce|their|gen
+assets|divorce|until
+is|final|pred
+counterclaim|her|gen
+accuses|counterclaim|in
+petition|gingrich|gen
+petition|july 29|nn
+petition|divorce|nn
+counterclaim|petition|to
+accuses|marianne gingrich|subj
+husband|her|gen
+accuses|husband|obj
+husband|transferring|of
+transferring|marianne gingrich|subj
+transferring|`|punc
+transferring|`|punc
+portions|substantial|mod
+transferring|portions|obj
+assets|certain|mod
+assets|valuable|mod
+portions|assets|of
+assets|'|punc
+assets|filing|before
+filing|divorce|for
+asks|also|mod-before
+asks|she|subj
+asks|that|c
+ordered|newt gingrich|obj
+ordered|stop|mod
+stop|newt gingrich|subj
+transfers|`|punc
+transfers|`|punc
+transfers|further|mod
+stop|transfers|obj
+transfers|or|punc
+transfers|concealment|conj
+concealment|'|punc
+concealment|'|punc
+concealment|assets|of
+stop|and|punc
+stop|replace|conj
+replace|newt gingrich|subj
+replace|assets|obj
+transferred|already|amod
+assets|transferred|rel
+transferred|assets|obj
+transferred|he|subj
+attorney|newt gingrich|gen
+attorney|randolph evans|appo
+denied|attorney|subj
+denied|allegation|obj
+denied|and|punc
+denied|said|conj
+said|attorney|subj
+handled|always|amod
+said|handled|fc
+handled|marianne gingrich|subj
+money|couple|gen
+handled|money|obj
+fight|assets|over
+is|yet|guest
+is|sign|pred
+sign|that|c
+contentious|already|mod
+divorce|contentious|mod
+divorce|gingrich|nn
+embarrassing|sign|obj
+embarrassing|divorce|subj
+congressman|former|mod
+congressman|10-term|mod
+embarrassing|congressman|for
+congressman|who|whn
+resigned|congressman|subj
+seat|his|gen
+resigned|seat|obj
+seat|january|in
+losses|1998|num
+losses|gop|nn
+losses|election|nn
+seat|losses|after
+wife|estranged|mod
+speaker|former|mod
+speaker|u.s. house|nn
+wife|speaker|of
+speaker|newt gingrich|person
+wants|wife|subj
+wants|cobb county|obj
+judge|freeze|rel
+freeze|judge|subj
+assets|couple|gen
+freeze|assets|obj
+divorce|their|gen
+assets|divorce|until
+is|final|pred
+counterclaim|her|gen
+accuses|counterclaim|in
+petition|gingrich|gen
+petition|july 29|nn
+petition|divorce|nn
+counterclaim|petition|to
+accuses|marianne gingrich|subj
+husband|her|gen
+accuses|husband|obj
+husband|transferring|of
+transferring|marianne gingrich|subj
+transferring|`|punc
+transferring|`|punc
+portions|substantial|mod
+transferring|portions|obj
+assets|certain|mod
+assets|valuable|mod
+portions|assets|of
+assets|'|punc
+assets|filing|before
+filing|divorce|for
+asks|also|mod-before
+asks|she|subj
+asks|that|c
+ordered|newt gingrich|obj
+ordered|stop|mod
+stop|newt gingrich|subj
+transfers|`|punc
+transfers|`|punc
+transfers|further|mod
+stop|transfers|obj
+transfers|or|punc
+transfers|concealment|conj
+concealment|'|punc
+concealment|'|punc
+concealment|assets|of
+stop|and|punc
+stop|replace|conj
+replace|newt gingrich|subj
+replace|assets|obj
+transferred|already|amod
+assets|transferred|rel
+transferred|assets|obj
+transferred|he|subj
+attorney|newt gingrich|gen
+attorney|randolph evans|appo
+denied|attorney|subj
+denied|allegation|obj
+denied|and|punc
+denied|said|conj
+said|attorney|subj
+handled|always|amod
+said|handled|fc
+handled|marianne gingrich|subj
+money|couple|gen
+handled|money|obj
+fight|assets|over
+is|yet|guest
+is|sign|pred
+sign|that|c
+contentious|already|mod
+divorce|contentious|mod
+divorce|gingrich|nn
+embarrassing|sign|obj
+embarrassing|divorce|subj
+congressman|former|mod
+congressman|10-term|mod
+embarrassing|congressman|for

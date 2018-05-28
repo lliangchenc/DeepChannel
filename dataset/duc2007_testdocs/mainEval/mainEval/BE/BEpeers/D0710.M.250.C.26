@@ -1,0 +1,138 @@
+president|israeli|mod
+president|ezer weizman|person
+president|who|whn
+visited|president|subj
+days|cyprus|nn
+days|three|amount-value
+visited|days|obj
+sent|president|subj
+counterpart|his|gen
+counterpart|cypriot|mod
+sent|counterpart|obj1
+sent|message|obj2
+message|friendship|of
+ambassador|israeli|mod
+friendship|ambassador|appo
+ambassador|shemi tzur|person
+ambassador|told|vrel
+told|ambassador|obj1
+told|reporters|obj2
+denied|not|amod
+denied|israel|subj
+denied|worked|fc
+worked|men|subj
+agency|its|gen
+agency|mossad|nn
+agency|intelligence|nn
+worked|agency|for
+israelis|two|nn
+israelis|that|whn
+arrested|israelis|obj
+arrested|cyprus|in
+act|israelis|subj
+act|cyprus|against
+act|and|punc
+act|act on|conj
+act on|israelis|subj
+behalf|turkey|gen
+act on|behalf|obj
+official|police|nn
+official|speaking|pnmod
+speaking|condition|on
+condition|anonymity|of
+confirmed|not|amod
+confirmed|netanyahu|subj
+confirmed|reports|obj
+reports|that|c
+men|two|nn
+men|custody|in
+custody|nicosia|in
+agents|mossad|nn
+are|agents|pred
+government|israel|gen
+acknowledged|not|amod
+acknowledged|government|subj
+acknowledged|that|c
+agents|israeli|mod
+are|agents|pred
+occupied|turkey|subj
+third|northern|mod
+occupied|third|obj
+third|cyprus|of
+statement|released|vrel
+released|statement|obj
+released|by|by-subj
+benjamin netanyahu|israeli|mod
+benjamin netanyahu|prime minister|title
+office|benjamin netanyahu|gen
+released|office|by
+interpreted|statement|obj
+interpreted|by|by-subj
+media|israeli|mod
+interpreted|media|by
+media|confirmation|as
+confirmation|that|c
+worked|two|subj
+mossad|israel|gen
+worked|mossad|for
+israelis|two|nn
+israelis|igar damary|conj
+igar damary|49|conj
+49|and|punc
+49|udi hargov|conj
+israelis|37|appo
+sentenced|israelis|obj
+years|three|amount-value
+sentenced|years|to
+years|jail|in
+jail|approaching|for
+approaching|israeli|subj
+area|restricted|mod
+approaching|area|obj
+approaching|and|punc
+approaching|possessing|conj
+possessing|israeli|subj
+devices|banned|mod
+devices|listening|nn
+possessing|devices|obj
+devices|permission|without
+authorities|cyprus|nn
+permission|authorities|of
+charged|two|obj
+possession|illegal|mod
+charged|possession|with
+equipment|wireless|mod
+possession|equipment|of
+use|espionage|nn
+equipment|use|for
+charged|and|punc
+charged|conspiring|conj
+conspiring|two|subj
+conspiring|with|guest
+conspiring|each other|with
+conspiring|commit|fc
+commit|two|subj
+commit|crime|obj
+crime|case|in
+case|that|whn
+caused|case|subj
+caused|tension|obj
+tension|cyprus|between
+cyprus|and|punc
+cyprus|israel|conj
+israelis|arrested|vrel
+arrested|israelis|obj
+arrested|village|at
+village|zigi|of
+found|israelis|obj
+found|have|mod
+have|israeli|subj
+scanners|radio|mod
+have|scanners|obj
+computer|laptop|nn
+scanners|computer|conj
+computer|cellular phones|conj
+cellular phones|and|punc
+maps|eight|nn
+cellular phones|maps|conj
+maps|island|of

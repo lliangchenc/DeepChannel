@@ -1,0 +1,147 @@
+signed|jordan|subj
+treaty|global|mod
+treaty|land mine|nn
+signed|treaty|obj
+signed|saturday|mod
+signed|joining|mod
+joining|jordan|subj
+countries|127|num
+countries|other|mod
+joining|countries|obj
+countries|that|whn
+endorsed|countries|subj
+endorsed|pact|obj
+pact|which|whn
+prohibits|pact|subj
+prohibits|use|obj
+use|production|conj
+production|and|punc
+production|stockpiling|conj
+stockpiling|weapon|of
+120|more than|num-mod
+countries|120|nn
+signed|countries|subj
+signed|treaty|obj
+treaty|known|pnmod
+convention|ottawa|nn
+known|convention|as
+capital|canadian|nn
+signed|capital|in
+capital|december|in
+needs|it|subj
+needs|ratified|fc
+ratified|by|by-subj
+countries|40|num
+ratified|countries|by
+countries|take effect|rel
+take effect|country|subj
+task|our|gen
+is|now|mod-before
+is|persuade|pred
+sign|countries|subj
+delay|further|mod
+sign|delay|without
+sign|and|punc
+sign|remove|conj
+remove|countries|subj
+remove|millions|obj
+millions|mines|of
+laid|already|mod-before
+mines|laid|vrel
+laid|mines|obj
+laid|world|across
+refused|united states|subj
+refused|sign|fc
+sign|united states|subj
+sign|or|punc
+sign|ratify|conj
+ratify|united states|subj
+ratify|treaty|obj
+ratify|maintaining|mod
+maintaining|united states|subj
+weapons|such|pre
+maintaining|needed|fc
+needed|weapons|obj
+peninsula|korean|nn
+needed|peninsula|on
+peninsula|deter|rel
+deter|peninsula|subj
+deter|north korea|obj
+north korea|invading|from
+invading|united states|subj
+invading|south korea|obj
+expressed|statement|in
+expressed|icbl|subj
+expressed|`|punc
+expressed|`|punc
+concern|grave|mod
+expressed|concern|obj
+concern|reports|about
+laying|continued|mod
+reports|laying|of
+laying|mines|of
+mines|number|in
+number|countries|of
+countries|that|whn
+signed|countries|subj
+signed|but|punc
+signed|not|punc
+signed|ratified|conj
+ratified|countries|subj
+ratified|treaty|obj
+ratified|angola|such as
+angola|cambodia|conj
+cambodia|senegal|conj
+senegal|and|punc
+senegal|sudan|conj
+treaty|land mine|nn
+want|treaty|with
+treaty|ratified|vrel
+ratified|treaty|obj
+time|record|mod
+ratified|time|in
+want|they|subj
+want|nation|obj
+nation|sign|rel
+sign|nation|subj
+sign|it|obj
+it|and|punc
+it|millions|conj
+mines|land|nn
+millions|mines|of
+mines|that|whn
+continue|mines|subj
+continue|kill|mod
+kill|terror|obj
+terror|removed|rel
+removed|terror|obj
+removed|world|subj
+last|survey|nn
+last|completed|mod
+reported|last|in
+april|international campaign|appo
+international campaign|ban land mines|to
+ban land mines|which|whn
+won|ban land mines|subj
+won|1997|guest
+won|nobel peace prize|obj
+reported|april|subj
+reported|that|c
+governments|or|punc
+groups|rebel|mod
+governments|groups|conj
+13|at least|num-mod
+countries|13|nn
+groups|countries|in
+used|governments|subj
+used|mines|obj
+months|15|amount-value
+mines|months|in
+used|after|mod
+after|signed|comp1
+signed|treaty|obj
+signed|though|mod
+went into|officially|mod-before
+though|went into|comp1
+went into|it|subj
+went into|force|obj

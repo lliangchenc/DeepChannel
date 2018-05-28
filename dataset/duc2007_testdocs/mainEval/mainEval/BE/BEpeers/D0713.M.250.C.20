@@ -1,0 +1,168 @@
+india|and|punc
+india|pakistan|conj
+carried out|india|subj
+tests|nuclear|mod
+carried out|tests|obj
+tests|last|vrel
+last|tests|obj
+last|may|mod
+last|drawing|mod
+drawing|india|subj
+sanctions|international|mod
+drawing|sanctions|obj
+last|and|punc
+last|calls|conj
+calls|tests|subj
+calls|sign|mod
+sign|india|subj
+treaty|test|mod
+treaty|ban|nn
+sign|treaty|obj
+jean chretien|canadian|mod
+jean chretien|prime minister|title
+called|jean chretien|subj
+called|pakistan|on
+pakistan|and|punc
+pakistan|india|conj
+india|renounce|rel
+renounce|india|subj
+programs|their|gen
+programs|nuclear weapons|nn
+renounce|programs|obj
+renounce|and|punc
+renounce|sign|conj
+sign|india|subj
+non-proliferation treaty|nuclear|mod
+sign|non-proliferation treaty|on
+npt|(|punc
+non-proliferation treaty|npt|abbrev
+npt|)|punc
+non-proliferation treaty|and|punc
+non-proliferation treaty|ctbt|conj
+exploded|may 28|mod-before
+may 28|(|punc
+xinhua|)|punc
+countries|or|punc
+countries|international organizations|conj
+xinhua|expressed|rel
+expressed|xinhua|obj
+expressed|countries|subj
+may 28|concerns|rel
+concerns|may 28|obj
+concerns|xinhua|subj
+concerns|pakistan|after
+exploded|beijing|subj
+devices|five|nn
+devices|nuclear|mod
+exploded|devices|obj
+devices|thursday|on
+devices|response|in
+tests|nuclear|mod
+response|tests|to
+tests|carried out|vrel
+carried out|tests|obj
+carried out|by|by-subj
+carried out|india|by
+india|may 11|on
+xinhua|may 28|nn
+xinhua|(|punc
+cairo|xinhua|appo
+xinhua|)|punc
+xinhua|reaction|in
+tests|pakistan|gen
+tests|nuclear|mod
+underscored|tests|to
+underscored|thursday|mod-before
+reaction|underscored|comp1
+underscored|egypt|subj
+underscored|need|obj
+need|make|comp1
+make|egypt|subj
+make|middle east|obj1
+region|nuclear-free|mod
+make|region|desc
+make|and|punc
+make|urged|conj
+urged|egypt|subj
+join|israel|subj
+non-proliferation treaty|nuclear|mod
+join|non-proliferation treaty|obj
+npt|(|punc
+non-proliferation treaty|npt|abbrev
+npt|)|punc
+ap|new delhi|nn
+ap|(|punc
+meeting|international|mod
+means|india|on
+rivalry|nuclear|mod
+pakistan|neighboring|mod
+rivalry|pakistan|with
+means|likely|amod
+means|rivalry|subj
+means|that|c
+nuclear powers|world|gen
+nuclear powers|five|nn
+nuclear powers|original|mod
+address|nuclear powers|subj
+dispute|main|mod
+address|dispute|obj
+countries|two|nn
+dispute|countries|between
+spurned|long|amod
+spurned|india|subj
+spurned|both|punc
+spurned|comprehensive test ban treaty|obj
+comprehensive test ban treaty|and|punc
+comprehensive test ban treaty|nuclear non-proliferation treaty|conj
+spurned|saying|mod
+saying|india|subj
+saying|are|fc
+are|discriminatory|pred
+are|because|mod
+do|not|neg
+because|force|comp1
+force|they|subj
+force|britain|obj
+britain|china|conj
+china|france|conj
+france|russia|conj
+russia|and|punc
+russia|united states|conj
+united states|give up|rel
+give up|united states|subj
+arsenals|their|gen
+arsenals|nuclear|mod
+give up|arsenals|obj
+finds|japan|subj
+tests|nuclear|mod
+finds|tests|obj1
+unacceptable|totally|mod
+finds|unacceptable|desc
+finds|as|mod
+as|pose|comp1
+pose|they|subj
+challenge|grave|mod
+pose|challenge|obj
+regime|international|mod
+regime|non-proliferation|mod
+challenge|regime|to
+pose|and|punc
+undermines|seriously|mod-before
+pose|undermines|conj
+undermines|they|subj
+undermines|stability|obj
+stability|south asia|in
+south asia|yukata takeyama|appo
+yukata takeyama|chairman|appo
+atomic energy commission|japan|gen
+chairman|atomic energy commission|of
+atomic energy commission|told|vrel
+told|chairman|obj1
+told|delegates|obj2
+conference|international atomic energy agency|nn
+delegates|conference|at
+japan|xinhua|nn
+japan|)|punc
+urged|tuesday|mod-before
+urged|japan|subj
+urged|pakistan|obj

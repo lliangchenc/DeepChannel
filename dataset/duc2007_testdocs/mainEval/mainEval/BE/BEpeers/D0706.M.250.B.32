@@ -1,0 +1,136 @@
+aung san suu kyi|nobel|nn
+aung san suu kyi|laureate|mod
+offered|aung san suu kyi|subj
+offered|thursday|guest
+thursday|end|rel
+end|thursday|subj
+road|her|gen
+end|road|obj
+standoff|side|nn
+offered|standoff|obj
+government|military|mod
+standoff|government|with
+offered|if|c
+agrees|government|subj
+agrees|release|fc
+release|government|subj
+members|jailed|mod
+release|members|obj
+political party|her|gen
+members|political party|of
+avoids|government|subj
+avoids|saying|fc
+saying|government|subj
+saying|detained|fc
+detained|it|subj
+members|nld|nn
+detained|members|obj
+claims|it|subj
+invited|"|punc
+claims|invited|fc
+invited|they|obj
+invited|"|punc
+invited|to|punc
+invited|government|punc
+invited|guest|punc
+invited|houses|punc
+invited|exchange|for
+exchange|views|of
+views|convening|on
+convening|they|subj
+convening|parliament|obj
+earlier|week|in
+new light|state-run|mod
+commentary|new light|in
+new light|myanmar|of
+signed|commentary|subj
+signed|"|punc
+said|"|punc
+signed|said|fc
+said|supreme court justice|subj
+said|that|c
+citizen|british|mod
+is|citizen|pred
+deport|government|subj
+deport|her|obj
+anniversary|tenth|post
+exiled|anniversary|on
+takeover|military|mod
+anniversary|takeover|of
+takeover|myanmar|in
+60|about|num-mod
+exiled|60|subj
+exiled|dissidents|obj
+dissidents|protested|vrel
+protested|dissidents|obj
+protested|front|in
+country|their|gen
+embassy|country|gen
+front|embassy|of
+embassy|bangkok|in
+bangkok|friday|on
+friday|calling for|rel
+calling for|friday|subj
+calling for|release|obj
+release|political prisoners|of
+political prisoners|and|punc
+students|arrested|mod
+political prisoners|students|conj
+guises|various|mod
+military|guises|in
+guises|1962|since
+government|current|mod
+government|military|mod
+came to|government|subj
+came to|power|obj
+power|sept 18 , 1988|on
+crushing|brutally|amod
+power|crushing|after
+crushing|government|subj
+movement|nationwide|mod
+movement|democracy|nn
+crushing|movement|obj
+panel|world trade organization|nn
+is|rule in|pred
+rule in|dispute|obj
+dispute|united states|between
+united states|europe|conj
+europe|and|punc
+europe|japan|conj
+legislation|u.s.|nn
+japan|legislation|over
+legislation|that|c
+trade|legislation|obj
+trade|bans|subj
+government|military|mod
+trade|government|with
+government|burma|of
+labor|forced|mod
+are|including|mod-before
+including|labor|subj
+labor|child|nn
+including|labor|obj
+are|widespread|pred
+widespread|myanmar|in
+ignores|government|subj
+rights|workers|gen
+ignores|rights|obj
+said|u.s. labor department|subj
+said|report|in
+said|monday|mod
+diplomats|foreign|mod
+diplomats|and|punc
+official|government|nn
+diplomats|official|conj
+said|diplomats|subj
+said|were|fc
+were|demonstrations|pred
+were|warnings|after
+warnings|government|from
+government|and|punc
+call|reported|mod
+government|call|conj
+call|calm|for
+party|opposition|nn
+calm|party|by
+party|national league for democracy|appo

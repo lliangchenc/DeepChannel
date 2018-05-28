@@ -1,0 +1,154 @@
+transpired|investigations|from
+investigations|date|rel
+date|investigation|subj
+transpired|nothing|subj
+transpired|link|mod
+link|nothing|subj
+link|issue|obj
+issue|government|with
+government|israel|of
+israel|"|punc
+israel|cypriot|appo
+cypriot|said|rel
+said|cypriot|obj
+said|justice ministry|subj
+said|sunday|mod
+owner|cypriot|mod
+owner|restaurant|nn
+owner|who|whn
+tipped|owner|subj
+tipped|police|obj
+police|activities|to
+israelis|two|nn
+activities|israelis|of
+israelis|suspected|pnmod
+suspected|spying|of
+is|actually|guest
+agent|cypriot|mod
+agent|security|nn
+is|agent|pred
+haaretz|daily|mod
+agent|haaretz|appo
+haaretz|reported|vrel
+reported|haaretz|obj
+reported|friday|mod
+confirmed|speaking|mod-before
+speaking|official|subj
+speaking|condition|on
+condition|anonymity|of
+confirmed|official|subj
+confirmed|report|obj
+xinhua|september 15|nn
+xinhua|(|punc
+nicosia|xinhua|appo
+assured|tuesday|mod-before
+assured|israel|subj
+assured|cyprus|obj
+alliance|its|gen
+alliance|military|mod
+alliance|turkey|with
+will|not|neg
+harm|alliance|subj
+harm|cyprus|obj
+harm|and|punc
+harm|urged|conj
+urged|alliance|subj
+diplomats|arab|nn
+promote|diplomats|subj
+process|peace|nn
+promote|process|obj
+process|israel|with
+xinhua|february 2|nn
+xinhua|(|punc
+jerusalem|xinhua|appo
+items|major|mod
+items|news|nn
+are|items|pred
+items|leading|in
+leading|following|subj
+newspapers|israeli|mod
+leading|newspapers|obj
+newspapers|tuesday|on
+xinhua|august 13|nn
+xinhua|(|punc
+jerusalem post nicosia|xinhua|appo
+president|cyprus|nn
+president|glafcos clerides|person
+received|president|subj
+thanks|personal|mod
+received|thanks|obj
+president|israeli|mod
+thanks|president|from
+president|ezer weizman|person
+president|and|punc
+ehud barak|prime minister|title
+president|ehud barak|conj
+ehud barak|freeing|for
+freeing|president|subj
+israelis|two|nn
+freeing|israelis|obj
+israelis|jailed|pnmod
+jailed|cyprus|in
+israelis|two|nn
+israelis|igar damary|conj
+igar damary|49|conj
+49|and|punc
+49|udi hargov|conj
+israelis|37|appo
+sentenced|israelis|obj
+sentenced|february|in
+years|three|amount-value
+sentenced|years|to
+years|jail|in
+jail|approaching|for
+approaching|israeli|subj
+area|restricted|mod
+approaching|area|obj
+approaching|and|punc
+approaching|possessing|conj
+possessing|israeli|subj
+devices|banned|mod
+devices|listening|nn
+possessing|devices|obj
+devices|permission|without
+authorities|cyprus|nn
+permission|authorities|of
+xinhua|august 13|nn
+xinhua|(|punc
+jerusalem|xinhua|appo
+items|major|mod
+items|news|nn
+are|items|pred
+items|leading|in
+leading|following|subj
+newspapers|israeli|mod
+leading|newspapers|obj
+leading|friday|mod
+xinhua|march 24|nn
+xinhua|(|punc
+nicosia|xinhua|appo
+president|cyprus|nn
+president|glafcos clerides|person
+start|president|subj
+visit|four-day|nn
+visit|state|nn
+start|visit|obj
+visit|israel|to
+tuesday|next|post
+start|tuesday|mod
+reports|local|mod
+said|reports|subj
+said|friday|mod
+visit|coming|mod
+is|ever|mod-before
+ever|israel|to
+head of state|cyprus|nn
+israel|head of state|by
+visit|return|nn
+is|visit|pred
+president|israeli|mod
+trip|president|gen
+president|ezer weizman|person
+visit|trip|to
+trip|cyprus|to
+cyprus|november 1998|in

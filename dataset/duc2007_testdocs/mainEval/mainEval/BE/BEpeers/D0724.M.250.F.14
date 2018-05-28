@@ -1,0 +1,142 @@
+risk|absolute|mod
+risk|dying|of
+gets|risk|subj
+gets|higher|mod
+gets|and|punc
+get|higher|mod-before
+higher|you|as
+gets|get|conj
+get|risk|subj
+get|older|desc
+get|until|mod
+until|die|comp1
+die|you|subj
+importance|obesity|of
+factor|risk|nn
+obesity|factor|as
+decreases|importance|subj
+decreases|"|punc
+decreases|said|mod
+said|ralf bender|subj
+researcher|obesity|nn
+ralf bender|researcher|conj
+researcher|university of bielefeld|at
+university of bielefeld|germany|in
+researcher|and|punc
+author|principal|mod
+researcher|author|conj
+study|latest|mod
+author|study|of
+report|national institutes of health|subj
+report|that|c
+cause|second-leading|mod
+is|cause|pred
+cause|(|punc
+cause|smoking|after
+smoking|obesity|subj
+smoking|)|punc
+death|preventable|mod
+smoking|death|of
+death|united states|in
+smoking|today|mod
+cause|and|punc
+cause|estimate|conj
+estimate|that|c
+disease|obesity-related|mod
+costs|disease|subj
+about $100|nation|nn
+costs|about $100|obj
+expenses|direct|mod
+expenses|health-care|nn
+about $100|expenses|in
+in|or|punc
+in|in|conj
+productivity|lost|mod
+in|productivity|in
+viewed|increasingly|guest
+viewed|obesity|obj
+disease|chronic|mod
+viewed|disease|as
+professionals|medical|mod
+disease|professionals|by
+viewed|and|punc
+viewed|established|conj
+established|obesity|obj
+established|by|by-subj
+established|american heart association|by
+factor|major|mod
+factor|modifiable|mod
+factor|risk|nn
+american heart association|factor|as
+disease|heart|nn
+factor|disease|for
+cause|leading|mod
+disease|cause|appo
+cause|death|of
+death|united states|in
+epidemic|u.s.|nn
+is|epidemic|pred
+epidemic|that|whn
+surged|epidemic|subj
+decade|past|mod
+surged|decade|in
+surged|and|punc
+affects|now|mod-before
+surged|affects|conj
+affects|epidemic|subj
+one|nearly|num-mod
+affects|one|obj
+adults|five|nn
+one|adults|in
+affects|killing|mod
+killing|obesity|subj
+killing|300,000|obj
+killing|year|mod
+studies|new|mod
+collection|studies|of
+()|emphasizing|of
+exercise|and|punc
+diets|healthier|mod
+exercise|diets|conj
+emphasizing|done|fc
+done|exercise|subj
+done|little|obj
+little|stem|rel
+stem|little|subj
+epidemic|growing|mod
+stem|epidemic|obj
+epidemic|obesity|of
+obesity|united states|in
+20|more than|num-mod
+stem|20|with
+adults|and|punc
+15|up to|num-mod
+adults|15|conj
+official|top|mod
+official|us|nn
+official|health|nn
+said|official|subj
+said|friday|mod
+based|studies|obj
+based|data|on
+data|relating|rel
+relating|data|subj
+degree|person|gen
+relating|degree|to
+degree|obesity|of
+risks|their|gen
+obesity|risks|to
+disease|five|nn
+disease|major|mod
+disease|diseases|nn
+disease|coronary|mod
+disease|heart|nn
+risks|disease|of
+diabetes|type 2|nn
+disease|diabetes|conj
+diabetes|stroke|conj
+stroke|high blood pressure|conj
+high blood pressure|and|punc
+cholesterol|high|mod
+cholesterol|blood|nn
+high blood pressure|cholesterol|conj

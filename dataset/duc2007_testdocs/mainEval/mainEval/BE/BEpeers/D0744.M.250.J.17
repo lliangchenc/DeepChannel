@@ -1,0 +1,146 @@
+as|grew|comp1
+grew|sales|subj
+20|more than|num-mod
+grew|20|obj
+year|1990s|through
+food|organic|mod
+came to|food|subj
+came to|account|obj
+account|$1|for
+$1|$100|of
+$100|spent|pnmod
+spent|food|on
+took notice|1997|in
+took notice|agency|subj
+took notice|proposing|mod
+proposing|agency|subj
+standards|national|mod
+standards|organic|mod
+proposing|standards|obj
+food|all|pre
+standards|food|for
+were|years|for
+foods|organic|mod
+players|bit|nn
+were|players|pred
+industry|food|nn
+players|industry|in
+proposed|agriculture department|subj
+regulations|organic|mod
+regulations|food|nn
+proposed|regulations|obj
+regulations|more|pnmod
+more|280,000|than
+filed|people|subj
+filed|comments|obj
+comments|protesting|rel
+protesting|comment|subj
+protesting|inclusion|obj
+modified|genetically|mod
+foods|modified|mod
+inclusion|foods|of
+foods|as|mod
+food|organic|mod
+become|food|subj
+become|area|obj
+development|vigorous|mod
+area|development|of
+agriculture|china|gen
+development|agriculture|in
+agriculture|and|punc
+production|food|nn
+agriculture|production|conj
+talking about|future|obj
+industry|organic|mod
+industry|food|nn
+future|industry|of
+said|liu lianfu|subj
+food|organic|mod
+become|already|amod
+said|become|fc
+become|food|subj
+market|rising|mod
+become|market|obj
+potential|great|mod
+market|potential|with
+change|that|subj
+change|release|with
+change|as|mod
+standards|first|post
+standards|national|mod
+food|organic|mod
+standards|food|for
+released|on|mod-before
+released|march 7 , 2000 ,|on
+released|government|subj
+standards|new|mod
+standards|national|mod
+released|standards|obj
+standards|growing|for
+growing|government|subj
+standards|and|punc
+food|processing|nn
+food|organic|mod
+standards|food|conj
+food|that|whn
+bar|food|subj
+bar|use|obj
+use|genetic engineering|of
+genetic engineering|or|punc
+genetic engineering|irradiation|conj
+rules|new|mod
+rules|federal|mod
+food|organic|mod
+rules|food|for
+assure|rules|subj
+assure|consumers|obj
+consumers|that|c
+grown|consumers|obj2
+grown|products|obj1
+grown|and|punc
+grown|processed|conj
+processed|consumers|obj
+processed|products|subj
+standards|same|post
+processed|standards|to
+processed|nationwide|mod
+offers|also|amod
+offers|it|subj
+standard|strict|mod
+offers|standard|obj
+standard|defining|rel
+defining|standard|subj
+constitutes|what|subj
+food|organic|mod
+constitutes|food|obj
+step|do|rel
+do|step|obj
+do|that|subj
+do|a great deal|mod
+do|enhance|mod
+enhance|that|subj
+trust|consumer|nn
+enhance|trust|obj
+trust|that|c
+labeled|trust|obj
+labeled|food|subj
+is|really|mod-before
+is|organic|pred
+like|they|subj
+like|talk about|fc
+talk about|they|subj
+talk about|(|punc
+food|organic|mod
+talk about|food|obj
+buy|they|subj
+buy|it|obj
+continues|much|like
+much|rest|of
+rest|world|of
+continues|united states|subj
+continues|lurch|mod
+lurch|united states|subj
+standard|national|mod
+lurch|standard|toward
+food|organic|mod
+standard|food|for

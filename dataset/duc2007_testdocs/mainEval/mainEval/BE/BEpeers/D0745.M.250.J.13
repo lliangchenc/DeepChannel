@@ -1,0 +1,148 @@
+found|february 1997|in
+jury|civil|mod
+found|jury|subj
+found|simpson|obj
+simpson|liable|pnmod
+deaths|stabbing|mod
+liable|deaths|for
+deaths|ronald goldman|of
+ronald goldman|and|punc
+ronald goldman|nicole brown simpson|conj
+ordered|o.j simpson|obj
+ordered|pay|mod
+pay|o.j simpson|subj
+33.5 million|dlrs|nn
+pay|33.5 million|obj
+33.5 million|estates|to
+estates|and|punc
+estates|heirs|conj
+simpson|ms.|title
+heirs|simpson|of
+simpson|and|punc
+ronald goldman|her|gen
+ronald goldman|friend|nn
+simpson|ronald goldman|conj
+won|they|subj
+suit|civil|mod
+suit|wrongful|mod
+suit|death|nn
+won|suit|obj
+won|after|mod
+after|acquitted|comp1
+acquitted|simpson|obj
+acquitted|murders|of
+court|criminal|nn
+murders|court|in
+house|butterfield|nn
+house|auction|nn
+house|sunset boulevard|on
+conducts|house|subj
+process|live|mod
+process|bidding|nn
+conducts|process|obj
+property|simpson|nn
+process|property|for
+property|seized|vrel
+seized|property|obj
+seized|help|mod
+help|house|subj
+help|settle|obj
+judgment|$25 million|nn
+judgment|civil|mod
+settle|won|rel
+won|settle|obj
+won|judgment|subj
+won|families|by
+ron goldman|murder|nn
+ron goldman|victims|nn
+families|ron goldman|of
+ron goldman|and|punc
+ron goldman|nicole brown simpson|conj
+found|simpson|obj1
+found|liable|desc
+liable|deaths|for
+simpson|ms.|title
+deaths|simpson|of
+simpson|and|punc
+simpson|goldman|conj
+trial|separate|mod
+trial|civil|mod
+goldman|trial|in
+found|and|punc
+found|ordered|conj
+ordered|simpson|obj
+ordered|pay|mod
+pay|simpson|subj
+pay|$33.5 million|obj
+$33.5 million|damages|in
+acquitted|simpson|obj
+murders|1994|num
+acquitted|murders|of
+simpson|ms.|title
+murders|simpson|of
+simpson|and|punc
+ronald goldman|her|gen
+ronald goldman|friend|nn
+simpson|ronald goldman|conj
+lost|simpson|subj
+lawsuit|civil|mod
+lost|lawsuit|obj
+lawsuit|deaths|over
+wife|his|gen
+deaths|wife|of
+wife|nicole|conj
+nicole|and|punc
+ron goldman|her|gen
+ron goldman|friend|nn
+nicole|ron goldman|conj
+ron goldman|1997|in
+acquitted|simpson|obj
+acquitted|murder|of
+trial|criminal|mod
+murder|trial|in
+acquitted|but|punc
+acquitted|found|conj
+found|simpson|obj1
+found|liable|desc
+trial|subsequent|mod
+trial|civil|mod
+liable|trial|in
+deaths|1994|num
+trial|deaths|for
+nicole brown simpson|his|gen
+nicole brown simpson|ex-wife|nn
+deaths|nicole brown simpson|of
+nicole brown simpson|and|punc
+ronald goldman|her|gen
+ronald goldman|friend|nn
+nicole brown simpson|ronald goldman|conj
+hunt|usc|gen
+hunt|author|appo
+author|o.j|of
+facts|simpson|nn
+facts|and|punc
+facts|fictions|conj
+news rituals|construction|in
+construction|reality|of
+agreed|that|subj
+reason|prime|mod
+is|reason|pred
+is|why|wha
+remains|simpson|subj
+remains|flash point|obj
+jury|los angeles|nn
+acquitted|jury|subj
+acquitted|simpson|obj
+simpson|1995|in
+simpson|murdering|of
+murdering|jury|subj
+ex-wife|his|gen
+murdering|ex-wife|obj
+ex-wife|nicole brown simpson|conj
+nicole brown simpson|and|punc
+ronald goldman|her|gen
+ronald goldman|friend|nn
+nicole brown simpson|ronald goldman|conj
+summer|o.j|appo
+was|defendant|pred
+defendant|most-watched|in

@@ -1,0 +1,138 @@
+balloon|swiss|mod
+pilot|balloon|subj
+pilot|bertrand piccard|obj
+teammate|his|gen
+teammate|new|mod
+tony brown|british|mod
+tony brown|flight engineer|nn
+teammate|tony brown|appo
+said|teammate|subj
+said|be|fc
+be|ready|pred
+be|later|mod
+be|month|mod
+attempt|new|mod
+month|attempt|for
+attempt|fly|rel
+fly|attempt|subj
+fly|nonstop|desc
+nonstop|world|round
+announced|bertrand piccard|subj
+announced|wednesday|guest
+announced|that|c
+chosen|he|subj
+chosen|brian jones|obj
+teammate|his|gen
+brian jones|teammate|as
+attempt|his|gen
+attempt|next|post
+teammate|attempt|for
+attempt|circling|at
+circling|he|subj
+circling|world|obj
+world|balloon|in
+bertrand piccard|switzerland|of
+switzerland|and|punc
+switzerland|briton brian jones|conj
+climbed|bertrand piccard|subj
+gondola|hi-tech|mod
+climbed|gondola|out of
+balloon|breitling orbiter 3|nn
+gondola|balloon|of
+balloon|break off|rel
+break off|balloon|subj
+break off|some|obj
+some|icicles|of
+icicles|ice pick|with
+ice pick|thursday|on
+adventurers|bertrand piccard|appo
+bertrand piccard|switzerland|of
+switzerland|and|punc
+switzerland|brian jones|conj
+brian jones|england|of
+steered|adventurers|subj
+balloon|their|gen
+steered|balloon|obj
+balloon|pacific ocean|over
+pacific ocean|hawaii|toward
+hawaii|and|punc
+hawaii|california|conj
+california|or|punc
+california|mexico|conj
+mexico|jones|conj
+jones|and|punc
+jones|bertrand piccard|conj
+bertrand piccard|switzerland|of
+switzerland|who|whn
+lifted off|switzerland|subj
+lifted off|swiss alps|from
+swiss alps|march 1|on
+were|over|pred
+were|belize|over
+belize|central america|in
+pilots|brian jones|appo
+brian jones|england|of
+england|and|punc
+england|bertrand piccard|conj
+bertrand piccard|switzerland|of
+hope|pilots|subj
+hope|reach|fc
+reach|pilot|subj
+coast|north african|nn
+reach|coast|obj
+coast|mauritania|at
+reach|perhaps|mod
+evening|saturday|nn
+perhaps|evening|by
+achieving|what|obj
+called|promoters|subj
+milestone|last|post
+milestone|great|mod
+called|milestone|obj
+milestone|aviation|of
+aviation|bertrand piccard|conj
+bertrand piccard|and|punc
+legends|brian jones|nn
+legends|joined|mod
+bertrand piccard|legends|conj
+legends|wright brothers|like
+wright brothers|and|punc
+wright brothers|charles lindbergh|conj
+completion|saturday|gen
+charles lindbergh|completion|with
+manned|first|mod
+flight|manned|mod
+flight|round-the-world|mod
+flight|balloon|nn
+completion|flight|of
+voyage|20-day|nn
+voyage|swiss bertrand piccard|conj
+swiss bertrand piccard|and|punc
+swiss bertrand piccard|british brian jones|conj
+after|completed|comp1
+completed|voyage|subj
+circumnavigation|their|gen
+circumnavigation|nonstop|mod
+completed|circumnavigation|obj
+circumnavigation|hot-air balloon|on
+completed|and|punc
+completed|landed|conj
+landed|voyage|obj
+egypt|southern|mod
+landed|egypt|in
+landed|smoothly|mod
+morning|sunday|nn
+landed|morning|mod
+international olympic committee|that|c
+award|international olympic committee|obj1
+award|they|subj
+award|olympic order|obj2
+bertrand piccard|balloonists|nn
+olympic order|bertrand piccard|to
+bertrand piccard|and|punc
+bertrand piccard|brian jones|conj
+brian jones|who|whn
+are|first|pred
+first|circumnavigate|rel
+circumnavigate|first|subj
+circumnavigate|world|obj

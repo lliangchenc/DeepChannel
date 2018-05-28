@@ -1,0 +1,144 @@
+government|myanmar|gen
+government|military|mod
+detained|government|subj
+187|another|num-mod
+members|187|nn
+detained|members|obj
+leader|pro-democracy|mod
+party|leader|gen
+leader|aung san suu kyi|person
+members|party|of
+detained|bringing|mod
+bringing|government|subj
+bringing|total|obj
+total|702|to
+702|arrested|vrel
+arrested|702|obj
+arrested|since|mod
+since|began|comp1
+began|crackdown|subj
+began|may|in
+said|party|subj
+began|said|mod
+began|friday|mod
+avoids|government|subj
+avoids|saying|fc
+saying|government|subj
+saying|detained|fc
+detained|it|subj
+members|nld|nn
+detained|members|obj
+'s|good|pred
+'s|know|mod
+know|that|c
+countries|different|mod
+people|countries|of
+concerned|really|mod
+are|concerned|pred
+'s|and|punc
+'s|involved|conj
+think|movement|in
+movement|help|rel
+help|movement|subj
+kyi|suu|nn
+help|kyi|obj
+involved|think|fc
+think|i|subj
+'s|ways|in
+think|'s|fc
+'s|better|pred
+'s|have|mod
+have|it|subj
+have|people|obj
+people|world|of
+side|your|gen
+world|side|on
+side|governments|than
+governments|world|of
+have|even if|mod
+even if|be|comp1
+effective|more|mod
+be|effective|pred
+directions|certain|mod
+effective|directions|in
+government|democratic|mod
+do|government|subj
+do|its|obj
+do|best|mod
+do|make|mod
+make|government|subj
+make|sure|desc
+sure|that|c
+growing|opium|of
+eliminated|growing|obj
+eliminated|country|in
+country|and|punc
+country|aung san suu kyi|conj
+people|who|whn
+depend on|people|subj
+opium|growing|mod
+depend on|opium|obj
+life|their|gen
+opium|life|for
+aung san suu kyi|find|rel
+find|aung san suu kyi|obj
+find|people|subj
+ways|other|mod
+find|ways|mod
+earning|people|subj
+earning|living|obj
+barred|myanmar|subj
+ministers|british|mod
+barred|ministers|obj
+ministers|and|punc
+ministers|officials|conj
+officials|country|from
+country|following|rel
+following|country|subj
+pressure|british|mod
+following|pressure|obj
+regime|military|mod
+pressure|regime|on
+regime|hold|rel
+hold|regime|subj
+hold|talks|obj
+leader|opposition|nn
+talks|leader|with
+leader|aung san suu kyi|person
+chosen|aung san suu kyi|in
+cities|and|punc
+cities|state|conj
+state|features|of
+chosen|cities|subj
+chosen|do|mod
+do|city|subj
+do|business|obj
+business|companies|with
+companies|that|whn
+deal with|companies|subj
+deal with|suu|obj
+is|this|pred
+means|effective|mod
+democratization|burmese|mod
+means|democratization|of
+democratization|suu kyi|in
+figures|other|mod
+figures|who|whn
+received|figures|subj
+received|freedom|obj
+honor|city|nn
+freedom|honor|of
+include|figures|subj
+include|suu kyi|obj
+presidents|aung san suu kyi burma|person
+mary freehill john nelson mandela|and|punc
+generals|mother dublin leading|nn
+mary freehill john nelson mandela|generals|conj
+recently|also|mod
+stepped up|recently|amod
+stepped up|mary freehill john nelson mandela|subj
+attacks|their|gen
+attacks|verbal|mod
+stepped up|attacks|obj
+nobel peace prize|1991|num
+attacks|nobel peace prize|against

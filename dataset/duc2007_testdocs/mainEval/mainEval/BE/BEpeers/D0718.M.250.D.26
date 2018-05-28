@@ -1,0 +1,140 @@
+estimated|analysts|subj
+retailer|gourmet|nn
+retailer|coffee|nn
+estimated|earn|fc
+earn|retailer|subj
+earn|60 cents per share|obj
+retailer|nation|gen
+retailer|largest|mod
+retailer|coffee|nn
+starbucks|retailer|appo
+announced|starbucks|subj
+announced|that|c
+buy|it|subj
+buy|pasqua|obj
+amount|undisclosed|mod
+pasqua|amount|for
+executive|officerhoward lester|person
+declined|executive|subj
+declined|discuss|mod
+discuss|chief executive|subj
+discuss|situation|obj
+situation|saying|appo
+going on|nothing|subj
+going on|now|mod
+named|sources|subj
+named|starbucks corp.|obj
+giant|seattle|nn
+giant|coffee|nn
+starbucks corp.|giant|appo
+suitor|likely|mod
+named|suitor|as
+starbucks|seattle|gen
+retailer|brick-and-mortar|mod
+starbucks|retailer|appo
+proposed|starbucks|subj
+proposed|buying|fc
+buying|starbucks|subj
+buying|williams-sonoma|obj
+retailer|brick-and-mortar|mod
+williams-sonoma|retailer|appo
+is|man|pred
+man|who|whn
+looked at|man|subj
+looked at|country|obj
+country|where|wha
+is|available|pred
+corner|street|nn
+available|corner|on
+is|and|punc
+is|proceeded|conj
+proceeded|coffee|subj
+proceeded|roll out|mod
+roll out|coffee|subj
+chain|national|mod
+roll out|chain|obj
+bars|coffee|nn
+chain|bars|of
+said|it|subj
+said|share|fc
+share|it|subj
+share|revenue|obj
+revenue|care|with
+division|new|mod
+take over|division|subj
+take over|business|obj
+business|that|whn
+brought in|business|subj
+brought in|$206 million|obj
+$206 million|or|punc
+16|almost|num-mod
+$206 million|16|conj
+sales|company|gen
+sales|total|mod
+is|not|neg
+is|that|c
+shops|coffee|nn
+profit|shops|from
+falling|profit|subj
+juggernaut|starbucks|nn
+juggernaut|global|mod
+is|on|pred
+is|track|on
+track|plans|with
+plans|open|rel
+open|year|subj
+stores|500|num
+open|stores|obj
+stores|world|around
+said|schultz|subj
+meeting|annual|mod
+said|meeting|to
+meeting|filled|vrel
+filled|meeting|obj
+filled|people|with
+people|rejoicing|rel
+rejoicing|people|subj
+rejoicing|announcement|over
+split|2-for-1|nn
+announcement|split|of
+shares|its|gen
+split|shares|of
+stock|common|nn
+shares|stock|of
+tapped|starbucks|subj
+power|pepsi-cola co.|gen
+power|ubiquitous|mod
+power|distribution|nn
+tapped|power|obj
+power|sell|rel
+sell|power|subj
+beverage|its|gen
+beverage|frappuccino|nn
+beverage|blended|mod
+beverage|coffee|nn
+sell|beverage|obj
+beverage|which|whn
+leads|beverage|subj
+category|ready-to-drink|mod
+category|coffee|nn
+leads|category|obj
+starbucks|seattle-based|mod
+hopes|starbucks|subj
+hopes|that|c
+attract|tazo|with
+attract|it|subj
+customers|new|mod
+attract|customers|obj
+discontinue|company|subj
+brand|its|gen
+brand|in-house|mod
+brand|infusia|nn
+discontinue|brand|obj
+brand|tea|of
+tea|which|whn
+accounts for|tea|subj
+accounts for|just|guest
+accounts for|1 percent|obj
+1 percent|starbucks $1.3 billion|of
+sales|annual|mod
+starbucks $1.3 billion|sales|in

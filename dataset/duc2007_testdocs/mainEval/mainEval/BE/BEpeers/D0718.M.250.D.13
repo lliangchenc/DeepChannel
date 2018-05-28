@@ -1,0 +1,126 @@
+plan|starbucks coffee co.|nn
+plan|acquire|rel
+acquire|plan|subj
+acquire|pasqua coffee|obj
+leaving|plan|subj
+aftertaste|bitter|mod
+leaving|aftertaste|obj
+aftertaste|mouths|in
+mouths|patrons|of
+coffeehouse|san francisco-based|mod
+patrons|coffeehouse|of
+industry|nation|gen
+industry|tea|nn
+seen|industry|subj
+hope-and thinks|its|gen
+hope-and thinks|great|mod
+hope-and thinks|shining|mod
+seen|hope-and thinks|obj
+be|starbucks coffee co.|pred
+want|joe|with
+want|we|subj
+want|encourage|fc
+encourage|we|subj
+encourage|traditions|obj
+howard schultz|chairman|appo
+starbucks coffee co.|seattle-based|mod
+chairman|starbucks coffee co.|of
+said|howard schultz|subj
+said|statement|in
+announced|starbucks coffee co.|subj
+announced|new|obj
+division|consumer products|nn
+ice cream|its|gen
+ice cream|specialty|nn
+division|ice cream|for
+drinks|bottled|mod
+drinks|coffee|nn
+ice cream|drinks|conj
+drinks|and|punc
+products|other|mod
+drinks|products|conj
+new|sold|rel
+sold|new|obj
+sold|division|subj
+sold|away|mod
+shops|its own|gen
+away|shops|from
+opened|they|subj
+opened|latest|obj
+stores|their|gen
+stores|50-50|nn
+stores|joint venture|nn
+stores|starbucks coffee|nn
+latest|stores|in
+said|johnson|subj
+said|be|fc
+be|more|pred
+more|seattle|in
+be|one|along with
+theaters|johnson|gen
+theaters|multiplex|mod
+theaters|movie|nn
+one|theaters|of
+starbucks coffee co.|schultz|gen
+starbucks coffee co.|seattle-based|mod
+starbucks coffee co.|and|punc
+johnson development corp.|johnson|gen
+johnson development corp.|los angeles-based|mod
+starbucks coffee co.|johnson development corp.|conj
+opened|recently|amod
+opened|starbucks coffee co.|subj
+stores|similar|mod
+stores|starbucks|nn
+stores|coffee|nn
+opened|stores|obj
+stores|west los angeles|in
+west los angeles|and|punc
+harlem|new york|gen
+west los angeles|harlem|conj
+starbucks corp.|coffee|nn
+starbucks corp.|giant|mod
+purchased|starbucks corp.|subj
+purchased|hear music|obj
+retailer|upscale|mod
+retailer|music|nn
+kozmo.com|on-line|mod
+kozmo.com|delivery service|nn
+teaming|kozmo.com|subj
+teaming|up|mod
+up|starbucks coffee co.|with
+marketing|cross|mod
+starbucks coffee co.|marketing|for
+marketing|and|punc
+promotions|in-store|mod
+marketing|promotions|conj
+pay|deal|under
+pay|kozmo|subj
+years|starbucks $150 million|nn
+five|over|num-mod
+years|five|amount-value
+pay|years|obj
+years|right|for
+right|place|comp1
+place|kozmo|subj
+boxes|return|nn
+place|boxes|obj
+stores|starbucks|nn
+boxes|stores|in
+new york times co.|and|punc
+new york times co.|starbucks coffee co.|conj
+said|new york times co.|subj
+said|tuesday|guest
+said|that|c
+agreed|they|subj
+agreed|sale|to
+newspapers|new york times|nn
+sale|newspapers|of
+stores|starbucks|nn
+newspapers|stores|in
+years|three|amount-value
+stores|years|for
+years|exchange|in
+promotion|times|gen
+promotion|advertising|nn
+exchange|promotion|for
+promotion|starbucks|of

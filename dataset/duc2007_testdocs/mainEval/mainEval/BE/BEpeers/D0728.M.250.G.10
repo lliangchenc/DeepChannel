@@ -1,0 +1,142 @@
+specialized pharmacy services|fisher|gen
+store|drug|nn
+specialized pharmacy services|store|appo
+store|pittsburgh|in
+began|specialized pharmacy services|subj
+began|selling|mod
+selling|specialized pharmacy services|subj
+version|its|gen
+selling|version|obj
+version|drugs|of
+make|patients|in
+make|drugs|subj
+signs|all|pre
+signs|virus|of
+disappear|signs|subj
+'s|unclear|pred
+long|how|mod
+lasts|effect|subj
+show|many|subj
+show|signs|obj
+signs|infection|of
+proves|ultimately|mod-before
+proves|interferon|subj
+proves|ineffective|desc
+begin|she|subj
+course|second|post
+begin|course|obj
+burden|financial|mod
+is|burden|pred
+patient|one|nn
+went home|patient|subj
+day|same|post
+went home|day|mod
+others|four|nn
+went home|others|subj
+morning|next|post
+went home|morning|mod
+reassembled|they|obj
+genes|daughter|nn
+reassembled|genes|into
+reassembled|comprising|mod
+comprising|they|subj
+comprising|fragments|obj
+fragments|parents|from
+comprising|using|mod
+using|variant|obj
+reaction|dna-building|mod
+reaction|polymerase|nn
+reaction|chain|nn
+variant|reaction|of
+versions|superior|mod
+make|versions|obj
+enzyme|industrial|mod
+versions|enzyme|of
+enzyme|identity|whn
+identity|enzyme|of
+secret|still|mod
+is|secret|pred
+scientists|maxygen|gen
+isolated|scientists|subj
+isolated|genes|obj
+microorganisms|26|num
+genes|microorganisms|from
+microorganisms|which|whn
+make|each|mod-before
+make|microorganisms|subj
+versions|their own|gen
+make|versions|obj
+versions|enzyme|of
+shuffled|also|amod
+shuffled|maxygen|subj
+shuffled|genes|obj
+genes|that|whn
+make|genes|subj
+interferons|20|num
+interferons|known|mod
+interferons|human|mod
+make|interferons|obj
+is|present|at
+popular|most|mod
+method|popular|mod
+method|coaxing|of
+coaxing|genes|obj
+genes|making|into
+versions|new|mod
+making|versions|obj
+versions|proteins|of
+mutagenesis|random|mod
+is|mutagenesis|pred
+ultraviolet light|or|punc
+chemical|dna-disrupting|mod
+ultraviolet light|chemical|conj
+makes|ultraviolet light|subj
+mutate|genes|subj
+fragments|dna|of
+gene|known|mod
+dna|gene|from
+used|fragments|obj
+genomes|trawl|nn
+used|genomes|to
+species|other|mod
+genomes|species|of
+genes|related|mod
+species|genes|for
+questions|all|pre
+answer|questions|to
+not|probably|mod
+depending on|results|obj
+need|he|subj
+need|drugs|obj
+months|three|amount-value
+drugs|months|for
+months|year|to
+forms|other|mod
+forms|interferon|of
+are|available|pred
+manufacturers|different|mod
+available|manufacturers|from
+issued|group|subj
+issued|nationwide|guest
+alerts|e-mail|nn
+issued|alerts|obj
+alerts|announcing|rel
+announcing|alert|subj
+source|new|mod
+announcing|source|obj
+source|ribavirin|of
+ribavirin|complete|pnmod
+pharmacy|pittsburgh|nn
+number|pharmacy|gen
+number|toll-free|mod
+number|phone|nn
+complete|number|with
+spokeswoman|fda|nn
+said|spokeswoman|subj
+could|not|neg
+said|comment on|fc
+comment on|agency|subj
+response|its|gen
+comment on|response|obj
+complaint|schering-plough|gen
+response|complaint|to

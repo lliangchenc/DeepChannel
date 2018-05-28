@@ -1,0 +1,161 @@
+justice department|and|punc
+states|20|num
+justice department|states|conj
+states|suing|rel
+suing|state|subj
+suing|microsoft|obj
+microsoft|antitrust case|in
+say|justice department|subj
+say|that|c
+is|part|pred
+part|pattern|of
+practices|illegal|mod
+pattern|practices|of
+giant|software|nn
+practices|giant|by
+giant|intended|vrel
+protect|giant|subj
+grip|its|gen
+grip|tight|mod
+protect|grip|obj
+grip|market|on
+software|personal computer|nn
+market|software|for
+lawyer|who|whn
+is|close|pred
+case|government|gen
+case|current|mod
+close|case|to
+said|lawyer|subj
+relies on|`|punc
+relies on|`|punc
+said|relies on|fc
+relies on|it|subj
+relies on|statements|obj
+statements|made|vrel
+made|statements|obj
+made|before|mod
+before|engaged in|comp1
+engaged in|microsoft|subj
+acts|numerous|mod
+acts|illegal|mod
+engaged in|acts|obj
+acts|found|vrel
+found|acts|obj
+case|current|mod
+found|case|in
+case|'|punc
+case|'|punc
+testimony|and|punc
+testimony|cross-examination|conj
+cross-examination|norris|of
+case|focus|rel
+focus|case|obj
+focus|testimony|subj
+allegation|crucial|mod
+focus|allegation|on
+suit|antitrust|mod
+allegation|suit|in
+suit|microsoft|against
+microsoft|justice department|by
+justice department|and|punc
+states|19|num
+justice department|states|conj
+uses|microsoft|subj
+uses|price|obj
+charges|it|subj
+makers|pc|nn
+charges|makers|obj
+operating system|its|gen
+operating system|industry-standard|mod
+operating system|windows|nn
+makers|operating system|for
+operating system|insure|rel
+insure|operating system|subj
+insure|that|c
+promote|they|subj
+software|microsoft|nn
+promote|software|obj
+software|competing|mod
+software|software|over
+attempt|last|vrel
+last|attempt|obj
+last|year|mod
+year|have|rel
+have|year|subj
+have|company|obj
+company|held|vrel
+held|company|obj
+held|contempt of court|in
+contempt of court|violating|for
+decree|earlier|mod
+decree|consent|nn
+violating|decree|obj
+rejected|attempt|obj
+rejected|by|by-subj
+court|appeals|nn
+rejected|court|by
+court|which|whn
+ruled|court|subj
+ruled|that|c
+had|microsoft|subj
+had|right|obj
+right|add|comp1
+add|microsoft|subj
+add|internet|obj
+internet|browsing|rel
+browsing|internet|subj
+browsing|capabilities|obj
+operating system|its|gen
+capabilities|operating system|to
+operating system|_|punc
+operating system|one|appo
+issues|key|mod
+one|issues|of
+issues|dispute|in
+dispute|antitrust case|in
+justice department|and|punc
+states|17|num
+justice department|states|conj
+filed|justice department|subj
+filed|brief|obj
+brief|court|with
+court|april 28|on
+april 28|asking|rel
+asking|april 28|subj
+asking|judge|obj
+judge|break|rel
+break|judge|subj
+break|microsoft|obj
+companies|two|nn
+microsoft|companies|into
+companies|remedy|as
+behavior|illegal|mod
+remedy|behavior|for
+behavior|found|vrel
+found|behavior|obj
+antitrust|long|mod
+trial|antitrust|mod
+found|trial|in
+says|government|subj
+splitting|government|subj
+splitting|microsoft|obj
+says|prevent|fc
+prevent|that|subj
+system|windows|nn
+prevent|system|obj
+system|that|whn
+runs|system|subj
+80|over|num-mod
+runs|80|on
+computers|personal|nn
+being|used|pred
+being|force|mod
+force|companies|obj
+companies|and|punc
+companies|consumers|conj
+consumers|use|rel
+use|consumer|subj
+products|other|mod
+products|microsoft|nn
+use|products|obj

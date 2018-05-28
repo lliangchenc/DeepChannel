@@ -1,0 +1,147 @@
+investigators|federal|mod
+concluded|investigators|subj
+error|pilot|mod
+concluded|caused|fc
+caused|error|subj
+crash|plane|nn
+caused|crash|obj1
+crash|that|whn
+killed|crash|subj
+killed|john f. kennedy jr.|obj
+wife|his|gen
+john f. kennedy jr.|wife|conj
+wife|and|punc
+wife|his|conj
+caused|sister-in-law|obj2
+sister-in-law|nbc news|appo
+nbc news|reported|vrel
+reported|nbc news|obj
+reported|thursday|mod
+plane|small|mod
+plane|carrying|rel
+carrying|plane|subj
+carrying|john f. kennedy jr|obj
+wife|his|gen
+john f. kennedy jr|wife|conj
+wife|carolyn bessette kennedy|conj
+carolyn bessette kennedy|and|punc
+sister|her|gen
+carolyn bessette kennedy|sister|conj
+disappeared|plane|subj
+disappeared|late|mod
+disappeared|friday|mod
+coast|massachusetts|nn
+disappeared|coast|off
+continued|search|subj
+continued|along|guest
+path|presumed|mod
+path|flight|nn
+continued|path|obj
+plane|kennedy|gen
+path|plane|of
+continued|discovery|until
+discovery|debris|of
+vineyard|martha|gen
+debris|vineyard|off
+investigation|national transportation safety board|gen
+continues|investigation|subj
+began|search|subj
+began|area|in
+report|first|post
+report|missing|about
+plane|single-engine|mod
+missing|plane|of
+came from|report|subj
+came from|members|obj
+family|kennedy|nn
+members|family|of
+is|founder|pred
+magazine|george|nn
+founder|magazine|of
+piper saratoga|kennedy|gen
+piper saratoga|single-engine|mod
+arrived|piper saratoga|subj
+wife|his|gen
+wife|carolyn bessette kennedy|conj
+carolyn bessette kennedy|and|punc
+sister|her|gen
+sister|older|mod
+carolyn bessette kennedy|sister|conj
+wife|lauren bessette|appo
+climbed|wife|subj
+plane|six-seat|mod
+climbed|plane|aboard
+dropped|plane|subj
+feet|700|num
+dropped|feet|obj
+son|38-year-old|mod
+president|former|mod
+son|president|of
+president|kennedy|person
+reported|son|obj
+reported|missing|mod
+missing|son|subj
+saturday|early|mod
+missing|saturday|mod
+missing|flight|on
+flight|essex county airport|from
+essex county airport|fairfield|in
+tracked|radar|subj
+plane|kennedy|gen
+tracked|plane|obj
+tracked|as far as|mod
+as far as|'s|comp1
+'s|vineyard|pred
+kennedy|and|punc
+kennedy|sister-in-law|conj
+died|kennedy|subj
+died|july|in
+died|when|wha
+plane|piloting|rel
+piloting|plane|obj
+piloting|he|subj
+crashed|plane|subj
+crashed|off|guest
+crashed|shore|obj
+vineyard|martha|gen
+shore|vineyard|of
+registered|kennedy|subj
+registered|plane|obj
+plane|april|in
+kennedy|pilot|appo
+planned|kennedy|subj
+planned|drop|fc
+drop|kennedy|subj
+drop|off|guest
+drop|his|off
+drop|sister-in-law|obj
+sister-in-law|island|on
+drop|and|punc
+drop|continue|conj
+continue|kennedy|subj
+cousin|his|gen
+wedding|cousin|gen
+continue|wedding|to
+wedding|hyannis port|in
+guard|coast|nn
+guard|and|punc
+guard|air national guard|conj
+started|then|mod-before
+started|guard|subj
+started|search|obj
+edward m. kennedy|sen.|title
+bodies|kennedy|of
+wife|his|gen
+kennedy|wife|conj
+wife|and|punc
+wife|sister-in-law|conj
+recovered|bodies|obj
+recovered|wednesday|mod
+recovered|afternoon|mod
+last|kennedy|nn
+refueled|last|subj
+refueled|plane|obj
+flown|kennedy|subj
+airplane|his|gen
+airplane|piper saratoga ii|nn
+flown|airplane|obj

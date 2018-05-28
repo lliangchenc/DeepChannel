@@ -1,0 +1,149 @@
+silent|officially|mod
+sunday|silent|mod
+was|sunday|pred
+was|subject|on
+israelis|two|nn
+subject|israelis|of
+israelis|arrested|vrel
+arrested|israelis|obj
+arrested|cyprus|in
+cyprus|suspicion|on
+suspicion|spying|of
+arrested|but|mod
+official|government|nn
+but|said|comp1
+said|official|subj
+diplomats|israeli|mod
+visit|likely|amod
+said|visit|fc
+visit|diplomats|subj
+visit|them|obj
+visit|prison|in
+israelis|two|nn
+israelis|who|whn
+arrested|israelis|obj
+arrested|cyprus|in
+arrested|last week|mod
+arrested|suspicion|on
+suspicion|spying|of
+are|agents|pred
+mossad|israeli|mod
+mossad|intelligence|nn
+mossad|agency|nn
+agents|mossad|of
+newspaper|israeli|mod
+said|newspaper|subj
+said|thursday.6|obj
+men|two|nn
+thursday.6|telephoning|rel
+telephoning|thursday.6|obj1
+telephoning|men|subj
+telephoning|`|punc
+telephoning|`|punc
+institute|specific|mod
+institute|intelligence|nn
+telephoning|institute|obj2
+headquarters|institute|gen
+institute|headquarters|whn
+is|in|pred
+is|tel aviv|in
+haaretz|israeli|mod
+haaretz|daily|mod
+reported|haaretz|subj
+reported|thursday|guest
+reported|that|c
+men|two|nn
+are|agents|pred
+agents|mossad|of
+agency|israeli|mod
+agency|intelligence|nn
+mossad|agency|appo
+were|part|pred
+operation|intelligence|nn
+part|operation|of
+port|small|mod
+port|fishing|nn
+operation|port|near
+port|ziyi|of
+said|peres|subj
+said|had|fc
+had|he|subj
+had|`|punc
+had|`|punc
+talks|very|mod
+friendly|very|mod
+talks|friendly|mod
+had|talks|obj
+talks|'|punc
+talks|president|with
+president|glafcos clerides|person
+think|i|subj
+think|clarified|fc
+clarified|problems|obj
+added|he|subj
+added|that|c
+israelis|two|nn
+mission|israelis|of
+israelis|who|whn
+described|israelis|obj
+agents|mossad|nn
+described|agents|as
+was|`|punc
+was|`|punc
+was|basically|guest
+was|mistake|pred
+israelis|two|nn
+arrested|israelis|obj
+arrested|nov|on
+nov|admits|rel
+admits|nov|obj
+admits|israel|subj
+mossad agents arrested|two|nn
+benjamin netanyahu|cyprus--|mod
+benjamin netanyahu|israeli|mod
+benjamin netanyahu|prime minister|title
+mossad agents arrested|benjamin netanyahu|in
+admitted|mossad agents arrested|subj
+admitted|that|c
+israelis|two|nn
+israelis|arrested|vrel
+arrested|israelis|obj
+arrested|cyprus|in
+cyprus|suspicion|on
+suspicion|espionage|of
+espionage|cyprus|against
+agents|mossad|nn
+are|agents|pred
+agency|cyprus|nn
+agency|news|nn
+benjamin netanyahu|nicosia--|mod
+benjamin netanyahu|israeli|mod
+benjamin netanyahu|prime minister|title
+agency|admitted|rel
+admitted|benjamin netanyahu|subj
+admitted|that|c
+israelis|two|nn
+arrested|israelis|subj
+arrested|cyprus|in
+cyprus|suspicion|on
+suspicion|espionage|of
+espionage|cyprus|against
+agents|mossad|nn
+are|agents|pred
+two|cyprus news agency cyprus|nn
+two|arrested|mod
+alleged|two|subj
+hours|israeli mossad|nn
+hours|agents|nn
+48|less than|num-mod
+hours|48|amount-value
+alleged|hours|obj
+departure|weizman|gen
+hours|departure|after
+departure|nicosia|from
+visit|his|gen
+visit|first|post
+nicosia|visit|during
+country|island|nn
+visit|country|to
+country|1998|in

@@ -1,0 +1,128 @@
+be|available|pred
+stores|starbucks|nn
+available|stores|in
+stores|end|by
+end|year|of
+owner|giant|mod
+owner|coffee shop|nn
+announced|owner|subj
+announced|teaming|fc
+teaming|it|subj
+teaming|time inc|with
+time inc|publish|rel
+publish|time inc|subj
+publish|magazine|obj
+magazine|called|vrel
+called|magazine|obj1
+called|joe|desc
+joe|that|whn
+sold|joe|obj
+sold|most|at
+locations|starbucks|nn
+locations|'1800|nn
+most|locations|of
+locations|north america|across
+retailer|coffee|nn
+retailer|warned|vrel
+warned|retailer|obj
+warned|that|c
+businesses|its|gen
+businesses|non-core|mod
+shortfalls|businesses|in
+businesses|and|punc
+businesses|cost|conj
+cost|launching|of
+portal|new|mod
+portal|internet|nn
+launching|portal|obj
+result|shortfalls|subj
+result|lower|in
+earnings|expected|mod
+lower|earnings|than
+two|next|num-mod
+quarters|two|amount-value
+earnings|quarters|for
+for|and|punc
+for|for|conj
+for|year|for
+skidded|afternoon|in
+afternoon|trading|rel
+trading|afternoon|subj
+trading|today|mod
+trading|nasdaq stock market|on
+shares|starbucks|nn
+skidded|shares|subj
+skidded|$11.68 3\\/4|obj
+$11.68 3\\/4|$25.87 1\\/2|to
+plans|starbucks|subj
+plans|convert|fc
+convert|starbucks|subj
+banner|starbucks|nn
+convert|banner|to
+joined|time inc|subj
+joined|forces|obj
+forces|starbucks|with
+bid|starbucks|nn
+news|bid|of
+became|news|subj
+became|public|desc
+became|closing|mod
+closing|news|subj
+closing|yesterday|mod
+closing|$35.81|at
+closing|$1.81|up
+starbucks coffee|maker|appo
+juices|big-named|mod
+juices|bean|nn
+maker|juices|of
+juices|those|like
+adding|starbucks coffee|subj
+stores|500|num
+adding|stores|obj
+adding|year|mod
+offered|starbucks|subj
+coffee|single-origin|mod
+offered|coffee|obj
+coffee|brazil|from
+spokesman|starbucks|nn
+declined|spokesman|subj
+declined|comment|fc
+comment|spokesman|subj
+decided|company|subj
+decided|pursue|fc
+pursue|company|subj
+pursue|just|guest
+opportunity|such|pre
+pursue|opportunity|obj
+set|different|mod
+opportunity|set|with
+set|partners|of
+partners|not|appo-mod
+partners|starbucks|appo
+starbucks|and|punc
+starbucks|oxygen|conj
+pursue|last week|mod
+shop|world|gen
+shop|biggest|mod
+shop|coffee|nn
+shop|starbucks corp|appo
+trying|shop|subj
+trying|buy|fc
+buy|shop|subj
+buy|williams-sonoma inc|obj
+williams-sonoma inc|seller|conj
+armchairs|leather|nn
+seller|armchairs|of
+seller|and|punc
+seller|mixing|conj
+starbucks corp|coffee|nn
+starbucks corp|giant|mod
+purchased|starbucks corp|subj
+purchased|hear music|obj
+retailer|upscale|mod
+retailer|music|nn
+residents|city|gen
+ordering|residents|subj
+ordering|coffee|obj1
+coffee|company|from
+ordering|catalog|obj2

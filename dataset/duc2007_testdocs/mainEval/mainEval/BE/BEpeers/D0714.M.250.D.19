@@ -1,0 +1,157 @@
+internet|heavy|mod
+internet|metal|nn
+internet|band|nn
+metallica|metal|nn
+metallica|rock band|nn
+accused|metallica|subj
+universities|three|nn
+accused|universities|obj
+universities|and|punc
+universities|makers|conj
+music|popular|mod
+music|internet|nn
+makers|music|of
+music|sharing|rel
+sharing|music|subj
+sharing|software|obj
+infringement|copyright|nn
+music|infringement|of
+infringement|and|punc
+infringement|racketeering|conj
+amy weiss|and|punc
+recording industry association of america|rock band|nn
+amy weiss|recording industry association of america|conj
+sued|both|amod
+sued|amy weiss|subj
+sued|internet|obj
+software|company|gen
+alleging|allows|fc
+allows|software|subj
+allows|computer|obj
+users|trade|rel
+trade|user|subj
+copyrighted|users|subj
+copyrighted|music|obj
+music|online|pnmod
+online|permission|without
+should|not|neg
+held|it|obj
+accountable|if|c
+users|online piracy|nn
+trade|illegally|mod-before
+trade|users|subj
+music|internet|over
+store|music|obj
+computers|its|gen
+music|computers|on
+store|or|punc
+store|engage in|conj
+engage in|trading|obj
+surge|sharing|in
+sharing|and|punc
+music|trading|nn
+sharing|music|conj
+music|internet|over
+brought|surge|subj
+music|online|mod
+brought|music|obj
+sites|conflict|into
+labels|record|mod
+conflict|labels|with
+labels|which|whn
+say|labels|subj
+copyrighted|sites|subj
+copyrighted|songs|obj
+are|pirated|pred
+los angeles|and|punc
+counsel|stanford|nn
+counsel|legal|mod
+los angeles|counsel|conj
+counsel|dre|person
+said|los angeles|subj
+universities|their|gen
+said|received|fc
+received|universities|subj
+received|complaints|obj
+violations|copyright|nn
+complaints|violations|of
+violations|past|in
+involving|usually|amod
+received|involving|mod
+involving|university|subj
+involving|incidents|obj
+incidents|music|like
+music|text|conj
+text|or|punc
+text|photos|conj
+photos|posted|vrel
+posted|photos|obj
+posted|permission|without
+sites|student|nn
+sites|napster inc.|nn
+permission|sites|on
+fans|metallica|nn
+thousands|fans|of
+fans|booted|pnmod
+music|online|mod
+booted|music|by
+music|sharing|rel
+sharing|music|subj
+napster inc.|software|nn
+napster inc.|company|nn
+sharing|napster inc.|obj
+sharing|for|mod
+swapping|allegedly|amod
+band|heavy|mod
+band|metal|nn
+for|'s|comp1
+want|music|nn
+'s|want|pred
+access|their|gen
+want|reinstated|rel
+reinstated|want|obj
+reinstated|access|subj
+companies|major|mod
+companies|record|mod
+golon/harris international|rock band|nn
+companies|golon/harris international|along with
+golon/harris international|and|punc
+napster|rap|nn
+napster|star|nn
+napster|dr.|title
+golon/harris international|napster|conj
+but|sued|comp1
+sued|companies|subj
+sued|united states|obj
+united states|claiming|rel
+claiming|united states|subj
+claiming|promotes|fc
+promotes|program|subj
+piracy|music|nn
+promotes|piracy|obj
+promotes|and|punc
+promotes|cheats|conj
+cheats|program|subj
+cheats|artists|obj
+artists|royalties|out of
+officials|napster|nn
+say|officials|subj
+say|breaking|fc
+breaking|company|subj
+breaking|law|obj
+breaking|because|mod
+does|not|neg
+provide|directly|amod
+because|provide|comp1
+provide|it|subj
+music|copyrighted|mod
+provide|music|obj
+provide|just|mod
+provide|way|mod
+way|get|rel
+get|way|subj
+get|it|obj
+part|its|gen
+says|part|for
+says|napster|subj
+says|it|obj

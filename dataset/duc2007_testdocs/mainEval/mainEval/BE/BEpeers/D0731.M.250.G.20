@@ -1,0 +1,168 @@
+tapes|tripp|nn
+were|basis|pred
+investigation|kenneth starr|gen
+basis|investigation|for
+relationship|president|gen
+president|clinton|person
+investigation|relationship|into
+lewinsky|ms.|title
+relationship|lewinsky|with
+linda tripp|washington|nn
+linda tripp|(|punc
+linda tripp|ap|nn
+linda tripp|)|punc
+recordings|linda tripp|gen
+recordings|tape|nn
+linda tripp|recordings|whn
+recordings|monica lewinsky|of
+triggered|recordings|subj
+investigation|criminal|mod
+triggered|investigation|obj
+investigation|president|of
+president|bill clinton|person
+subpoenaed|linda tripp|obj
+subpoenaed|testify|mod
+testify|linda tripp|subj
+jury|grand|nn
+testify|jury|before
+week|next|post
+testify|week|mod
+said|one|subj
+lawyers|tripp|gen
+one|lawyers|of
+testify|said|mod
+testify|thursday|mod
+was|tripp|pred
+tripp|who|whn
+decided|tripp|subj
+tape|secretly|amod
+decided|tape|fc
+tape|it|subj
+tape|conversations|obj
+conversations|lewinsky|with
+talked about|lewinsky|subj
+affair|alleged|mod
+talked about|affair|obj
+affair|clinton|with
+investigating|he|subj
+investigating|whether|c
+lied|tripp|subj
+lied|when|wha
+denied|she|subj
+denied|making|fc
+making|she|subj
+making|copies|obj
+copies|tapes|of
+tapes|which|whn
+triggered|tapes|subj
+probe|starr|gen
+triggered|probe|obj
+perjury|alleged|mod
+probe|perjury|of
+perjury|and|punc
+perjury|obstruction|conj
+affair|president|gen
+president|bill clinton|person
+obstruction|affair|in
+affair|intern|with
+tripp|and|punc
+agent|new york|nn
+agent|book|nn
+tripp|agent|conj
+agent|lucianne goldberg|person
+agent|who|whn
+said|agent|subj
+said|urged|fc
+urged|she|subj
+record|tripp|subj
+conversations|her|gen
+record|conversations|obj
+conversations|lewinksy|with
+teamed|tripp|subj
+teamed|expose|mod
+expose|tripp|subj
+expose|matter|obj
+matter|media|to
+to|to|conj
+counsel|independent|mod
+to|counsel|to
+counsel|ken starr|person
+to|and|punc
+to|to|conj
+to|lawyers|to
+lawyers|representing|rel
+representing|lawyer|subj
+representing|paula jones|obj
+lawsuit|her|gen
+lawsuit|sexual harassment|nn
+paula jones|lawsuit|in
+lawsuit|president|against
+easier|a lot|mod
+was|easier|pred
+was|take|mod
+take|linda tripp|subj
+take|when|wha
+slinking|she|subj
+slinking|around|mod
+shadow|ken starr|gen
+around|shadow|in
+slinking|and|punc
+slinking|refusing|conj
+refusing|she|subj
+refusing|comment on|fc
+comment on|she|subj
+investigation|his|gen
+comment on|investigation|obj
+investigation|president|of
+investigation|starr|gen
+allegations|sex-and-lies|nn
+investigation|allegations|of
+involving|investigation|subj
+involving|clinton|obj
+clinton|and|punc
+clinton|lewinsky|conj
+lewinsky|mention|rel
+mention|lewinsky|subj
+media|accompanying|mod
+mention|media|obj
+resulted|directly|mod-before
+resulted|frenzy|subj
+decision|tripp|gen
+resulted|decision|from
+decision|tape|rel
+tape|decision|subj
+conversations|her|gen
+tape|conversations|obj
+conversations|lewinksy|with
+appearance|her|gen
+appearance|scheduled|mod
+word|appearance|of
+comes|word|subj
+prosecutor|special|mod
+comes|prosecutor|as
+prosecutor|tries|rel
+tries|prosecutor|obj
+tries|kenneth starr|subj
+tries|negotiate|mod
+negotiate|kenneth starr|subj
+negotiate|agreement|obj
+agreement|cooperation|for
+lewinsky|ms.|title
+cooperation|lewinsky|of
+intern|former|mod
+intern|white house|nn
+lewinsky|intern|appo
+intern|who|whn
+alleged|intern|subj
+alleged|in|guest
+alleged|conversations|in
+conversations|tripp|with
+affair|presidential|mod
+alleged|affair|obj
+affair|and|punc
+affair|cover-up|conj
+taping|illegally|amod
+conversations|her|gen
+taping|conversations|obj
+monica|ex-friend|nn
+conversations|monica|with

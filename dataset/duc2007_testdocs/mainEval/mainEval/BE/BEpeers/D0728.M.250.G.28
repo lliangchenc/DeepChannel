@@ -1,0 +1,140 @@
+six|another|num-mod
+months|six|amount-value
+after|gone by|comp1
+gone by|months|subj
+undetectable|still|mod
+was|undetectable|pred
+undetectable|half|in
+patients|combination|nn
+half|patients|of
+patients|compared|vrel
+compared|patients|obj
+5 percent|just|pre
+compared|5 percent|with
+group|interferon|nn
+5 percent|group|in
+alpha-2b|interferon|nn
+sales|alpha-2b|of
+alpha-2b|which|whn
+used|alpha-2b|obj
+used|treat|mod
+diseases|viral|mod
+treat|diseases|obj
+diseases|and|punc
+diseases|cancer|conj
+pull|sales|subj
+pull|$600 million|in
+$600 million|schering-plough|for
+schering-plough|berlin|of
+knew|folkman|subj
+research|recent|mod
+shown|research|subj
+shown|that|c
+alpha|interferon|nn
+alpha|made|vrel
+made|alpha|obj
+made|by|by-subj
+system|body|gen
+system|immune|mod
+made|system|by
+shut|alpha|subj
+shut|down|guest
+shut|overproduction|obj
+overproduction|fgf|of
+eliminates|therapy|subj
+eliminates|disease|obj
+10 percent|only|mod
+disease|10 percent|in
+10 percent|20 percent|to
+20 percent|patients|of
+but|say|comp1
+say|researchers|subj
+say|that|c
+all|not|mod
+patients|hepatitis|nn
+patients|c|nn
+need|patients|subj
+need|rebetron|obj
+rebetron|which|whn
+have|rebetron|subj
+effects|severe|mod
+effects|side|nn
+have|effects|obj
+effects|including|rel
+including|effect|subj
+symptoms|flulike|mod
+including|symptoms|obj
+symptoms|anemia|conj
+anemia|depression|conj
+depression|and|punc
+behavior|suicidal|mod
+depression|behavior|conj
+describe|paper|in
+tuesday|published|mod
+being|tuesday|pred
+being|journal|in
+pediatrics|folkman|conj
+folkman|kaban|conj
+kaban|and|punc
+kaban|colleagues|conj
+describe|pediatrics|subj
+describe|was|fc
+beaten|finally|mod
+was|beaten|pred
+regimen|yearlong|mod
+beaten|regimen|with
+regimen|drug|of
+alfa-2a|interferon|nn
+drug|alfa-2a|appo
+alfa-2a|that|whn
+knocked out|alfa-2a|subj
+ability|tumor|gen
+knocked out|ability|obj
+ability|recruit|rel
+recruit|ability|subj
+vessels|new|mod
+vessels|blood|nn
+recruit|vessels|obj
+approved|food and drug administration|subj
+approach|new|mod
+approved|approach|obj
+approach|combination|conj
+combination|interferon|of
+combination|and|punc
+combination|ribavirin|conj
+disease|spread|vrel
+spread|disease|obj
+spread|mainly|mod
+needles|dirty|mod
+mainly|needles|by
+needles|and|punc
+needles|exposure|conj
+blood|infected|mod
+exposure|blood|to
+reason|leading|mod
+is|reason|pred
+transplants|liver|mod
+reason|transplants|for
+reason|leading|mod
+is|reason|pred
+transplantation|liver|mod
+reason|transplantation|for
+2.7 million|at least|num-mod
+americans|2.7 million|nn
+carry|americans|subj
+virus|hepatitis|nn
+virus|c|nn
+carry|virus|obj
+carry|making|mod
+making|american|subj
+making|it|obj1
+common|most|mod
+infection|common|mod
+infection|blood-borne|mod
+making|infection|desc
+infection|united states|in
+making|study|according to
+journal|today|gen
+journal|new england|nn
+study|journal|in
+journal|medicine|of

@@ -1,0 +1,154 @@
+two|more than|num-mod
+years|two|amount-value
+effort|federal government|gen
+effort|first|post
+years|effort|after
+effort|define|rel
+define|effort|subj
+food|organic|mod
+define|food|obj
+failed|years|subj
+failed|win|fc
+win|years|subj
+approval|public|mod
+win|approval|obj
+announcing|department of agriculture|subj
+tougher|much|mod
+rules|tougher|mod
+announcing|rules|obj
+rules|that|whn
+prohibit|rules|subj
+prohibit|use|obj
+modified|genetically|mod
+ingredients|modified|mod
+use|ingredients|of
+ingredients|products|in
+products|carrying|rel
+carrying|product|subj
+label|organic|mod
+carrying|label|obj
+farming|organic|mod
+advocates|farming|of
+farming|who|whn
+seen|farming|subj
+rules|revised|mod
+seen|rules|obj
+say|advocates|subj
+say|that|c
+are|stricter|pred
+stricter|those|than
+those|developed|vrel
+developed|those|obj
+country|other|mod
+developed|country|in
+developed|and|punc
+developed|set|conj
+set|those|subj
+set|bar|obj
+high|very|mod
+bar|high|pnmod
+farmers|organic|mod
+high|farmers|for
+farmers|united states|in
+discouraging|possibly|amod
+set|discouraging|mod
+discouraging|standard|subj
+discouraging|rather|punc
+discouraging|than|punc
+discouraging|encouraging|conj
+encouraging|standard|subj
+encouraging|them|obj
+encouraging|grow|mod
+crops|organic|mod
+grow|crops|obj
+standards|national|mod
+help|standards|subj
+producers|u.s.|nn
+sell|producers|subj
+food|organic|mod
+sell|food|obj
+sell|abroad|mod
+sell|where|wha
+opposition|substantial|mod
+been|opposition|pred
+opposition|use|to
+modified|genetically|mod
+crops|modified|mod
+use|crops|of
+crops|and|punc
+technologies|other|mod
+technologies|new|mod
+technologies|food|nn
+crops|technologies|conj
+manufacturers|nation|gen
+manufacturers|biggest|mod
+manufacturers|food|nn
+some|manufacturers|of
+getting into|some|subj
+business|natural-foods|nn
+getting into|business|obj
+getting into|including|mod
+including|some|subj
+including|general mills inc.|obj
+general mills inc.|and|punc
+general mills inc.|h.j|conj
+co.|heinz|nn
+general|mills|person
+has|general|subj
+cereal|new|mod
+cereal|organic|mod
+has|cereal|obj
+has|and|punc
+has|announced|conj
+announced|general|subj
+announced|in|guest
+announced|december|in
+announced|that|c
+small planet foods|buying|nn
+was|small planet foods|pred
+producer|leading|mod
+small planet foods|producer|appo
+products|organic|mod
+products|food|nn
+producer|products|of
+food|organic|mod
+attack|food|on
+organization|well-financed|mod
+organization|research|nn
+food|organization|by
+suggests|attack|subj
+suggests|that|obj
+suggests|even|mod
+suggests|though|mod
+food|organic|mod
+though|accounts for|comp1
+accounts for|food|subj
+accounts for|only|guest
+accounts for|1 percent|obj
+sales|food|nn
+1 percent|sales|of
+sales|country|in
+industry|conventional|mod
+industry|food|nn
+worried|industry|obj
+as|grew|comp1
+grew|sales|subj
+20|more than|num-mod
+grew|20|obj
+year|1990s|through
+food|organic|mod
+came to|food|subj
+came to|account|obj
+account|$1|for
+$1|$100|of
+$100|spent|pnmod
+spent|food|on
+took notice|1997|in
+took notice|agency|subj
+took notice|proposing|mod
+proposing|agency|subj
+standards|national|mod
+standards|organic|mod
+proposing|standards|obj
+food|all|pre
+standards|food|for

@@ -1,0 +1,151 @@
+judge|u.s.|nn
+judge|district|mod
+judge|thursday|person
+declared|judge|subj
+authority|president|gen
+authority|line-item|nn
+authority|veto|nn
+declared|authority|obj
+agreed|supreme court|subj
+agreed|on|guest
+agreed|friday|on
+agreed|hear|fc
+hear|supreme court|subj
+hear|argument|obj
+hear|and|punc
+hear|decide|conj
+decide|supreme court|subj
+decide|constitutionality|obj
+veto|president|nn
+veto|line-item|nn
+constitutionality|veto|of
+used|clinton|subj
+last|line-item|nn
+last|veto|nn
+times|82|amount-value
+last|times|nn
+used|last|obj
+used|year|mod
+president|u.s.|nn
+president|bill clinton|person
+vetoed|today|mod-before
+vetoed|president|subj
+rejection|congressional|mod
+vetoed|rejection|obj
+veto|his|gen
+veto|line-item|nn
+rejection|veto|of
+projects|38|num
+projects|military|mod
+projects|construction|nn
+veto|projects|on
+government|and|punc
+officials|hospital|nn
+government|officials|conj
+state|new york|nn
+officials|state|in
+praised|government|subj
+decision|supreme court|gen
+praised|decision|obj
+decision|strike down|rel
+strike down|decision|subj
+power|president|gen
+power|line-item|nn
+power|veto|nn
+strike down|power|obj
+was|struck|pred
+was|down|mod
+justice|john paul stevens|person
+wrote|justice|subj
+opinion|majority|nn
+wrote|opinion|obj
+wrote|divided|mod
+divided|court|subj
+divided|6-to-3|obj
+case|line item|nn
+case|veto|nn
+6-to-3|case|in
+override|congress|subj
+veto|line-item|nn
+override|veto|obj
+vote|simple|mod
+vote|majority|nn
+veto|vote|by
+judge|u.s.|nn
+judge|district|mod
+judge|thomas hogan|person
+judge|struck|pnmod
+law|line-item|nn
+law|veto|nn
+struck|law|down
+law|line-item|nn
+law|veto|nn
+challenged|law|obj
+challenged|by|by-subj
+challenged|new york city|by
+president|first|post
+was|president|pred
+president|exercise|rel
+exercise|president|subj
+veto|line-item|nn
+exercise|veto|obj
+judge|federal|mod
+ruled|judge|subj
+veto|line-item|nn
+ruled|veto|obj
+veto|unconstitutional|pnmod
+unconstitutional|february|in
+president|first|post
+is|president|pred
+president|have|rel
+have|president|subj
+authority|line-item|nn
+authority|veto|nn
+have|authority|obj
+vetoes|such|pre
+vetoes|line-item|nn
+were|unconstitutional|pred
+justices|antonin scalia|person
+justices|stephen breyer|conj
+stephen breyer|and|punc
+stephen breyer|sandra day o 'connor|conj
+dissented|justices|subj
+dissented|saying|mod
+saying|justice|subj
+saying|upheld|fc
+upheld|they|subj
+veto|line-item|nn
+upheld|veto|obj
+vetoes|such|pre
+vetoes|line-item|nn
+were|unconstitutional|pred
+used|clinton|subj
+veto|line-item|nn
+used|veto|obj
+veto|rewrite|rel
+rewrite|veto|subj
+laws|11|num
+rewrite|laws|obj
+presidents|ulysses grant|since
+sought|presidents|subj
+veto|line-item|nn
+sought|veto|obj
+upheld|dissenters|subj
+veto|line-item|nn
+upheld|veto|obj
+makes|this|subj
+calculus|political|mod
+makes|calculus|obj
+veto|line-item|nn
+calculus|veto|of
+republicans|house|nn
+made|republicans|subj
+veto|line-item|nn
+made|veto|obj1
+made|part|desc
+contract|their|gen
+part|contract|of
+contract|america|with
+is|really|mod-before
+veto|line-item|nn
+is|veto|pred

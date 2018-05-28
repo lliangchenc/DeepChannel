@@ -1,0 +1,136 @@
+monica lewinsky|washington--|mod
+monica lewinsky|whether|nn
+monica lewinsky|president|nn
+president|clinton|person
+monica lewinsky|corrupted|mod
+is|subject|pred
+subject|clergymen|for
+mentioned|frequently|amod
+mentioned|feinstein|obj
+running mate|potential|mod
+mentioned|running mate|as
+nominee|democratic|mod
+nominee|presidential|mod
+running mate|nominee|for
+nominee|2000|in
+dianne feinstein|--|mod
+dianne feinstein|sen.|title
+dianne feinstein|d-calif.|appo
+wednesday|that|whn
+time|"|punc
+is|right|pred
+right|"|punc
+right|for|punc
+right|a|punc
+right|woman|punc
+be|on|pred
+ticket--|democratic|mod
+be|ticket--|on
+be|but|mod
+but|bristled at|comp1
+bristled at|she|subj
+bristled at|notion|obj
+likely|most|mod
+candidate|likely|mod
+is|candidate|pred
+dianne feinstein|washington--|mod
+ride|dianne feinstein|gen
+ride|easy|mod
+ride|re-election|to
+is|over|pred
+though|remains|comp1
+remains|feinstein|subj
+remains|favorite|obj
+tom campbell|rep.|title
+'s|entry|pred
+'s|tuesday|mod
+'s|california|into
+race|senate|nn
+transformed|immediately|mod-before
+transformed|race|subj
+contest|sleepy|mod
+transformed|contest|obj
+showdown|spirited|mod
+contest|showdown|into
+significance|national|mod
+showdown|significance|of
+joined|sh1 boxer present feinstein|obj
+feinstein|and|punc
+feinstein|boxer|conj
+democrats|california|nn
+feinstein|democrats|appo
+make|feinstein|subj
+remarks|opening|mod
+make|remarks|obj
+remarks|convention|at
+convention|which|whn
+begins|convention|subj
+begins|aug 14th|mod
+begins|and|punc
+begins|preside|conj
+preside|convention|subj
+preside|votes|over
+votes|and|punc
+business|official|mod
+votes|business|conj
+business|dais|from
+women|two|nn
+chaired|previously|mod-before
+chaired|women|subj
+conventions|democratic|mod
+chaired|conventions|obj
+chairpersons|single|mod
+conventions|chairpersons|as
+chose|1992|in
+chose|democrats|subj
+chose|texas|obj
+martha layne collins|gov.|title
+martha layne collins|kentucky|of
+selected|martha layne collins|obj
+selected|chair|as
+chair|convention|of
+convention|held|vrel
+held|convention|obj
+held|san francisco|in
+john kerry|massachusetts|of
+massachusetts|bob graham|conj
+bob graham|florida|of
+bob graham|evan bayh|conj
+evan bayh|indiana|of
+evan bayh|and|punc
+evan bayh|tom harkin|conj
+bob graham|iowa|of
+leader|house|nn
+leader|minority|nn
+iowa|leader|conj
+leader|dick gephardt|person
+leader|missouri|of
+missouri|and|punc
+leader|former|mod
+leader|senate|nn
+leader|majority|nn
+missouri|leader|conj
+leader|george mitchell|person
+iowa|maine|of
+'s|speakers|among
+speakers|monday|on
+'s|program|pred
+dianne feinstein|and|punc
+dianne feinstein|barbara boxer|conj
+in|california|nn
+barbara boxer|in|of
+in|1992|num
+made|californians|subj
+made|history|obj
+history|pulling|by
+pulling|californian|subj
+pulling|lever|obj
+for|both|punc
+lever|dianne feinstein|for
+dianne feinstein|and|punc
+dianne feinstein|barbara boxer|conj
+barbara mikulski|sen.|title
+blanche lambert lincoln|maryland|nn
+blanche lambert lincoln|sen.|title
+barbara mikulski|blanche lambert lincoln|of
+blanche lambert lincoln|arkansas|of

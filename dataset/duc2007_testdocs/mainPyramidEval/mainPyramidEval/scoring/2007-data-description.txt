@@ -1,0 +1,37 @@
+
+		DUC 2007 Main Task: Description of Score Table
+		------------------------------------------------
+
+This file is a companion to 2007-header.txt. It describes the contents
+of each of the 11 columns in the score table (2007_modified_scores.txt).
+
+1. setID---document subset ID
+2. peerId---peer summarizer ID
+3. modified (pyramid) score---this score is very closely related to
+       the original pyramid score, which equals the sum of the weights
+       of the Summary Content Units (SCUs) that a peer summary
+       matches, normalized by the weight of an ideally informative
+       summary consisting of the same number of contributors as the
+       peer. However, the normalization factor for the modified score
+       is the ideal weight of a summary which has the same number of
+       contributors as the average of the model summaries in the
+       associated pyramid.
+4. numSCUs---the number of unique contributors in the peer summary
+       that match an SCU in the model pyramid. Note that a pyramid SCU
+       can be matched by more than one contributor, in the case of
+       exact or paraphrase repetition.
+5. numrepetitions---the number of contributors in the peer that
+       repeated a match to a pyramid SCU. For each set of contributors
+       in the peer summary that match the same pyramid SCU, only one
+       increments the count in column 4. The rest appear in this
+       field; thus the total number of contributing content units in a
+       peer summary would be given by summing columns 4 and 5.
+6-10.---the NIST judgments for the five linguistic quality questions,
+       reproduced here to facilitate comparisons between the two types
+       of scores, since the summaries evaluated by the pyramid method
+       are only a subset of all DUC07 summaries.
+11. content---the NIST content responsiveness judgment for the peer
+
+
+
+ 

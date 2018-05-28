@@ -1,0 +1,132 @@
+plan|starbucks coffee co.|nn
+plan|acquire|rel
+acquire|plan|subj
+acquire|pasqua coffee|obj
+leaving|plan|subj
+aftertaste|bitter|mod
+leaving|aftertaste|obj
+aftertaste|mouths|in
+mouths|patrons|of
+coffeehouse|san francisco-based|mod
+patrons|coffeehouse|of
+tapped|starbucks|subj
+power|pepsi-cola co.|gen
+power|`|punc
+power|`|punc
+power|ubiquitous|mod
+power|distribution|nn
+tapped|power|obj
+power|'|punc
+power|'|punc
+power|sell|rel
+sell|power|subj
+beverage|its|gen
+beverage|frappuccino|nn
+beverage|blended|mod
+beverage|coffee|nn
+sell|beverage|obj
+beverage|which|whn
+leads|beverage|subj
+category|ready-to-drink|mod
+category|coffee|nn
+leads|category|obj
+leads|said|mod
+said|schultz|subj
+hurl|downtown|in
+austin|where|whn
+can|where|obj
+can|you|subj
+hurl|hardly|mod-before
+hurl|austin|subj
+hurl|stone|obj
+stone|hitting|without
+hitting|austin|subj
+hitting|starbucks|obj
+starbucks|or|punc
+joint|other|mod
+joint|java|nn
+starbucks|joint|conj
+become|circles|in
+city|capital|mod
+become|rapidly|amod
+become|city|subj
+city|cappuccino|nn
+become|city|obj
+opening|starbucks|subj
+one|at least|num-mod
+store|one|nn
+store|new|mod
+opening|store|obj
+opening|year|mod
+year|mid-march|in
+streets|nueces|nn
+campus|university of texas|nn
+west|campus|of
+announced|starbucks coffee co.|subj
+announced|new|obj
+division|consumer products|nn
+ice cream|its|gen
+ice cream|specialty|nn
+division|ice cream|for
+drinks|bottled|mod
+drinks|coffee|nn
+ice cream|drinks|conj
+drinks|and|punc
+products|other|mod
+drinks|products|conj
+new|sold|rel
+sold|new|obj
+sold|division|subj
+sold|away|mod
+shops.most|its own|gen
+away|shops.most|from
+shops.most|it|of
+been|joint ventures|pred
+grand ice cream|dreyer|gen
+ice cream|grand ice cream|with
+frappuccino|bottled|mod
+frappuccino|pepsi-cola|with
+distribution|supermarket|nn
+coffee|starbucks|nn
+distribution|coffee|of
+coffee|kraft foods inc.|with
+starbucks coffee co.|schultz|gen
+starbucks coffee co.|seattle-based|mod
+starbucks coffee co.|and|punc
+johnson development corp.|johnson|gen
+johnson development corp.|los angeles-based|mod
+starbucks coffee co.|johnson development corp.|conj
+opened|recently|amod
+opened|starbucks coffee co.|subj
+stores|similar|mod
+stores|starbucks|nn
+stores|coffee|nn
+opened|stores|obj
+stores|west los angeles|in
+west los angeles|and|punc
+harlem|new york|gen
+west los angeles|harlem|conj
+beans|even|mod
+beans|coffee|nn
+beans|which|whn
+constitute|beans|subj
+minority|small|mod
+constitute|minority|obj
+sales|starbucks|gen
+minority|sales|of
+have|beans|subj
+net|much|mod
+potential|net|mod
+have|potential|obj
+have|since|mod
+since|operates|comp1
+operates|starbucks|subj
+shops|physical|mod
+operates|shops|obj
+shops|corner|on
+operates|making|mod
+making|starbucks|subj
+making|access|obj
+access|beans|to
+making|at least|mod
+at least|as|mod

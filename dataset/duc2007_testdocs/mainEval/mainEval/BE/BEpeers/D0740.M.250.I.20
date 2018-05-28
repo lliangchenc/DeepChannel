@@ -1,0 +1,148 @@
+balloon|switzerland|nn
+balloon|(|punc
+balloon|ap|nn
+balloon|)|punc
+balloon|swiss|mod
+d 'oex|balloon|appo
+bertrand piccard|pilot|mod
+balloon|announced|rel
+announced|balloon|obj
+announced|bertrand piccard|subj
+announced|wednesday|mod
+wednesday|that|c
+chosen|he|subj
+teammate|his|gen
+brian jones|teammate|as
+teammate|his|for
+attempt|next|mod-before
+attempt|wednesday|obj
+attempt|brian jones|subj
+attempt|circling|at
+circling|brian jones|subj
+circling|world|obj
+world|balloon|in
+xinhua|march 24|nn
+xinhua|(|punc
+geneva|xinhua|appo
+xinhua|)|punc
+xinhua|said|rel
+said|xinhua|obj
+said|international olympic committee|subj
+said|wednesday|mod
+wednesday|that|c
+award|wednesday|obj1
+award|they|subj
+award|olympic order|obj2
+bertrand piccard|balloonists|nn
+olympic order|bertrand piccard|to
+bertrand piccard|and|punc
+bertrand piccard|brian jones|conj
+brian jones|who|whn
+are|first|pred
+first|circumnavigate|rel
+circumnavigate|first|subj
+circumnavigate|world|obj
+world|balloon|in
+balloon|their|gen
+balloon|new|mod
+balloon|breitling orbiter 3|nn
+take off|balloon|subj
+take off|chateaud 'oex|from
+take off|swiss alps|in
+are|soon|mod-before
+soon|nov 25|after
+conditions|weather|mod
+are|favorable|pred
+said|they|subj
+attempt|piccard|gen
+attempt|third|post
+be|attempt|pred
+attempt|become|rel
+become|attempt|subj
+become|first|obj
+first|pilot|rel
+pilot|first|subj
+pilot|balloon|obj
+balloon|world|around
+balloon|their|gen
+balloon|new|mod
+balloon|breitling orbiter 3|nn
+take off|balloon|subj
+take off|chateaud 'oex|from
+take off|swiss alps|in
+are|soon|mod-before
+soon|nov 25|after
+conditions|weather|mod
+are|favorable|pred
+said|they|subj
+bid|piccard|gen
+bid|last|post
+bid|round-the-world|mod
+abandoned|bid|obj
+abandoned|after|mod
+after|refused|comp1
+refused|china|subj
+refused|his|obj1
+entry|balloon|nn
+refused|entry|obj2
+abandoned|causing|mod
+causing|bid|subj
+causing|it|obj
+causing|miss|mod
+miss|out|mod
+winds|jet-stream|nn
+out|winds|on
+winds|needed|vrel
+needed|winds|obj
+needed|speed|mod
+speed|it|obj
+speed|pacific|over
+switzerland|bern|nn
+switzerland|(|punc
+switzerland|ap|nn
+switzerland|)|punc
+is|optimistic|pred
+grant|soon|amod
+grant|china|subj
+permission|swiss-based|mod
+permission|balloon|nn
+permission|team|nn
+grant|permission|obj
+permission|overfly|rel
+overfly|permission|subj
+overfly|country|obj
+quest|its|gen
+country|quest|in
+nonstop|first|mod
+round-the-world|nonstop|mod
+flight|round-the-world|mod
+quest|flight|for
+spokeswoman|foreign|mod
+spokeswoman|ministry|nn
+said|spokeswoman|subj
+said|monday|mod
+xinhua|march 21|nn
+xinhua|(|punc
+cairo|xinhua|appo
+voyage|20-day|nn
+voyage|swiss bertrand piccard|conj
+swiss bertrand piccard|and|punc
+swiss bertrand piccard|british brian jones|conj
+after|completed|comp1
+completed|voyage|subj
+circumnavigation|their|gen
+circumnavigation|nonstop|mod
+completed|circumnavigation|obj
+circumnavigation|hot-air balloon|on
+completed|and|punc
+completed|landed|conj
+landed|voyage|obj
+egypt|southern|mod
+landed|egypt|in
+landed|smoothly|mod
+morning|sunday|nn
+landed|morning|mod
+men|two|nn
+men|bertrand piccard|conj
+bertrand piccard|and|punc
+bertrand piccard|wim verstraeten|conj

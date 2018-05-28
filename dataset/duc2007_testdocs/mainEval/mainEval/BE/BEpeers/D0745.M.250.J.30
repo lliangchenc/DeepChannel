@@ -1,0 +1,143 @@
+jury|los angeles|nn
+acquitted|jury|subj
+acquitted|simpson|obj
+simpson|1995|in
+simpson|murdering|of
+murdering|jury|subj
+ex-wife|his|gen
+murdering|ex-wife|obj
+ex-wife|nicole brown simpson|conj
+nicole brown simpson|and|punc
+ronald goldman|her|gen
+ronald goldman|friend|nn
+nicole brown simpson|ronald goldman|conj
+acquitted|simpson|obj
+acquitted|october 1995|in
+trial|criminal|mod
+acquitted|trial|in
+acquitted|for|mod
+for|murders|comp1
+murders|slashing|subj
+murders|of|guest
+murders|his|of
+nicole brown simpson|ex-wife|nn
+murders|nicole brown simpson|obj
+nicole brown simpson|and|punc
+ronald goldman|her|gen
+ronald goldman|friend|nn
+nicole brown simpson|ronald goldman|conj
+relatives|victims|gen
+filed|relatives|subj
+suit|civil|mod
+suit|wrongful|mod
+suit|death|nn
+filed|suit|obj
+suit|him|against
+filed|seeking|mod
+seeking|relative|subj
+damages|monetary|mod
+seeking|damages|obj
+acquitted|simpson|obj
+acquitted|murder|of
+trial|criminal|mod
+murder|trial|in
+acquitted|but|punc
+acquitted|found|conj
+found|simpson|obj1
+found|liable|desc
+trial|subsequent|mod
+trial|civil|mod
+liable|trial|in
+deaths|1994|num
+trial|deaths|for
+nicole brown simpson|his|gen
+nicole brown simpson|ex-wife|nn
+deaths|nicole brown simpson|of
+nicole brown simpson|and|punc
+ronald goldman|her|gen
+ronald goldman|friend|nn
+nicole brown simpson|ronald goldman|conj
+agency|u.s.|nn
+agency|federal|mod
+agency|tax|nn
+wants|agency|subj
+wants|estate|obj
+estate|nicole brown simpson|of
+nicole brown simpson|pay|rel
+pay|nicole brown simpson|subj
+6.5 million|dlrs|nn
+pay|6.5 million|obj
+6.5 million|taxes|in
+taxes|claim|appo
+claim|based|vrel
+based|claim|obj
+judgment|dlrs|nn
+judgment|12 million|nn
+judgment|civil|mod
+based|judgment|on
+judgment|o.j|against
+acquitted|simpson|obj
+charges|criminal|mod
+acquitted|charges|of
+murders|1994|num
+charges|murders|in
+murders|nicole brown simpson|of
+nicole brown simpson|and|punc
+friend|her|gen
+nicole brown simpson|friend|conj
+nicole brown simpson|ronald goldman|appo
+focuses on|book|like
+focuses on|miniseries|subj
+focuses on|tensions|obj
+tensions|and|punc
+tensions|strategies|conj
+team|legal|mod
+team|`|punc
+team|dream|nn
+strategies|team|of
+team|`|punc
+team|that|whn
+won|team|subj
+acquittal|simpson|gen
+won|acquittal|obj
+slayings|1994|num
+acquittal|slayings|in
+ex-wife|his|gen
+slayings|ex-wife|of
+ex-wife|nicole brown simpson|conj
+nicole brown simpson|and|punc
+friend|her|gen
+nicole brown simpson|friend|conj
+ex-wife|ronald goldman|appo
+said|bailey|subj
+said|friday|mod
+said|testimony|during
+courtroom|florida|nn
+testimony|courtroom|in
+courtroom|where|wha
+license|his|gen
+license|practice|rel
+practice|license|subj
+practice|law|obj
+is|challenged|pred
+slayings|june 1994|nn
+shortly|slayings|after
+slayings|nicole brown simpson|of
+nicole brown simpson|and|punc
+nicole brown simpson|ronald goldman|conj
+received|he|subj
+received|telephone call|obj
+attorney|los angeles|nn
+attorney|defense|nn
+telephone call|attorney|from
+attorney|robert shapiro|person
+found|february 1997|in
+jury|civil|mod
+found|jury|subj
+found|simpson|obj
+simpson|liable|pnmod
+deaths|stabbing|mod
+liable|deaths|for
+deaths|ronald goldman|of
+ronald goldman|and|punc
+ronald goldman|nicole brown simpson|conj

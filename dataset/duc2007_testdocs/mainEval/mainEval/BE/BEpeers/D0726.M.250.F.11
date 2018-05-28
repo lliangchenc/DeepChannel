@@ -1,0 +1,138 @@
+ap|washington|nn
+ap|(|punc
+2000|president|gen
+president|al gore|person
+appointed|campaign|subj
+appointed|campaign|obj1
+appointed|pro|obj2
+connections|local|mod
+connections|washington|nn
+pro|connections|with
+director|its|gen
+director|political|mod
+connections|director|as
+donna brazile|chief of staff|conj
+chief of staff|and|punc
+chief of staff|press secretary|conj
+press secretary|del. eleanor holmes norton|for
+del. eleanor holmes norton|district of columbia|of
+director|national|mod
+director|field|nn
+was|director|pred
+dick gephardt|rep.|title
+campaign|dick gephardt|gen
+campaign|1988|num
+campaign|presidential|mod
+director|campaign|for
+chairs|kennedy|subj
+chairs|democratic congressional campaign committee|obj
+arm|fund-raising|mod
+democratic congressional campaign committee|arm|appo
+democrats|house|nn
+arm|democrats|of
+jackson|jesse|nn
+decision|act|rel
+act|decision|subj
+came|now|mod-before
+came|decision|subj
+came|reflection|after
+holiday|christmas|nn
+reflection|holiday|over
+holiday|and|punc
+holiday|phone call|conj
+phone call|kennedy|between
+kennedy|and|punc
+kennedy|gore|conj
+gore|new year|since
+camp|kennedy|nn
+people|camp|in
+supporters|gore|nn
+pushed for|supporters|subj
+pushed for|endorsement|obj
+woman|stamford|nn
+become|woman|subj
+maker|official|mod
+maker|yarmulke|nn
+become|maker|obj
+ticket|gore-lieberman|nn
+ticket|presidential|mod
+maker|ticket|of
+clinton|bill|nn
+campaign|vice president|gen
+campaign|white house|for
+but|faces|comp1
+faces|campaign|subj
+challenge|fresh|mod
+faces|challenge|obj
+challenge|democrats|from
+democrats|congress|in
+congress|who|whn
+want|congress|subj
+want|gore|obj
+gore|criticize|rel
+criticize|gore|subj
+conduct|president|gen
+criticize|conduct|obj
+conduct|help|rel
+help|conduct|subj
+distinguish|party|subj
+distinguish|itself|obj
+effectively|more|mod
+distinguish|effectively|mod
+effectively|clinton|from
+issue|hot-button|mod
+clinton|issue|on
+values|personal|mod
+issue|values|of
+vice president|washington--|mod
+vice president|al gore|person
+warned|accepting|mod-before
+accepting|vice president|subj
+accepting|endorsements|obj
+endorsements|hundreds|from
+leaders|latino|mod
+hundreds|leaders|of
+warned|vice president|subj
+warned|tuesday|obj
+cuts|republican-sponsored|mod
+cuts|tax|nn
+opposition|gop|gen
+cuts|opposition|conj
+sampling|census|nn
+opposition|sampling|to
+sampling|and|punc
+george bush|texas|nn
+george bush|gov.|title
+proposals|george bush|gen
+proposals|education|nn
+sampling|proposals|conj
+wipe out|cuts|subj
+gains|economic|mod
+wipe out|gains|obj
+gains|made|vrel
+made|gains|obj
+made|by|by-subj
+made|hispanics|by
+policies|administration|nn
+hispanics|policies|under
+dianne feinstein|u.s.|nn
+dianne feinstein|sen.|title
+including|dianne feinstein|obj
+resign|delay|subj
+office|present|mod
+resign|office|from
+office|july 15|on
+july 15|replace|rel
+replace|july 15|subj
+replace|tony coelho|obj
+congressman|former|mod
+congressman|california|nn
+tony coelho|congressman|appo
+congressman|who|whn
+hired|congressman|obj
+hired|by|by-subj
+hired|gore|by
+hired|year ago|mod
+year ago|lead|rel
+lead|year ago|subj
+lead|campaign|obj

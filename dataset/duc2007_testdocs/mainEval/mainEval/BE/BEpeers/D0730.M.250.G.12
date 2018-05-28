@@ -1,0 +1,158 @@
+xinhua|february 12|nn
+xinhua|(|punc
+washington|xinhua|appo
+planning|justice department|subj
+planning|appeal to|fc
+appeal to|justice department|subj
+appeal to|u.s. supreme court|obj
+appeal to|after|mod
+judge|federal|mod
+after|struck down|comp1
+struck down|judge|subj
+veto|line-item|nn
+struck down|veto|obj
+struck down|thursday|mod
+struck down|as|mod
+president|bill clinton|person
+said|president|subj
+disappointed|"|punc
+said|disappointed|fc
+disappointed|he|obj
+disappointed|"|punc
+upheld|ruling|by
+ruling|but|punc
+confidence|expressed|mod
+ruling|confidence|conj
+law|line-item|nn
+upheld|eventually|mod-before
+disappointed|upheld|fc
+upheld|law|obj
+upheld|by|by-subj
+upheld|supreme court|by
+has|law|under
+law|which|whn
+took effect|law|subj
+took effect|january 1997|in
+has|president|subj
+days|five|amount-value
+has|days|obj
+days|signing|after
+signing|president|subj
+signing|bill|obj
+bill|cancel|rel
+cancel|bill|subj
+cancel|some|obj
+appropriations|its|gen
+some|appropriations|of
+cancel|or|punc
+cancel|cancel|conj
+cancel|bill|subj
+breaks|special|mod
+breaks|tax|nn
+cancel|breaks|obj
+breaks|seen|vrel
+seen|bill|obj
+seen|applying|as
+numbers|small|mod
+applying|numbers|to
+numbers|people|of
+overturn|congress|subj
+overturn|all|obj
+vetoes|line-item|nn
+some|vetoes|of
+vetoes|majority|on
+vote in|some|subj
+bill|"|punc
+bill|disapproval|nn
+vote in|bill|obj
+vetoes|then|mod-before
+vetoes|president|subj
+vetoes|bill|obj
+require|it|subj
+vote|two-thirds|nn
+require|vote|obj
+in|both|punc
+vote|house of representatives|in
+house of representatives|and|punc
+house of representatives|senate|conj
+senate|override|to
+ruled|supreme court|subj
+ruled|thursday|guest
+ruled|that|c
+prohibited|constitution|subj
+prohibited|president|obj
+president|rewriting|from
+rewriting|constitution|subj
+rewriting|legislation|obj
+legislation|vetoing|by
+items|single|mod
+vetoing|items|obj
+items|spending|of
+spending|or|punc
+breaks|specific|mod
+breaks|tax|nn
+spending|breaks|conj
+breaks|approved|vrel
+approved|by|by-subj
+approved|congress|by
+decision|6-3|nn
+rejected|decision|in
+rejected|court|subj
+effort|decades-old|mod
+rejected|effort|obj
+effort|strengthen|rel
+strengthen|effort|subj
+strengthen|hand|obj
+hand|president|of
+president|struggles|in
+struggles|congress|with
+court|quoted|vrel
+quoted|court|obj1
+quoted|george washington|obj2
+george washington|who|whn
+presided|george washington|subj
+presided|constitutional convention|over
+presided|and|punc
+wrote|later|mod-before
+presided|wrote|conj
+wrote|george washington|subj
+wrote|that|obj1
+wrote|president|obj2
+approve|`|punc
+approve|`|punc
+approve|court|subj
+approve|all|guest
+approve|parts|obj
+parts|bill|of
+approve|or|punc
+approve|reject|conj
+reject|court|subj
+reject|it|obj
+reject|toto|in
+reject|'|punc
+reject|'|punc
+reject|but|punc
+reject|modify|conj
+modify|court|subj
+modify|text|obj
+text|legislation|of
+legislation|presented|vrel
+presented|legislation|obj
+presented|him|to
+presented|by|by-subj
+presented|congress|by
+amended|president|subj
+acts|two|nn
+amended|acts|obj
+acts|congress|of
+congress|repealing|by
+repealing|president|subj
+repealing|portion|obj
+portion|each|of
+repealing|'|punc
+repealing|'|punc
+repealing|said|mod
+opinion|majority|nn
+said|opinion|subj
+repealing|justice|by
+justice|john paul stevens|person

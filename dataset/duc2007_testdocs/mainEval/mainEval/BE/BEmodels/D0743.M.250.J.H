@@ -1,0 +1,144 @@
+western turkey|two|nn
+western turkey|consecutive|mod
+western turkey|earthquakes|nn
+western turkey|struck|mod
+western turkey|17 august 1999|on
+quakes|two|nn
+registered|quakes|subj
+7|about|num-mod
+registered|7|obj
+7|richter scale|on
+registered|and|punc
+lasted|each|mod-before
+registered|lasted|conj
+lasted|quakes|subj
+45|about|num-mod
+seconds|45|amount-value
+lasted|seconds|obj
+twenty-seven|at least|num-mod
+aftershocks|twenty-seven|nn
+followed|aftershocks|subj
+followed|quakes|obj
+was|near|pred
+was|izmit|near
+kilometers|70|amount-value
+southeast|kilometers|nn
+izmit|southeast|appo
+southeast|istanbul|of
+13,000|estimated|mod
+died|13,000|subj
+injured|seriously|amod
+injured|16,000|obj
+injured|more|mod
+injured|than|mod
+than|are|comp1
+are|homeless|pred
+believed|35,000|obj
+believed|buried|mod
+buried|wreckage|in
+was|totaling|mod-before
+totaling|damage|subj
+totaling|billions|obj
+billions|dollars|of
+extensive|very|mod
+was|extensive|pred
+buildings|residential|mod
+residential|and|punc
+residential|industrial|conj
+extensive|buildings|to
+bases|coastal|mod
+bases|naval|mod
+bases|and|punc
+bases|seaports|conj
+wires|destroyed|mod
+wires|electric|mod
+were|wires|pred
+lines|water|nn
+were|cut|pred
+cracked|roads|subj
+collapsed|bridges|subj
+fire|major|mod
+broke out|fire|subj
+broke out|izmit refinery|in
+teams|rescue|nn
+teams|supplies|with
+supplies|and|punc
+supplies|equipment|conj
+arrived|teams|subj
+bases|us|nn
+arrived|bases|from
+bases|turkey|in
+teams|two|nn
+teams|american|mod
+teams|search-rescue|mod
+teams|and|punc
+workers|1,000|num
+workers|relief|nn
+teams|workers|conj
+countries|nineteen|nn
+workers|countries|from
+survivors|trapped|mod
+buildings|survivors|for
+countries|eight|nn
+countries|european|nn
+firefighters|countries|from
+succeeded|firefighters|subj
+controlling|firefighters|subj
+fires|refinery|nn
+controlling|fires|obj
+country|european|nn
+sent|country|subj
+sent|money|obj
+workers|relief|nn
+workers|and|punc
+psychological association|turkey|gen
+workers|psychological association|conj
+counseling|workers|subj
+counseling|children|obj
+flooded|hospitals|obj
+flooded|injured|with
+homeless|200,000|num
+living|homeless|subj
+living|tents|in
+facilities|educational|mod
+tents|facilities|appo
+in|and|punc
+in|in|conj
+area|open|mod
+in|area|in
+need|overwhelming|mod
+is|need|pred
+toilets|portable|mod
+need|toilets|for
+collection|garbage|nn
+toilets|collection|conj
+collection|disposal|conj
+disposal|bodies|of
+bodies|and|punc
+bodies|reconstruction|conj
+reconstruction|living|of
+living|facilities|obj
+facilities|and|punc
+facilities|factories|conj
+cost|estimated|mod
+cost|recovery|of
+is|between|pred
+is|$4.5|between
+$4.5|and|punc
+$4.5|$17 million|conj
+failures|its|gen
+is|failures|for
+is|confident|pred
+confident|recovery|of
+boom|construction|nn
+recovery|boom|because of
+measures|extensive|mod
+boom|measures|conj
+measures|cope|rel
+cope|measure|subj
+quakes|new|mod
+cope|quakes|with
+quakes|and|punc
+quakes|improvement|conj
+standards|construction|nn
+boom|standards|of

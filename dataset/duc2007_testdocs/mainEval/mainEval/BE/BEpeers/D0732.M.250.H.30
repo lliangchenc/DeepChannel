@@ -1,0 +1,155 @@
+president|kenyan|mod
+president|daniel|person
+moi|arap|nn
+president|challenged|rel
+challenged|moi|subj
+consider|investors|subj
+consider|investing|fc
+investing|president|obj
+investing|investor|subj
+investing|higher education|in
+higher education|kenya|in
+newspaper|state-run|mod
+newspaper|kenya times|nn
+said|newspaper|subj
+investing|said|mod
+investing|saturday|mod
+talks|teachers|on
+dispute|pay|nn
+government|kenyan|mod
+dispute|government|between
+government|and|punc
+government|kenya national union of teachers|conj
+knut|(|punc
+kenya national union of teachers|knut|abbrev
+knut|)|punc
+reached|dispute|subj
+reached|deadlock|obj
+nation|daily|nn
+reported|nation|subj
+reported|today|obj
+launch|kenya|subj
+program|sex|nn
+program|education|nn
+launch|program|obj
+program|primary|in
+primary|and|punc
+schools|secondary|nn
+primary|schools|conj
+schools|and|punc
+colleges|teacher|nn
+colleges|training|nn
+schools|colleges|conj
+launch|when|wha
+reopen|schools|subj
+monday|next|post
+reopen|monday|obj
+400|initial|mod
+reopen|400|with
+teachers|trained|pnmod
+trained|exercise|for
+media|local|mod
+reported|media|subj
+reported|friday|obj
+moi|kenyan|mod
+moi|president|nn
+president|daniel|person
+moi|arap|nn
+ordered|today|mod-before
+ordered|moi|subj
+ordered|schools|obj1
+schools|primary|from
+primary|university|to
+ordered|level|obj2
+level|furnish|rel
+furnish|level|subj
+education|environmental|mod
+education|conservation|nn
+furnish|education|obj
+subjects|other|mod
+education|subjects|among
+save|minister|according to
+colleges|foreign|mod
+colleges|constituent|mod
+save|colleges|subj
+much|kenyans|nn
+save|much|obj
+fees|school|nn
+much|fees|in
+fees|and|punc
+fees|foreign exchange|conj
+has|kenya|subj
+has|shortage|obj
+200|over|num-mod
+teachers|200|nn
+teachers|science|nn
+teachers|subjects|nn
+shortage|teachers|of
+schools|secondary|nn
+teachers|schools|in
+schools|country|in
+minister|kenyan|mod
+minister|education joseph kamotho|for
+said|minister|subj
+said|today|mod
+general|assembly|person
+general|african women educators forum|of
+aef|(|punc
+african women educators forum|aef|abbrev
+aef|)|punc
+open|general|subj
+open|nanyuki|in
+kilometers|200|amount-value
+north|kilometers|nn
+nanyuki|north|appo
+north|nairobi|of
+nairobi|capital|pnmod
+capital|kenya|of
+kenya|tuesday|on
+unicef|(|punc
+united nations children 's fund|unicef|abbrev
+unicef|)|punc
+urged|united nations children 's fund|subj
+education ministry|kenya|gen
+include|education ministry|subj
+education|sex|nn
+include|education|obj
+education|curriculum|in
+government|kenyan|mod
+published|government|subj
+published|university bill 2000|obj
+university bill 2000|allow|rel
+allow|university bill 2000|subj
+universities|foreign|mod
+allow|universities|obj1
+universities|establish|rel
+establish|university|subj
+establish|constituent|obj
+allow|campuses|obj2
+country|east|mod
+country|african|nn
+campuses|country|in
+newspaper|sunday|nn
+newspaper|standard|mod
+reported|newspaper|subj
+allow|reported|mod
+made|minister|subj
+made|remarks|obj
+made|when|wha
+launched|he|subj
+exercise|national|mod
+exercise|schools|nn
+exercise|form|nn
+exercise|one|nn
+exercise|selection|nn
+launched|exercise|obj
+exercise|kenya science teachers college|at
+kenya science teachers college|nairobi|in
+nairobi|wednesday|on
+is|widespread|pred
+widespread|country|in
+is|claiming|mod
+claiming|aids|subj
+claiming|lives|fc
+lives|500|subj
+lives|daily|mod

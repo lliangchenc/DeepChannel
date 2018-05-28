@@ -1,0 +1,131 @@
+sales|starbucks|gen
+sales|online|mod
+expanding|sales|obj
+sales|coffee|beyond
+said|schultz|subj
+said|taking|fc
+taking|company|subj
+taking|crack|obj
+revenues|potential|mod
+crack|revenues|at
+sold|starbucks|subj
+cds|jazz|nn
+sold|cds|obj
+shops|its|gen
+shops|coffee|nn
+cds|shops|in
+shops|years|for
+sold|and|punc
+sold|considers|conj
+considers|starbucks|subj
+considers|music|obj1
+part|important|mod
+considers|part|obj2
+experience|customers|subj
+brand|its|gen
+experience|brand|obj
+experience|said|mod
+said|bonnie kramer tonneson|subj
+bonnie kramer tonneson|analyst|conj
+analyst|hambrecht|with
+analyst|and|punc
+analyst|quist|conj
+be|addition|in
+stores|williams-sonoma|gen
+stores|larger|mod
+locales|good|mod
+be|locales|pred
+bars|small|mod
+bars|starbucks|nn
+bars|coffee|nn
+locales|bars|for
+said|observers|subj
+be|said|mod
+direct|launch|obj
+portal|new|mod
+portal|internet|nn
+launch|portal|of
+form|starbucks|subj
+subsidiary|new|mod
+form|subsidiary|obj
+subsidiary|named|vrel
+named|subsidiary|obj1
+x|starbucks|nn
+named|x|obj2
+x|led|vrel
+led|x|obj
+led|by|by-subj
+led|senior vice president|by
+senior vice president|debbi gillotti|person
+said|schultz|subj
+led|said|mod
+starbucks corp.|coffee|nn
+starbucks corp.|giant|mod
+purchased|starbucks corp.|subj
+purchased|hear music|obj
+retailer|upscale|mod
+retailer|music|nn
+opened|they|subj
+opened|latest|obj
+stores|their|gen
+stores|50-50|nn
+stores|joint venture|nn
+stores|starbucks coffee|nn
+latest|stores|in
+said|johnson|subj
+said|be|fc
+be|more|pred
+more|seattle|in
+be|one|along with
+theaters|johnson|gen
+theaters|multiplex|mod
+theaters|movie|nn
+one|theaters|of
+offer|starbucks|gen
+offer|acquisition|nn
+offer|rebuffed|vrel
+rebuffed|offer|obj
+rebuffed|by|by-subj
+board of directors|williams-sonoma|gen
+rebuffed|board of directors|by
+rebuffed|earlier|mod
+follows|month|mod-before
+but|follows|comp1
+follows|offer|subj
+logic|new|mod
+follows|logic|obj
+logic|internet|of
+tazo|ap|nn
+tazo|)|punc
+tazo|oregon company|appo
+oregon company|that|whn
+aspired|once|mod-before
+aspired|oregon company|subj
+be|starbucks|pred
+starbucks|teas|of
+bought out|tazo|obj
+bought out|by|by-subj
+bought out|starbucks|by
+most|it|of
+been|joint ventures|pred
+grand ice cream|dreyer|gen
+ice cream|grand ice cream|with
+frappuccino|bottled|mod
+frappuccino|pepsi-cola|with
+distribution|supermarket|nn
+coffee|starbucks|nn
+distribution|coffee|of
+coffee|kraft foods inc.|with
+gathered|never|mod-before
+because|gathered|comp1
+gathered|shareholders|subj
+gathered|vote|for
+vote|(|punc
+vote|which|whn
+conducted|vote|obj
+conducted|by|by-subj
+conducted|mail|by
+was|difficult|pred
+was|fight|mod
+fight|it|subj
+fight|starbucks|obj

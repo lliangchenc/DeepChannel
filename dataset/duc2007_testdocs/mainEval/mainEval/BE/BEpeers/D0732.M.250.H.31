@@ -1,0 +1,133 @@
+exhibitors|kenya|across
+kenya|participating|rel
+participating|kenya|subj
+participating|show|in
+include|exhibitors|subj
+include|suppliers|obj
+equipment|educational|mod
+suppliers|equipment|of
+equipment|publishers|conj
+publishers|printers|conj
+printers|and|punc
+printers|booksellers|conj
+booksellers|and|punc
+booksellers|others|conj
+others|involved|vrel
+involved|others|obj
+involved|sector|in
+december 1999|early|mod
+launched|december 1999|in
+launched|kenya|subj
+strategy|national|mod
+strategy|anti-aids|mod
+launched|strategy|obj
+strategy|which|whn
+included|strategy|subj
+education|compulsory|mod
+included|education|obj
+risks|aids|nn
+education|risks|of
+kenyan|all|mod
+schools|kenyan|mod
+risks|schools|in
+schools|starting|rel
+starting|school|subj
+starting|year|from
+year|2000|num
+made|minister|subj
+made|remarks|obj
+made|when|wha
+launched|he|subj
+exercise|national|mod
+exercise|schools|nn
+exercise|form|nn
+exercise|one|nn
+exercise|selection|nn
+launched|exercise|obj
+exercise|kenya science teachers college|at
+kenya science teachers college|nairobi|in
+nairobi|wednesday|on
+cent|boys|for
+boys|and|punc
+boys|it|conj
+widens|cent|subj
+widens|32 percent|to
+32 percent|females|for
+females|and|punc
+females|68 percent|conj
+68 percent|males|for
+level|secondary|mod
+males|level|at
+secretary|permanent|mod
+secretary|samuel ambuka|person
+said|secretary|subj
+said|help|fc
+help|move|subj
+attain|state|obj
+state|singularity|of
+management|region|gen
+management|economic|mod
+singularity|management|in
+management|and|punc
+organization|social|nn
+management|organization|conj
+newspaper|daily nation|nn
+reported|newspaper|subj
+reported|friday|obj
+said|alot|subj
+said|that|c
+body|apex|nn
+address|also|amod
+address|body|subj
+address|issues|obj
+participation|women|gen
+issues|participation|such as
+participation|decision-making|in
+levels|all|pre
+decision-making|levels|at
+levels|and|punc
+levels|access|conj
+resources|social|mod
+access|resources|to
+address|including|mod
+including|body|subj
+including|education|obj
+education|employment|conj
+employment|health|conj
+health|and|punc
+services|population|nn
+health|services|conj
+55 percent|kenyans|of
+youth|kenyan|mod
+youth|defined|vrel
+defined|youth|obj
+15 and 24|age|nn
+defined|15 and 24|between
+accounts for|youth|subj
+accounts for|one-fifth|obj
+population|total|mod
+one-fifth|population|of
+was|also|guest
+was|result|pred
+result|lack|of
+facilities|adequate|mod
+facilities|teaching|nn
+lack|facilities|of
+facilities|and|punc
+teachers|qualified|mod
+facilities|teachers|conj
+teachers|schools|in
+country|eastern|mod
+country|african|nn
+schools|country|in
+press|local|mod
+country|press|appo
+press|quoted|vrel
+quoted|press|obj1
+quoted|report|obj2
+report|saying|as
+quoted|today|mod
+urged|president|subj
+university|private|mod
+take advantage of|university|subj
+take advantage of|quest|obj

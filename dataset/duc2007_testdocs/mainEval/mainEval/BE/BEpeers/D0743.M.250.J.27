@@ -1,0 +1,141 @@
+quakes|two|nn
+lasted|quakes|subj
+45|about|num-mod
+seconds|45|amount-value
+lasted|seconds|obj
+seconds|3 a.m.|at
+teams|relief|nn
+dispatched|teams|obj
+people|1,000|num
+although|died|comp1
+died|people|subj
+died|quake|in
+efforts|rescue|nn
+appeared|efforts|subj
+coordinated|well|amod
+appeared|coordinated|mod
+city|istanbul|gen
+city|largest|mod
+lies|with|mod-before
+lies|population|with
+population|12 million|of
+lies|city|subj
+lies|just|mod
+miles|65|amount-value
+west|miles|nn
+west|izmit|of
+place|next|post
+place|feel|rel
+feel|place|subj
+wrath|fault|gen
+feel|wrath|obj
+markets|weekly|mod
+markets|street|nn
+bustled|markets|subj
+bustled|selling|mod
+selling|market|subj
+selling|everything|obj
+everything|fruit|from
+fruit|shoes|to
+earthquakes|fatal|mod
+are|common|pred
+common|turkey|in
+are|occurring|mod
+occurring|earthquake|subj
+occurring|about|mod
+occurring|once|mod
+occurring|every two years|mod
+was|guess|pred
+good|remarkably|mod
+one|good|mod
+was|one|pred
+bulent ecevit|prime minister|title
+bulent ecevit|dressed|vrel
+dressed|bulent ecevit|obj
+dressed|black|in
+echoed|bulent ecevit|subj
+concern|parmer|gen
+echoed|concern|obj
+missing|more|mod-before
+missing|still|amod
+missing|thousands|subj
+hundreds|thousands|of
+are|homeless|pred
+homeless|result|as
+result|quake|of
+xinhua|august 17|nn
+xinhua|(|punc
+ankara|xinhua|appo
+aftershocks|27|num
+jolted|aftershocks|subj
+turkey|western|mod
+jolted|turkey|obj
+turkey|past|in
+jolted|hours|mod
+jolted|after|mod
+earthquake|strong|mod
+after|rocked|comp1
+rocked|earthquake|subj
+rocked|area|obj
+area|early|pnmod
+early|day|in
+reports|turkish|nn
+reports|news|nn
+said|reports|subj
+said|tuesday|mid
+continue|we|subj
+continue|determine|mod
+determine|we|subj
+help|further|mod
+determine|needed|fc
+needed|help|obj
+said|he|subj
+caused|also|mod-before
+caused|tremor|subj
+caused|loss|obj
+loss|15 billion dollars|of
+production|industrial|mod
+15 billion dollars|production|in
+production|and|punc
+production|bases|conj
+regions|stricken|mod
+bases|regions|in
+in|and|punc
+in|for|conj
+economy|trade|mod
+in|economy|for
+said|experts|subj
+france|netherlands|conj
+netherlands|kazakistan|conj
+kazakistan|and|punc
+kazakistan|russia|conj
+participating|france|subj
+participating|fight|in
+fight|blaze|against
+blaze|that|whn
+threatened|blaze|subj
+threatened|engulf|mod
+engulf|france|subj
+field|entire|mod
+engulf|field|obj
+tanks|30|num
+tanks|storage|nn
+field|tanks|of
+tanks|containing|rel
+containing|tank|subj
+tons|1 million|amount-value
+containing|tons|obj
+oil|crude|nn
+tons|oil|of
+60|over|num-mod
+aftershocks|60|nn
+aftershocks|measuring|rel
+measuring|aftershock|subj
+4.0|at least|num-mod
+measuring|4.0|obj
+4.0|richter scale|on
+occurred|aftershocks|subj
+occurred|since|mod
+since|hit|comp1
+hit|quake|subj
+hit|western|obj

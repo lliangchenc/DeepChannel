@@ -1,0 +1,138 @@
+xinhua|april 8|nn
+xinhua|(|punc
+ankara|xinhua|appo
+jose cutileiro|-general|appo
+-general|western european union|of
+weu|(|punc
+western european union|weu|abbrev
+weu|)|punc
+visit|jose cutileiro|subj
+visit|turkey|obj
+turkey|april 11-14|on
+agency|anatolia|nn
+agency|news|nn
+reported|agency|subj
+reported|today|obj
+xinhua|september 19|nn
+xinhua|(|punc
+paris|xinhua|appo
+parliament|european|nn
+voted|today|mod-before
+voted|parliament|subj
+voted|to|guest
+voted|block|to
+u.s.|53 million|nn
+u.s.|ecu|nn
+u.s.|(|punc
+u.s.|70 million|nn
+voted|u.s.|obj1
+package|dollars|nn
+package|)|punc
+package|special|mod
+package|aid|nn
+voted|package|obj2
+package|turkey|to
+called|what|obj1
+called|it|subj
+deterioration|"|punc
+called|deterioration|desc
+situation|human rights|nn
+deterioration|situation|in
+situation|"|punc
+situation|country|in
+parliament|european|nn
+members|parliament|of
+parliament|strasbourg|in
+voted|members|subj
+voted|319|obj
+23|resolution|against
+abstentions|20|num
+resolution|abstentions|with
+reports|local|mod
+reports|media|nn
+xinhua|october 22|nn
+xinhua|(|punc
+athens|xinhua|appo
+threatened|greece|subj
+threatened|thursday|obj
+thursday|react|rel
+react|thursday|subj
+react|strongly|mod
+react|if|c
+'s|decision|pred
+release|european commission|subj
+package|155-million dollar|nn
+aid|economic|mod
+package|aid|of
+aid|turkey|to
+decision|approved|comp1
+approved|package|obj
+approved|by|by-subj
+council of ministers|european union|nn
+eu|(|punc
+european union|eu|abbrev
+eu|)|punc
+approved|council of ministers|by
+briefing|press|nn
+speaking|briefing|at
+spokesman|greek|nn
+spokesman|government|nn
+spokesman|dimitris reppas|person
+attributed|spokesman|subj
+decision|commission|gen
+attributed|decision|obj
+xinhua|august 25|nn
+xinhua|(|punc
+brussels|xinhua|appo
+considering|european union|subj
+considering|granting|fc
+granting|european union|subj
+aid|second|post
+aid|emergency|mod
+granting|aid|obj
+turkey|quake-stricken|mod
+aid|turkey|to
+granting|as|mod
+officials|senior|mod
+officials|bloc|of
+as|scheduled|comp1
+scheduled|officials|obj
+scheduled|visit|mod
+visit|official|subj
+visit|country|obj
+country|wednesday|on
+xinhua|february 3|nn
+xinhua|(|punc
+ankara|xinhua|appo
+items|major|mod
+items|news|nn
+are|items|pred
+items|leading|in
+leading|following|subj
+newspapers|turkish|nn
+leading|newspapers|obj
+newspapers|thursday|on
+national|milliyet|nn
+national|(|punc
+extending|european union|subj
+dollars|750 million|nn
+dollars|u.s.|nn
+extending|dollars|obj
+dollars|loans|in
+loans|turkey|to
+fruits|initial|mod
+is|fruits|pred
+fruits|turkey|for
+turkey|accepted|rel
+accepted|candidate|as
+membership|eu|nn
+candidate|membership|of
+summit|helsinki|nn
+membership|summit|at
+summit|last|vrel
+last|summit|obj
+last|december|mod
+:|hurriyet|nn
+:|(|punc
+:|freedom|nn
+:|)|punc

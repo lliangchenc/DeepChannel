@@ -1,0 +1,146 @@
+restructure|united states|subj
+programs|its|gen
+programs|ballistic missile defense|nn
+bmd|(|punc
+ballistic missile defense|bmd|abbrev
+bmd|)|punc
+restructure|programs|obj
+restructure|and|punc
+restructure|place|conj
+place|united states|subj
+priority|its|gen
+priority|highest|mod
+place|priority|obj
+priority|developing|on
+developing|united states|subj
+generation|next|post
+developing|generation|obj
+missile defense system|patriot|nn
+generation|missile defense system|of
+developing|and|punc
+developing|lower|conj
+lower|united states|subj
+system|tier|nn
+system|navy|nn
+system|anti-missile|mod
+lower|system|obj
+said|pentagon|subj
+lower|said|mod
+lower|today|mod
+should|not|neg
+deploy|pentagon|subj
+missile defense system|national|mod
+deploy|missile defense system|obj
+missile defense system|2008|until
+test|iran|gen
+test|weekend|nn
+missile|long-range|mod
+test|missile|of
+underscored|test|subj
+underscored|need|obj
+missile defense system|u.s.|nn
+missile defense system|national|mod
+need|missile defense system|for
+continue|it|subj
+continue|testing|mod
+testing|it|subj
+testing|its|obj
+missile defense system|pentagon|gen
+missile defense system|fifth|post
+failed|missile defense system|subj
+failed|intercept|fc
+intercept|missile defense system|subj
+intercept|target|obj
+intercept|statement|in
+program|missile|nn
+program|defense|nn
+system|$60 billion|nn
+is|system|pred
+system|that|whn
+allow|system|subj
+destroy|united states|subj
+warheads|incoming|mod
+destroy|warheads|obj
+missile|u.s. army|gen
+missile|theater high-altitude area defense|nn
+thaad|(|punc
+theater high-altitude area defense|thaad|abbrev
+thaad|)|punc
+hit|missile|subj
+hit|and|punc
+hit|destroyed|conj
+destroyed|missile|subj
+rocket|hera|nn
+rocket|test|nn
+destroyed|rocket|obj
+rocket|flight|in
+flight|white sands|over
+satellites|space-based|mod
+satellites|missile|for
+launch|satellites|subj
+launch|detection|obj
+detection|and|punc
+detection|communications|conj
+design|boeing|subj
+design|system|obj
+missiles|ground-based|mod
+missiles|interceptor|nn
+system|missiles|of
+designed|thaad|obj
+designed|protect|mod
+protect|thaad|subj
+protect|troops|obj
+troops|and|punc
+troops|bases|conj
+attack|medium-range|mod
+attack|ballistic missile|nn
+bases|attack|from
+opposed|russia|subj
+opposed|construction|obj
+missile defense system|u.s.|nn
+construction|missile defense system|of
+charged|defense department|subj
+charged|lockheed martin corporation|obj
+vetoed|clinton|subj
+legislation|defense|nn
+vetoed|legislation|obj
+legislation|that|whn
+contained|legislation|subj
+program|national|mod
+program|missile|nn
+program|defense|nn
+contained|program|obj
+voiced|in|mod-before
+voiced|testimony|in
+voiced|holum|subj
+support|strong|mod
+voiced|support|obj
+support|deploying|for
+deploying|holum|subj
+deploying|missile defense system|obj
+president|clinton|person
+vetoed|president|subj
+bill|earlier|mod
+vetoed|bill|obj
+bill|committing|rel
+committing|bill|subj
+committing|nation|obj
+system|missile-defense|mod
+nation|system|to
+limited|1972|under
+anti-ballistic missile treaty|united states|conj
+united states|and|punc
+united states|russia|conj
+limited|anti-ballistic missile treaty|obj
+limited|build|mod
+build|anti-ballistic missile treaty|subj
+system|single|mod
+system|ballistic missile|nn
+system|defense|nn
+build|system|obj
+developed|years|in
+years|come|rel
+come|year|subj
+missile defense system|workable|mod
+missile defense system|national|mod
+developed|missile defense system|obj

@@ -1,0 +1,143 @@
+construction|jabiluka|of
+australia|mine--|mod
+mine|australia|gen
+mine|first|post
+mine|new|mod
+mine|uranium|nn
+mine|decade--|in
+jabiluka|began|rel
+began|jabiluka|obj
+began|mine|subj
+began|june|in
+battle|protracted|mod
+battle|legal|mod
+began|battle|after
+owners|aboriginal|mod
+owners|land|nn
+battle|owners|with
+with|and|punc
+with|amid|conj
+with|continuing|amid
+continuing|mine|subj
+protest|environmental|mod
+continuing|protest|obj
+arrested|police|subj
+100|more than|num-mod
+protesters|100|nn
+arrested|protesters|obj
+arrested|tuesday|mod
+resources|energy|nn
+arrested|resources|at
+development|australia|gen
+development|jabiluka|nn
+development|mine|mod
+resources|development|of
+development|kakadu|at
+area|world|nn
+area|heritage|nn
+area|listed|mod
+development|area|appo
+area|northern territory|in
+federal government|australian|mod
+rejected|thursday|mod-before
+rejected|federal government|subj
+report|unesco|nn
+rejected|report|obj
+report|which|whn
+called for|report|subj
+called for|kakadu national park|obj
+australia|northwest|mod
+kakadu national park|australia|in
+australia|placed|rel
+list|endangered|mod
+placed|list|on
+list|threat|because of
+threat|posed|vrel
+posed|threat|obj
+posed|by|by-subj
+mine|jabiluka|nn
+mine|uranium|nn
+posed|mine|by
+government|australian|mod
+year|next|post
+year|try|rel
+try|year|subj
+try|stop|fc
+stop|united nations|obj
+united nations|declaring|from
+declaring|kakadu national park|obj
+kakadu national park|endangered|vrel
+endangered|kakadu national park|obj
+mine|jabiluka|nn
+mine|uranium|nn
+endangered|mine|because of
+site|government-approved|mod
+site|mine|mod
+is|in|pred
+is|area|in
+area|surrounded|vrel
+surrounded|area|obj
+surrounded|by|by-subj
+kakadu national park|aboriginal-owned|mod
+surrounded|kakadu national park|by
+said|committee|subj
+mine|proposed|mod
+said|pose|fc
+pose|mine|subj
+danger|severe|mod
+pose|danger|obj
+values|cultural|mod
+cultural|and|punc
+cultural|natural|conj
+danger|values|to
+kakadu national park|adjacent|mod
+values|kakadu national park|of
+team|u.n.|from
+visiting|world heritage bureau|subj
+visiting|park|obj
+park|examine|rel
+examine|park|subj
+examine|claims|obj
+claims|that|c
+values|environmental|mod
+environmental|and|punc
+environmental|cultural|conj
+values|park|of
+are|threatened|pred
+threatened|by|by-subj
+mine|jabiluka|nn
+threatened|mine|by
+begun|construction|subj
+begun|one week ago|mod
+begun|jabiluka|at
+lying|uranium|nn
+lying|mining|nn
+lying|lease|nn
+jabiluka|lying|conj
+lying|boundaries|within
+boundaries|kakadu national park|of
+kakadu national park|listed|pnmod
+listed|united nations education|by
+lying|scientific|conj
+scientific|and|punc
+scientific|cultural organization|conj
+list|its|gen
+list|world heritage|nn
+cultural organization|list|on
+sites|important|mod
+sites|cultural|mod
+cultural|and|punc
+cultural|environmental|conj
+list|sites|of
+energy resources|company|nn
+energy resources|australia ltd.|of
+said|consistently|amod
+said|energy resources|subj
+record|its|gen
+record|environmental|mod
+said|proven|fc
+proven|record|obj
+proven|by|by-subj
+operation|16-year|nn
+proven|operation|by
+operation|ranger|of

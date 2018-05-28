@@ -1,0 +1,155 @@
+is|probably|guest
+is|one|pred
+frequent|most|mod
+purchases|frequent|mod
+one|purchases|of
+purchases|makes|rel
+makes|purchases|obj
+makes|customer|subj
+new york times co.|and|punc
+new york times co.|starbucks coffee co.|conj
+said|new york times co.|subj
+said|tuesday|guest
+said|that|c
+agreed|they|subj
+agreed|sale|to
+newspapers|new york times|nn
+sale|newspapers|of
+stores|starbucks|nn
+newspapers|stores|in
+years|three|amount-value
+stores|years|for
+years|exchange|in
+promotion|times|gen
+promotion|advertising|nn
+exchange|promotion|for
+promotion|starbucks|of
+plan|starbucks coffee co.|nn
+plan|acquire|rel
+acquire|plan|subj
+acquire|pasqua coffee|obj
+leaving|plan|subj
+aftertaste|bitter|mod
+leaving|aftertaste|obj
+aftertaste|mouths|in
+mouths|patrons|of
+coffeehouse|san francisco-based|mod
+patrons|coffeehouse|of
+kozmo.com|on-line|mod
+kozmo.com|delivery service|nn
+teaming|kozmo.com|subj
+teaming|up|mod
+up|starbucks coffee co.|with
+marketing|cross|mod
+starbucks coffee co.|marketing|for
+marketing|and|punc
+promotions|in-store|mod
+marketing|promotions|conj
+starbucks coffee co.|schultz|gen
+starbucks coffee co.|seattle-based|mod
+starbucks coffee co.|and|punc
+johnson development corp.|johnson|gen
+johnson development corp.|los angeles-based|mod
+starbucks coffee co.|johnson development corp.|conj
+opened|recently|amod
+opened|starbucks coffee co.|subj
+stores|similar|mod
+stores|starbucks|nn
+stores|coffee|nn
+opened|stores|obj
+stores|west los angeles|in
+west los angeles|and|punc
+harlem|new york|gen
+west los angeles|harlem|conj
+pack|new|mod
+notable|also|mod
+is|notable|pred
+is|that|in
+time|first|post
+is|time|pred
+time|offered|rel
+offered|time|obj1
+offered|starbucks|subj
+coffee|single-origin|mod
+offered|coffee|obj2
+coffee|brazil|from
+retailer|seattle-based|mod
+retailer|coffee|nn
+starbucks|retailer|appo
+help|also|amod
+help|starbucks|subj
+kozmo|hype|nn
+help|kozmo|obj
+help|as|mod
+as|enters|comp1
+enters|it|subj
+markets|new|mod
+enters|markets|obj
+shares|starbucks corp.|nn
+tumbled|shares|subj
+tumbled|today|mod
+retailer|coffee|nn
+tumbled|retailer|after
+retailer|warned|vrel
+warned|retailer|obj
+warned|that|c
+businesses|its|gen
+businesses|non-core|mod
+shortfalls|businesses|in
+businesses|and|punc
+businesses|cost|conj
+cost|launching|of
+launching|share|subj
+portal|new|mod
+portal|internet|nn
+launching|portal|obj
+result|shortfalls|subj
+result|lower|in
+earnings|expected|mod
+lower|earnings|than
+two|next|num-mod
+quarters|two|amount-value
+earnings|quarters|for
+for|and|punc
+for|for|conj
+for|year|for
+deliver|in|mod-before
+deliver|turn|in
+deliver|kozmo|subj
+coffees|starbucks|nn
+deliver|coffees|obj
+coffees|and|punc
+coffees|teas|conj
+beverages|pound-and eventually|nn
+hot|perhaps|mod
+beverages|hot|mod
+teas|beverages|by
+deliver|too|mod
+offer|starbucks|gen
+offer|acquisition|nn
+offer|rebuffed|vrel
+rebuffed|offer|obj
+rebuffed|by|by-subj
+williams-sonoma|san francisco|gen
+rebuffed|williams-sonoma|by
+rebuffed|earlier|mod
+was|month|mod-before
+was|unexpected|pred
+was|because|mod
+because|ignored|comp1
+ignored|it|subj
+rules|conventional|mod
+ignored|rules|obj
+mergers|retail|nn
+rules|mergers|of
+man|passed|vrel
+passed|man|obj1
+passed|out|guest
+passed|leaflets|obj2
+leaflets|charging|rel
+charging|leaflet|subj
+charging|starbucks|obj
+exploits|"|punc
+exploits|man|subj
+labor|prison|nn
+exploits|labor|obj
