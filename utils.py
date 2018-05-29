@@ -21,7 +21,9 @@ def wrap_with_variable(tensor, volatile, cuda):
         return Variable(tensor, volatile=volatile)
 
 def wrap_with_variables(volatile, cuda, *tensors):
-    return (wrap_with_variable(tensor, volatile, cuda) for tensor in tensors)
+    return [wrap_with_variables(volatile, cuda, *t) if isinstance(t, list) or isinstance(t, tuple) \
+            else wrap_with_variable(t, volatile, cuda) \
+            for t in tensors]
 
 
 def unwrap_scalar_variable(var):

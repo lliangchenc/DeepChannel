@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 from torch.nn import init
-from ..utils import reverse_padded_sequence, unwrap_scalar_variable
+from utils import reverse_padded_sequence, unwrap_scalar_variable
 
 class BiGRU(nn.Module):
 

@@ -1,5 +1,6 @@
 import torch
 import math
+from torch import nn
 from torch.nn import init, Parameter, functional
 
 class ChannelModel(nn.Module):
@@ -22,7 +23,7 @@ class ChannelModel(nn.Module):
         '''
         n, m = D.size(0), S.size(0)
         S_T = torch.transpose(S, 0, 1).contiguous() # [Ds, m]
-        att_weight = functional.Softmax(
+        att_weight = functional.softmax(
                 torch.mm(D, S_T) / math.sqrt(self.se_dim) / self.temperature,
                 dim=1
                 ) # [n, m]

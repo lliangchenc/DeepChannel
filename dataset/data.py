@@ -3,10 +3,10 @@ import random
 import time
 import torch
 import numpy as np
-random.seed(666)
 
 def wrap_numpy_to_longtensor(*args):
-    return map(torch.LongTensor, args)
+    return [torch.LongTensor(arg) if not isinstance(arg, list) \
+            else wrap_numpy_to_longtensor(*arg) for arg in args]
 
 class Dataset(object):
 

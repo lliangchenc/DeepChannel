@@ -4,15 +4,19 @@ import argparse
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)-8s %(message)s')
 logFormatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
+import random
 import shutil
+import os
 from model.noisyChannel import ChannelModel
 from model.sentence import SentenceEmbedding
 from dataset.data import Dataset
 from torch import nn
 from torch import nn, optim
 from torch.autograd import Variable
+import numpy as np
 import tensorboard
-from utils import add_scalar_summary, wrap_with_variables
+from utils import add_scalar_summary, wrap_with_variables, unwrap_scalar_variable
+from IPython import embed
 
 
 def trainChannelModel(args):
@@ -33,9 +37,10 @@ def trainChannelModel(args):
     else:
         print('Tune word embeddings')
     if args.cuda:
+        print('Transfer models to cuda......')
         sentenceEncoder = sentenceEncoder.cuda()
         channelModel = channelModel.cuda()
-        print('Transfer models to cuda')
+    print('Initializing optimizer and summary writer......')
     params = [p for p in sentenceEncoder.parameters() if p.requires_grad] +\
             [p for p in channelModel.parameters() if p.requires_grad]
     optimizer_class = {
@@ -48,6 +53,7 @@ def trainChannelModel(args):
             logdir=os.path.join(args.save_dir, 'log', 'train'), flush_secs=10)
     tic = time.time()
     iter_count = 0
+    print('Start training......')
     for epoch_num in range(args.max_epoch):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01
@@ -69,12 +75,12 @@ def trainChannelModel(args):
                 optimizer.zero_grad()
                 loss.backward()
                 nn.utils.clip_grad_norm(parameters=params, max_norm=args.clip)
-                optimzier.step()
+                optimizer.step()
             add_scalar_summary(tsw, 'loss', loss, iter_count)
             ###################################
             #scheduler.step(valid_accuracy)
-            if (batch_iter+1) % (data.train_size / 100) == 0:
-                logging.info('Epoch %.2f, loss: %.4f' % (progress, unwrap_scalar_variable(loss)))
+            # if (batch_iter+1) % (data.train_size / 100) == 0:
+            logging.info('Epoch %.2f, loss: %.4f' % (progress, unwrap_scalar_variable(loss)))
     torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
     torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
@@ -114,7 +120,7 @@ def parse_args():
     return args
 
 
-def prepare(args):
+def prepare():
     # dir preparation
     args = parse_args()
     if os.path.isdir(args.save_dir):
@@ -136,9 +142,10 @@ def prepare(args):
     # args display
     for k, v in vars(args).items():
         logging.info(k+':'+str(v))
+    return args
 
 def main():
-    prepare()
+    args = prepare()
     trainChannelModel(args)
 
 
