@@ -12,6 +12,7 @@ class Dataset(object):
 
     def __init__(self, path, batch_size=1):
         self.batch_size = batch_size
+        #sys.exit(1)
 
         tic = time.time()
         data_file = open(path, 'rb')
@@ -68,7 +69,11 @@ class Dataset(object):
         random.shuffle(combined)
         self.train_set[:], self.train_len[:] = zip(*combined)
         for d, s, d_len, s_len in map(lambda _: _[0]+_[1], zip(self.train_set, self.train_len)):
-             yield wrap_numpy_to_longtensor(d, s, d_len, s_len)
+             s_batch = [s]
+             s_batch.extend([np.delete(s, x, 0) for x in range(len(s))])
+             s_len_batch = [s_len]
+             s_len_batch.extend([np.delete(s_len, x, 0) for x in range(len(s_len))])
+             yield wrap_numpy_to_longtensor(d, s_batch, d_len, s_len_batch)
         else:
             raise StopIteration
 
@@ -86,3 +91,12 @@ class Dataset(object):
         else:
             raise StopIteration
 
+def main():
+    dataset = Dataset("/data/sjx/Summarization-Exp/cnn.pickle")
+    #print(dataset.train_size)
+    print(dataset.gen_train_minibatch())
+    print(dataset.gen_train_minibatch)
+    print("here")
+
+if __name__ == "__main__":
+    main()
