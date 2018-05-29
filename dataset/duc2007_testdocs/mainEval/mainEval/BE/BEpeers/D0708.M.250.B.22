@@ -1,0 +1,131 @@
+treat|project|subj
+tons|20000|amount-value
+treat|tons|obj
+daily|waste|mod
+daily|water|nn
+tons|daily|of
+supplies|water|nn
+run out|supplies|subj
+run out|end|by
+end|year|of
+drought|extended|mod
+year|drought|due to
+water|potable|mod
+shortage|water|of
+city|capital|mod
+water|city|in
+city|ethiopia|of
+solved|shortage|obj
+quarter|last|nn
+solved|quarter|in
+quarter|year|of
+shortage|severe|mod
+shortage|water|nn
+hit|shortage|subj
+province|northern|mod
+hit|province|obj
+province|tak|of
+tak|thailand|in
+hit|as|mod
+as|dried|comp1
+dried|reservoirs|subj
+dried|up|mod
+project|which|whn
+recycle|project|subj
+recycle|99 percent|obj
+99 percent|water|of
+being|used|pred
+fields|oil|nn
+used|fields|in
+suffering|people|subj
+suffering|shortage|from
+water|drinking|nn
+shortage|water|of
+drought|vietnam|in
+caused|drought|subj
+shortage|serious|mod
+shortage|water|nn
+caused|shortage|obj
+shortage|affecting|rel
+affecting|shortage|subj
+3 million|about|num-mod
+people|3 million|nn
+affecting|people|obj
+months|recent|mod
+people|months|in
+inspected|he|subj
+works|ruvu|nn
+works|water|nn
+inspected|works|obj
+inspected|wednesday|mod
+reservoir|water|nn
+meet|reservoir|subj
+meet|demand|obj
+demand|consumers|of
+meet|just|mod
+days|12|amount-value
+just|days|for
+nine|past|num-mod
+months|nine|amount-value
+rainfall|months|in
+months|most|in
+most|country|of
+fell|rainfall|subj
+fell|sharply|mod
+can|not|neg
+survive|they|subj
+survive|water|without
+survive|as|mod
+as|is|comp1
+commodity|essential|mod
+is|commodity|pred
+government|rwandan|mod
+launched|government|subj
+campaign|big|mod
+launched|campaign|obj
+campaign|ease|comp1
+ease|government|subj
+shortage|water|nn
+ease|shortage|obj
+country|his|gen
+suffering|country|subj
+shortage|annual|mod
+shortage|water|nn
+suffering|shortage|obj
+1 billion|more than|num-mod
+cubic meters|1 billion|amount-value
+shortage|cubic meters|of
+offered|dams|subj
+means|only|mod
+offered|means|obj
+means|meet|rel
+meet|means|subj
+needs|country|gen
+needs|water|nn
+meet|needs|obj
+50 percent|diseases|of
+caused|50 percent|obj
+caused|by|by-subj
+caused|lack|by
+water|clean|mod
+lack|water|of
+shortage|water|nn
+shortage|pokhara|in
+severe|so|mod
+is|severe|pred
+surgical operations|patients|on
+can|not|neg
+go on|surgical operations|subj
+go on|smoothly|mod
+smoothly|regional hospital|in
+regional hospital|city|in
+capitalized on|vendors|subj
+shortage|water|nn
+capitalized on|shortage|obj
+shortage|make|rel
+make|shortage|subj
+profits|quick|mod
+make|profits|obj
+profits|people|from
+people|desperate|pnmod
+desperate|water|for

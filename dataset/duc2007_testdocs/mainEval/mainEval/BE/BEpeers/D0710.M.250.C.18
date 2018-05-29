@@ -1,0 +1,151 @@
+agents|israeli|mod
+were|agents|pred
+benjamin netanyahu|prime minister|title
+said|benjamin netanyahu|subj
+citizen|israeli|mod
+is|important|pred
+important|us|to
+police|cypriot|mod
+said|police|subj
+said|suspected|fc
+suspected|they|subj
+suspected|were|fc
+were|spying|pred
+spying|behalf|on
+behalf|turkey|of
+turkey|which|whn
+invaded|turkey|subj
+third|northern|mod
+invaded|third|obj
+third|cyprus|of
+cyprus|1974|in
+trip|their|gen
+trip|next|post
+november|early|mod
+trip|november|in
+monitored|trip|subj
+israelis|two|nn
+monitored|israelis|obj
+monitored|as soon as|mod
+as soon as|arrived at|comp1
+arrived at|they|subj
+airport|larnaca|nn
+arrived at|airport|obj
+passports|forged|mod
+airport|passports|on
+said|paper|subj
+reported|haaretz|subj
+reported|that|c
+men|two|nn
+are|agents|pred
+agents|mossad|of
+agency|israeli|mod
+agency|intelligence|nn
+mossad|agency|appo
+were|part|pred
+operation|intelligence|nn
+part|operation|of
+near|fin|subj
+near|ziyi|obj
+benjamin netanyahu|israeli|mod
+benjamin netanyahu|prime minister|title
+admitted|benjamin netanyahu|subj
+admitted|that|c
+israelis|two|nn
+israelis|arrested|vrel
+arrested|israelis|obj
+arrested|cyprus|in
+cyprus|suspicion|on
+suspicion|espionage|of
+espionage|cyprus|against
+agents|mossad|nn
+are|agents|pred
+agents|cyprus news agency|appo
+cna|(|punc
+cyprus news agency|cna|abbrev
+cna|)|punc
+cyprus news agency|reported|vrel
+reported|cyprus news agency|obj
+reported|thursday|mod
+deny|two|subj
+deny|are|fc
+are|spies|pred
+arrest|their|gen
+soured|arrest|subj
+soured|relations|obj
+relations|cyprus|between
+cyprus|and|punc
+cyprus|israel|conj
+soured|and|punc
+soured|came|conj
+came|arrest|subj
+days|only|mod
+came|days|mod
+came|after|mod
+president|ezer weizman|person
+after|ended|comp1
+ended|president|subj
+visit|first|post
+official|ever|mod
+visit|official|mod
+ended|visit|obj
+visit|island|to
+head of state|israeli|mod
+island|head of state|by
+government|israeli|mod
+acknowledged|not|amod
+acknowledged|government|subj
+acknowledged|publicly|guest
+acknowledged|that|c
+agents|mossad|nn
+are|agents|pred
+are|saying|mod
+saying|two|subj
+saying|only|guest
+saying|that|c
+did|not|neg
+spy|they|subj
+spy|behalf|on
+behalf|turkey|of
+spy|and|punc
+were|not|neg
+spy|trying|conj
+trying|they|subj
+trying|hurt|fc
+hurt|they|subj
+interests|cypriot|mod
+hurt|interests|obj
+president|cyprus|nn
+president|glafcos clerides|person
+received|president|subj
+thanks|personal|mod
+received|thanks|obj
+president|israeli|mod
+thanks|president|from
+president|ezer weizman|person
+president|and|punc
+ehud barak|prime minister|title
+president|ehud barak|conj
+ehud barak|freeing|for
+freeing|president|subj
+israelis|two|nn
+freeing|israelis|obj
+israelis|jailed|pnmod
+jailed|cyprus|in
+two|cyprus|nn
+two|arrested|mod
+alleged|two|subj
+hours|israeli mossad|nn
+hours|agents|nn
+48|less than|num-mod
+hours|48|amount-value
+alleged|hours|obj
+departure|weizman|gen
+hours|departure|after
+departure|nicosia|from
+visit|his|gen
+visit|first|post
+nicosia|visit|during
+country|island|nn
+visit|country|to
+country|1998|in

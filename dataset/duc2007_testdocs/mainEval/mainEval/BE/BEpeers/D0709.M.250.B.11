@@ -1,0 +1,122 @@
+actress|saving private ryan|nn
+actress|"|punc
+cate blanchett|"|punc
+ap|elizabeth|nn
+ap|"|punc
+ap|los angeles|nn
+ap|(|punc
+cate blanchett|ap|appo
+led|"|punc
+led|shakespeare in love|subj
+nominees|movie|nn
+led|nominees|obj
+awards|5th|mod
+awards|annual screen|nn
+awards|actors|nn
+awards|guild|nn
+nominees|awards|for
+awards|and|punc
+awards|"|punc
+awards|nypd blue|conj
+nypd blue|"|punc
+nypd blue|edged|vrel
+edged|nypd blue|obj
+edged|ahead|mod
+ahead|pack|of
+nominations|television|nn
+pack|nominations|in
+nominations|announced|vrel
+announced|nominations|obj
+announced|tuesday|mod
+ap|new york|nn
+ap|(|punc
+cover|magazine|nn
+woman|cover|on
+isn|kate|pred
+kate|or|punc
+kate|claudia|conj
+claudia|or|punc
+supermodel|fab|mod
+claudia|supermodel|conj
+ap|las vegas|nn
+ap|(|punc
+billy bob thornton|oscar|nn
+billy bob thornton|winners|nn
+billy bob thornton|and|punc
+billy bob thornton|angelina jolie|conj
+married|billy bob thornton|obj
+married|here|mod
+ceremony|quickie|nn
+no-frills|ceremony|appo
+ap|los angeles|nn
+ap|(|punc
+caper|car-heist|mod
+gone|"|punc
+gone|caper|subj
+seconds|60|amount-value
+gone|seconds|in
+seconds|"|punc
+seconds|raced|vrel
+raced|seconds|obj
+raced|top|to
+office|weekend|nn
+office|box|nn
+top|office|of
+raced|debuting|mod
+debuting|caper|subj
+debuting|$25.5 million|with
+debuting|and|punc
+debuting|pushing|conj
+pushing|caper|subj
+pushing|"|punc
+pushing|mission|obj
+impossible 2|"|punc
+impossible 2|pack|into
+estimates|studio|nn
+ap|los angeles|nn
+ap|(|punc
+billy bob thornton|oscar-winner|mod
+recuperating|billy bob thornton|subj
+recuperating|home|at
+home|treated|after
+treated|hospital|at
+infection|viral|mod
+hospital|infection|for
+writer|chicago-based|mod
+writer|free-lance|mod
+is|writer|pred
+recorded|mgm|subj
+quarter|its|gen
+quarter|second|post
+quarter|consecutive|mod
+quarter|profitable|mod
+recorded|quarter|obj
+months|final|mod
+months|three|amount-value
+quarter|months|during
+months|1999|of
+is|impact|thanks to
+flick|new|mod
+flick|james bond|nn
+impact|flick|of
+is|not|neg
+is|enough|pred
+enough|"|punc
+results|improved|mod
+results|video|nn
+enough|results|conj
+results|and|punc
+overhaul|corporate|mod
+results|overhaul|conj
+based|quarter|for
+quarter|ended|vrel
+ended|quarter|obj
+ended|dec 31|mod
+monica--|santa|nn
+based|monica--|subj
+$15.2 million|mgm|nn
+$15.2 million|earned|mod
+based|$15.2 million|obj
+revenues|$372.2 million|of
+lives on|angelina jolie|subj
+lives on|edge|obj

@@ -1,0 +1,117 @@
+rate|france|gen
+rate|unemployment|nn
+seeking|11.6 percent|around
+months|recent|mod
+11.6 percent|months|in
+associations|jobless|mod
+seeking|associations|subj
+seeking|rekindle|mod
+rekindle|association|subj
+movement|protest|nn
+rekindle|movement|obj
+movement|which|whn
+year|last|post
+led to|year|subj
+led to|occupation|obj
+occupation|dozens|of
+offices|unemployment|nn
+dozens|offices|of
+offices|country|across
+rate|unemployment|nn
+dropped|rate|subj
+dropped|0.2 percent|by
+0.2 percent|and|punc
+0.2 percent|0.1 percent|conj
+0.1 percent|septebmer|in
+government|french|nn
+predicted|government|subj
+predicted|that|obj
+rate|growth|nn
+product|gross|mod
+product|domestic|mod
+rate|product|of
+product|country|in
+people|jobless|mod
+number|people|of
+dropped|number|subj
+dropped|11.4 percent|by
+11.4 percent|or|punc
+people|333,600|num
+11.4 percent|people|conj
+dropped|from december 1998 to december 1999|mod
+is|also|guest
+time|first|post
+is|time|pred
+rate|unemployment|nn
+time|rate|for
+rate|france|in
+be|below|pred
+be|12.5 percent|below
+12.5 percent|september 1996|since
+rate|france|gen
+rate|unemployment|nn
+stands|now|mod-before
+stands|rate|subj
+stands|12.4 percent|at
+12.4 percent|which|whn
+means|12.4 percent|subj
+means|that|c
+people|3,114,600|num
+population|france|gen
+population|working|mod
+population|age|nn
+people|population|among
+are|without|pred
+are|jobs|without
+unedic|unemployment|nn
+unedic|insurance|nn
+unedic|agency|nn
+official|had|rel
+had|official|obj
+had|unedic|subj
+had|close|mod
+close|unedic|subj
+door|its|gen
+close|door|obj
+door|paris|in
+close|wednesday|mod
+activities|protest|nn
+close|activities|because of
+offices|jobless|mod
+offices|occupied|mod
+offices|unemployment|nn
+groups|offices|of
+france|southern|mod
+offices|france|in
+in|and|punc
+in|in|conj
+suburb|one|nn
+suburb|parisian|mod
+in|suburb|in
+keeping|pressure|obj
+pressure|government|on
+report|ined|nn
+published|report|obj
+day|national|mod
+published|day|on
+day|suicide|against
+suicide|which|whn
+held|first|amod
+held|suicide|obj
+year|last|post
+held|year|mod
+law|new|mod
+law|french|nn
+went into|law|subj
+went into|effect|obj
+effect|that|whn
+encourages|effect|subj
+encourages|businesses|obj
+businesses|cut|rel
+cut|business|subj
+cut|working|mod
+working|hours|mod
+working|and|punc
+working|hire|conj
+workers|more|mod
+hire|workers|obj

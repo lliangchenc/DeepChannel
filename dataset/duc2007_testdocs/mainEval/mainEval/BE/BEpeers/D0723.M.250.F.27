@@ -1,0 +1,147 @@
+wants|freeh|subj
+wants|fbi|obj
+be|able|pred
+be|access|mod
+codes|encryption|nn
+access|codes|obj
+investigations|other|mod
+investigations|criminal|nn
+believed|i|subj
+believed|him|obj
+comes|trip|subj
+poll|new|mod
+comes|poll|as
+boxer|los angeles times|nn
+boxer|shows|nn
+poll|boxer|by
+boxer|pulling|rel
+pulling|boxer|subj
+ahead|slightly|mod
+pulling|ahead|mod
+opponent|her|gen
+opponent|republican|mod
+ahead|opponent|of
+treasurer|state|nn
+opponent|treasurer|appo
+treasurer|matt fong|person
+points|5|num
+points|percentage|nn
+pulling|points|by
+points|49 percent|appo
+49 percent|44 percent|to
+those|likely|pnmod
+likely|vote|to
+election|nov 3|nn
+vote|election|in
+washington|_|punc
+dianne feinstein|california|nn
+dianne feinstein|sen.|title
+washington|dianne feinstein|appo
+decision|dianne feinstein|gen
+dianne feinstein|decision|whn
+run|governor|for
+run|earlier|mod
+came|year|mod-before
+came|decision|subj
+came|months|after
+came|intrigue|of
+intrigue|and|punc
+speculation|public|mod
+intrigue|speculation|conj
+plans|her|gen
+suspense|plans|about
+plans|re-election|for
+re-election|senate|to
+office|her|gen
+released|office|subj
+released|copy|obj
+statement|her|gen
+copy|statement|of
+released|thursday|mod
+moving|censure|obj
+resolution|floor|to
+require|resolution|subj
+require|two-thirds|obj
+two-thirds|senate|of
+senate|_|punc
+votes|67|num
+senate|votes|appo
+two-thirds|_|punc
+two-thirds|suspend|rel
+suspend|two-thirds|subj
+rules|senate|nn
+suspend|rules|obj
+said|feinstein|subj
+suspend|said|mod
+softened|she|subj
+softened|language|obj
+lose|she|subj
+lose|republicans|obj
+linda r. tripp|vilified|mod
+embarked|linda r. tripp|subj
+tour|network|nn
+tour|tv|nn
+tour|image-enhancement|mod
+embarked|tour|on
+said|she|subj
+think|i|subj
+think|be|fc
+be|part|pred
+campaign|presidential|mod
+part|campaign|of
+strong|very|mod
+is|strong|pred
+campbell|u.s.|nn
+campbell|senator|nn
+campbell|'|punc
+campbell|'|punc
+experience|campbell|gen
+be|experience|pred
+ability|and|punc
+positions|moderate|mod
+ability|positions|conj
+make|instantly|mod-before
+make|ability|subj
+make|him|obj1
+make|front-runner|desc
+field|crowded|mod
+front-runner|field|in
+unknown|largely|mod
+candidates|unknown|mod
+candidates|gop|nn
+field|candidates|of
+is|from|pred
+is|belief|from
+belief|that|c
+says|campbell|subj
+says|draws|fc
+draws|he|subj
+support|his|gen
+draws|support|obj
+draws|for|mod
+abortions|legal|mod
+abortions|as|punc
+abortions|well|punc
+abortions|as|punc
+opposition|his|gen
+abortions|opposition|conj
+tax|personal income|nn
+opposition|tax|to
+tax|(|punc
+tax|which|whn
+says|tax|obj
+says|he|subj
+for|replaced|comp1
+replaced|abortions|obj
+replaced|by|by-subj
+tax|national|mod
+tax|sales|nn
+replaced|tax|by
+may|not|neg
+be|as|pred
+be|as|mod
+as|gets in|comp1
+gets in|it|subj
+gets in|politics|obj
+politics|but|punc
+politics|this|conj

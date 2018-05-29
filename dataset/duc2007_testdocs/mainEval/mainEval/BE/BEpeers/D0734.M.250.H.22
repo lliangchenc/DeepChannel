@@ -1,0 +1,134 @@
+given|cedars-sinai medical center|at
+patients|cardiac|mod
+given|patients|obj1
+given|option|obj2
+option|receiving|of
+receiving|patient|subj
+receiving|acupuncture|obj
+acupuncture|or|punc
+therapy|massage|nn
+acupuncture|therapy|conj
+surgery|coronary|mod
+surgery|bypass|nn
+therapy|surgery|after
+treatment|effective|mod
+is|treatment|pred
+treatment|those|for
+those|addicted|pnmod
+addicted|cocaine|to
+researchers|yale|nn
+patients|studied|vrel
+studied|patients|obj
+53.8 percent|receiving|of
+technique|acupuncture|nn
+receiving|tested|rel
+tested|receiving|obj
+tested|technique|subj
+free|cocaine|of
+cocaine|last week|during
+last week|treatment|of
+treatment|compared|vrel
+compared|treatment|obj
+compared|23.5 percent|with
+23.5 percent|and|punc
+23.5 percent|9.1 percent|conj
+groups|two|nn
+groups|control|nn
+9.1 percent|groups|in
+group|second|post
+group|control|nn
+received|group|subj
+received|acupuncture|obj
+points|other|mod
+acupuncture|points|in
+points|outer ear|along
+outer ear|believed|vrel
+believed|outer ear|obj
+believed|have|mod
+have|group|subj
+effect|treatment|nn
+have|effect|obj
+americans|three|nn
+one|americans|in
+medicine|non-western|nn
+spending|14 billion dollars a|obj
+14 billion dollars a|treatment|in
+undergo|patients|subj
+scans|cat|nn
+undergo|scans|obj
+scans|and|punc
+procedures|other|mod
+procedures|high-tech|mod
+procedures|medical|mod
+scans|procedures|conj
+face-lift|acupuncture|nn
+inserted|face-lift|in
+needles|36-millimeter|nn
+inserted|needles|obj
+inserted|facial muscles|into
+students|medical|nn
+taught|students|obj1
+therapies|alternative|mod
+taught|therapies|obj2
+is|delivered|pred
+delivered|business|like
+used|acupuncture|obj
+used|by|by-subj
+used|millions|by
+millions|americans|of
+parolees|attend|rel
+attend|parolee|subj
+program|drug|nn
+program|counseling|nn
+attend|program|obj
+program|conjunction|in
+conjunction|acupuncture|with
+helps|acupuncture|subj
+cravings|control|nn
+helps|cravings|obj
+cravings|cocaine|for
+has|acupuncture|subj
+effects|fewer|mod
+effects|side|nn
+has|effects|obj
+has|and|punc
+has|is|conj
+is|relatively|guest
+is|low-cost|pred
+committee|us|nn
+committee|medical|mod
+committee|expert|nn
+endorsed|today|mod-before
+endorsed|committee|subj
+acupuncture|chinese|nn
+acupuncture|traditional|mod
+acupuncture|needle|nn
+acupuncture|therapy|nn
+endorsed|acupuncture|obj
+acupuncture|part|as
+medicine|mainstream|nn
+medicine|american|mod
+part|medicine|of
+practitioners|chinese|nn
+offered|long|amod
+offered|practitioners|subj
+offered|acupuncture|obj
+acupuncture|us|in
+acupuncture|medical|mod
+system|american|mod
+system|healthcare|nn
+help|acupuncture|subj
+including|addiction|obj
+cramps|menstrual|mod
+headaches|cramps|conj
+pain|myofascial|mod
+cramps|pain|conj
+pain|back|nn
+pain|pain|conj
+pain|asthma|conj
+asthma|osteoarthritis|conj
+syndrome|carpal|mod
+syndrome|tunnel|nn
+osteoarthritis|syndrome|conj
+syndrome|and|punc
+syndrome|fibromyalgia|conj

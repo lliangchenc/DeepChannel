@@ -1,0 +1,145 @@
+arena|present|mod
+concerns|arena|subj
+india|only|mod
+concerns|india|obj
+india|and|punc
+india|pakistan|conj
+intends|iran|subj
+intends|carry out|fc
+carry out|iran|subj
+tests|nuclear|mod
+carry out|tests|obj
+acquired|country|subj
+acquired|capability|obj
+capability|make|rel
+make|capability|subj
+bombs|nuclear|mod
+make|bombs|obj
+bombs|and|punc
+weapons|other|mod
+bombs|weapons|conj
+destruction|mass|nn
+weapons|destruction|of
+be|closer|pred
+()|amassing|to
+arsenal|nuclear|mod
+amassing|arsenal|obj
+sought|congress|subj
+sought|impose|fc
+impose|congress|subj
+impose|sanctions|obj
+sanctions|countries|on
+countries|helping|rel
+helping|country|subj
+develop|iran|subj
+weapons|nuclear|mod
+nuclear|chemical|conj
+chemical|or|punc
+chemical|biological|conj
+develop|weapons|obj
+caused|washington|in
+washington|and|punc
+washington|israel|conj
+but|caused|comp1
+caused|test|subj
+concern|serious|mod
+caused|concern|obj
+tested|successfully|mod-before
+tested|iran|subj
+missile|medium-range|mod
+tested|missile|obj
+missile|wednesday|on
+military|local|mod
+military|and|punc
+iran|technological|mod
+iran|capability|nn
+military|iran|conj
+developed|military|subj
+test|iran|gen
+test|missile|of
+missile|that|whn
+reach|missile|subj
+reach|israel|obj
+israel|saudi arabia|conj
+saudi arabia|and|punc
+saudi arabia|turkey|conj
+development|disturbing|mod
+disturbing|and|punc
+disturbing|dangerous|conj
+is|development|pred
+elapse|time|subj
+elapse|testing|between
+testing|and|punc
+testing|deployment|conj
+iran|and|punc
+iran|russia|conj
+committed|iran|obj
+controlling|iran|subj
+controlling|export|obj
+export|nuclear energy|of
+country|either|nn
+nuclear energy|country|from
+country|accordance|in
+npt|nuclear non-proliferation treaty|nn
+npt|(|punc
+accordance|npt|with
+plans|iran|subj
+plans|build|fc
+build|iran|subj
+build|atomic bomb|obj
+briefed|adamov|subj
+officials|iranian|mod
+briefed|officials|obj
+measures|russia|gen
+officials|measures|on
+measures|complete|rel
+complete|measure|subj
+plant|bushehr|nn
+plant|nuclear power|nn
+complete|plant|obj
+united states|and|punc
+united states|israel|conj
+israel|which|whn
+suspect|israel|subj
+suspect|that|c
+want|iran|subj
+want|acquire|fc
+acquire|iran|subj
+acquire|nuclear weapons|obj
+opposed|united states|subj
+cooperation|russian-iranian|nn
+cooperation|nuclear|mod
+opposed|cooperation|obj
+of state|us|nn
+of state|madeleine albright|person
+visiting|of state|subj
+visiting|country|obj
+accused|long|guest
+accused|iran|obj
+accused|by|by-subj
+accused|us|by
+us|trying|of
+trying|iran|subj
+trying|gain|fc
+capability|nuclear|mod
+gain|capability|obj
+accusation|israeli|mod
+coincided|accusation|subj
+efforts|iran|gen
+efforts|successful|mod
+coincided|efforts|with
+efforts|pressure|rel
+pressure|effort|subj
+pressure|israel|obj
+issue|nuclear|mod
+israel|issue|on
+use|iran|subj
+use|atomic energy|obj
+purposes|peaceful|mod
+atomic energy|purposes|for
+has|undoubtedly|subj
+budget|lowest|mod
+budget|defense|nn
+has|budget|obj
+countries|middle east|nn
+budget|countries|among

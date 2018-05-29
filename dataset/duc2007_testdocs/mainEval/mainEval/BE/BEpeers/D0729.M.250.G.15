@@ -1,0 +1,136 @@
+truck|pickup|nn
+discovery|truck|of
+truck|believed|vrel
+believed|discovery|obj
+been|stolen|pred
+stolen|eric robert rudolph|by
+prompted|discovery|subj
+investigators|federal|mod
+prompted|investigators|obj
+investigators|double|rel
+double|investigator|subj
+force|their|gen
+double|force|obj
+double|here|mod
+double|and|punc
+double|hint|conj
+hint|investigator|subj
+hint|that|c
+be|close|pred
+close|finding|to
+finding|sought|comp1
+sought|fugitive|subj
+sought|bombing|in
+clinic|birmingham|nn
+clinic|abortion|nn
+bombing|clinic|of
+clinic|and|punc
+bombings|three|nn
+bombings|atlanta|nn
+clinic|bombings|conj
+intensified|manhunt|subj
+intensified|again|mod
+clinic|abortion|nn
+again|clinic|for
+clinic|bombing|rel
+bombing|clinic|subj
+eric rudolph|suspect|nn
+bombing|eric rudolph|obj
+bombing|after|mod
+after|said|comp1
+said|authorities|subj
+said|took|fc
+took|he|subj
+took|truck|obj
+truck|and|punc
+supply|six-month|nn
+truck|supply|conj
+supply|food|of
+food|home|from
+took|last week|mod
+truck|rudolph|gen
+seen|truck|obj
+seen|leaving|mod
+leaving|truck|subj
+leaving|area|obj
+bombing|birmingham|nn
+area|bombing|of
+disappeared|fugitive|subj
+disappeared|jan 30|mod
+mountains|western|mod
+mountains|north carolina|nn
+disappeared|mountains|into
+monday|that|c
+have|monday|obj
+have|they|subj
+evidence|connecting|rel
+connecting|evidence|subj
+bombing|fugitive|mod
+connecting|bombing|obj
+suspect|evidence|subj
+suspect|eric rudolph|obj
+eric rudolph|explosion|to
+clinic|abortion|nn
+explosion|clinic|at
+clinic|weekend|over
+suspect|but|mod
+but|ruling|comp1
+ruling|they|subj
+ruling|him|obj
+ruling|out|mod
+ruling|either|mod
+charged|also|guest
+charged|rudolph|obj
+bombing|july 27 , 1996 ,|subj
+bombing|centennial olympic park|at
+centennial olympic park|atlanta|in
+bombing|jan 16 , 1997 ,|subj
+bombing|of|guest
+bombing|north|of
+building|atlanta|nn
+bombing|building|obj
+building|that|whn
+includes|building|subj
+clinic|abortion|nn
+includes|clinic|obj
+bombing|feb 21 , 1997 ,|subj
+nightclub|atlanta|nn
+bombing|nightclub|of
+gay|large|mod
+clientele|gay|mod
+nightclub|clientele|with
+charged|rudolph|obj
+bombings|three|nn
+bombings|atlanta-area|mod
+charged|bombings|in
+charged|including|mod
+including|rudolph|subj
+bombing|1996 olympic park|nn
+including|bombing|obj
+bombing|atlanta|in
+died|woman|subj
+agents|federal|mod
+agents|law enforcement|nn
+bombing|jan 29 , 1998|nn
+shortly|bombing|after
+bombing|birmingham|of
+clinic|abortion|nn
+suspect|also|mod-before
+suspect|investigators|subj
+suspect|involved|fc
+involved|he|obj
+involved|1998|in
+1998|explosion|appo
+explosion|that|whn
+killed|explosion|subj
+killed|policeman|obj
+killed|and|punc
+killed|maimed|conj
+maimed|explosion|subj
+maimed|nurse|obj
+nurse|clinic|at
+clinic|that|whn
+performs|clinic|subj
+performs|abortions|obj
+abortions|birmingham|in
+hours|birmingham|after

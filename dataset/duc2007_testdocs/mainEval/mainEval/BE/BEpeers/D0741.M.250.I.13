@@ -1,0 +1,154 @@
+day|44-year-old|mod
+described|day|mod-before
+day|trader|pnmod
+trader|center|at
+rampage|thursday|gen
+rampage|bloody|mod
+center|rampage|of
+described|mark barton|obj
+described|by|by-subj
+described|neighbors|by
+suburb|atlanta|nn
+neighbors|suburb|in
+suburb|morrow|of
+man|quiet|mod
+man|churchgoing|mod
+morrow|man|as
+man|who|whn
+worked|man|subj
+day|all|pre
+worked|day|mod
+computer|his|gen
+worked|computer|on
+shot|barton|subj
+people|nine|nn
+shot|people|obj
+offices|two|nn
+offices|atlanta|nn
+offices|stock-trading|mod
+people|offices|in
+offices|thursday|on
+shot|injuring|mod
+injuring|barton|subj
+others|13|num
+injuring|others|obj
+piecing|grimly|amod
+piecing|authorities|subj
+piecing|together|guest
+know|what|obj
+know|they|subj
+know|mark o. barton|about
+father|44-year-old|mod
+mark o. barton|father|conj
+father|investor|conj
+investor|and|punc
+murder suspect|former|mod
+investor|murder suspect|conj
+murder suspect|who|whn
+walked|murder suspect|subj
+brokerages|two|nn
+brokerages|atlanta|nn
+walked|brokerages|into
+walked|and|punc
+walked|killed|conj
+killed|murder suspect|subj
+people|nine|nn
+killed|people|obj
+as|continued|comp1
+continued|authorities|subj
+continued|investigate|mod
+investigate|authority|subj
+spree|three-day|nn
+spree|killing|mod
+investigate|spree|obj
+spree|that|c
+13|left|mod
+people|spree|obj
+people|13|subj
+people|dead|mod
+people|including|mod
+including|barton|obj
+mother|his|gen
+said|mother|subj
+said|fathom|fc
+fathom|she|subj
+transformed|what|subj
+trader|44-year-old|mod
+trader|chemist-turned-day|mod
+transformed|trader|obj
+murderer|worst|nn
+murderer|mass|nn
+trader|murderer|into
+history|georgia|nn
+murderer|history|in
+but|was|comp1
+was|evidence|pred
+focused|still|amod
+evidence|focused|comp1
+focused|nation|obj
+spree|mark o. barton|gen
+spree|shooting|nn
+focused|spree|on
+buildings|two|nn
+buildings|buckhead|nn
+buildings|office|nn
+spree|buildings|at
+buildings|where|wha
+left|he|subj
+left|nine|obj
+left|dead|mod
+buildings|and|punc
+buildings|12|conj
+christmas|last|post
+sat down|mark o. barton|subj
+wife|his|gen
+wife|estranged|mod
+sat down|wife|with
+sat down|and|punc
+sat down|confessed|conj
+confessed|mark o. barton|obj
+financial losses|huge|mod
+confessed|financial losses|to
+financial losses|day|as
+day|trader|pnmod
+market|stock|nn
+trader|market|in
+colleagues|who|whn
+lent|colleagues|subj
+money|mark barton|nn
+lent|money|obj
+were|among|pred
+were|those|among
+those|killed|vrel
+killed|those|obj
+spree|his|gen
+spree|shooting|nn
+killed|spree|in
+widow|man|of
+man|murdered|pnmod
+murdered|mark o. barton|by
+mark o. barton|his|during
+spree|shooting|nn
+spree|last|vrel
+last|spree|obj
+last|month|mod
+firms|two day-trading|mod
+last|firms|at
+filed|spree|subj
+lawsuit|first|post
+filed|lawsuit|obj
+lawsuit|stemming from|rel
+stemming from|lawsuit|subj
+stemming from|crimes|obj
+lawsuit|third|post
+lawsuit|resulting|pnmod
+spree|mark o. barton|gen
+spree|july 29|nn
+spree|killing|mod
+resulting|spree|from
+filed|lawsuit|obj
+filed|fulton county state court|in
+saturday|next|post
+day|44-year-old|mod
+tore|trader|subj
+tore|through|mod

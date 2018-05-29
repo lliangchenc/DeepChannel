@@ -1,0 +1,143 @@
+committee|u.s.|nn
+committee|medical|mod
+committee|expert|nn
+endorsed|today|mod-before
+endorsed|committee|subj
+acupuncture|chinese|nn
+acupuncture|traditional|mod
+acupuncture|needle|nn
+acupuncture|therapy|nn
+endorsed|acupuncture|obj
+acupuncture|part|as
+medicine|mainstream|nn
+medicine|american|mod
+part|medicine|of
+schools|traditional|mod
+schools|u.s.|nn
+schools|medical|nn
+almost two-thirds|schools|of
+teach|now|mod-before
+teach|almost two-thirds|subj
+therapies|alternative|mod
+teach|therapies|obj
+teach|including|mod
+including|almost two-thirds|subj
+including|chiropractic|obj
+chiropractic|acupuncture|conj
+remedies|herbal|mod
+acupuncture|remedies|conj
+remedies|and|punc
+medicine|mind-body|mod
+remedies|medicine|conj
+treatment|effective|mod
+is|treatment|pred
+abuse|cocaine|nn
+treatment|abuse|for
+received|first|subj
+weeks|eight|amount-value
+received|weeks|obj
+therapy|standard|mod
+therapy|addiction|nn
+therapy|acupuncture|nn
+weeks|therapy|of
+acupuncture|cosmetic|mod
+works|acupuncture|subj
+works|variety|in
+variety|ways|of
+works|says|mod
+acupuncturist|licensed|mod
+says|acupuncturist|subj
+acupuncturist|and|punc
+practitioner|traditional-chinese-medicine|mod
+acupuncturist|practitioner|conj
+institutes|research|nn
+institutes|developing|rel
+developing|institute|subj
+medicines|herbal|mod
+developing|medicines|obj
+appears|report|subj
+issue|august|nn
+appears|issue|in
+archives|journal|nn
+issue|archives|of
+archives|medicine|of
+called for|panel|subj
+system|american|mod
+system|healthcare|nn
+doctors|and|punc
+doctors|practitioners|conj
+care|alternative|mod
+practitioners|care|of
+mix|always|amod
+mix|doctors|subj
+mix|well|mod
+happening|what|subj
+center for health|beth israel|gen
+happening|center for health|at
+center for health|and|punc
+center for health|healing|conj
+launched|hospital|subj
+group|its|gen
+group|integrative medicine|nn
+launched|group|obj
+setting up|country|across
+number|ever-increasing|mod
+country|number|conj
+hospitals|conventional|mod
+number|hospitals|of
+number|and|punc
+number|health-care|conj
+setting up|organizations|subj
+centers|complementary-care|mod
+setting up|centers|obj
+how|acupuncture|about
+touch|therapeutic|mod
+acupuncture|touch|conj
+touch|or|punc
+counseling|nutritional|mod
+touch|counseling|conj
+information|more|mod
+http://www.nytimes.com/syndicate|information|for
+in|lifebeat|nn
+information|in|on
+face-lift|acupuncture|nn
+needles|36-millimeter|nn
+inserted|needles|obj
+inserted|facial muscles|into
+is|patients|for
+surgery|plastic|nn
+solution|best|mod
+is|solution|pred
+opened|stanford university medical center|subj
+program|similar|mod
+program|patient-care|mod
+opened|program|obj
+program|april|in
+medicine|western|mod
+made|medicine|subj
+less|considerably|mod
+made|less|guest
+made|progress|obj
+problems|lingering|mod
+problems|health|nn
+progress|problems|against
+disease|alzheimer|gen
+problems|disease|such as
+disease|arthritis|conj
+arthritis|and|punc
+pain|chronic|mod
+arthritis|pain|conj
+pay|patients|subj
+pay|about $45|obj
+treatment|acupuncture|nn
+about $45|treatment|for
+offered|center|subj
+treatments|alternative|mod
+offered|treatments|obj
+treatments|more|for
+more|year|than
+works|barice|subj
+works|part-time|desc
+administration medical center|veteran|gen
+part-time|administration medical center|at
+administration medical center|west palm beach|in

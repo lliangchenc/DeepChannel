@@ -1,0 +1,166 @@
+sales|u.s.|nn
+foods|organic|mod
+sales|foods|of
+grown|sales|subj
+grown|20 percent|by
+grown|annually|mod
+years|last|post
+years|seven|amount-value
+annually|years|for
+year|last|post
+farmers|organic|mod
+defeated|farmers|subj
+proposals|usda|nn
+defeated|proposals|obj
+proposals|allow|rel
+allow|proposal|subj
+allow|irradiation|obj
+irradiation|genetic engineering|conj
+genetic engineering|and|punc
+sludge|sewage|nn
+genetic engineering|sludge|conj
+production|organic|mod
+sludge|production|in
+planning|government|subj
+planning|issue|fc
+issue|government|subj
+issue|rules|obj
+rules|prohibiting|rel
+prohibiting|rule|subj
+prohibiting|label|obj
+label|organic|pnmod
+organic|food|for
+food|that|whn
+irradiated|food|obj
+engineered|genetically|amod
+irradiated|engineered|conj
+engineered|food|obj
+engineered|or|punc
+engineered|treated|conj
+treated|food|obj
+treated|antibiotics|with
+food|organic|mod
+attack|food|on
+organization|well-financed|mod
+organization|research|nn
+food|organization|by
+suggests|attack|subj
+suggests|that|obj
+suggests|even|mod
+suggests|though|mod
+food|organic|mod
+though|accounts for|comp1
+accounts for|food|subj
+accounts for|only|guest
+accounts for|1 percent|obj
+sales|food|nn
+1 percent|sales|of
+sales|country|in
+industry|conventional|mod
+industry|food|nn
+worried|industry|obj
+proposed|agriculture department|subj
+regulations|organic|mod
+regulations|food|nn
+proposed|regulations|obj
+regulations|more|pnmod
+more|280,000|than
+filed|people|subj
+filed|comments|obj
+comments|protesting|rel
+protesting|comment|subj
+protesting|inclusion|obj
+modified|genetically|mod
+foods|modified|mod
+inclusion|foods|of
+foods|as|mod
+food|organic|mod
+become|food|subj
+become|area|obj
+development|vigorous|mod
+area|development|of
+agriculture|china|gen
+development|agriculture|in
+agriculture|and|punc
+production|food|nn
+agriculture|production|conj
+standards|national|mod
+help|standards|subj
+producers|u.s.|nn
+sell|producers|subj
+food|organic|mod
+sell|food|obj
+sell|abroad|mod
+sell|where|wha
+opposition|substantial|mod
+been|opposition|pred
+opposition|use|to
+modified|genetically|mod
+crops|modified|mod
+use|crops|of
+crops|and|punc
+technologies|other|mod
+technologies|new|mod
+technologies|food|nn
+crops|technologies|conj
+food|processed|mod
+food|containing|rel
+containing|food|subj
+50|at least|num-mod
+containing|50|obj
+ingredients|organic|mod
+labeled|ingredients|obj
+ingredients|organic|mod
+ingredients|and|punc
+three|list|nn
+three|up to|num-mod
+ingredients|three|conj
+three|them|of
+general|mills|person
+has|general|subj
+cereal|new|mod
+cereal|organic|mod
+has|cereal|obj
+has|and|punc
+has|announced|conj
+announced|general|subj
+announced|in|guest
+announced|december|in
+announced|that|c
+small planet foods|buying|nn
+was|small planet foods|pred
+producer|leading|mod
+small planet foods|producer|appo
+products|organic|mod
+products|food|nn
+producer|products|of
+released|government|subj
+standards|new|mod
+standards|national|mod
+released|standards|obj
+standards|growing|for
+growing|government|subj
+standards|and|punc
+food|processing|nn
+food|organic|mod
+standards|food|conj
+food|that|whn
+bar|food|subj
+bar|use|obj
+use|genetic engineering|of
+genetic engineering|or|punc
+genetic engineering|irradiation|conj
+food|organic|mod
+certified|food|obj
+certified|by|by-subj
+private|various|mod
+certified|private|by
+private|and|punc
+organizations|state|nn
+private|organizations|conj
+organizations|that|whn
+use|each|mod-before
+use|organizations|subj
+standards|their own|gen
+use|standards|obj
+standards|term|for

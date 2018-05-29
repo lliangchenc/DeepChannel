@@ -1,0 +1,140 @@
+team|swiss-british|nn
+passed|team|subj
+passed|south|obj
+south|japan|of
+passed|today|mod
+joined|brian jones|subj
+joined|legends|obj
+legends|wright brothers|like
+wright brothers|and|punc
+wright brothers|charles lindbergh|conj
+completion|saturday|gen
+charles lindbergh|completion|with
+manned|first|mod
+flight|manned|mod
+flight|round-the-world|mod
+flight|balloon|nn
+completion|flight|of
+swiss|and|punc
+balloonists|british|mod
+swiss|balloonists|conj
+balloonists|circle|rel
+circle|balloonist|subj
+circle|world|obj
+floated|nonstop|mod-before
+floated|swiss|subj
+floated|pacific ocean|over
+center|their|gen
+center|geneva|nn
+center|control|nn
+said|center|subj
+floated|said|mod
+swiss bertrand piccard|and|punc
+swiss bertrand piccard|british brian jones|conj
+completed|swiss bertrand piccard|subj
+circumnavigation|their|gen
+circumnavigation|nonstop|mod
+completed|circumnavigation|obj
+circumnavigation|hot-air balloon|on
+completed|and|punc
+completed|landed|conj
+landed|swiss bertrand piccard|subj
+egypt|southern|mod
+landed|egypt|in
+landed|smoothly|mod
+team|breitling|nn
+team|ground|nn
+team|geneva|in
+forecast|team|subj
+forecast|that|c
+balloon|huge|mod
+balloon|swiss-registered|mod
+complete|balloon|subj
+circuit|its|gen
+complete|circuit|obj
+circuit|earth|of
+complete|somewhere|mod
+somewhere|north africa|in
+degrees|9.27|amount-value
+longitude|degrees|nn
+longitude|west|nn
+represents|longitude|subj
+represents|finish line|obj
+balloon|british|mod
+end|balloon|subj
+attempt|round-the-world|mod
+end|attempt|obj
+team|composed|vrel
+composed|team|obj
+composed|bertrand piccard|of
+bertrand piccard|wim verstraeten|conj
+wim verstraeten|and|punc
+wim verstraeten|andy elson|conj
+been|due to|pred
+been|lift-off|due to
+'oex|chateau|nn
+'oex|d|mod
+lift-off|'oex|from
+alps|swiss|mod
+'oex|alps|in
+morning|thursday|nn
+alps|morning|on
+bid|balloon|gen
+bid|round-the-world|mod
+abandoned|bid|obj
+abandoned|after|mod
+after|refused|comp1
+refused|china|subj
+refused|it|obj1
+refused|entry|obj2
+capsule|and|punc
+capsule|most|conj
+most|balloon|of
+presented|capsule|obj
+air|smithsonian institution|gen
+presented|air|to
+air|and|punc
+museum|space|nn
+air|museum|conj
+bertrand piccard|first two|nn
+bertrand piccard|switzerland|of
+switzerland|and|punc
+switzerland|brian jones|conj
+brian jones|britain|of
+trip|20-day|nn
+ending|egyptian|in
+desert|ending|subj
+flying|piccard|unlike
+piccard|and|punc
+piccard|jones|conj
+flying|uliassi|subj
+compartment|unpressurized|mod
+compartment|crew|nn
+flying|compartment|in
+shivering|pilots|subj
+cabin|balloon|gen
+shivering|cabin|in
+crossing|pacific|nn
+was|sluggish|pred
+sluggish|first|at
+balloon|breitling orbiter|nn
+was|balloon|with
+piccard|and|punc
+piccard|jones|conj
+jones|set|vrel
+set|jones|obj
+set|off|mod
+off|swiss alps|from
+picked up|finally|mod-before
+picked up|balloon|subj
+stream|jet|nn
+picked up|stream|obj
+team|swiss-english|nn
+team|balloon|nn
+300|about|num-mod
+miles|300|amount-value
+was|miles|pred
+miles|jamaica|from
+night|late|mod
+night|wednesday|nn
+was|night|mod

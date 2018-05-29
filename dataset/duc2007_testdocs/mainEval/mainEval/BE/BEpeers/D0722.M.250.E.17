@@ -1,0 +1,124 @@
+year|last|post
+vetoed|clinton|subj
+legislation|defense|nn
+vetoed|legislation|obj
+legislation|that|whn
+contained|legislation|subj
+program|national|mod
+program|missile|nn
+program|defense|nn
+contained|program|obj
+contained|expressing|mod
+expressing|clinton|subj
+expressing|concern|obj
+concern|that|c
+violate|it|subj
+violate|1972|guest
+treaty|anti-ballistic|mod
+treaty|missile|nn
+violate|treaty|obj
+treaty|russia|with
+has|united states|subj
+has|defense|obj
+missile|long-range|mod
+defense|missile|against
+planned|defense department|subj
+planned|develop|fc
+develop|defense department|subj
+develop|weapons|obj
+missile defense system|national|mod
+weapons|missile defense system|for
+missile defense system|1999|by
+deploy|it|obj
+years|three|amount-value
+deploy|years|within
+missile defense system|pentagon|gen
+missile defense system|fifth|post
+failed|missile defense system|subj
+failed|intercept|fc
+intercept|missile defense system|subj
+intercept|target|obj
+intercept|may 1998|in
+said|defense department|subj
+said|statement|in
+military|u.s.|nn
+tested|successfully|mod-before
+tested|military|subj
+tested|anti-missile|obj
+destroying|missile|obj
+one|another|num-mod
+missile|one|with
+one|high|pnmod
+high|new mexico state|over
+said|defense department|subj
+success|second|post
+success|straight|mod
+intercepted|success|in
+missile defense system|experimental|mod
+missile defense system|theater|nn
+intercepted|missile defense system|subj
+missile|target|nn
+intercepted|missile|obj
+intercepted|august 1999|in
+site|new mexico|nn
+site|test|mod
+intercepted|site|at
+intercepted|prompting|mod
+prompting|missile defense system|subj
+prompting|pentagon|obj
+pentagon|predict|rel
+predict|pentagon|subj
+predict|that|c
+graduate|missile|subj
+graduate|to|guest
+graduate|its|to
+stage|second|post
+graduate|stage|obj
+stage|development|of
+year|next|post
+graduate|year|mod
+announced|u.s. defense department|subj
+announced|that|c
+skip|it|subj
+test|planned|mod
+test|third|post
+skip|test|obj
+missile|anti-missile|mod
+test|missile|of
+agreed|1972|in
+united states|and|punc
+united states|soviet union|conj
+agreed|united states|subj
+agreed|anti-ballistic missile treaty|in
+anti-ballistic missile treaty|construct|rel
+construct|anti-ballistic missile treaty|subj
+defense|national|mod
+construct|defense|obj
+missiles|such|pre
+defense|missiles|against
+test|iran|gen
+test|weekend|nn
+missile|long-range|mod
+test|missile|of
+underscored|test|subj
+underscored|need|obj
+missile defense system|u.s.|nn
+missile defense system|national|mod
+need|missile defense system|for
+said|defense william cohen|subj
+said|july 2000|in
+push|britain|subj
+push|united states|obj
+united states|halt|rel
+halt|united states|subj
+halt|plans|obj
+missile defense system|its|gen
+missile defense system|national|mod
+plans|missile defense system|for
+committee|parliament|nn
+missile defense system|committee|appo
+affairs|foreign|mod
+committee|affairs|on
+affairs|recommended|vrel
+recommended|affairs|obj
+recommended|august 2000|in

@@ -1,0 +1,140 @@
+'s|half|about
+half|businesses|of
+businesses|guayaquil|in
+miles|165|amount-value
+southwest|miles|nn
+southwest|quito|of
+quito|closed|vrel
+closed|quito|obj
+closed|protest|mod
+protest|president|obj
+president|jamil mahuad|person
+'s|proposal|pred
+proposal|raise|rel
+raise|proposal|subj
+raise|taxes|obj
+taxes|reduce|rel
+reduce|tax|subj
+south american nation|small|mod
+deficit|south american nation|gen
+deficit|$1.2 billion|nn
+deficit|budget|nn
+reduce|deficit|obj
+killed|hurricane mitch|subj
+killed|more|guest
+more|9,000|than
+killed|people|obj
+people|central america|in
+killed|and|punc
+killed|caused|conj
+caused|hurricane mitch|subj
+caused|billions|obj
+billions|dollar|of
+dollar|damage|in
+damage|october|in
+october|and|punc
+october|november|conj
+jose luis gonzalez|leader|appo
+tribe|pemon|nn
+leader|tribe|of
+but|said|comp1
+said|jose luis gonzalez|subj
+said|approved|fc
+approved|chavez|subj
+projects|mining|subj
+projects|including|guest
+including|mining|subj
+including|one|obj
+one|las cristinas|at
+projects|site|obj
+believed|what|obj
+be|one|pred
+deposits|largest|mod
+deposits|gold|nn
+one|deposits|of
+deposits|latin america|in
+producer|world|gen
+producer|12th|mod
+producer|biggest|mod
+producer|gold|nn
+is|producer|pred
+producer|and|punc
+producer|second|conj
+second|south america|in
+south america|brazil|after
+establish|south africa|subj
+diplomatic missions|resident|mod
+establish|diplomatic missions|obj
+diplomatic missions|venezuela|in
+venezuela|and|punc
+venezuela|peru|conj
+few|next|post
+peru|few|in
+establish|months|mod
+announced|department of foreign affairs|subj
+establish|announced|mod
+establish|today|mod
+took|decision|subj
+took|into|guest
+took|account|into
+priorities|south africa|gen
+priorities|emerging|mod
+took|priorities|obj
+priorities|it|in
+'s|foreign policy|pred
+foreign policy|and|punc
+opportunities|political|mod
+political|economic|conj
+economic|and|punc
+economic|other|conj
+foreign policy|opportunities|conj
+opportunities|had|rel
+had|opportunities|obj
+had|countries|subj
+had|offer|mod
+offer|country|subj
+said|department|subj
+countries|two|nn
+countries|latin american|nn
+opened|also|amod
+opened|countries|subj
+opened|embassies|obj
+embassies|south africa|in
+trade|bilateral|mod
+trade|south africa|between
+south africa|and|punc
+south africa|venezuela|conj
+stood|trade|subj
+dollars|41.96 million|nn
+dollars|u.s.|nn
+stood|dollars|at
+dollars|and|punc
+dollars|that|conj
+dollars|peru|with
+peru|45.3 million dollars|at
+central american countries|and|punc
+central american countries|canada|conj
+signed|central american countries|subj
+signed|here|mod
+signed|today|mod
+agreement|rules|on
+environment|clear|mod
+rules|environment|for
+industry|mining|nn
+environment|industry|for
+industry|central america|in
+firms|canadian|mod
+shown|firms|subj
+shown|interest|obj
+interest|investing|in
+investing|firm|subj
+investing|in|guest
+investing|mining|in
+investing|activities|obj
+activities|costa rica|in
+costa rica|and|punc
+central american countries|other|mod
+costa rica|central american countries|conj
+investing|mainly|mod
+exploitation|gold|nn
+mainly|exploitation|in

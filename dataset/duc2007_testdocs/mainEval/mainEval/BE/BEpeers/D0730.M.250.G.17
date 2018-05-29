@@ -1,0 +1,140 @@
+accept|supreme court|subj
+accept|appeal|obj
+accept|hear|conj
+hear|supreme court|subj
+hear|argument|obj
+hear|and|punc
+hear|rule|conj
+rule|supreme court|subj
+veto|line-item|nn
+constitutionality|veto|gen
+rule|constitutionality|on
+constitutionality|end|before
+end|term|of
+june|late|mod
+term|june|in
+june|or|punc
+july|early|mod
+june|july|conj
+agreed|supreme court|subj
+agreed|february 1998|in
+agreed|hear|mod
+hear|supreme court|subj
+hear|argument|obj
+hear|and|punc
+hear|decide|conj
+decide|supreme court|subj
+decide|constitutionality|obj
+veto|president|nn
+veto|line-item|nn
+constitutionality|veto|of
+struck down|supreme court|subj
+struck down|as|guest
+struck down|law|obj
+law|giving|rel
+giving|law|subj
+giving|president|obj1
+veto|line-item|nn
+giving|veto|obj2
+veto|which|whn
+let|veto|subj
+cancel|him|subj
+items|specific|mod
+cancel|items|obj
+items|tax|in
+tax|and|punc
+measures|spending|nn
+tax|measures|conj
+lawmakers|who|whn
+dubbed|lawmakers|subj
+dubbed|law|obj1
+dubbed|line item veto act|obj2
+succeeded|"|punc
+succeeded|lawmakers|subj
+faking|lawmaker|subj
+faking|out|guest
+faking|supreme court|obj
+faking|"|punc
+faking|because|mod
+does|not|neg
+because|give|comp1
+give|statute|subj
+authority|president|nn
+authority|new|mod
+authority|veto|nn
+give|authority|obj
+said|scalia|subj
+give|said|mod
+action|president|gen
+action|authorizes|rel
+authorizes|action|obj
+authorizes|it|subj
+authorizes|fact|in
+is|not|neg
+veto|line item|nn
+is|veto|pred
+is|and|punc
+offend|thus|mod-before
+does|not|neg
+is|offend|conj
+offend|action|subj
+offend|art|obj
+passed|line item veto act|obj
+passed|part|as
+contract with america|republicans|gen
+contract with america|"|punc
+part|contract with america|of
+struck down|in|mod-before
+struck down|june 1998|in
+struck down|u.s. supreme court|subj
+struck down|as|guest
+law|line-item|nn
+law|veto|nn
+struck down|law|obj
+law|that|whn
+lets|law|subj
+president|u.s.|nn
+strike out|president|subj
+items|specific|mod
+strike out|items|obj
+items|tax|in
+tax|and|punc
+measures|spending|nn
+tax|measures|conj
+was|struck|pred
+was|down|mod
+court|high|nn
+found|court|subj
+found|it|obj1
+found|unnecessary|desc
+found|address|mod
+address|court|subj
+issue|second|post
+address|issue|obj
+issue|raised|vrel
+raised|issue|obj
+raised|by|by-subj
+federal court|lower|mod
+raised|federal court|by
+raised|when|wha
+found|it|subj
+found|act|obj1
+found|unconstitutional--|desc
+veto|line item|nn
+disrupts|veto|subj
+disrupts|balance|obj
+balance|powers|of
+branch|executive|nn
+was|only|pred
+was|after|mod
+requirements|presentment clause|of
+after|satisfied|comp1
+satisfied|requirements|obj
+exercised|president|subj
+authority|his|gen
+exercised|authority|obj
+authority|line item veto act|under
+line item veto act|cancel|rel
+cancel|line item veto act|subj
+item|spending|nn
+cancel|item|obj

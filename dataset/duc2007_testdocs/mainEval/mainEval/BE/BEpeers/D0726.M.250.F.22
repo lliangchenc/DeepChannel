@@ -1,0 +1,136 @@
+president|us|nn
+president|al gore thursday|person
+named|president|subj
+named|commerce secretary|obj1
+named|william daley|obj2
+william daley|take over|rel
+take over|william daley|subj
+campaign|his|gen
+campaign|presidential|mod
+take over|campaign|obj
+president|clinton|person
+pledged|long ago|mod
+president|pledged|pnmod
+gore|help|nn
+pledged|gore|to
+get|president|subj
+get|elected|desc
+get|guaranteeing|mod
+guaranteeing|president|subj
+understudy|his|gen
+guaranteeing|understudy|obj
+always|not|mod
+bestowed|always|mod-before
+understudy|bestowed|rel
+bestowed|understudy|obj
+bestowed|advantage|subj
+bestowed|vice presidents|upon
+plans|gore|subj
+plans|capitalize on|fc
+capitalize on|gore|subj
+capitalize on|popularity|obj
+while|clinton|nn
+while|initiatives|nn
+popularity|while|of
+time|same|post
+while|time|at
+time|distinguishing|rel
+distinguishing|time|subj
+distinguishing|himself|obj
+boss|his|gen
+distinguishing|boss|from
+campaign|gore|gen
+been|run|pred
+offices|high-rent|mod
+run|offices|from
+offices|k street|on
+k street|washington|in
+needed|gore|subj
+needed|loosen up|fc
+loosen up|gore|subj
+trail|campaign|nn
+loosen up|trail|on
+president|al gore|person
+president|saturday|on
+took|president|subj
+campaign|his|gen
+campaign|presidential|mod
+took|campaign|obj
+room|living|nn
+campaign|room|to
+room|that|whn
+helped|room|subj
+jimmy carter|launch|nn
+helped|jimmy carter|obj
+jimmy carter|and|punc
+jimmy carter|bill clinton|conj
+bill clinton|white house|into
+president|al gore|person
+named|president|subj
+named|veteran|obj1
+campaigns|clinton-gore|nn
+campaigns|presidential|mod
+veteran|campaigns|of
+be|his|pred
+press secretary|campaign|nn
+named|press secretary|obj2
+director|deputy|nn
+director|communications|nn
+stacie spector|director|appo
+director|white house|at
+move over|stacie spector|subj
+campaign|gore|nn
+move over|campaign|to
+campaign|assist|rel
+assist|campaign|subj
+manager|campaign|nn
+assist|manager|obj
+manager|craig smith|person
+assist|and|punc
+assist|be|conj
+be|director|pred
+operations|strategic|mod
+director|operations|of
+responsible|legally|mod
+be|responsible|pred
+campaign|gore|nn
+filings|campaign|gen
+responsible|filings|for
+filings|federal election commission|with
+moving|he|subj
+campaign|his|gen
+moving|campaign|obj
+campaign|state|to
+state|tennessee|of
+announcement|gore|gen
+came with|announcement|subj
+concern|growing|mod
+came with|concern|obj
+campaign|gore|nn
+concern|campaign|within
+campaign|threat|about
+threat|democratic bradley|from
+democratic bradley|and|punc
+george w. bush|republican|mod
+george w. bush|presidential|mod
+george w. bush|front-runner|nn
+democratic bradley|george w. bush|conj
+democrats|registered|mod
+led|democrats|among
+led|gore|subj
+led|bradley|obj
+bradley|56 percent|appo
+56 percent|32 percent|to
+led|up|mod
+lead|15-point|nn
+up|lead|from
+lead|held|rel
+held|lead|obj
+held|vice president|subj
+held|two weeks ago|mod
+senator|and|punc
+senator|president|conj
+president|al gore|person
+visited|senator|subj
+night|wednesday|nn
+visited|night|mod

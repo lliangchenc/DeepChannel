@@ -1,0 +1,131 @@
+ap|washington|nn
+ap|(|punc
+reduce|fbi|subj
+reduce|number|obj
+number|agents|of
+agents|assigned|pnmod
+hunt|year-old|mod
+assigned|hunt|to
+bomber|suspected|mod
+hunt|bomber|for
+area|remote|mod
+bomber|area|in
+area|north carolina|of
+director|louis freeh|person
+said|director|subj
+said|wednesday|mod
+was|year ago|pred
+year ago|that|c
+bombing|serial|mod
+suspect|bombing|subj
+suspect|slipped|fc
+slipped|year ago|obj
+slipped|eric rudolph|subj
+dragnet|police|nn
+slipped|dragnet|through
+dragnet|loaded|vrel
+loaded|dragnet|obj
+loaded|up|mod
+up|food|on
+food|and|punc
+food|gear|conj
+home|acquaintance|gen
+gear|home|at
+loaded|and|punc
+loaded|vanished|conj
+vanished|dragnet|subj
+southern appalachians|rugged|mod
+vanished|southern appalachians|into
+tracking|dogs|obj
+searchers|200|num
+dogs|searchers|conj
+searchers|and|punc
+helicopters|infrared-equipped|mod
+searchers|helicopters|conj
+since|failed|comp1
+failed|find|fc
+find|rudolph|obj1
+mountain|dense|mod
+rudolph|mountain|in
+find|forests|obj2
+force|task|nn
+force|that|whn
+hunted|force|subj
+bombing|serial|mod
+hunted|bombing|obj
+suspect|force|subj
+years|two|amount-value
+eric rudolph|years|for
+suspect|dismantle|fc
+dismantle|eric rudolph|subj
+command post|its|gen
+dismantle|command post|obj
+southern appalachians|rugged|mod
+command post|southern appalachians|in
+southern appalachians|end|by
+end|june|of
+paying|fbi|subj
+paying|outdoorsmen|obj
+outdoorsmen|familiar|pnmod
+mountains|remote|mod
+familiar|mountains|with
+north carolina|western|mod
+mountains|north carolina|of
+north carolina|watch|rel
+watch|north carolina|subj
+watch|signs|for
+eric rudolph|serial|mod
+eric rudolph|bombing|nn
+eric rudolph|suspect|nn
+signs|eric rudolph|of
+eric rudolph|who|whn
+eluded|eric rudolph|subj
+eluded|manhunt|obj
+two|more than|num-mod
+years|two|amount-value
+manhunt|years|for
+numbers|large|mod
+numbers|law enforcement|nn
+jennifer brett boots|eludesby|nn
+jennifer brett boots|possible|pnmod
+give|fingerprint|subj
+lead|feds|nn
+lead|new|mod
+give|lead|obj
+atlanta--|rudolph|nn
+atlanta--|hunt|nn
+lead|atlanta--|in
+search|31-month|nn
+bombing|atlanta olympic|nn
+search|bombing|for
+suspect|search|subj
+suspect|cost|fc
+cost|eric robert rudolph|subj
+cost|fbi|obj
+$11.2 million|estimated|mod
+acknowledged|publicly|mod
+cost|acknowledged|mod
+bringing|cost|obj
+cost|search|of
+search|$24.6 million|to
+xinhua|october 15|nn
+xinhua|(|punc
+washington|xinhua|appo
+authorites|federal|mod
+charged|authorites|subj
+charged|eric robert rudolph|obj
+fugitive|elusive|mod
+eric robert rudolph|sought|rel
+sought|eric robert rudolph|obj
+sought|fugitive|subj
+sought|bomb|in
+bomb|olympic park|of
+olympic park|bombing|rel
+bombing|olympic park|subj
+bombing|of|guest
+bombing|1996 and two|of
+wedensday|other|mod
+wedensday|atlanta-area|mod
+wedensday|terroist|nn
+wedensday|attacks|nn
+bombing|wedensday|obj

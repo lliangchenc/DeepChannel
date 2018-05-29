@@ -1,0 +1,167 @@
+rejected|yesterday|mod-before
+rejected|pakistan|subj
+call|united nations|nn
+rejected|call|obj
+call|sign|rel
+sign|call|subj
+non-proliferation treaty|nuclear|mod
+sign|non-proliferation treaty|obj
+npt|(|punc
+non-proliferation treaty|npt|abbrev
+npt|)|punc
+sign|saying|mod
+approach|security|nn
+approach|council|nn
+saying|been|fc
+been|`|punc
+been|`|punc
+been|unjust|pred
+unjust|and|punc
+unjust|unrealistic|conj
+nawaz sharif|pakistan|nn
+nawaz sharif|prime minister|title
+slammed|nawaz sharif|subj
+members|five|nn
+members|permanent|mod
+slammed|members|obj
+members|un security council|of
+double standards|their|gen
+un security council|double standards|for
+non-proliferation treaty|nuclear|mod
+double standards|non-proliferation treaty|on
+npt|(|punc
+non-proliferation treaty|npt|abbrev
+npt|)|punc
+body|world|nn
+saying|sued|fc
+sued|body|obj
+sued|instrument|as
+instrument|achieving|for
+achieving|body|subj
+objectives|narrow|mod
+objectives|strategic|mod
+achieving|objectives|obj
+objectives|countries|of
+india|and|punc
+india|pakistan|conj
+do|not|neg
+have|india|subj
+have|status|obj
+states|nuclear weapons|nn
+status|states|of
+states|accordance|in
+accordance|nuclear non-proliferation treaty|with
+made|]|punc
+made|iftikhar murshid|subj
+made|behalf|on
+minister|pakistan|gen
+minister|foreign|mod
+behalf|minister|of
+minister|abdul sattar|person
+regretted|spokesman|subj
+regretted|position|obj
+position|taken|vrel
+taken|position|obj
+taken|by|by-subj
+taken|sixth review conference|by
+non-proliferation treaty|nuclear|mod
+sixth review conference|non-proliferation treaty|on
+npt|(|punc
+non-proliferation treaty|npt|abbrev
+npt|)|punc
+tests|nuclear|mod
+non-proliferation treaty|tests|toward
+tests|conducted|vrel
+conducted|tests|obj
+conducted|by|by-subj
+conducted|india|by
+india|and|punc
+india|pakistan|conj
+pakistan|may 1998|in
+urged|including|mod-before
+including|government|subj
+including|united states|obj
+united states|japan|conj
+japan|and|punc
+japan|european union|conj
+urged|governments|subj
+india|two|nn
+india|[|punc
+urged|india|obj
+india|and|punc
+india|pakistan|conj
+pakistan|]|punc
+pakistan|refrain|rel
+refrain|pakistan|subj
+testing|nuclear weapons|nn
+refrain|testing|from
+refrain|and|punc
+refrain|sign|conj
+sign|pakistan|subj
+sign|comprehensive test ban treaty|obj
+comprehensive test ban treaty|and|punc
+comprehensive test ban treaty|nuclear non-proliferation treaty|conj
+said|ogawa|subj
+restore|partially|amod
+said|restore|fc
+restore|tokyo|subj
+restore|aid|obj
+aid|pakistan|to
+signing|its|gen
+pakistan|signing|after
+signing|and|punc
+signing|ratification|conj
+non-proliferation treaty|nuclear|mod
+ratification|non-proliferation treaty|of
+npt|(|punc
+non-proliferation treaty|npt|abbrev
+npt|)|punc
+minister|pakistani|mod
+minister|foreign|mod
+visit|minister|gen
+minister|sartaj aziz|person
+removed|visit|during
+visit|japan|to
+last|late|mod-before
+japan|last|vrel
+last|japan|obj
+last|year|mod
+government|japanese|mod
+removed|government|subj
+removed|its|obj
+opposition|pakistan|to
+getting|opposition|subj
+getting|loans|obj
+institutions|international|mod
+loans|institutions|from
+getting|but|punc
+getting|refused|conj
+refused|opposition|subj
+refused|lift|fc
+lift|opposition|subj
+lift|sanctions|obj
+lift|before|mod
+before|signs|comp1
+signs|pakistan|subj
+signs|ctbt|obj
+jean chretien|canadian|mod
+jean chretien|prime minister|title
+called|jean chretien|subj
+called|pakistan|on
+pakistan|and|punc
+pakistan|india|conj
+india|renounce|rel
+renounce|india|subj
+programs|their|gen
+programs|nuclear weapons|nn
+renounce|programs|obj
+renounce|and|punc
+renounce|sign|conj
+sign|india|subj
+non-proliferation treaty|nuclear|mod
+sign|non-proliferation treaty|on
+npt|(|punc
+non-proliferation treaty|npt|abbrev
+npt|)|punc
+non-proliferation treaty|and|punc
+non-proliferation treaty|ctbt|conj

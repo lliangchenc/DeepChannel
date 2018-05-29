@@ -1,0 +1,143 @@
+rival|microsoft|gen
+rival|major|mod
+netscape communication corp.|rival|appo
+market|u.s.|nn
+rival|market|in
+market|software|for
+wrote|netscape communication corp.|subj
+wrote|justice department|to
+justice department|last|vrel
+last|month|mod
+month|asking|rel
+asking|month|subj
+asking|regulators|obj
+regulators|examine|rel
+examine|regulator|subj
+violations|possible|mod
+violations|antitrust|mod
+examine|violations|obj
+violations|marketing|in
+marketing|and|punc
+marketing|distribution|conj
+software|microsoft|gen
+software|internet explorer|nn
+distribution|software|of
+seemed|business|subj
+seemed|as usual|mod
+headquarters|microsoft|nn
+as usual|headquarters|at
+day|first|post
+headquarters|day|on
+trial|u.s. government|gen
+trial|antitrust|mod
+day|trial|of
+giant|software|nn
+trial|giant|against
+negotiations|settlement|nn
+may 18-after|fail|rel
+fail|may 18-after|obj
+fail|negotiations|subj
+may 18-after|justice department|conj
+justice department|and|punc
+states|20|num
+justice department|states|conj
+file|may 18-after|subj
+suit|broad|mod
+suit|antitrust|mod
+file|suit|obj
+suit|microsoft|against
+justice department|and|punc
+states|19|num
+justice department|states|conj
+assert|justice department|subj
+assert|microsoft|obj
+()|bundling|by
+browser|its|gen
+browser|internet explorer|nn
+bundling|browser|obj
+operating system|its|gen
+operating system|windows|nn
+browser|operating system|with
+ruling|his|gen
+wrote|ruling|in
+judge|district|nn
+judge|thomas penfield jackson|person
+wrote|judge|subj
+violated|microsoft|subj
+violated|sherman antitrust act|obj
+attorneys|justice department|for
+justice department|and|punc
+states|19|num
+justice department|states|conj
+states|that|whn
+sued|successfully|mod-before
+sued|states|subj
+sued|microsoft|obj
+violations|antitrust|mod
+microsoft|violations|for
+considering|attorneys|subj
+considering|ways|obj
+ways|break up|rel
+break up|way|subj
+break up|company|obj
+company|method|as
+method|curb|rel
+curb|method|subj
+practices|anticompetitive|mod
+curb|practices|obj
+was|part|pred
+record|public|mod
+part|record|of
+antitrust case|older|mod
+record|antitrust case|from
+antitrust case|microsoft|against
+suit|justice department|gen
+suit|first|post
+antitrust case|suit|appo
+suit|company|against
+set|schedule|nn
+filed|set|under
+set|jackson|by
+jackson|april|in
+justice department|and|punc
+states|17|num
+justice department|states|conj
+filed|justice department|subj
+filed|brief|obj
+brief|court|with
+court|april 28|on
+april 28|asking|rel
+asking|april 28|subj
+asking|judge|obj
+judge|break|rel
+break|judge|subj
+break|microsoft|obj
+companies|two|nn
+microsoft|companies|into
+companies|remedy|as
+behavior|illegal|mod
+remedy|behavior|for
+behavior|found|vrel
+found|behavior|obj
+antitrust|long|mod
+trial|antitrust|mod
+found|trial|in
+judge|u.s.|nn
+judge|federal|mod
+ordered|judge|subj
+ordered|wednesday|guest
+ordered|microsoft corp.|obj
+be|split|pred
+companies|two|nn
+companies|separate|mod
+split|companies|in
+companies|correct|rel
+correct|company|subj
+violations|antitrust|mod
+correct|violations|obj
+caldera systems inc.|orem|appo
+orem|maker|appo
+software|linux|nn
+maker|software|of
+filed|caldera systems inc.|subj
+filed|antitrust case|obj

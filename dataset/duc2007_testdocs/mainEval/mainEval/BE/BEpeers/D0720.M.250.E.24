@@ -1,0 +1,154 @@
+days|nine|amount-value
+talks|intensive|mod
+days|talks|of
+benjamin netanyahu|israeli|mod
+benjamin netanyahu|prime minister|title
+talks|benjamin netanyahu|conj
+benjamin netanyahu|and|punc
+leader|palestinian|mod
+benjamin netanyahu|leader|conj
+leader|yasser arafat|person
+leader|reached|vrel
+reached|leader|obj1
+reached|agreement|obj2
+agreement|issues|on
+discussed|days|subj
+accords|oslo|nn
+accords|signed|vrel
+signed|accords|obj
+signed|by|by-subj
+predecessor|his|gen
+signed|predecessor|by
+yitzhak rabin|late|mod
+predecessor|yitzhak rabin|conj
+yitzhak rabin|and|punc
+leader|palestinian|mod
+yitzhak rabin|leader|conj
+leader|yasser arafat|person
+prepared|accords|subj
+prepared|ground|obj
+process|israeli-palestinian|nn
+process|peace|nn
+ground|process|for
+process|principle|on
+of|"|punc
+principle|land-for-peace|of
+interpreted|egypt|subj
+proposal|netanyahu|nn
+interpreted|proposal|obj
+proposal|attempt|as
+attempt|annul|comp1
+annul|egypt|subj
+principle|land-for-peace|mod
+annul|principle|obj
+principle|set|vrel
+set|principle|obj
+set|by|by-subj
+conference|madrid|nn
+set|conference|by
+conference|and|punc
+accords|oslo|nn
+conference|accords|conj
+accords|that|c
+signed|accords|obj
+signed|israel|subj
+signed|palestinians|with
+renewed|arafat|subj
+pledge|his|gen
+renewed|pledge|obj
+pledge|that|c
+declare|he|subj
+independence|palestinian|mod
+independence|may 1999|in
+independence|end|at
+end|oslo|of
+declare|process|fc
+process|pledge|obj
+process|independence|subj
+process|even|mod
+even|absence|in
+agreement|final|mod
+agreement|peace|nn
+absence|agreement|of
+agreement|israel|with
+official|senior|mod
+official|palestinian national authority|nn
+pna|(|punc
+palestinian national authority|pna|abbrev
+pna|)|punc
+official|thursday|person
+urged|official|subj
+implement|israel|subj
+accords|oslo|nn
+implement|accords|obj
+accords|and|punc
+agreement|hebron|nn
+accords|agreement|conj
+agreement|bid|in
+bid|move|comp1
+move|israel|subj
+process|mideast|nn
+process|peace|nn
+move|process|obj
+move|forward|mod
+accepting|israelis|subj
+accepting|reality|obj
+state|future|mod
+state|palestinian|mod
+reality|state|of
+believe|palestinians|subj
+believe|is|fc
+is|alternative|pred
+accords|oslo|nn
+alternative|accords|to
+anniversary|fifth|post
+accords|oslo|nn
+anniversary|accords|of
+marked|anniversary|obj
+marked|by|by-subj
+marked|clashes|by
+clashes|palestinians|between
+palestinians|and|punc
+soldiers|israeli|mod
+palestinians|soldiers|conj
+closure|israeli|mod
+soldiers|closure|conj
+closure|west bank|of
+west bank|and|punc
+west bank|gaza|conj
+gaza|and|punc
+demonstrations|massive|mod
+demonstrations|peace|nn
+gaza|demonstrations|conj
+demonstrations|israel|in
+has|israel|subj
+has|transfer|fc
+transfer|israel|subj
+territories|remaining|mod
+territories|west bank|nn
+transfer|territories|obj
+zones|military|mod
+territories|zones|except
+zones|and|punc
+settlements|jewish|mod
+zones|settlements|conj
+settlements|palestinians|to
+accords|oslo|nn
+palestinians|accords|under
+sides|two|nn
+have|sides|subj
+have|decide|fc
+decide|side|subj
+decide|on|guest
+decide|last|on
+redeployment|israeli|mod
+redeployment|troop|nn
+decide|redeployment|obj
+redeployment|west bank|in
+accords|oslo|nn
+west bank|accords|under
+accords|signed|vrel
+signed|accords|obj
+signed|1993|in
+accord|2|num
+army|israeli|mod

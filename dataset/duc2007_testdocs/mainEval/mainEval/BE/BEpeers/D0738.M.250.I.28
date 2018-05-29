@@ -1,0 +1,141 @@
+six|country|of
+six|50|num
+exporting|companies|obj
+companies|gold|nn
+companies|mining|nn
+are|companies|pred
+encourage|investment|obj
+plans|government|subj
+plans|among|guest
+incentives|other|mod
+plans|incentives|among
+plans|cut|fc
+cut|government|subj
+minimum|current|mod
+cut|minimum|obj1
+rate|income|nn
+rate|tax|nn
+cut|rate|obj2
+rate|34 percent|of
+34 percent|20 percent|by
+company|fifth|post
+company|largest|mod
+company|gold|nn
+is|company|pred
+company|world|in
+is|while|mod
+while|ranks|comp1
+ranks|gold fields|subj
+ranks|second|obj
+producers|gold|nn
+second|producers|among
+producers|south africa|in
+ranks|and|punc
+ranks|is|conj
+is|one|pred
+one|largest|of
+largest|world|in
+officials|toco|nn
+quoted|officials|obj
+quoted|wednesday|on
+quoted|by|by-subj
+quoted|media|by
+media|saying|as
+saying|official|subj
+saying|that|c
+three|next|num-mod
+years|three|amount-value
+'s|years|in
+production|diamond|nn
+'s|production|pred
+600,000|and|punc
+karats|700,000|num
+600,000|karats|conj
+s|latin america|nn
+s|'|punc
+second|s|subj
+second|largest|guest
+mine|diamond|nn
+second|mine|obj
+position|first|post
+second|being|mod
+mine|similar|mod
+being|mine|pred
+mine|canada|in
+signed|agreement|obj
+signed|by|by-subj
+deputy|thai|mod
+signed|deputy|by
+deputy|prime|person
+amnuay viravan|his|during
+visit|amnuay viravan|subj
+visit|peru|to
+peru|january|in
+announced|fine|obj
+announced|tuesday|mod
+notice|legal|mod
+announced|notice|in
+newspaper|government|gen
+newspaper|official|mod
+notice|newspaper|in
+newspaper|el peruano|appo
+350|about|num-mod
+members|350|nn
+tribe|pemon|nn
+members|tribe|of
+state|southern|mod
+state|bolivar|nn
+tribe|state|in
+occupied|members|subj
+occupied|site|obj
+site|where|wha
+planned|crews|subj
+planned|begin|fc
+begin|crew|subj
+begin|erecting|mod
+tower|electricity|nn
+erecting|tower|obj
+erecting|wednesday|mod
+companies|peru|gen
+companies|mining|nn
+year|planned|rel
+planned|year|obj
+planned|companies|subj
+planned|invest|mod
+invest|company|subj
+350 million|over|num-mod
+gold|350 million|nn
+gold|u.s.|nn
+invest|gold|obj
+production|1995|in
+stood|production|subj
+tons|53 and 55|amount-value
+amounted to|tons|between
+tons|and|punc
+tons|gold|conj
+amounted to|export|subj
+amounted to|600 million dollars|obj
+600 million dollars|last|vrel
+last|600 million dollars|obj
+last|year|mod
+mines|private|mod
+estimated|mines|obj
+estimated|produce|mod
+produce|mine|subj
+metric tons|3.2 million|amount-value
+produce|metric tons|obj
+copper|refined|mod
+metric tons|copper|of
+production|total|mod
+produce|production|with
+production|country|for
+country|reaching|rel
+reaching|country|subj
+metric tons|4.7 million|amount-value
+reaching|metric tons|obj
+output|peru|gen
+output|gold|nn
+expected|output|subj
+expected|soar|fc
+soar|output|subj
+soar|20.5 percent|by

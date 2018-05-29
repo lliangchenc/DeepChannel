@@ -1,0 +1,135 @@
+resurrecting|he|subj
+resurrecting|his|obj
+character|seinfeld|nn
+lawyer|trigger-happy|mod
+named|lawyer|subj
+named|jackie chiles|obj
+named|star|mod
+star|lawyer|subj
+star|in|guest
+star|nbc|in
+executive-produced|sitcom|nn
+star|executive-produced|obj
+executive-produced|jerry seinfeld|by
+jerry seinfeld|and|punc
+larry david|seinfeld|nn
+larry david|co-creator|mod
+jerry seinfeld|larry david|conj
+because|return|comp1
+return|he|subj
+return|phone calls|obj
+life|there|nn
+is|life|pred
+life|seinfeld|after
+cast|show|gen
+seinfeld|cast|for
+announcement|big|mod
+made|announcement|obj
+made|thursday|mod
+made|by|by-subj
+pal|seinfeld|nn
+made|pal|by
+special|hbo|nn
+telling|i|subj
+telling|you|obj
+time|last|nn
+telling|time|for
+truth|and|punc
+truth|sex|conj
+go|truth|subj
+go|together|mod
+'s|still|guest
+'s|lot|pred
+lot|cash|of
+cash|seinfeld|for
+seinfeld|and|punc
+show|his|gen
+columbia tristar tv|show|gen
+columbia tristar tv|distributor|nn
+seinfeld|columbia tristar tv|conj
+kind|seinfeld|gen
+kind|humor|of
+is|different|pred
+'s|back|pred
+back|nbc|on
+month|next|post
+'s|month|mod
+'s|michael richards show|in
+returning to|he|subj
+roots|his|gen
+returning to|roots|obj
+new york|and|punc
+comedy|stand-up|mod
+new york|comedy|conj
+show|broadway|nn
+look|show|after
+look|seinfeld|subj
+look|develop|mod
+develop|seinfeld|subj
+material|fresh|mod
+develop|material|obj
+isn|sure|pred
+sure|vetoed|fc
+vetoed|he|subj
+vetoed|incest|obj
+is|late|pred
+is|year|mod
+year|summer|because of
+script|seinfeld|nn
+sale|christie 's|nn
+sale|east|mod
+script|sale|in
+bears|script|subj
+bears|signatures|obj
+members|four|nn
+members|principal|mod
+members|cast|nn
+signatures|members|of
+interested|he|obj
+format|standard|mod
+format|film-the-comedian-telling-jokes|nn
+interested|format|in
+is|real|pred
+episode|first|post
+episode|seinfeld|of
+appeared|episode|subj
+appeared|nbc|on
+nbc|may 1990|in
+move|joel|gen
+is|work-related|pred
+is|native|pred
+town|far-less-tony|mod
+town|long island|nn
+native|town|of
+town|massapequa|of
+show|sunday|gen
+show|live|mod
+show|television|nn
+performance|final|mod
+tour|two-month|nn
+tour|world|nn
+performance|tour|in
+comic|stand-up|mod
+play|comic|obj
+comic|named|vrel
+named|comic|obj1
+named|jerry seinfeld|obj2
+jerry seinfeld|series|in
+in|and|punc
+in|in|conj
+years|its|gen
+years|early|mod
+in|years|in
+years|began|rel
+began|years|obj
+began|episode|subj
+began|sitcom|with
+called|police|obj
+called|meet|mod
+meet|police|subj
+meet|plane|obj
+plane|identify|rel
+identify|plane|subj
+identify|snake|obj
+one|people|of
+is|seinfeld|pred

@@ -1,0 +1,148 @@
+investigators|federal|mod
+concluded|investigators|subj
+error|pilot|mod
+concluded|caused|fc
+caused|error|subj
+crash|plane|nn
+caused|crash|obj
+crash|that|whn
+killed|crash|subj
+killed|john f. kennedy jr. kennedy|obj
+wife|his|gen
+wife|33|conj
+33|and|punc
+carolyn bessette kennedy|her|gen
+carolyn bessette kennedy|[|punc
+sister|carolyn bessette kennedy|gen
+sister|]|punc
+33|sister|conj
+wife|34|appo
+killed|wife|obj
+killed|when|wha
+kennedy|small|mod
+kennedy|private|mod
+kennedy|plane|nn
+was|piloting|pred
+piloting|crashed|vrel
+crashed|piloting|obj
+crashed|atlantic|into
+vineyard|martha|gen
+atlantic|vineyard|off
+vineyard|massachusetts state|in
+massachusetts state|united states|of
+united states|july 16|on
+aircraft|kennedy jr.|gen
+aircraft|powerful|mod
+aircraft|single-engine|mod
+plummeted|aircraft|subj
+plummeted|atlantic ocean|toward
+feet|4,700|num
+atlantic ocean|feet|at
+feet|minute|per
+feet|seconds|in
+crash|fatal|mod
+seconds|crash|before
+crash|that|whn
+killed|crash|subj
+killed|him|obj
+wife|his|gen
+him|wife|conj
+wife|and|punc
+sister|her|gen
+wife|sister|conj
+hours|forty-eight|amount-value
+plane|john f. kennedy jr.|gen
+hours|plane|after
+plunged into|hours|subj
+plunged into|ocean|obj
+vineyard|martha|gen
+ocean|vineyard|off
+officials|federal|mod
+officials|sunday|person
+ended|officials|subj
+search|their|gen
+ended|search|obj
+search|survivors|for
+declaring|effectively|amod
+ended|declaring|mod
+declaring|official|subj
+declaring|kennedy|obj
+wife|his|gen
+kennedy|wife|conj
+wife|and|punc
+sister|her|gen
+wife|sister|conj
+crash|fatal|mod
+victims|crash|of
+said|larrabbee|subj
+said|decision|obj
+end|larrabbee|subj
+efforts|rescue|nn
+decision|made|comp1
+made|efforts|obj
+made|consultation|in
+consultation|national transportation safety board|with
+made|and|punc
+made|communicated|conj
+communicated|efforts|obj
+family|kennedy|gen
+communicated|family|to
+family|and|punc
+family|family|conj
+passengers|his|gen
+family|passengers|of
+beach|loved|rel
+loved|beach|obj
+loved|he|subj
+beach|and|punc
+beach|site|conj
+site|where|wha
+life|his|gen
+ended|life|subj
+crash|terrifying|mod
+ended|crash|in
+ashes|john f. kennedy jr.|gen
+ashes|and|punc
+ashes|those|conj
+wife|his|gen
+those|wife|of
+wife|and|punc
+wife|sister-in-law|conj
+given up|ashes|obj
+given up|thursday|mod
+given up|waters|to
+waters|that|whn
+brought|waters|subj
+brought|joy|obj
+family|his|gen
+joy|family|to
+family|generations|for
+witnessed|service|obj
+witnessed|by|by-subj
+15|about|num-mod
+members|15|nn
+witnessed|members|by
+members|kennedy|of
+kennedy|and|punc
+families|bessette|nn
+kennedy|families|conj
+witnessed|including|mod
+including|service|subj
+sister|kennedy|gen
+including|sister|obj
+sister|caroline kennedy schlossberg|appo
+maria shriver|his|gen
+maria shriver|cousins|nn
+maria shriver|and|punc
+maria shriver|william kennedy smith|conj
+william kennedy smith|and|punc
+sisters|bessette|nn
+mother|sisters|gen
+william kennedy smith|mother|conj
+mother|stepfather|conj
+stepfather|and|punc
+stepfather|sister|conj
+held|service|obj
+held|well|mod
+well|gaze|out of
+gaze|public|of

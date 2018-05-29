@@ -1,0 +1,170 @@
+speaker|former|mod
+speaker|house|nn
+speaker|newt gingrich|person
+filed for|speaker|subj
+filed for|divorce|obj
+wife|his|gen
+divorce|wife|from
+years|18|amount-value
+wife|years|of
+filed for|saying|mod
+saying|speaker|subj
+marriage|his|gen
+broken|`|punc
+broken|`|punc
+broken|irretrievably|amod
+saying|broken|fc
+broken|marriage|obj
+asked|motion|in
+motion|filed|vrel
+filed|motion|obj
+filed|cobb county superior court|in
+asked|gingrich|subj
+asked|judge|obj
+judge|give|rel
+give|judge|subj
+days|his|gen
+days|wife|nn
+days|marianne|nn
+days|14|amount-value
+give|days|obj
+days|transfer|rel
+transfer|days|subj
+transfer|money|obj
+account|joint|mod
+money|account|to
+account|agreed|rel
+agreed|couple|subj
+agreed|set up|fc
+set up|account|obj
+set up|couple|subj
+month|last|post
+set up|month|mod
+set up|until|mod
+divorce|their|gen
+until|is|comp1
+is|final|pred
+counterclaim|her|gen
+accuses|counterclaim|in
+petition|gingrich|gen
+petition|july 29|nn
+petition|divorce|nn
+counterclaim|petition|to
+accuses|marianne gingrich|subj
+husband|her|gen
+accuses|husband|obj
+husband|transferring|of
+transferring|marianne gingrich|subj
+transferring|`|punc
+transferring|`|punc
+portions|substantial|mod
+transferring|portions|obj
+assets|certain|mod
+assets|valuable|mod
+portions|assets|of
+assets|'|punc
+assets|filing|before
+filing|divorce|for
+asks|also|mod-before
+asks|she|subj
+asks|that|c
+ordered|newt gingrich|obj
+ordered|stop|mod
+stop|newt gingrich|subj
+transfers|`|punc
+transfers|`|punc
+transfers|further|mod
+stop|transfers|obj
+transfers|or|punc
+transfers|concealment|conj
+concealment|'|punc
+concealment|'|punc
+concealment|assets|of
+stop|and|punc
+stop|replace|conj
+replace|newt gingrich|subj
+replace|assets|obj
+transferred|already|amod
+assets|transferred|rel
+transferred|assets|obj
+transferred|he|subj
+gave way|thursday|on
+accusations|wrongdoing|of
+wrongdoing|and|punc
+wrongdoing|mining|conj
+mining|dirt|of
+speaker|former|mod
+speaker|u.s. house|nn
+case|speaker|gen
+case|divorce|nn
+dirt|case|in
+gave way|accusations|subj
+settlement|secret|mod
+gave way|settlement|to
+settlement|gingrich|between
+gingrich|and|punc
+wife|his|gen
+gingrich|wife|conj
+years|18|amount-value
+wife|years|of
+years|marianne gingrich|appo
+mediator|court-appointed|mod
+hours|spent|mod
+hours|12|amount-value
+hours|negotiating|rel
+negotiating|hours|subj
+agreement|settlement|nn
+negotiating|agreement|obj
+agreement|gingriches|between
+filed|hours|subj
+report|her|gen
+filed|report|obj
+filed|friday|mod
+filed|saying|mod
+saying|hours|subj
+saying|came to|fc
+came to|couple|subj
+settlement|`|punc
+settlement|`|punc
+settlement|full|mod
+came to|settlement|obj
+came to|'|punc
+came to|'|punc
+came to|early|mod
+came to|morning|mod
+chuck clay|chairman|appo
+chairman|georgia republican party|of
+said|chuck clay|subj
+settlement|divorce|nn
+make|likely|amod
+said|make|fc
+make|settlement|subj
+make|it|obj1
+make|easier|desc
+easier|gingrich|for
+gingrich|return to|rel
+return to|gingrich|subj
+eye|public|nn
+return to|eye|obj
+setting|political|mod
+eye|setting|in
+closes|settlement|subj
+months|five|amount-value
+closes|months|obj
+wrangling|bitter|mod
+wrangling|legal|mod
+months|wrangling|of
+wrangling|case|in
+culminating|gingrich|with
+last|admission|subj
+last|month|guest
+month|that|c
+had|month|obj
+had|he|subj
+relationship|romantic|mod
+last|relationship|obj
+aide|washington|nn
+aide|congressional|mod
+relationship|aide|with
+years|six|amount-value
+aide|years|for
