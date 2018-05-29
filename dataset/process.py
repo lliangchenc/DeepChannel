@@ -127,7 +127,6 @@ def main():
 
     print('Reading data......')
     data, length = datasets[args.data](args.data, args.data_dir)
-
     print('train/valid/test: %d/%d/%d' % tuple([len(_) for _ in data]))
     print('Count word frequency......')
     wtof = {}
