@@ -1,3 +1,0 @@
-setid     peerid     modifiedscore     numSCUs     numrepetitions     lingqual1     lingqual2     lingqual3     lingqual4     lingqual5     content
-
-

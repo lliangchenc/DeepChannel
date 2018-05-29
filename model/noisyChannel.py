@@ -6,8 +6,8 @@ class ChannelModel(nn.Module):
 
     def __init__(self, **kwargs):
         super().__init__()
-        self.Ds = kwargs['Ds'] # dim of sentence embedding
-        self.W = Parameter(torch.FloatTensor(self.Ds, self.Ds))
+        self.se_dim = kwargs['se_dim'] # dim of sentence embedding
+        self.W = Parameter(torch.FloatTensor(self.se_dim, self.se_dim))
         self.temperature = 1 # for annealing
         self.reset_parameters()
 
@@ -23,7 +23,7 @@ class ChannelModel(nn.Module):
         n, m = D.size(0), S.size(0)
         S_T = torch.transpose(S, 0, 1).contiguous() # [Ds, m]
         att_weight = functional.Softmax(
-                torch.mm(D, S_T) / math.sqrt(self.Ds) / self.temperature,
+                torch.mm(D, S_T) / math.sqrt(self.se_dim) / self.temperature,
                 dim=1
                 ) # [n, m]
         att_S = torch.mm(att_weight, S) # [n, Ds]

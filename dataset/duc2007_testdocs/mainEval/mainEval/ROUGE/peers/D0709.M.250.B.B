@@ -1,7 +1,0 @@
-Angelina Jolie had her screen debut when she was six years old in the 1982 film "Looking to Get Out", with father Jon Voight.
-She was 2 years old when her mother divorced Voight.
-Her early movie roles were in: "Hackers" (1995), "Foxfire" (1996), and "George Wallace" (1997) for which she received an Emmy, "nod", "Playing God" (1998), and "Playing by Heart" (1999).
-In 1999 Angelina Jolie was nominated for a Screen Actors Guild award for her role in the TV movie Gia and won the Golden Globe's best actress award for Gia.
-After the Golden Globe ceremonies, she notoriously celebrated by plunging alone into a public swimming pool in her expensive 5,000 antique-crystal beaded Randolph Duke dress and Harry Winston "baubles".
-In 1999 Angelina Jolie was in a "Charlie's Angels" remake, the movie "Pushing Tin" with Billy Bob Thornton, divorced Johnny Lee Miller, played in the movies "The Bone Collector" with Denzel Washington, and "Girl Interrupted" -- which earned her another Golden Globe Award -- and was on the cover of Allure magazine.
-In 2000 Angelina Jolie played in the movies "Dancing in the Dark" with Antonio Bandaras and "Gone in 60 Seconds" with Nicolas Cage and starred in "Tomb Raider" -- based on a video game -- won an academy award for best supporting actress in "Girl Interrupted", married Billy Bob Thornton, and was cast in the planned Oliver Stone movie "Beyond Borders" to be filmed in part in refugee camps in Kenya.

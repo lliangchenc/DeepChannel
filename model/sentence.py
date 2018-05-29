@@ -1,4 +1,5 @@
 import torch
+from torch import nn
 from torch.nn import init
 from ..utils import reverse_padded_sequence, unwrap_scalar_variable
 
@@ -95,6 +96,9 @@ class SentenceEmbedding(nn.Module):
 
     def __init__(self, **kwargs):
         super(SentenceEmbedding, self).__init__()
+        self.drop = nn.Dropout(kwargs['dropout'])
+        self.word_embedding = nn.Embedding(num_embeddings=kwargs['num_words'],
+                                            embedding_dim=kwargs['word_dim'])
         self.SE_type = kwargs['SE_type']
         if self.SE_type == 'GRU':
             self.encoder = GRU_wrapper(**kwargs)
@@ -109,8 +113,9 @@ class SentenceEmbedding(nn.Module):
         return self.dim
 
     def forward(self, input, length):
-        # input: [bsz, len, w_dim]
+        # input: [bsz, len]
         # length: [bsz, ]
+        input = self.drop(self.word_embedding(input)) # [bsz, len, word_dim]
         output = self.encoder(input, length)
         return output # [bsz, self.dim]
 
