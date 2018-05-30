@@ -14,8 +14,8 @@ from torch import nn
 from torch import nn, optim
 from torch.autograd import Variable
 import numpy as np
-import tensorboard
-from utils import add_scalar_summary, wrap_with_variables, unwrap_scalar_variable
+from tensorboardX import SummaryWriter
+from utils import recursive_to_device
 from IPython import embed
 
 
@@ -36,10 +36,10 @@ def trainChannelModel(args):
         print('Fix word embeddings')
     else:
         print('Tune word embeddings')
+    device = torch.device('cuda' if args.cuda else 'cpu')
     if args.cuda:
         print('Transfer models to cuda......')
-        sentenceEncoder = sentenceEncoder.cuda()
-        channelModel = channelModel.cuda()
+    sentenceEncoder, channelModel = sentenceEncoder.to(device), channelModel.to(device)
     print('Initializing optimizer and summary writer......')
     params = [p for p in sentenceEncoder.parameters() if p.requires_grad] +\
             [p for p in channelModel.parameters() if p.requires_grad]
@@ -49,19 +49,20 @@ def trainChannelModel(args):
             }[args.optimizer]
     optimizer = optimizer_class(params=params, lr=args.lr, weight_decay=args.weight_decay)
     # scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=20, verbose=True)
-    tsw = train_summary_writer = tensorboard.FileWriter(
-            logdir=os.path.join(args.save_dir, 'log', 'train'), flush_secs=10)
+    train_writer = SummaryWriter(os.path.join(args.save_dir, 'log', 'train'))
     tic = time.time()
     iter_count = 0
     print('Start training......')
     for epoch_num in range(args.max_epoch):
         if args.anneal:
-            channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01
+            channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
             iter_count += 1
-            doc, sums, doc_len, sums_len = wrap_with_variables(False, args.cuda, *train_batch)
+            doc, sums, doc_len, sums_len = recursive_to_device(device, *train_batch)
+            if len(sums) == 2: # only one sentence in summary
+                continue
             D = sentenceEncoder(doc, doc_len)
             S_bads = []
             S_good = sentenceEncoder(sums[0], sums_len[0])
@@ -69,18 +70,24 @@ def trainChannelModel(args):
             good_prob = channelModel(D, S_good)
             bad_probs = [channelModel(D, S_bad) for S_bad in S_bads]
             ########### hinge loss ############
-            bad_index = np.argmax([unwrap_scalar_variable(p) for p in bad_probs])
+            bad_index = np.argmax([p.item() for p in bad_probs])
             loss = bad_probs[bad_index] - good_prob
-            if unwrap_scalar_variable(loss) > -args.margin:
+            loss_value = loss.item()
+            if loss_value > -args.margin:
                 optimizer.zero_grad()
                 loss.backward()
-                nn.utils.clip_grad_norm(parameters=params, max_norm=args.clip)
+                nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
                 optimizer.step()
-            add_scalar_summary(tsw, 'loss', loss, iter_count)
             ###################################
+            # summary
+            train_writer.add_scalar('loss', loss, iter_count)
+            for name, param in list(sentenceEncoder.named_parameters()) + list(channelModel.named_parameters()):
+                if param.requires_grad and name not in ['word_embedding.weight']:
+                    train_writer.add_histogram(name, param.clone().cpu().data.numpy(), iter_count)
+                    train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
             #scheduler.step(valid_accuracy)
             # if (batch_iter+1) % (data.train_size / 100) == 0:
-            logging.info('Epoch %.2f, loss: %.4f' % (progress, unwrap_scalar_variable(loss)))
+            logging.info('Epoch %.2f, loss: %.4f' % (progress, loss_value))
     torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
     torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
@@ -97,11 +104,11 @@ def parse_args():
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
     parser.add_argument('--kernel-num', type=int, default=64, help='kernel num/ output dim in CNN')
-    parser.add_argument('--dropout', type=float, default=0.1)
+    parser.add_argument('--dropout', type=float, default=0)
     parser.add_argument('--margin', type=float, default=0.123, help='margin of hinge loss, must >= 0')
     
     parser.add_argument('--clip', type=float, default=0.5, help='clip to prevent the too large grad')
-    parser.add_argument('--lr', type=float, default=.001, help='initial learning rate')
+    parser.add_argument('--lr', type=float, default=.005, help='initial learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
     parser.add_argument('--max-epoch', type=int, default=5)
     parser.add_argument('--cuda', action='store_true', default=True)

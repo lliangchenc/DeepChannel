@@ -13,7 +13,7 @@ class ChannelModel(nn.Module):
         self.reset_parameters()
 
     def reset_parameters(self):
-        init.normal(self.W.data, mean=0, std=0.01)
+        init.normal(self.W, mean=0, std=0.01)
 
     def forward(self, D, S): # TODO batch with torch.bmm
         '''

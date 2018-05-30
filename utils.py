@@ -1,36 +1,8 @@
 import torch
-from torch.autograd import Variable
-from tensorboard import summary
 
-def add_scalar_summary(summary_writer, name, value, step):
-    value = unwrap_scalar_variable(value)
-    summ = summary.scalar(name=name, scalar=value)
-    summary_writer.add_summary(summary=summ, global_step=step)
-
-def add_histo_summary(summary_writer, name, value, step):
-    value = value.view(-1).data.cpu().numpy()
-    summ = summary.histogram(name=name, values=value)
-    summary_writer.add_summary(summary=summ, global_step=step)
-
-def wrap_with_variable(tensor, volatile, cuda):
-    if isinstance(tensor, Variable):
-        return tensor.cuda() if cuda else tensor
-    elif cuda:
-        return Variable(tensor.cuda(), volatile=volatile)
-    else:
-        return Variable(tensor, volatile=volatile)
-
-def wrap_with_variables(volatile, cuda, *tensors):
-    return [wrap_with_variables(volatile, cuda, *t) if isinstance(t, list) or isinstance(t, tuple) \
-            else wrap_with_variable(t, volatile, cuda) \
-            for t in tensors]
-
-
-def unwrap_scalar_variable(var):
-    if isinstance(var, Variable):
-        return var.data[0]
-    else:
-        return var
+def recursive_to_device(device, *tensors):
+    return [recursive_to_device(device, *t) if isinstance(t, list) or isinstance(t, tuple) \
+            else t.to(device) for t in tensors]
 
 def reverse_padded_sequence(inputs, lengths, batch_first=False):
     """Reverses sequences according to their lengths.
@@ -57,10 +29,7 @@ def reverse_padded_sequence(inputs, lengths, batch_first=False):
             reversed_indices[i][:length] = reversed_indices[i][length-1::-1]
     reversed_indices = (torch.LongTensor(reversed_indices).unsqueeze(2)
                         .expand_as(inputs))
-    reversed_indices = Variable(reversed_indices)
-    if inputs.is_cuda:
-        device = inputs.get_device()
-        reversed_indices = reversed_indices.cuda(device)
+    reversed_indices = reversed_indices.to(inputs.device)
     reversed_inputs = torch.gather(inputs, 1, reversed_indices)
     if not batch_first:
         reversed_inputs = reversed_inputs.transpose(0, 1)
