@@ -69,11 +69,21 @@ class Dataset(object):
         random.shuffle(combined)
         self.train_set[:], self.train_len[:] = zip(*combined)
         for d, s, d_len, s_len in map(lambda _: _[0]+_[1], zip(self.train_set, self.train_len)):
+             index_max = np.max(d)
+             #temp_index = random.randint(0, len(d) - 1)
              s_batch = [s]
-             s_batch.extend([np.delete(s, x, 0) for x in range(len(s))])
              s_len_batch = [s_len]
-             s_len_batch.extend([np.delete(s_len, x, 0) for x in range(len(s_len))])
+             
+             # Strategy 1 : Replace a golden summary sentence with a random sentence
+             s_batch.extend([np.append(np.delete(s, x, 0), [np.random.randint(index_max + 1, size=[np.shape(s)[1], ])], axis=0) for x in range(len(s))])
+             s_len_batch.extend([np.append(np.delete(s_len, x, 0), [np.shape(s)[1]], axis=0) for x in range(len(s_len))])
+  
+             # Strategy 2 : Delete a golden summary sentence
+             #s_batch.extend([np.delete(s, x, 0) for x in range(len(s))])
+             #s_len_batch.extend([np.delete(s_len, x, 0) for x in range(len(s))])
+             
              yield wrap_numpy_to_longtensor(d, s_batch, d_len, s_len_batch)
+             #print(s, s_batch[1])
         else:
             raise StopIteration
 
