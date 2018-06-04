@@ -10,6 +10,8 @@ class ChannelModel(nn.Module):
         self.se_dim = kwargs['se_dim'] # dim of sentence embedding
         self.W = Parameter(torch.FloatTensor(self.se_dim, self.se_dim))
         self.temperature = 1 # for annealing
+        self.prob_arr = []
+        self.attention = []
         self.reset_parameters()
 
     def reset_parameters(self):
@@ -29,7 +31,10 @@ class ChannelModel(nn.Module):
                 ) # [n, m]
         att_S = torch.mm(att_weight, S) # [n, Ds]
         # logits = torch.diag(torch.mm(torch.mm(D, self.W), torch.t(att_S))) # TODO: which is faster?
-        logits = torch.stack([torch.dot(D[i], torch.mv(self.W, att_S[i])) for i in range(n)])
+        logit_arr = [torch.dot(D[i], torch.mv(self.W, att_S[i])) for i in range(n)]
+        logits = torch.stack(logit_arr)
         log_prob = torch.sum(functional.logsigmoid(logits)) # P(D|S) on the independent assumption
+        self.prob_arr = [x.item() for x in logit_arr]
+        self.attention = att_weight.clone().cpu().data.numpy()
         return log_prob
 

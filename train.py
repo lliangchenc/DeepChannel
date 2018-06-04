@@ -19,7 +19,10 @@ from utils import recursive_to_device
 #from IPython import embed
 
 
+
 def trainChannelModel(args):
+    open("visualize.txt","w").close()
+    np.set_printoptions(threshold=1e10) 
     print('Loading data......')
     data = Dataset(path=args.data_path)
     print('Building model......')
@@ -54,6 +57,7 @@ def trainChannelModel(args):
     iter_count = 0
     loss_arr = []
     print('Start training......')
+    #print(data.itow[123])
     for epoch_num in range(args.max_epoch):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
@@ -69,6 +73,10 @@ def trainChannelModel(args):
             S_good = sentenceEncoder(sums[0], sums_len[0])
             S_bads = [sentenceEncoder(s, s_l) for s, s_l in zip(sums[1:], sums_len[1:])] # TODO so many repetitions
             good_prob = channelModel(D, S_good)
+             
+            if(iter_count % 10000 == 0):
+                visualize([doc.clone().cpu().data.numpy(), sums[0].clone().cpu().data.numpy(), channelModel.attention, iter_count], data)
+                #print(channelModel.attention)
             bad_probs = [channelModel(D, S_bad) for S_bad in S_bads]
             ########### hinge loss ############
             bad_index = np.argmax([p.item() for p in bad_probs])
@@ -102,9 +110,23 @@ def trainChannelModel(args):
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
 
 
-            
-
-
+def visualize(args, dataset):
+    doc = args[0]            
+    summ = args[1]
+    doc_w = []
+    for i in range(len(doc)):
+        doc_w.append([dataset.itow[x] for x in doc[i]])
+    summ_w = []
+    for i in range(len(summ)):
+        summ_w.append([dataset.itow[x] for x in summ[i]])
+    attention = args[2]
+    iters = args[3]
+    f = open("visualize.txt", "r")
+    s = f.read()
+    f.close()
+    f = open("visualize.txt", "w")
+    s += "\n\n" + str(iters) + "\n\ndocument:\n" + str(doc_w) + "\n\nsummary:\n" + str(summ_w) + "\n\nattention:\n" + str(attention)
+    f.write(s)
 
 def parse_args():
     parser = argparse.ArgumentParser()

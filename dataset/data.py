@@ -102,11 +102,12 @@ class Dataset(object):
             raise StopIteration
 
 def main():
+    print("haha")
     dataset = Dataset("/data/sjx/Summarization-Exp/cnn.pickle")
     #print(dataset.train_size)
-    print(dataset.gen_train_minibatch())
-    print(dataset.gen_train_minibatch)
-    print("here")
+    #print(dataset.gen_train_minibatch())
+    #print(dataset.gen_train_minibatch)
+    #print("here",dataset.itow(123))
 
 if __name__ == "__main__":
     main()
