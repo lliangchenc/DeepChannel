@@ -4,6 +4,7 @@ import argparse
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)-8s %(message)s')
 logFormatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
+rootLogger = logging.getLogger()
 import random
 import shutil
 import os
@@ -73,20 +74,14 @@ def trainChannelModel(args):
             S_good = sentenceEncoder(sums[0], sums_len[0])
             S_bads = [sentenceEncoder(s, s_l) for s, s_l in zip(sums[1:], sums_len[1:])] # TODO so many repetitions
             good_prob = channelModel(D, S_good)
-             
-            if(iter_count % 10000 == 0):
-                visualize([doc.clone().cpu().data.numpy(), sums[0].clone().cpu().data.numpy(), channelModel.attention, iter_count], data)
-                #print(channelModel.attention)
             bad_probs = [channelModel(D, S_bad) for S_bad in S_bads]
             ########### hinge loss ############
             bad_index = np.argmax([p.item() for p in bad_probs])
-            loss = bad_probs[bad_index] - 1.1 * good_prob
-            #loss = bad_probs[bad_index]
-            #print(bad_probs, good_prob)
-            #loss = - good_prob
+            loss = bad_probs[bad_index] - good_prob
             bad_prob_value = bad_probs[bad_index].item()
             good_prob_value = good_prob.item()
             loss_value = loss.item()
+            #print(good_prob_value, ', '.join([str(p.item()) for p in bad_probs]))
             if loss_value > -args.margin:
                 optimizer.zero_grad()
                 loss.backward()
@@ -96,6 +91,8 @@ def trainChannelModel(args):
             ###################################
             # summary
             train_writer.add_scalar('loss', loss, iter_count)
+            train_writer.add_scalar('prob/good_prob', good_prob_value, iter_count)
+            train_writer.add_scalar('prob/bad_prob', bad_prob_value, iter_count)
             if(iter_count % 1000 == 0):
                 for name, param in list(sentenceEncoder.named_parameters()) + list(channelModel.named_parameters()):
                     #print(param.grad)
@@ -104,7 +101,10 @@ def trainChannelModel(args):
                         train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
             #scheduler.step(valid_accuracy)
             # if (batch_iter+1) % (data.train_size / 100) == 0:
-            logging.info('Epoch %.2f, loss: %.4f, bad_prob: %.4f, good_prob: %.4f' % (progress, loss_value, bad_prob_value, good_prob_value))
+            if iter_count % 10 == 0:
+                logging.info('Epoch %.2f, loss: %.4f, bad_prob: %.4f, good_prob: %.4f' % (progress, loss_value, bad_prob_value, good_prob_value))
+            if(iter_count % 10000000 == 0):
+                visualize([doc.clone().cpu().data.numpy(), sums[0].clone().cpu().data.numpy(), channelModel.attention, iter_count], data)
     torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
     torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
@@ -136,10 +136,10 @@ def parse_args():
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
     parser.add_argument('--kernel-num', type=int, default=64, help='kernel num/ output dim in CNN')
     parser.add_argument('--dropout', type=float, default=0)
-    parser.add_argument('--margin', type=float, default=123, help='margin of hinge loss, must >= 0')
+    parser.add_argument('--margin', type=float, default=3, help='margin of hinge loss, must >= 0')
     
     parser.add_argument('--clip', type=float, default=0.5, help='clip to prevent the too large grad')
-    parser.add_argument('--lr', type=float, default=.00001, help='initial learning rate')
+    parser.add_argument('--lr', type=float, default=.001, help='initial learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
     parser.add_argument('--max-epoch', type=int, default=5)
     parser.add_argument('--cuda', action='store_true', default=True)
@@ -167,13 +167,13 @@ def prepare():
     # seed setting
     torch.manual_seed(args.seed)
     random.seed(args.seed)
+    np.random.seed(args.seed)
     if torch.cuda.is_available():
         if not args.cuda:
             print("WARNING: You have a CUDA device, so you should probably run with --cuda")
         else:
             torch.cuda.manual_seed(args.seed)
     # make logging.info display into both shell and file
-    rootLogger = logging.getLogger()
     fileHandler = logging.FileHandler(os.path.join(args.save_dir, 'stdout.log'))
     fileHandler.setFormatter(logFormatter)
     rootLogger.addHandler(fileHandler)

@@ -90,6 +90,20 @@ class GRU_wrapper(nn.Module):
         return output # [bsz, h_dim]
 
 
+class AVG_wrapper(nn.Module):
+
+    def __init__(self, **kwargs):
+        super().__init__()
+    
+    def forward(self, input, length):
+        # input: [bsz, len, w_dim]
+        # length: [bsz, ]
+        bsz = length.size(0)
+        output = torch.stack(
+                [torch.mean(input[i, :length[i]], dim=0) for i in range(bsz)]
+                )
+        return output # [bsz, h_dim]
+
 
 
 
@@ -108,7 +122,8 @@ class SentenceEmbedding(nn.Module):
             self.encoder = BiGRU_wrapper(**kwargs)
             self.dim = 2 * kwargs['hidden_dim']
         elif self.SE_type == 'AVG':
-            pass
+            self.encoder = AVG_wrapper(**kwargs)
+            self.dim = kwargs['word_dim']
         self.reset_parameters()
 
     def reset_parameters(self):

@@ -2,6 +2,7 @@ import torch
 import math
 from torch import nn
 from torch.nn import init, Parameter, functional
+import numpy as np
 
 class ChannelModel(nn.Module):
 
@@ -15,7 +16,7 @@ class ChannelModel(nn.Module):
         self.reset_parameters()
 
     def reset_parameters(self):
-        init.normal(self.W, mean=0, std=0.01)
+        init.normal_(self.W, mean=0, std=0.01)
 
     def forward(self, D, S): # TODO batch with torch.bmm
         '''
@@ -25,16 +26,27 @@ class ChannelModel(nn.Module):
         '''
         n, m = D.size(0), S.size(0)
         S_T = torch.transpose(S, 0, 1).contiguous() # [Ds, m]
-        att_weight = functional.softmax(
-                torch.mm(D, S_T) / math.sqrt(self.se_dim) / self.temperature,
-                dim=1
-                ) # [n, m]
-        att_S = torch.mm(att_weight, S) # [n, Ds]
-        # logits = torch.diag(torch.mm(torch.mm(D, self.W), torch.t(att_S))) # TODO: which is faster?
-        logit_arr = [torch.dot(D[i], torch.mv(self.W, att_S[i])) for i in range(n)]
-        logits = torch.stack(logit_arr)
-        log_prob = torch.sum(functional.logsigmoid(logits)) # P(D|S) on the independent assumption
-        self.prob_arr = [x.item() for x in logit_arr]
-        self.attention = att_weight.clone().cpu().data.numpy()
+#        att_weight = functional.softmax(
+#                torch.mm(D, S_T) / self.temperature,
+#                #torch.mm(D, S_T) / math.sqrt(self.se_dim) / self.temperature,
+#                dim=1
+#                ) # [n, m]
+#        att_S = torch.mm(att_weight, S) # [n, Ds]
+#        # logits = torch.diag(torch.mm(torch.mm(D, self.W), torch.t(att_S))) # TODO: which is faster?
+#        logit_arr = [torch.dot(D[i], torch.mv(self.W, att_S[i])) for i in range(n)]
+#        logits = torch.stack(logit_arr)
+#        log_prob = torch.mean(functional.logsigmoid(logits)) # P(D|S) on the independent assumption
+#        #print(logits)
+#        print(att_weight)
+#        print(logits)
+#        self.prob_arr = [x.item() for x in logit_arr]
+#        self.attention = att_weight.clone().cpu().data.numpy()
+#        return log_prob
+
+        # Choose the max prob
+        prob_matrix = torch.mm(torch.mm(D, self.W), S_T) # [n, m]
+        logits, index = torch.max(prob_matrix, dim=1) # [n, ]
+        #print(index)
+        log_prob = torch.mean(functional.logsigmoid(logits)) # TODO: mean or sum???
         return log_prob
 
