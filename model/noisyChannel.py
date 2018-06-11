@@ -1,5 +1,6 @@
 import torch
 import math
+import random
 from torch import nn
 from torch.nn import init, Parameter, functional
 import numpy as np
@@ -12,6 +13,7 @@ class ChannelModel(nn.Module):
         self.W = Parameter(torch.FloatTensor(self.se_dim, self.se_dim))
         self.temperature = 1 # for annealing
         self.prob_arr = []
+        self.prob_matrix = []
         self.attention = []
         self.reset_parameters()
 
@@ -44,9 +46,21 @@ class ChannelModel(nn.Module):
 #        return log_prob
 
         # Choose the max prob
-        prob_matrix = torch.mm(torch.mm(D, self.W), S_T) # [n, m]
-        logits, index = torch.max(prob_matrix, dim=1) # [n, ]
-        #print(index)
-        log_prob = torch.mean(functional.logsigmoid(logits)) # TODO: mean or sum???
+        self.prob_matrix = torch.mm(torch.mm(D, self.W), S_T) # [n, m]
+        #rand_matrix = torch.randn_like(prob_matrix) * (torch.max(prob_matrix)-torch.min(prob_matrix))
+        #select_matrix = torch.add(prob_matrix, rand_matrix)
+
+        #if(random.random() < 1e-3):
+        #    logits = torch.stack([prob_matrix[i, random.randint(0, m - 1)] for i in range(n)])
+        #else:
+        #    logits = torch.max(prob_matrix, dim=1)[0]
+        #logits = torch.stack(temp)
+        logits, index = torch.max(self.prob_matrix, dim=1) # [n, ]
+        self.attention = self.prob_matrix.clone().cpu().data.numpy()
+        #print(self.prob_matrix)
+        #print(torch.equal(logits, logit))
+        #print(functional.sigmoid(logits), logits)
+        log_prob = torch.mean(functional.sigmoid(logits))
+        #log_prob = torch.mean(torch.log(0.5 + functional.sigmoid(logits))) # TODO: mean or sum???
         return log_prob
 
