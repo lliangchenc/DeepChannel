@@ -4,6 +4,17 @@ def recursive_to_device(device, *tensors):
     return [recursive_to_device(device, *t) if isinstance(t, list) or isinstance(t, tuple) \
             else t.to(device) for t in tensors]
 
+def visualize_tensor(tensor):
+    tensor = tensor.squeeze()
+    if tensor.dim() == 0:
+        return '%.3f' % tensor.item()
+    elif tensor.dim() == 1:
+        return ' '.join(['%.3f' % x for x in tensor])
+    elif tensor.dim() == 2:
+        return '\n'.join([visualize_tensor(tensor[i]) for i in range(tensor.size(0))])
+    else:
+        raise Exception('dim must <=2')
+
 def reverse_padded_sequence(inputs, lengths, batch_first=False):
     """Reverses sequences according to their lengths.
     Inputs should have size ``T x B x *`` if ``batch_first`` is False, or

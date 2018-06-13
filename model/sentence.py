@@ -72,7 +72,6 @@ class GRU_wrapper(nn.Module):
 
     def reset_parameters(self):
         for name, param in self.encoder.named_parameters():
-            #print(name)
             if 'bias' in name:
                 init.constant_(param, 0.0)
             elif 'weight' in name:

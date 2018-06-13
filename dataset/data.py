@@ -69,21 +69,30 @@ class Dataset(object):
         random.shuffle(combined)
         self.train_set[:], self.train_len[:] = zip(*combined)
         for d, s, d_len, s_len in map(lambda _: _[0]+_[1], zip(self.train_set, self.train_len)):
-             index_max = np.max(d)
-             #temp_index = random.randint(0, len(d) - 1)
-             s_batch = [s]
-             s_len_batch = [s_len]
+            s_batch = [s]
+            s_len_batch = [s_len]
              
-             # Strategy 1 : Replace a golden summary sentence with a random sentence
-             #s_batch.extend([np.append(np.delete(s, x, 0), [np.random.randint(index_max + 1, size=[np.shape(s)[1], ])], axis=0) for x in range(len(s))])
-             #s_len_batch.extend([np.append(np.delete(s_len, x, 0), [np.shape(s)[1]], axis=0) for x in range(len(s_len))])
+            # Strategy 1 : Replace a golden summary sentence with a random selected sentence from document
+            d_index = random.randint(0, len(d) - 1)
+            end_j = min(s.shape[1], d_len[d_index])
+            for i in range(len(s)):
+                new_s, new_s_len = np.copy(s), np.copy(s_len)
+                new_s[i, :end_j] = d[d_index, :end_j]
+                new_s[i, end_j:] = 0
+                new_s_len[i] = end_j
+                s_batch.append(new_s)
+                s_len_batch.append(new_s_len)
+            
+            #index_max = np.max(d) 
+            #s_batch.extend([np.append(np.delete(s, x, 0), [np.random.randint(index_max + 1, size=[np.shape(s)[1], ])], axis=0) for x in range(len(s))])
+            #s_len_batch.extend([np.append(np.delete(s_len, x, 0), [np.shape(s)[1]], axis=0) for x in range(len(s_len))])
   
-             # Strategy 2 : Delete a golden summary sentence
-             s_batch.extend([np.delete(s, x, 0) for x in range(len(s))])
-             s_len_batch.extend([np.delete(s_len, x, 0) for x in range(len(s))])
+            # Strategy 2 : Delete a golden summary sentence
+            #s_batch.extend([np.delete(s, x, 0) for x in range(len(s))])
+            #s_len_batch.extend([np.delete(s_len, x, 0) for x in range(len(s))])
              
-             yield wrap_numpy_to_longtensor(d, s_batch, d_len, s_len_batch)
-             #print(s, s_batch[1])
+            yield wrap_numpy_to_longtensor(d, s_batch, d_len, s_len_batch)
+            #print(s, s_batch[1])
         else:
             raise StopIteration
 

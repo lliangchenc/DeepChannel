@@ -16,8 +16,8 @@ from torch import nn, optim
 from torch.autograd import Variable
 import numpy as np
 from tensorboardX import SummaryWriter
-from utils import recursive_to_device
-#from IPython import embed
+from utils import recursive_to_device, visualize_tensor
+from IPython import embed
 
 
 
@@ -67,75 +67,60 @@ def trainChannelModel(args):
             progress = epoch_num + batch_iter / data.train_size
             iter_count += 1
             doc, sums, doc_len, sums_len = recursive_to_device(device, *train_batch)
-            if len(sums) == 2: # only one sentence in summary
+            num_sent_of_sum = sums[0].size(0)
+            if num_sent_of_sum == 1: # if delete, summary should have more than one sentence
                 continue
             D = sentenceEncoder(doc, doc_len)
-            S_bads = []
             S_good = sentenceEncoder(sums[0], sums_len[0])
             S_bads = [sentenceEncoder(s, s_l) for s, s_l in zip(sums[1:], sums_len[1:])] # TODO so many repetitions
             
-            good_prob = channelModel(D, S_good)
-            temp_attention = channelModel.attention
-            prob_matrix = channelModel.prob_matrix.clone()
-            bad_probs = [channelModel(D, S_bad) for S_bad in S_bads]
-            ########### hinge loss ############
+            # prob calculation
+            good_prob, good_prob_vector, good_attention_weight = channelModel(D, S_good)
+            bad_probs, bad_probs_vector = [], []
+            for S_bad in S_bads:
+                res = channelModel(D, S_bad)
+                bad_probs.append(res[0])
+                bad_probs_vector.append(res[1])
             bad_index = np.argmax([p.item() for p in bad_probs])
-
-            sig_prob = torch.sigmoid(prob_matrix)
-            regulation = torch.sum(sig_prob, dim=0) / torch.sum(sig_prob)  # [m,]
-            loss = bad_probs[bad_index] - good_prob +  torch.var(regulation)
-            #loss = bad_probs[bad_index] - good_prob
-            bad_prob_value = bad_probs[bad_index].item()
-            good_prob_value = good_prob.item()
-            loss_value = loss.item()
+            bad_prob = bad_probs[bad_index]
+            ########### loss ############
+            loss_prob_term = bad_prob - good_prob
+            # TODO: good_attention_weight for regularization n/m * I
+            loss = loss_prob_term
+            bad_prob_value, good_prob_value, loss_value = bad_prob.item(), good_prob.item(), loss.item()
             #print(good_prob_value, ', '.join([str(p.item()) for p in bad_probs]))
             if loss_value > -args.margin:
                 optimizer.zero_grad()
                 loss.backward()
-                #print(param.grad)
                 nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
                 optimizer.step()
             ###################################
             # summary
-            train_writer.add_scalar('loss', loss, iter_count)
-            train_writer.add_scalar('prob/good_prob', good_prob_value, iter_count)
-            train_writer.add_scalar('prob/bad_prob', bad_prob_value, iter_count)
+            train_writer.add_scalar('loss/total', loss, iter_count)
+            train_writer.add_scalar('loss/prob_term', loss_prob_term, iter_count)
+            train_writer.add_scalar('prob/good_prob', good_prob, iter_count)
             if(iter_count % 1000 == 0):
-                train_writer.add_histogram('probmatrix', prob_matrix.cpu().data.numpy(), iter_count)
+                train_writer.add_histogram('good_prob_vector', good_prob_vector.clone().cpu().data.numpy(), iter_count)
                 for name, param in list(sentenceEncoder.named_parameters()) + list(channelModel.named_parameters()):
-                    #print(param.grad)
                     if param.requires_grad and name not in ['word_embedding.weight']:
                         train_writer.add_histogram(name, param.clone().cpu().data.numpy(), iter_count)
                         train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
             #scheduler.step(valid_accuracy)
-            # if (batch_iter+1) % (data.train_size / 100) == 0:
             if iter_count % 100 == 0:
                 logging.info('Epoch %.2f, loss: %.4f, bad_prob: %.4f, good_prob: %.4f' % (progress, loss_value, bad_prob_value, good_prob_value))
-            if(iter_count % 1000 == 0):
-                visualize([doc.clone().cpu().data.numpy(), sums[0].clone().cpu().data.numpy(), temp_attention, iter_count, loss_value], data)
+            if args.debug and iter_count % 100 == 0:
+                print(visualize_tensor(good_prob_vector))
+                for i in range(len(bad_probs)):
+                    print(visualize_tensor(bad_probs_vector[i]))
+                    if i == bad_index:
+                        print(' @#@')
+                print('-'*33)
+                print(visualize_tensor(good_attention_weight))
+                print('='*66)
     torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
     torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
 
-
-def visualize(args, dataset):
-    doc = args[0]            
-    summ = args[1]
-    doc_w = []
-    for i in range(len(doc)):
-        doc_w.append([dataset.itow[x] for x in doc[i]])
-    summ_w = []
-    for i in range(len(summ)):
-        summ_w.append([dataset.itow[x] for x in summ[i]])
-    attention = args[2]
-    iters = args[3]
-    loss = args[4]
-    f = open("visualize.txt", "r")
-    s = f.read()
-    f.close()
-    f = open("visualize.txt", "w")
-    s += "\n\n" + str(iters) + " loss: " + str(loss) + "\n\ndocument:\n" + str(doc_w) + "\n\nsummary:\n" + str(summ_w) + "\n\nattention:\n" + str(attention)
-    f.write(s)
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -148,15 +133,14 @@ def parse_args():
     parser.add_argument('--margin', type=float, default=5e-1, help='margin of hinge loss, must >= 0')
     
     parser.add_argument('--clip', type=float, default=.5, help='clip to prevent the too large grad')
-    parser.add_argument('--lr', type=float, default=1, help='initial learning rate')
+    parser.add_argument('--lr', type=float, default=0.001, help='initial learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
     parser.add_argument('--max-epoch', type=int, default=30)
     parser.add_argument('--cuda', action='store_true', default=True)
-    parser.add_argument('--optimizer', default='sgd', choices=['adam', 'sgd', 'adadelta'])
+    parser.add_argument('--optimizer', default='adam', choices=['adam', 'sgd', 'adadelta'])
     parser.add_argument('--batch-size', type=int, default=1, help='batch size for training, not used now')
     parser.add_argument('--tune-word-embedding', action='store_true', help='specified to fine tune glove vectors')
     parser.add_argument('--anneal', action='store_true')
-    parser.add_argument('--display', action='store_true')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--seed', type=int, default=666, help='random seed')
     parser.add_argument('--alpha', type=float, default=0.1, help='weight of regularization term')
