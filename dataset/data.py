@@ -75,13 +75,20 @@ class Dataset(object):
             # Strategy 1 : Replace a golden summary sentence with a random selected sentence from document
             d_index = random.randint(0, len(d) - 1)
             end_j = min(s.shape[1], d_len[d_index])
-            for i in range(len(s)):
-                new_s, new_s_len = np.copy(s), np.copy(s_len)
-                new_s[i, :end_j] = d[d_index, :end_j]
-                new_s[i, end_j:] = 0
-                new_s_len[i] = end_j
-                s_batch.append(new_s)
-                s_len_batch.append(new_s_len)
+
+            neg_sent = np.int32(np.zeros([1, s.shape[1]]))
+            neg_sent[0, :end_j] = d[d_index, :end_j]
+            s_batch.append(neg_sent)
+            s_len_batch.append(np.int32([end_j]))
+            #print(s_batch, neg_sent, end_j, s_len_batch)
+
+            #for i in range(len(s)):
+            #    new_s, new_s_len = np.copy(s), np.copy(s_len)
+            #    new_s[i, :end_j] = d[d_index, :end_j]
+            #    new_s[i, end_j:] = 0
+            #    new_s_len[i] = end_j
+            #    s_batch.append(new_s)
+            #    s_len_batch.append(new_s_len)
             
             #index_max = np.max(d) 
             #s_batch.extend([np.append(np.delete(s, x, 0), [np.random.randint(index_max + 1, size=[np.shape(s)[1], ])], axis=0) for x in range(len(s))])

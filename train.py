@@ -17,7 +17,7 @@ from torch.autograd import Variable
 import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor
-from IPython import embed
+#from IPython import embed
 
 
 
@@ -44,6 +44,8 @@ def trainChannelModel(args):
     if args.cuda:
         print('Transfer models to cuda......')
     sentenceEncoder, channelModel = sentenceEncoder.to(device), channelModel.to(device)
+    identityMatrix = torch.eye(100).to(device)
+
     print('Initializing optimizer and summary writer......')
     params = [p for p in sentenceEncoder.parameters() if p.requires_grad] +\
             [p for p in channelModel.parameters() if p.requires_grad]
@@ -72,7 +74,20 @@ def trainChannelModel(args):
                 continue
             D = sentenceEncoder(doc, doc_len)
             S_good = sentenceEncoder(sums[0], sums_len[0])
-            S_bads = [sentenceEncoder(s, s_l) for s, s_l in zip(sums[1:], sums_len[1:])] # TODO so many repetitions
+            neg_sent_embed = sentenceEncoder(sums[1], sums_len[1])
+
+            l = S_good.size(0)        
+            S_bads = []
+            for i in range(l):
+                temp = []
+                for j in range(i):
+                    temp.append(S_good[j])
+                temp.append(neg_sent_embed[0])
+                for j in range(i+1, l):
+                    temp.append(S_good[j])
+                S_bads.append(torch.stack(temp))
+
+            # S_bads = [sentenceEncoder(s, s_l) for s, s_l in zip(sums[1:], sums_len[1:])] # TODO so many repetitions
             
             # prob calculation
             good_prob, good_prob_vector, good_attention_weight = channelModel(D, S_good)
@@ -86,8 +101,11 @@ def trainChannelModel(args):
             ########### loss ############
             loss_prob_term = bad_prob - good_prob
             # TODO: good_attention_weight for regularization n/m * I
-            loss = loss_prob_term
-            bad_prob_value, good_prob_value, loss_value = bad_prob.item(), good_prob.item(), loss.item()
+            eye_value = (good_attention_weight.size(0) + 0.) / good_attention_weight.size(1)
+            regulation_term = torch.norm(torch.mm(torch.transpose(good_attention_weight,0,1), good_attention_weight) - eye_value * identityMatrix[:good_attention_weight.size(1), :good_attention_weight.size(1)], 2)
+            #print(regulation_term)
+            loss = loss_prob_term + regulation_term
+            bad_prob_value, good_prob_value, loss_value, regulation_value = bad_prob.item(), good_prob.item(), loss.item(), regulation_term.item()
             #print(good_prob_value, ', '.join([str(p.item()) for p in bad_probs]))
             if loss_value > -args.margin:
                 optimizer.zero_grad()
@@ -98,6 +116,7 @@ def trainChannelModel(args):
             # summary
             train_writer.add_scalar('loss/total', loss, iter_count)
             train_writer.add_scalar('loss/prob_term', loss_prob_term, iter_count)
+            train_writer.add_scalar('loss/regulation_term', regulation_term, iter_count)
             train_writer.add_scalar('prob/good_prob', good_prob, iter_count)
             if(iter_count % 1000 == 0):
                 train_writer.add_histogram('good_prob_vector', good_prob_vector.clone().cpu().data.numpy(), iter_count)
@@ -107,7 +126,7 @@ def trainChannelModel(args):
                         train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
             #scheduler.step(valid_accuracy)
             if iter_count % 100 == 0:
-                logging.info('Epoch %.2f, loss: %.4f, bad_prob: %.4f, good_prob: %.4f' % (progress, loss_value, bad_prob_value, good_prob_value))
+                logging.info('Epoch %.2f, loss: %.4f, bad_prob: %.4f, good_prob: %.4f, regulation_value: %.4f' % (progress, loss_value, bad_prob_value, good_prob_value, regulation_value))
             if args.debug and iter_count % 100 == 0:
                 print(visualize_tensor(good_prob_vector))
                 for i in range(len(bad_probs)):
@@ -133,7 +152,7 @@ def parse_args():
     parser.add_argument('--margin', type=float, default=5e-1, help='margin of hinge loss, must >= 0')
     
     parser.add_argument('--clip', type=float, default=.5, help='clip to prevent the too large grad')
-    parser.add_argument('--lr', type=float, default=0.001, help='initial learning rate')
+    parser.add_argument('--lr', type=float, default=0.00001, help='initial learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
     parser.add_argument('--max-epoch', type=int, default=30)
     parser.add_argument('--cuda', action='store_true', default=True)
