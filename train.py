@@ -22,7 +22,6 @@ from utils import recursive_to_device, visualize_tensor
 
 
 def trainChannelModel(args):
-    open("visualize.txt","w").close()
     np.set_printoptions(threshold=1e10) 
     print('Loading data......')
     data = Dataset(path=args.data_path)
@@ -61,9 +60,21 @@ def trainChannelModel(args):
     loss_arr = []
     print('Start training......')
     #print(data.itow[123])
+    if(args.load_previous_model):
+        sentenceEncoder.load_state_dict(torch.load(os.path.join(args.save_dir, 'se.pkl')))
+        channelModel.load_state_dict(torch.load(os.path.join(args.save_dir, 'channel.pkl')))
+
+    if(args.validation):
+        validate(data, sentenceEncoder, channelModel, device)
+        return 0
+
+
     for epoch_num in range(args.max_epoch):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
+
+        if(epoch_num % 1 == 0):
+            validate(data, sentenceEncoder, channelModel, device)
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
@@ -79,25 +90,37 @@ def trainChannelModel(args):
             l = S_good.size(0)        
             S_bads = []
             for i in range(l):
-                temp = []
+                temp_replace = []
+                temp_delete = []
                 for j in range(i):
-                    temp.append(S_good[j])
-                temp.append(neg_sent_embed[0])
+                    temp_replace.append(S_good[j])
+                    temp_delete.append(S_good[j])
+                temp_replace.append(neg_sent_embed[0])
                 for j in range(i+1, l):
-                    temp.append(S_good[j])
-                S_bads.append(torch.stack(temp))
+                    temp_replace.append(S_good[j])
+                    temp_delete.append(S_good[j])
+                S_bads.append(torch.stack(temp_replace))
+                S_bads.append(torch.stack(temp_delete))
 
             # S_bads = [sentenceEncoder(s, s_l) for s, s_l in zip(sums[1:], sums_len[1:])] # TODO so many repetitions
             
             # prob calculation
             good_prob, good_prob_vector, good_attention_weight = channelModel(D, S_good)
             bad_probs, bad_probs_vector = [], []
-            for S_bad in S_bads:
-                res = channelModel(D, S_bad)
-                bad_probs.append(res[0])
+            bad_prob = 0.
+            if(args.neg_case == 'max'):
+                for S_bad in S_bads:
+                    res = channelModel(D, S_bad)
+                    bad_probs.append(res[0])
+                    bad_probs_vector.append(res[1])
+                bad_index = np.argmax([p.item() for p in bad_probs])
+                bad_prob = bad_probs[bad_index]
+            else:
+                bad_index = random.randint(0, len(S_bads) - 1)
+                res = channelModel(D, D_bads[bad_index])
+                bad_prob = res[0]
                 bad_probs_vector.append(res[1])
-            bad_index = np.argmax([p.item() for p in bad_probs])
-            bad_prob = bad_probs[bad_index]
+
             ########### loss ############
             loss_prob_term = bad_prob - good_prob
             # TODO: good_attention_weight for regularization n/m * I
@@ -136,25 +159,76 @@ def trainChannelModel(args):
                 print('-'*33)
                 print(visualize_tensor(good_attention_weight))
                 print('='*66)
-    torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
-    torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
+        if(epoch_num % 1 == 0):
+            torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
+            torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
 
+def validate(data_, sentenceEncoder_, channelModel_, device_):
+    neg_count = 0
+    valid_iter_count = 0
+    all_neg_count = 0
+    sent_count = 0
+    loss_arr = []
+    all_loss_arr = []
+    for batch_iter, valid_batch in enumerate(data_.gen_valid_minibatch()):
+        sentenceEncoder_.eval(); channelModel_.eval()
+        valid_iter_count += 1
+        doc, sums, doc_len, sums_len = recursive_to_device(device_, *valid_batch)
+        num_sent_of_sum = sums[0].size(0)
+        if num_sent_of_sum == 1: # if delete, summary should have more than one sentence
+            continue
+        D = sentenceEncoder_(doc, doc_len)
+        S_good = sentenceEncoder_(sums[0], sums_len[0])
+        neg_sent_embed = sentenceEncoder_(sums[1], sums_len[1])
+
+        l = S_good.size(0)        
+        S_bads = []
+        for i in range(l):
+            temp = []
+            temp_delete = []
+            for j in range(i):
+                temp.append(S_good[j])
+                temp_delete.append(S_good[j])
+            temp.append(neg_sent_embed[0])
+            for j in range(i+1, l):
+                temp.append(S_good[j])
+                temp_delete.append(S_good[j])
+            S_bads.append(torch.stack(temp))
+            S_bads.append(torch.stack(temp_delete))
+        # prob calculation
+        good_prob, good_prob_vector, good_attention_weight = channelModel_(D, S_good)
+        bad_probs, bad_probs_vector = [], []
+        for S_bad in S_bads:
+            res = channelModel_(D, S_bad)
+            bad_probs.append(res[0])
+            bad_probs_vector.append(res[1])
+        bad_index = np.argmax([p.item() for p in bad_probs])
+        bad_prob = bad_probs[bad_index]
+        ########### loss ############
+        loss_prob_term = bad_prob - good_prob
+        loss = loss_prob_term.item()
+        loss_arr.append(loss)
+        for bad in bad_probs:
+            all_loss_arr.append((bad - good_prob).item())
+
+    logging.info("avg loss: %4f, avg all_loss: %4f, acc: %4f, all_acc: %4f" % (float(np.mean(loss_arr)), float(np.mean(all_loss_arr)), (np.sum(np.int32(np.array(loss_arr) < 0)) + 0.) / len(loss_arr), (np.sum(np.int32(np.array(all_loss_arr) < 0)) + 0.) / len(all_loss_arr)))
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
+    parser.add_argument('--neg-case', default = 'max', choices=['max', 'random'])
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
     parser.add_argument('--kernel-num', type=int, default=64, help='kernel num/ output dim in CNN')
     parser.add_argument('--dropout', type=float, default=0)
-    parser.add_argument('--margin', type=float, default=5e-1, help='margin of hinge loss, must >= 0')
+    parser.add_argument('--margin', type=float, default=1, help='margin of hinge loss, must >= 0')
     
     parser.add_argument('--clip', type=float, default=.5, help='clip to prevent the too large grad')
-    parser.add_argument('--lr', type=float, default=0.00001, help='initial learning rate')
+    parser.add_argument('--lr', type=float, default=0.0001, help='initial learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
-    parser.add_argument('--max-epoch', type=int, default=30)
+    parser.add_argument('--max-epoch', type=int, default=100)
     parser.add_argument('--cuda', action='store_true', default=True)
     parser.add_argument('--optimizer', default='adam', choices=['adam', 'sgd', 'adadelta'])
     parser.add_argument('--batch-size', type=int, default=1, help='batch size for training, not used now')
@@ -166,6 +240,8 @@ def parse_args():
 
     parser.add_argument('--data-path', required=True, help='pickle file obtained by dataset dump or datadir for torchtext')
     parser.add_argument('--save-dir', type=str, required=True, help='path to save checkpoints and logs')
+    parser.add_argument('--load-previous-model', action='store_true')
+    parser.add_argument('--validation', action='store_true')
     args = parser.parse_args()
     return args
 
@@ -173,9 +249,10 @@ def parse_args():
 def prepare():
     # dir preparation
     args = parse_args()
-    if os.path.isdir(args.save_dir):
-        shutil.rmtree(args.save_dir)
-    os.mkdir(args.save_dir)
+    if not args.load_previous_model:
+        if os.path.isdir(args.save_dir):
+            shutil.rmtree(args.save_dir)
+        os.mkdir(args.save_dir)
     # seed setting
     torch.manual_seed(args.seed)
     random.seed(args.seed)
