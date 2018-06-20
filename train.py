@@ -17,7 +17,7 @@ from torch.autograd import Variable
 import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor
-#from IPython import embed
+from IPython import embed
 
 
 
@@ -73,8 +73,8 @@ def trainChannelModel(args):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
 
-        if(epoch_num % 1 == 0):
-            validate(data, sentenceEncoder, channelModel, device)
+        #if(epoch_num % 1 == 0):
+        #    validate(data, sentenceEncoder, channelModel, device)
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
@@ -102,35 +102,30 @@ def trainChannelModel(args):
                 S_bads.append(torch.stack(temp_replace))
                 S_bads.append(torch.stack(temp_delete))
 
-            # S_bads = [sentenceEncoder(s, s_l) for s, s_l in zip(sums[1:], sums_len[1:])] # TODO so many repetitions
-            
             # prob calculation
-            good_prob, good_prob_vector, good_attention_weight = channelModel(D, S_good)
+            good_prob, addition = channelModel(D, S_good)
+            good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
             bad_probs, bad_probs_vector = [], []
             bad_prob = 0.
             if(args.neg_case == 'max'):
                 for S_bad in S_bads:
-                    res = channelModel(D, S_bad)
-                    bad_probs.append(res[0])
-                    bad_probs_vector.append(res[1])
+                    bad_prob, addition = channelModel(D, S_bad)
+                    bad_probs.append(bad_prob)
+                    bad_probs_vector.append(addition['prob_vector'])
                 bad_index = np.argmax([p.item() for p in bad_probs])
                 bad_prob = bad_probs[bad_index]
             else:
                 bad_index = random.randint(0, len(S_bads) - 1)
-                res = channelModel(D, D_bads[bad_index])
-                bad_prob = res[0]
-                bad_probs_vector.append(res[1])
+                bad_prob, addition = channelModel(D, S_bads[bad_index])
+                bad_probs_vector.append(addition['prob_vector'])
 
             ########### loss ############
             loss_prob_term = bad_prob - good_prob
-            # TODO: good_attention_weight for regularization n/m * I
-            eye_value = (good_attention_weight.size(0) + 0.) / good_attention_weight.size(1)
-            regulation_term = torch.norm(torch.mm(torch.transpose(good_attention_weight,0,1), good_attention_weight) - eye_value * identityMatrix[:good_attention_weight.size(1), :good_attention_weight.size(1)], 2)
-            #print(regulation_term)
-            loss = loss_prob_term + regulation_term
-            bad_prob_value, good_prob_value, loss_value, regulation_value = bad_prob.item(), good_prob.item(), loss.item(), regulation_term.item()
-            #print(good_prob_value, ', '.join([str(p.item()) for p in bad_probs]))
-            if loss_value > -args.margin:
+            n, m = good_attention_weight.size()
+            regulation_term = torch.norm(torch.mm(good_attention_weight.t(), good_attention_weight) - n/m * torch.eye(m).to(device), 2)
+            loss = loss_prob_term + args.alpha * regulation_term
+            #print(good_prob.item(), ', '.join([str(p.item()) for p in bad_probs]))
+            if loss_prob_term.item() > -args.margin:
                 optimizer.zero_grad()
                 loss.backward()
                 nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
@@ -149,15 +144,18 @@ def trainChannelModel(args):
                         train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
             #scheduler.step(valid_accuracy)
             if iter_count % 100 == 0:
-                logging.info('Epoch %.2f, loss: %.4f, bad_prob: %.4f, good_prob: %.4f, regulation_value: %.4f' % (progress, loss_value, bad_prob_value, good_prob_value, regulation_value))
+                logging.info('Epoch %.2f, loss_prob: %.4f, bad_prob: %.4f, good_prob: %.4f, regulation_value: %.4f' % (progress, loss_prob_term.item(), bad_prob.item(), good_prob.item(), regulation_term.item()))
             if args.debug and iter_count % 100 == 0:
                 print(visualize_tensor(good_prob_vector))
+                print('-'*33)
                 for i in range(len(bad_probs)):
                     print(visualize_tensor(bad_probs_vector[i]))
                     if i == bad_index:
                         print(' @#@')
                 print('-'*33)
                 print(visualize_tensor(good_attention_weight))
+                #print('-'*33)
+                #print(visualize_tensor(torch.norm(S_good, p=2, dim=0)))
                 print('='*66)
         if(epoch_num % 1 == 0):
             torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
@@ -197,12 +195,13 @@ def validate(data_, sentenceEncoder_, channelModel_, device_):
             S_bads.append(torch.stack(temp))
             S_bads.append(torch.stack(temp_delete))
         # prob calculation
-        good_prob, good_prob_vector, good_attention_weight = channelModel_(D, S_good)
+        good_prob, addition = channelModel_(D, S_good)
+        good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
         bad_probs, bad_probs_vector = [], []
         for S_bad in S_bads:
-            res = channelModel_(D, S_bad)
-            bad_probs.append(res[0])
-            bad_probs_vector.append(res[1])
+            bad_prob, addition = channelModel_(D, S_bad)
+            bad_probs.append(bad_prob)
+            bad_probs_vector.append(addition['prob_vector'])
         bad_index = np.argmax([p.item() for p in bad_probs])
         bad_prob = bad_probs[bad_index]
         ########### loss ############
@@ -213,6 +212,8 @@ def validate(data_, sentenceEncoder_, channelModel_, device_):
             all_loss_arr.append((bad - good_prob).item())
 
     logging.info("avg loss: %4f, avg all_loss: %4f, acc: %4f, all_acc: %4f" % (float(np.mean(loss_arr)), float(np.mean(all_loss_arr)), (np.sum(np.int32(np.array(loss_arr) < 0)) + 0.) / len(loss_arr), (np.sum(np.int32(np.array(all_loss_arr) < 0)) + 0.) / len(all_loss_arr)))
+
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
