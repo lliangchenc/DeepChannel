@@ -13,9 +13,14 @@ class ChannelModel(nn.Module):
                 nn.Dropout(kwargs['dropout']),
                 nn.Linear(self.se_dim * 2, 512),
                 nn.ReLU(),
-                nn.Linear(512, 128),
+                #nn.Dropout(kwargs['dropout']),
+                nn.Linear(512, 512),
                 nn.ReLU(),
-                nn.Linear(128, 1),
+                #nn.Dropout(kwargs['dropout']),
+                nn.Linear(512, 256),
+                nn.ReLU(),
+                #nn.Dropout(kwargs['dropout']),
+                nn.Linear(256, 1),
                 nn.Sigmoid()
                 )
         self.temperature = 1 # for annealing

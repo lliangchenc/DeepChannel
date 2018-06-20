@@ -17,7 +17,7 @@ from torch.autograd import Variable
 import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor
-from IPython import embed
+#from IPython import embed
 
 
 
@@ -65,7 +65,7 @@ def trainChannelModel(args):
         channelModel.load_state_dict(torch.load(os.path.join(args.save_dir, 'channel.pkl')))
 
     if(args.validation):
-        validate(data, sentenceEncoder, channelModel, device)
+        validate(data, sentenceEncoder, channelModel, device, args)
         return 0
 
 
@@ -73,8 +73,8 @@ def trainChannelModel(args):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
 
-        #if(epoch_num % 1 == 0):
-        #    validate(data, sentenceEncoder, channelModel, device)
+        if(epoch_num % 10 == 0):
+            validate(data, sentenceEncoder, channelModel, device, args)
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
@@ -99,8 +99,14 @@ def trainChannelModel(args):
                 for j in range(i+1, l):
                     temp_replace.append(S_good[j])
                     temp_delete.append(S_good[j])
-                S_bads.append(torch.stack(temp_replace))
-                S_bads.append(torch.stack(temp_delete))
+                if(args.neg_sample == 'replace'):
+                    S_bads.append(torch.stack(temp_replace))
+                elif(args.neg_sample == 'delete'):
+                    S_bads.append(torch.stack(temp_delete))
+                else:
+                    S_bads.append(torch.stack(temp_replace))
+                    S_bads.append(torch.stack(temp_delete))
+                
 
             # prob calculation
             good_prob, addition = channelModel(D, S_good)
@@ -162,7 +168,7 @@ def trainChannelModel(args):
             torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
 
-def validate(data_, sentenceEncoder_, channelModel_, device_):
+def validate(data_, sentenceEncoder_, channelModel_, device_, args):
     neg_count = 0
     valid_iter_count = 0
     all_neg_count = 0
@@ -192,8 +198,15 @@ def validate(data_, sentenceEncoder_, channelModel_, device_):
             for j in range(i+1, l):
                 temp.append(S_good[j])
                 temp_delete.append(S_good[j])
-            S_bads.append(torch.stack(temp))
-            S_bads.append(torch.stack(temp_delete))
+
+            if(args.neg_sample == 'replace'):
+                S_bads.append(torch.stack(temp))
+            elif(args.neg_sample == 'delete'):
+                S_bads.append(torch.stack(temp_delete))
+            else:
+                S_bads.append(torch.stack(temp))
+                S_bads.append(torch.stack(temp_delete))
+
         # prob calculation
         good_prob, addition = channelModel_(D, S_good)
         good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
@@ -219,6 +232,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
     parser.add_argument('--neg-case', default = 'max', choices=['max', 'random'])
+    parser.add_argument('--neg-sample', default = 'mix', choices=['mix', 'delete', 'replace'])
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
