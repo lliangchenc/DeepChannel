@@ -13,14 +13,15 @@ import xml.etree.ElementTree as et
 random.seed(666)
 
 pattern_of_num = re.compile(r'[0-9]+')
-tokenizer = None
-def sent_dealer(s):
-    global tokenizer
-    if tokenizer is None:
-        tokenizer = spacy.load('en')
-    words = [w.text for w in tokenizer(s) if w.text.strip()]
-    words = ['zero' if pattern_of_num.match(w) else w for w in words]
+nlp = None
+def doc_dealer(d):
+    global nlp
+    if nlp is None:
+        nlp = spacy.load('en')
+    words = [['zero' if pattern_of_num.match(w.text) else w.text for w in s if w.text.strip()] \
+            for s in nlp(d).sents if s.text.strip()]
     return words
+    # return a list of sentences, sentence is list of words
 
 
 
@@ -50,9 +51,8 @@ def read_cnn_dailymail(data_type, data_dir):
     for i in range(3):
         for f in tqdm(fs[split_idx[i]: split_idx[i+1]]):
             parts = open(f).read().split('@highlight')
-            docu = [sent_dealer(s.strip()) for s in parts[0].split('\n') if s.strip()] 
-            # document is list of sentences, sentence is list of word tokens
-            summ = [sent_dealer(s.strip()) for s in parts[1:]]
+            docu = doc_dealer(parts[0]) 
+            summ = doc_dealer('.'.join(parts[1:]) + '.') 
             if len(docu)==0 or len(summ)==0:
                 continue
             docu_len = [len(s) for s in docu]
