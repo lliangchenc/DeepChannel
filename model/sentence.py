@@ -29,14 +29,20 @@ class BiGRU(nn.Module):
             elif 'weight' in name:
                 init.normal_(param, mean=0, std=0.01)
 
-    def forward(self, input, length):
+    def encode(self, input, length):
         # input: [bsz, len, w_dim]
         # length: [bsz, ]
         input = torch.transpose(input, 0, 1).contiguous() # [len, bsz, w_dim]
         reversed_input = reverse_padded_sequence(input, length, batch_first=False)
         forward_output = self.forward_encoder(input)[0]
-        backward_output = self.backward_encoder(reversed_input)[0] # [len, bsz, hid_dim]
-        backward_output = reverse_padded_sequence(backward_output, length, batch_first=False)
+        reversed_backward_output = self.backward_encoder(reversed_input)[0] # [len, bsz, hid_dim]
+        return forward_output, reversed_backward_output
+
+    def forward(self, input, length):
+        # input: [bsz, len, w_dim]
+        # length: [bsz, ]
+        forward_output, reversed_backward_output = self.encode(input, length)
+        backward_output = reverse_padded_sequence(reversed_backward_output, length, batch_first=False)
         output = torch.cat([forward_output, backward_output], dim=2) # [len, bsz, 2*hid_dim]
         return output
 
@@ -47,12 +53,12 @@ class BiGRU_wrapper(BiGRU):
         super().__init__(**kwargs)
 
     def forward(self, input, length):
-        all_h = super().forward(input, length)
-        bsz, dim2 = all_h.size(1), all_h.size(2)
+        forward_output, reversed_backward_output = super().encode(input, length)
+        bsz = forward_output.size(1)
         output = torch.stack([
                 torch.cat([
-                    all_h[length[i]-1, i, :dim2//2], # forward
-                    all_h[0, i, dim2//2:] # backward
+                    forward_output[length[i]-1, i], # forward
+                    reversed_backward_output[length[i]-1, i] # backward
                 ]) # concat the forward embedding and the backward embedding
             for i in range(bsz)])
         return output # [bsz, 2*h_dim]
