@@ -44,16 +44,15 @@ class BiGRU(nn.Module):
 class BiGRU_wrapper(BiGRU):
 
     def __init__(self, **kwargs):
-        print(kwargs)
-        super().__init__(kwargs)
+        super().__init__(**kwargs)
 
     def forward(self, input, length):
         all_h = super().forward(input, length)
         bsz, dim2 = all_h.size(1), all_h.size(2)
         output = torch.stack([
                 torch.cat([
-                    all_h[length[i]-1, i, :dim2/2], # forward
-                    all_h[0, i, dim2/2:] # backward
+                    all_h[length[i]-1, i, :dim2//2], # forward
+                    all_h[0, i, dim2//2:] # backward
                 ]) # concat the forward embedding and the backward embedding
             for i in range(bsz)])
         return output # [bsz, 2*h_dim]
