@@ -45,3 +45,9 @@ def reverse_padded_sequence(inputs, lengths, batch_first=False):
     if not batch_first:
         reversed_inputs = reversed_inputs.transpose(0, 1)
     return reversed_inputs
+
+def genPowerSet(items):
+    result = [[]]
+    for x in items:
+        result.extend([subset + [x] for subset in result])
+    return result

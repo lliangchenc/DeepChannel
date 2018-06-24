@@ -44,6 +44,7 @@ class BiGRU(nn.Module):
 class BiGRU_wrapper(BiGRU):
 
     def __init__(self, **kwargs):
+        print(kwargs)
         super().__init__(kwargs)
 
     def forward(self, input, length):

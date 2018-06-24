@@ -16,7 +16,7 @@ from torch import nn, optim
 from torch.autograd import Variable
 import numpy as np
 from tensorboardX import SummaryWriter
-from utils import recursive_to_device, visualize_tensor
+from utils import recursive_to_device, visualize_tensor, genPowerSet
 #from IPython import embed
 
 
@@ -53,11 +53,15 @@ def trainChannelModel(args):
             'sgd': optim.SGD,
             }[args.optimizer]
     optimizer = optimizer_class(params=params, lr=args.lr, weight_decay=args.weight_decay)
-    # scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=20, verbose=True)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=5, verbose=True)
     train_writer = SummaryWriter(os.path.join(args.save_dir, 'log', 'train'))
     tic = time.time()
     iter_count = 0
     loss_arr = []
+    valid_loss = 0
+    valid_all_loss = 0
+    valid_acc = 0
+    valid_all_acc = 0
     print('Start training......')
     #print(data.itow[123])
     if(args.load_previous_model):
@@ -73,8 +77,13 @@ def trainChannelModel(args):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
 
-        if(epoch_num % 10 == 0):
-            validate(data, sentenceEncoder, channelModel, device, args)
+        if(epoch_num % 1 == 0):
+            valid_loss, valid_all_loss, valid_acc, valid_all_acc = validate(data, sentenceEncoder, channelModel, device, args)
+            train_writer.add_scalar('validation/loss', valid_loss, epoch_num)
+            train_writer.add_scalar('validation/all_loss', valid_all_loss, epoch_num)
+            train_writer.add_scalar('validation/acc', valid_acc, epoch_num)
+            train_writer.add_scalar('validation/all_acc', valid_all_acc, epoch_num)
+
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
@@ -92,20 +101,28 @@ def trainChannelModel(args):
             for i in range(l):
                 temp_replace = []
                 temp_delete = []
-                for j in range(i):
-                    temp_replace.append(S_good[j])
-                    temp_delete.append(S_good[j])
-                temp_replace.append(neg_sent_embed[0])
-                for j in range(i+1, l):
-                    temp_replace.append(S_good[j])
-                    temp_delete.append(S_good[j])
-                if(args.neg_sample == 'replace'):
-                    S_bads.append(torch.stack(temp_replace))
-                elif(args.neg_sample == 'delete'):
-                    S_bads.append(torch.stack(temp_delete))
+                if(args.neg_sample == 'full_delete'):
+                    powerset = genPowerSet(range(l))[1:][:-1]
+                    for subset in powerset:
+                        temp = []
+                        for j in subset:
+                            temp.append(S_good[j])
+                        S_bads.append(torch.stack(temp))
                 else:
-                    S_bads.append(torch.stack(temp_replace))
-                    S_bads.append(torch.stack(temp_delete))
+                    for j in range(i):
+                        temp_replace.append(S_good[j])
+                        temp_delete.append(S_good[j])
+                    temp_replace.append(neg_sent_embed[0])
+                    for j in range(i+1, l):
+                        temp_replace.append(S_good[j])
+                        temp_delete.append(S_good[j])
+                    if(args.neg_sample == 'replace'):
+                        S_bads.append(torch.stack(temp_replace))
+                    elif(args.neg_sample == 'delete'):
+                        S_bads.append(torch.stack(temp_delete))
+                    else:
+                        S_bads.append(torch.stack(temp_replace))
+                        S_bads.append(torch.stack(temp_delete))
                 
 
             # prob calculation
@@ -120,10 +137,21 @@ def trainChannelModel(args):
                     bad_probs_vector.append(addition['prob_vector'])
                 bad_index = np.argmax([p.item() for p in bad_probs])
                 bad_prob = bad_probs[bad_index]
-            else:
+            elif(args.neg_case == 'random'):
                 bad_index = random.randint(0, len(S_bads) - 1)
                 bad_prob, addition = channelModel(D, S_bads[bad_index])
                 bad_probs_vector.append(addition['prob_vector'])
+            else:
+                bad_num = min(8, len(S_bads))
+                S_bads_sample = random.sample(S_bads, bad_num)
+                for S_bad in S_bads_sample:
+                    bad_prob, addition = channelModel(D, S_bad)
+                    bad_probs.append(bad_prob)
+                    bad_probs_vector.append(addition['prob_vector'])
+                bad_index = np.argmax([p.item() for p in bad_probs])
+                bad_prob = bad_probs[bad_index]
+
+
 
             ########### loss ############
             loss_prob_term = bad_prob - good_prob
@@ -148,7 +176,7 @@ def trainChannelModel(args):
                     if param.requires_grad and name not in ['word_embedding.weight']:
                         train_writer.add_histogram(name, param.clone().cpu().data.numpy(), iter_count)
                         train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
-            #scheduler.step(valid_accuracy)
+            #scheduler.step(valid_acc)
             if iter_count % 100 == 0:
                 logging.info('Epoch %.2f, loss_prob: %.4f, bad_prob: %.4f, good_prob: %.4f, regulation_value: %.4f' % (progress, loss_prob_term.item(), bad_prob.item(), good_prob.item(), regulation_term.item()))
             if args.debug and iter_count % 100 == 0:
@@ -163,6 +191,7 @@ def trainChannelModel(args):
                 #print('-'*33)
                 #print(visualize_tensor(torch.norm(S_good, p=2, dim=0)))
                 print('='*66)
+        scheduler.step(valid_acc)
         if(epoch_num % 1 == 0):
             torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
             torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
@@ -188,24 +217,32 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
 
         l = S_good.size(0)        
         S_bads = []
-        for i in range(l):
-            temp = []
-            temp_delete = []
-            for j in range(i):
-                temp.append(S_good[j])
-                temp_delete.append(S_good[j])
-            temp.append(neg_sent_embed[0])
-            for j in range(i+1, l):
-                temp.append(S_good[j])
-                temp_delete.append(S_good[j])
+        if(args.neg_sample == 'full_delete'):
+            powerset = genPowerSet(range(l))[1:][:-1]
+            for subset in powerset:
+                temp = []
+                for j in subset:
+                    temp.append(S_good[j])
+                S_bads.append(torch.stack(temp))
+        else:
+            for i in range(l):
+                temp = []
+                temp_delete = []
+                for j in range(i):
+                    temp.append(S_good[j])
+                    temp_delete.append(S_good[j])
+                temp.append(neg_sent_embed[0])
+                for j in range(i+1, l):
+                    temp.append(S_good[j])
+                    temp_delete.append(S_good[j])
 
-            if(args.neg_sample == 'replace'):
-                S_bads.append(torch.stack(temp))
-            elif(args.neg_sample == 'delete'):
-                S_bads.append(torch.stack(temp_delete))
-            else:
-                S_bads.append(torch.stack(temp))
-                S_bads.append(torch.stack(temp_delete))
+                if(args.neg_sample == 'replace'):
+                    S_bads.append(torch.stack(temp))
+                elif(args.neg_sample == 'delete'):
+                    S_bads.append(torch.stack(temp_delete))
+                else:
+                    S_bads.append(torch.stack(temp))
+                    S_bads.append(torch.stack(temp_delete))
 
         # prob calculation
         good_prob, addition = channelModel_(D, S_good)
@@ -223,16 +260,36 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
         loss_arr.append(loss)
         for bad in bad_probs:
             all_loss_arr.append((bad - good_prob).item())
+        if(args.visualize and valid_iter_count % 100 == 0):
+            doc_matrix = doc.cpu().data.numpy()
+            doc_len_arr = doc_len.cpu().data.numpy()
+            summ_matrix = sums[0].cpu().data.numpy()
+            summ_len_arr = sums_len[0].cpu().data.numpy()
+            doc_ = ""
+            for i in range(np.shape(doc_matrix)[0]):
+                doc_ += str(i) + ": " + " ".join([data_.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]) + "\n\n"
 
-    logging.info("avg loss: %4f, avg all_loss: %4f, acc: %4f, all_acc: %4f" % (float(np.mean(loss_arr)), float(np.mean(all_loss_arr)), (np.sum(np.int32(np.array(loss_arr) < 0)) + 0.) / len(loss_arr), (np.sum(np.int32(np.array(all_loss_arr) < 0)) + 0.) / len(all_loss_arr)))
+            summ_ = ""
+            for i in range(np.shape(summ_matrix)[0]):
+                summ_ += str(i) + ": " + " ".join([data_.itow[x] for x in summ_matrix[i]][:summ_len_arr[i]]) + "\n\n"
+            logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\nsummary:\n\n%s\n\nattention matrix:\n\n%s\n\n"%(valid_iter_count, str(doc_), str(summ_), str(good_attention_weight.cpu().data.numpy())))
+            
+    valid_loss = float(np.mean(loss_arr))
+    valid_all_loss = float(np.mean(all_loss_arr))
+    valid_acc = (np.sum(np.int32(np.array(loss_arr) < 0)) + 0.) / len(loss_arr)
+    valid_all_acc = (np.sum(np.int32(np.array(all_loss_arr) < 0)) + 0.) / len(all_loss_arr)
+    logging.info("avg loss: %4f, avg all_loss: %4f, acc: %4f, all_acc: %4f" % (valid_loss, valid_all_loss, valid_acc, valid_all_acc))
+
+
+    return valid_loss, valid_all_loss, valid_acc, valid_all_acc
 
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
-    parser.add_argument('--neg-case', default = 'max', choices=['max', 'random'])
-    parser.add_argument('--neg-sample', default = 'mix', choices=['mix', 'delete', 'replace'])
+    parser.add_argument('--neg-case', default = 'max', choices=['max', 'random', 'randmax'])
+    parser.add_argument('--neg-sample', default = 'mix', choices=['mix', 'delete', 'full_delete', 'replace'])
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
@@ -257,6 +314,7 @@ def parse_args():
     parser.add_argument('--save-dir', type=str, required=True, help='path to save checkpoints and logs')
     parser.add_argument('--load-previous-model', action='store_true')
     parser.add_argument('--validation', action='store_true')
+    parser.add_argument('--visualize', action='store_true')
     args = parser.parse_args()
     return args
 

@@ -7,7 +7,7 @@ import spacy
 import random
 from tqdm import tqdm
 from collections import Counter
-from IPython import embed
+#from IPython import embed
 import xml.etree.ElementTree as et
 
 random.seed(666)
@@ -44,6 +44,7 @@ def read_cnn_dailymail(data_type, data_dir):
         assert len(data_dir)==2
         fs = [os.path.join(data_dir[0], _) for _ in os.listdir(data_dir[0])] + [os.path.join(data_dir[1], _) for _ in os.listdir(data_dir[1])]
     elif data_type == 'cnn' or data_type == 'daily':
+        print(data_dir)
         assert ';' not in data_dir
         fs = [os.path.join(data_dir, _) for _ in os.listdir(data_dir)]
     random.shuffle(fs)
@@ -52,12 +53,20 @@ def read_cnn_dailymail(data_type, data_dir):
         for f in tqdm(fs[split_idx[i]: split_idx[i+1]]):
             parts = open(f).read().split('@highlight')
             docu = doc_dealer(parts[0]) 
-            summ = doc_dealer('.'.join(parts[1:]) + '.') 
-            if len(docu)==0 or len(summ)==0:
+            summ = doc_dealer('.'.join(parts[1:]) + '.')
+            docu_ = []
+            summ_ = []
+            for sent in docu:
+                if(len(sent) > 5 and not(sent[-1] == ":" or sent[-1] == "--")):
+                    docu_.append(sent)
+            for sent in summ:
+                if(len(sent) > 3 and not(sent[-1] == ":" or sent[-1] == "--")):
+                    summ_.append(sent)
+            if len(docu_)==0 or len(summ_)==0:
                 continue
-            docu_len = [len(s) for s in docu]
-            summ_len = [len(s) for s in summ]
-            data[i].append([docu, summ])
+            docu_len = [len(s) for s in docu_]
+            summ_len = [len(s) for s in summ_]
+            data[i].append([docu_, summ_])
             length[i].append([docu_len, summ_len])
             # return data, length
     return data, length
