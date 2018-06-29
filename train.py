@@ -17,6 +17,7 @@ from torch.autograd import Variable
 import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor, genPowerSet
+from dataset.rouge_not_a_wrapper import rouge_n
 #from IPython import embed
 
 
@@ -53,7 +54,7 @@ def trainChannelModel(args):
             'sgd': optim.SGD,
             }[args.optimizer]
     optimizer = optimizer_class(params=params, lr=args.lr, weight_decay=args.weight_decay)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=5, verbose=True)
+    #scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=5, verbose=True)
     train_writer = SummaryWriter(os.path.join(args.save_dir, 'log', 'train'))
     tic = time.time()
     iter_count = 0
@@ -157,6 +158,9 @@ def trainChannelModel(args):
             loss_prob_term = bad_prob - good_prob
             n, m = good_attention_weight.size()
             regulation_term = torch.norm(torch.mm(good_attention_weight.t(), good_attention_weight) - n/m * torch.eye(m).to(device), 2)
+            regulation_weight = 0.
+            if(epoch_num < 30):
+                regulation_weight = args.alpha * (1 - epoch_num / 30.)
             loss = loss_prob_term + args.alpha * regulation_term
             #print(good_prob.item(), ', '.join([str(p.item()) for p in bad_probs]))
             if loss_prob_term.item() > -args.margin:
@@ -191,11 +195,20 @@ def trainChannelModel(args):
                 #print('-'*33)
                 #print(visualize_tensor(torch.norm(S_good, p=2, dim=0)))
                 print('='*66)
-        scheduler.step(valid_acc)
+        #scheduler.step(valid_acc)
         if(epoch_num % 1 == 0):
             torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
             torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
+
+def rouge_atten_matrix(doc, summ):
+    doc_len = len(doc)
+    summ_len = len(summ)
+    temp_mat = np.zeros([doc_len, summ_len])
+    for i in range(doc_len):
+        for j in range(summ_len):
+            temp_mat[i, j] = rouge_n([doc[i]], [summ[j]])[0]
+    return temp_mat
 
 def validate(data_, sentenceEncoder_, channelModel_, device_, args):
     neg_count = 0
@@ -217,7 +230,35 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
 
         l = S_good.size(0)        
         S_bads = []
-        if(args.neg_sample == 'full_delete'):
+        
+        if(args.neg_sample == 'rouge'):
+            doc_matrix = doc.cpu().data.numpy()
+            doc_len_arr = doc_len.cpu().data.numpy()
+            summ_matrix = sums[0].cpu().data.numpy()
+            summ_len_arr = sums_len[0].cpu().data.numpy()
+            doc_ = []
+            summ_ = []
+            for i in range(np.shape(doc_matrix)[0]):
+                doc_.append(" ".join([data_.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]))
+
+            index = random.randint(0, l - 1) 
+            summ_.append(" ".join([data_.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
+             
+            atten_mat = rouge_atten_matrix(summ_, doc_)
+            best_index = np.argmax(atten_mat[0])
+            worst_index= np.argmin(atten_mat[0])
+            temp_good = []
+            temp_bad = []
+            for i in range(l):
+                if(not i == index):
+                    temp_good.append(S_good[i])
+                    temp_bad.append(S_good[i])
+                else:
+                    temp_good.append(D[worst_index])
+                    #temp_bad.append(D[worst_index])
+            S_good = torch.stack(temp_good)
+            S_bads.append(torch.stack(temp_bad))
+        elif(args.neg_sample == 'full_delete'):
             powerset = genPowerSet(range(l))[1:][:-1]
             for subset in powerset:
                 temp = []
@@ -289,7 +330,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
     parser.add_argument('--neg-case', default = 'max', choices=['max', 'random', 'randmax'])
-    parser.add_argument('--neg-sample', default = 'mix', choices=['mix', 'delete', 'full_delete', 'replace'])
+    parser.add_argument('--neg-sample', default = 'mix', choices=['rouge', 'mix', 'delete', 'full_delete', 'replace'])
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
@@ -300,7 +341,7 @@ def parse_args():
     parser.add_argument('--clip', type=float, default=.5, help='clip to prevent the too large grad')
     parser.add_argument('--lr', type=float, default=0.0001, help='initial learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
-    parser.add_argument('--max-epoch', type=int, default=100)
+    parser.add_argument('--max-epoch', type=int, default=50)
     parser.add_argument('--cuda', action='store_true', default=True)
     parser.add_argument('--optimizer', default='adam', choices=['adam', 'sgd', 'adadelta'])
     parser.add_argument('--batch-size', type=int, default=1, help='batch size for training, not used now')

@@ -19,7 +19,7 @@ def doc_dealer(d):
     if nlp is None:
         nlp = spacy.load('en')
     words = [['zero' if pattern_of_num.match(w.text) else w.text for w in s if w.text.strip()] \
-            for s in nlp(d).sents if s.text.strip()]
+            for s in nlp(d.lower()).sents if s.text.strip()]
     return words
     # return a list of sentences, sentence is list of words
 

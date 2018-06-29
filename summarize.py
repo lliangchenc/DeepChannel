@@ -18,6 +18,7 @@ import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor
 from rouge import Rouge
+from dataset.rouge_not_a_wrapper import rouge_n
 import copy
 #from IPython import embed
 
@@ -54,10 +55,13 @@ def genSentences(args):
 
     valid_count = 0
     rouge_arr = [[],[],[]]
+    another_rouge_arr = []
+    best_rouge1_arr = []
     for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        if(not(valid_count % 100 == 1)):
+        if(not(valid_count % 10 == 3)):
             valid_count += 1
             continue
+        print(valid_count)
         sentenceEncoder.eval(); channelModel.eval()
         doc, sums, doc_len, sums_len = recursive_to_device(device, *valid_batch)
         num_sent_of_sum = sums[0].size(0)
@@ -76,46 +80,63 @@ def genSentences(args):
             probs_arr.append(probs)
             best_index = np.argmax(probs)
             selected_indexs.append(best_index)
+        selected_indexs = random.sample(range(l), min(num_sent_of_sum, l))
 
-        selected_indexs = random.sample(range(l), num_sent_of_sum)
-        if(valid_count % 100 == 1):
-            doc_matrix = doc.cpu().data.numpy()
-            doc_len_arr = doc_len.cpu().data.numpy()
-            golden_summ_matrix = sums[0].cpu().data.numpy()
-            golden_summ_len_arr = sums_len[0].cpu().data.numpy()
-            summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
-            summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
-            #best_sent = " ".join([data.itow[x] for x in doc_matrix[best_index]][:doc_len_arr[best_index]])
-            doc_ = ""
-            doc_arr = []
-            for i in range(np.shape(doc_matrix)[0]):
-                temp_sent = " ".join([data.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]])
-                doc_ += str(i) + ": " + temp_sent + "\n\n"
-                doc_arr.append(temp_sent)
+        doc_matrix = doc.cpu().data.numpy()
+        doc_len_arr = doc_len.cpu().data.numpy()
+        golden_summ_matrix = sums[0].cpu().data.numpy()
+        golden_summ_len_arr = sums_len[0].cpu().data.numpy()
+        summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
+        summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
+        best_sent = " ".join([data.itow[x] for x in doc_matrix[best_index]][:doc_len_arr[best_index]])
+        doc_ = ""
+        doc_arr = []
+        for i in range(np.shape(doc_matrix)[0]):
+            temp_sent = " ".join([data.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]])
+            doc_ += str(i) + ": " + temp_sent + "\n\n"
+            doc_arr.append(temp_sent)
 
-            golden_summ_ = ""
-            golden_summ_arr = []
-            for i in range(np.shape(golden_summ_matrix)[0]):
-                temp_sent = " ".join([data.itow[x] for x in golden_summ_matrix[i]][:golden_summ_len_arr[i]])
-                golden_summ_ += str(i) + ": " + temp_sent + "\n\n"
-                golden_summ_arr.append(temp_sent)
-            
-            summ_ = ""
-            summ_arr = []
-            for i in range(np.shape(summ_matrix)[0]):
-                temp_sent = " ".join([data.itow[x] for x in summ_matrix[i]][:summ_len_arr[i]])
-                summ_ += str(i) + ": " + temp_sent + "\n\n"
-                summ_arr.append(temp_sent)
+        golden_summ_ = ""
+        golden_summ_arr = []
+        for i in range(np.shape(golden_summ_matrix)[0]):
+            temp_sent = " ".join([data.itow[x] for x in golden_summ_matrix[i]][:golden_summ_len_arr[i]])
+            golden_summ_ += str(i) + ": " + temp_sent + "\n\n"
+            golden_summ_arr.append(temp_sent)
+        
+        summ_ = ""
+        summ_arr = []
+        for i in range(np.shape(summ_matrix)[0]):
+            temp_sent = " ".join([data.itow[x] for x in summ_matrix[i]][:summ_len_arr[i]])
+            summ_ += str(i) + ": " + temp_sent + "\n\n"
+            summ_arr.append(temp_sent)
+        
+        best_rouge_summ_arr = []
+        for s in golden_summ_arr:
+            temp = []
+            for d in doc_arr:
+                temp.append(Rouge().get_scores(s, d)[0]['rouge-1']['f'])
+            index = np.argmax(temp)
+            best_rouge_summ_arr.append(doc_arr[index])
 
-            logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
-            print("PROB_ARR: ", str(probs_arr))
-            score = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
-            rouge_arr[0].append(score[0]['rouge-1']['f'])
-            rouge_arr[1].append(score[0]['rouge-2']['f'])
-            rouge_arr[2].append(score[0]['rouge-l']['f'])
-            print("ROUGE: ",score)
+        #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
+        #print("PROB_ARR: ", str(probs_arr))
+        score = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
+        another_score = rouge_n(best_rouge_summ_arr, golden_summ_arr, 1)
+        #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nrouge summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, "\n\n".join(best_rouge_summ_arr)))
+        #score = Rouge().get_scores(" ".join(summ_arr), " ".join(best_rouge_summ_arr))
+
+        rouge_arr[0].append(score[0]['rouge-1']['f'])
+        rouge_arr[1].append(score[0]['rouge-2']['f'])
+        rouge_arr[2].append(score[0]['rouge-l']['f'])
+        another_rouge_arr.append(another_score[0])
+        print("ROUGE: ",score, another_score)
+
         valid_count += 1
     print("ROUGE : ", np.mean(rouge_arr,axis = 1))
+    print("ROUGE : ", np.max(rouge_arr,axis = 1))
+
+    print("ROUGE : ", np.mean(another_rouge_arr))
+    print("ROUGE : ", np.max(another_rouge_arr))
 
 def parse_args():
     parser = argparse.ArgumentParser()
