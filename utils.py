@@ -51,3 +51,16 @@ def genPowerSet(items):
     for x in items:
         result.extend([subset + [x] for subset in result])
     return result
+
+def genSubset(items, element_num):
+    result_ = [[]]
+    result = []
+    for x in items:
+        temp = [subset + [x] for subset in result_]
+        for y in temp:
+            if len(y) <= element_num:
+                result_.append(y)
+    for x in result_:
+        if len(x) == element_num:
+            result.append(x)
+    return result

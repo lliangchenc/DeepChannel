@@ -11,13 +11,13 @@ class ChannelModel(nn.Module):
         self.se_dim = kwargs['se_dim'] # dim of sentence embedding
         self.p_producer = nn.Sequential(
                 nn.Dropout(kwargs['dropout']),
-                nn.Linear(self.se_dim * 2, 512),
+                nn.Linear(self.se_dim * 2, 1024),
                 nn.ReLU(),
                 #nn.Dropout(kwargs['dropout']),
-                nn.Linear(512, 512),
-                nn.ReLU(),
+                #nn.Linear(512, 512),
+                #nn.ReLU(),
                 #nn.Dropout(kwargs['dropout']),
-                nn.Linear(512, 256),
+                nn.Linear(1024, 256),
                 nn.ReLU(),
                 #nn.Dropout(kwargs['dropout']),
                 nn.Linear(256, 1),

@@ -16,9 +16,10 @@ from torch import nn, optim
 from torch.autograd import Variable
 import numpy as np
 from tensorboardX import SummaryWriter
-from utils import recursive_to_device, visualize_tensor
+from utils import recursive_to_device, visualize_tensor, genSubset
 from rouge import Rouge
 from dataset.rouge_not_a_wrapper import rouge_n
+from train import rouge_atten_matrix
 import copy
 #from IPython import embed
 
@@ -58,7 +59,7 @@ def genSentences(args):
     another_rouge_arr = []
     best_rouge1_arr = []
     for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        if(not(valid_count % 10 == 3)):
+        if(not(valid_count % 1000 == 0)):
             valid_count += 1
             continue
         print(valid_count)
@@ -68,27 +69,11 @@ def genSentences(args):
         D = sentenceEncoder(doc, doc_len)
         l = D.size(0)
         
-        selected_indexs = []
-        probs_arr = []
-        for _ in range(num_sent_of_sum):
-            probs = []
-            for i in range(l):
-                temp = [D[x] for x in selected_indexs]
-                temp.append(D[i])
-                temp_prob, addition = channelModel(D, torch.stack(temp))
-                probs.append(temp_prob.item())
-            probs_arr.append(probs)
-            best_index = np.argmax(probs)
-            selected_indexs.append(best_index)
-        selected_indexs = random.sample(range(l), min(num_sent_of_sum, l))
-
         doc_matrix = doc.cpu().data.numpy()
         doc_len_arr = doc_len.cpu().data.numpy()
         golden_summ_matrix = sums[0].cpu().data.numpy()
         golden_summ_len_arr = sums_len[0].cpu().data.numpy()
-        summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
-        summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
-        best_sent = " ".join([data.itow[x] for x in doc_matrix[best_index]][:doc_len_arr[best_index]])
+
         doc_ = ""
         doc_arr = []
         for i in range(np.shape(doc_matrix)[0]):
@@ -102,6 +87,68 @@ def genSentences(args):
             temp_sent = " ".join([data.itow[x] for x in golden_summ_matrix[i]][:golden_summ_len_arr[i]])
             golden_summ_ += str(i) + ": " + temp_sent + "\n\n"
             golden_summ_arr.append(temp_sent)
+
+        selected_indexs = []
+        probs_arr = []
+
+        if args.method == 'iterative':
+            for _ in range(num_sent_of_sum):
+                probs = []
+                for i in range(l):
+                    temp = [D[x] for x in selected_indexs]
+                    temp.append(D[i])
+                    temp_prob, addition = channelModel(D, torch.stack(temp))
+                    probs.append(temp_prob.item())
+                    #print(i, selected_indexs, probs)
+                probs_arr.append(probs)
+                best_index = np.argmax(probs)
+                selected_indexs.append(best_index)
+
+        if(args.method == 'iterative-delete'):
+            current_sent_set = range(l)
+            best_index = -1
+            doc_rouge_matrix = rouge_atten_matrix(doc_arr, doc_arr)
+            for i_ in range(num_sent_of_sum):
+                D_ = torch.stack([D[x] for x in current_sent_set])
+                probs = []
+                print(i_, current_sent_set)
+                for i in current_sent_set:
+                    temp_prob, addition = channelModel(D_, torch.stack([D[i]]))
+                    probs.append(temp_prob.item())
+                best_index = np.argmax(probs)
+                print(current_sent_set[best_index])
+                selected_indexs.append(current_sent_set[best_index])
+                temp = []
+                for i in current_sent_set:
+                    if(doc_rouge_matrix[current_sent_set[best_index], i] < 0.05):
+                        temp.append(i)
+                if(len(temp) == 0):
+                    break
+                current_sent_set = temp 
+
+        if args.method == 'top-k-simple':
+            for i in range(l):
+                temp_prob, addition = channelModel(D, torch.stack([D[i]]))
+                probs_arr.append(temp_prob.item())
+            for _ in range(3):
+                best_index = np.argmax(probs_arr)
+                probs_arr[best_index] = - 1000000
+                selected_indexs.append(best_index)
+
+        if args.method == 'top-k':
+            k_subset = genSubset(range(l), 3)
+            probs = []
+            for subset in k_subset:
+                temp_prob, addition = channelModel(D, torch.stack([D[i] for i in subset]))
+                probs.append(temp_prob.item())
+            index = np.argmax(probs)
+            selected_indexs = k_subset[index]
+
+        if args.method == 'random':
+            selected_indexs = random.sample(range(l), min(num_sent_of_sum, l))
+        
+        summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
+        summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
         
         summ_ = ""
         summ_arr = []
@@ -118,8 +165,10 @@ def genSentences(args):
             index = np.argmax(temp)
             best_rouge_summ_arr.append(doc_arr[index])
 
-        #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
-        #print("PROB_ARR: ", str(probs_arr))
+        logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
+        print("PROB_ARR: ", str(probs_arr))
+        print(rouge_atten_matrix(doc_arr, golden_summ_arr))
+        print(rouge_atten_matrix(doc_arr, summ_arr))
         score = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
         another_score = rouge_n(best_rouge_summ_arr, golden_summ_arr, 1)
         #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nrouge summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, "\n\n".join(best_rouge_summ_arr)))
@@ -143,6 +192,7 @@ def parse_args():
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
     parser.add_argument('--neg-case', default = 'max', choices=['max', 'random'])
     parser.add_argument('--neg-sample', default = 'mix', choices=['mix', 'delete', 'replace'])
+    parser.add_argument('--method', default = 'random', choices=['random', 'top-k-simple', 'top-k', 'iterative', 'iterative-delete'])
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
@@ -150,9 +200,6 @@ def parse_args():
     parser.add_argument('--dropout', type=float, default=0)
     parser.add_argument('--margin', type=float, default=1, help='margin of hinge loss, must >= 0')
 
-    parser.add_argument('--clip', type=float, default=.5, help='clip to prevent the too large grad')
-    parser.add_argument('--lr', type=float, default=0.0001, help='initial learning rate')
-    parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
     parser.add_argument('--max-epoch', type=int, default=100)
     parser.add_argument('--cuda', action='store_true', default=True)
     parser.add_argument('--optimizer', default='adam', choices=['adam', 'sgd', 'adadelta'])
