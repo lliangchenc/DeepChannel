@@ -60,7 +60,7 @@ def genSentences(args):
     another_rouge_arr = []
     best_rouge1_arr = []
     for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        if(not(valid_count % 100 == 0)):
+        if(not(valid_count % 100 == 1)):
             valid_count += 1
             continue
         print(valid_count)
@@ -103,6 +103,9 @@ def genSentences(args):
                     #print(i, selected_indexs, probs)
                 probs_arr.append(probs)
                 best_index = np.argmax(probs)
+                while(best_index in selected_indexs):
+                    probs[best_index] = -100000
+                    best_index = np.argmax(probs)
                 selected_indexs.append(best_index)
 
         if(args.method == 'iterative-delete'):
@@ -125,7 +128,11 @@ def genSentences(args):
                         temp.append(i)
                 if(len(temp) == 0):
                     break
-                current_sent_set = temp 
+                current_sent_set = temp
+
+        #if(args.method == 'random-replace'):
+        
+
 
         if args.method == 'top-k-simple':
             for i in range(l):
