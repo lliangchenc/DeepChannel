@@ -10,11 +10,12 @@ class BiGRU(nn.Module):
         self.forward_encoder = nn.GRU(input_size=kwargs['word_dim'],
                 hidden_size=kwargs['hidden_dim'],
                 num_layers=kwargs['num_layers'],
-                dropout=kwargs['dropout'])
+                #dropout=kwargs['dropout'])
+                dropout=0)
         self.backward_encoder = nn.GRU(input_size=kwargs['word_dim'],
                 hidden_size=kwargs['hidden_dim'],
                 num_layers=kwargs['num_layers'],
-                dropout=kwargs['dropout'])
+                dropout=0)
         self.reset_parameters()
 
     def reset_parameters(self):
@@ -116,7 +117,7 @@ class SentenceEmbedding(nn.Module):
 
     def __init__(self, **kwargs):
         super(SentenceEmbedding, self).__init__()
-        self.drop = nn.Dropout(kwargs['dropout'])
+        self.drop = nn.Dropout(0)
         self.word_embedding = nn.Embedding(num_embeddings=kwargs['num_words'],
                                             embedding_dim=kwargs['word_dim'])
         self.SE_type = kwargs['SE_type']

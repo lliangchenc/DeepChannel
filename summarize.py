@@ -18,6 +18,7 @@ import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor, genSubset
 from rouge import Rouge
+from pyrouge import Rouge155
 from dataset.rouge_not_a_wrapper import rouge_n
 from train import rouge_atten_matrix
 import copy
@@ -59,7 +60,7 @@ def genSentences(args):
     another_rouge_arr = []
     best_rouge1_arr = []
     for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        if(not(valid_count % 1000 == 0)):
+        if(not(valid_count % 100 == 0)):
             valid_count += 1
             continue
         print(valid_count)
@@ -120,7 +121,7 @@ def genSentences(args):
                 selected_indexs.append(current_sent_set[best_index])
                 temp = []
                 for i in current_sent_set:
-                    if(doc_rouge_matrix[current_sent_set[best_index], i] < 0.05):
+                    if(doc_rouge_matrix[current_sent_set[best_index], i] < 0.9):
                         temp.append(i)
                 if(len(temp) == 0):
                     break
@@ -130,7 +131,7 @@ def genSentences(args):
             for i in range(l):
                 temp_prob, addition = channelModel(D, torch.stack([D[i]]))
                 probs_arr.append(temp_prob.item())
-            for _ in range(3):
+            for _ in range(num_sent_of_sum):
                 best_index = np.argmax(probs_arr)
                 probs_arr[best_index] = - 1000000
                 selected_indexs.append(best_index)
@@ -146,6 +147,12 @@ def genSentences(args):
 
         if args.method == 'random':
             selected_indexs = random.sample(range(l), min(num_sent_of_sum, l))
+
+        if args.method == 'lead-3':
+            if(l < 3):
+                selected_indexs = range(l)
+            else:
+                selected_indexs = [0,1,2]
         
         summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
         summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
@@ -171,6 +178,8 @@ def genSentences(args):
         print(rouge_atten_matrix(doc_arr, summ_arr))
         score = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
         another_score = rouge_n(best_rouge_summ_arr, golden_summ_arr, 1)
+        #score_1 = Rouge155(n_words=100)
+        #return
         #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nrouge summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, "\n\n".join(best_rouge_summ_arr)))
         #score = Rouge().get_scores(" ".join(summ_arr), " ".join(best_rouge_summ_arr))
 
@@ -179,7 +188,6 @@ def genSentences(args):
         rouge_arr[2].append(score[0]['rouge-l']['f'])
         another_rouge_arr.append(another_score[0])
         print("ROUGE: ",score, another_score)
-
         valid_count += 1
     print("ROUGE : ", np.mean(rouge_arr,axis = 1))
     print("ROUGE : ", np.max(rouge_arr,axis = 1))
@@ -192,7 +200,7 @@ def parse_args():
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
     parser.add_argument('--neg-case', default = 'max', choices=['max', 'random'])
     parser.add_argument('--neg-sample', default = 'mix', choices=['mix', 'delete', 'replace'])
-    parser.add_argument('--method', default = 'random', choices=['random', 'top-k-simple', 'top-k', 'iterative', 'iterative-delete'])
+    parser.add_argument('--method', default = 'random', choices=['random', 'top-k-simple', 'top-k', 'iterative', 'iterative-delete', 'lead-3'])
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
