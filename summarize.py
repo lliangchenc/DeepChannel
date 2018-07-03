@@ -60,7 +60,7 @@ def genSentences(args):
     another_rouge_arr = []
     best_rouge1_arr = []
     for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        if(not(valid_count % 100 == 1)):
+        if(not(valid_count % 100 == 0)):
             valid_count += 1
             continue
         print(valid_count)
@@ -69,7 +69,8 @@ def genSentences(args):
         num_sent_of_sum = sums[0].size(0)
         D = sentenceEncoder(doc, doc_len)
         l = D.size(0)
-        
+        if(l < num_sent_of_sum):
+            continue
         doc_matrix = doc.cpu().data.numpy()
         doc_len_arr = doc_len.cpu().data.numpy()
         golden_summ_matrix = sums[0].cpu().data.numpy()
@@ -185,15 +186,16 @@ def genSentences(args):
         print(rouge_atten_matrix(doc_arr, summ_arr))
         score = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
         another_score = rouge_n(best_rouge_summ_arr, golden_summ_arr, 1)
-        #score_1 = Rouge155(n_words=100)
-        #return
+        
+        #score_1 = Rouge155(n_words=100, stem=True).score_summary([" ".join(summ_arr).split(" ")],{'A':[" ".join(golden_summ_arr).split(" ")]})
+        #print(score_1)
         #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nrouge summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, "\n\n".join(best_rouge_summ_arr)))
-        #score = Rouge().get_scores(" ".join(summ_arr), " ".join(best_rouge_summ_arr))
 
         rouge_arr[0].append(score[0]['rouge-1']['f'])
         rouge_arr[1].append(score[0]['rouge-2']['f'])
         rouge_arr[2].append(score[0]['rouge-l']['f'])
         another_rouge_arr.append(another_score[0])
+        #another_rouge_arr.append(score_1['rouge_1_f_score'])
         print("ROUGE: ",score, another_score)
         valid_count += 1
     print("ROUGE : ", np.mean(rouge_arr,axis = 1))
