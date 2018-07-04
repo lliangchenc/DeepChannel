@@ -24,6 +24,7 @@ from train import rouge_atten_matrix
 import copy
 #from IPython import embed
 
+
 def genSentences(args):
     np.set_printoptions(threshold=1e10) 
     print('Loading data......')
@@ -60,7 +61,7 @@ def genSentences(args):
     another_rouge_arr = []
     best_rouge1_arr = []
     for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        if(not(valid_count % 100 == 0)):
+        if(not(valid_count % 100 == 1)):
             valid_count += 1
             continue
         print(valid_count)
@@ -187,17 +188,20 @@ def genSentences(args):
         score = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
         another_score = rouge_n(best_rouge_summ_arr, golden_summ_arr, 1)
         
-        #score_1 = Rouge155(n_words=100, stem=True).score_summary([" ".join(summ_arr).split(" ")],{'A':[" ".join(golden_summ_arr).split(" ")]})
-        #print(score_1)
-        #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nrouge summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, "\n\n".join(best_rouge_summ_arr)))
-
+        score_1 = Rouge155(n_words=100, average="sentence", stem=True).score_summary([sent.split() for sent in summ_arr],{'A':[sent.split() for sent in golden_summ_arr]})
+        print(score_1)
+        #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nrouge summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, "\n\n".join(best_rouge_summ_arr)))riiieturn
         rouge_arr[0].append(score[0]['rouge-1']['f'])
         rouge_arr[1].append(score[0]['rouge-2']['f'])
         rouge_arr[2].append(score[0]['rouge-l']['f'])
         another_rouge_arr.append(another_score[0])
-        #another_rouge_arr.append(score_1['rouge_1_f_score'])
+        if(score_1['rouge_1_f_score'] > 0):
+            another_rouge_arr.append(score_1['rouge_1_f_score'])
+        else:
+            return
         print("ROUGE: ",score, another_score)
         valid_count += 1
+        #return
     print("ROUGE : ", np.mean(rouge_arr,axis = 1))
     print("ROUGE : ", np.max(rouge_arr,axis = 1))
 
