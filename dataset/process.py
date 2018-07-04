@@ -173,8 +173,8 @@ def main():
     wtof = {}
     for j in range(len(data[0])): # j-th sample of train set
         for k in range(2): # 0: content, 1: summary
-            for l in range(len(data[i][j][k])): # l-th sentence
-                for word in data[i][j][k][l]:
+            for l in range(len(data[0][j][k])): # l-th sentence
+                for word in data[0][j][k][l]:
                     wtof[word] = wtof.get(word, 0) + 1
     wtof = Counter(wtof).most_common(args.max_word_num)
     needed_words = { w[0]: w[1] for w in wtof }
