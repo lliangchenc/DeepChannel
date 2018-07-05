@@ -1,28 +1,61 @@
 import torch
 import time
 import argparse
-import logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)-8s %(message)s')
-logFormatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
-rootLogger = logging.getLogger()
 import random
 import shutil
 import os
 from model.noisyChannel import ChannelModel
 from model.sentence import SentenceEmbedding
 from dataset.data import Dataset
-from torch import nn
-from torch import nn, optim
-from torch.autograd import Variable
 import numpy as np
-from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor, genSubset
 from rouge import Rouge
-from pyrouge import Rouge155
-from dataset.rouge_not_a_wrapper import rouge_n
+from pyrouge.rouge import Rouge155
 from train import rouge_atten_matrix
 import copy
-#from IPython import embed
+from tqdm import tqdm
+from IPython import embed
+
+def evalLead3(args):
+    data = Dataset(path=args.data_path)
+    Rouge_list, Rouge155_list = [], []
+    Rouge155_obj = Rouge155(stem=True, tmp='./tmp2')
+    for batch_iter, valid_batch in tqdm(enumerate(data.gen_test_minibatch()), total=data.test_size):
+        doc, sums, doc_len, sums_len = valid_batch
+        selected_indexs = range(min(doc.size(0), 3))
+        doc_matrix = doc.data.numpy()
+        doc_len_arr = doc_len.data.numpy()
+        golden_summ_matrix = sums[0].data.numpy()
+        golden_summ_len_arr = sums_len[0].data.numpy()
+        doc_arr = []
+        for i in range(np.shape(doc_matrix)[0]):
+            temp_sent = " ".join([data.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]])
+            doc_arr.append(temp_sent)
+
+        golden_summ_arr = []
+        for i in range(np.shape(golden_summ_matrix)[0]):
+            temp_sent = " ".join([data.itow[x] for x in golden_summ_matrix[i]][:golden_summ_len_arr[i]])
+            golden_summ_arr.append(temp_sent)
+
+        summ_matrix = torch.stack([doc[x] for x in selected_indexs]).data.numpy()
+        summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).data.numpy()
+        
+        summ_arr = []
+        for i in range(np.shape(summ_matrix)[0]):
+            temp_sent = " ".join([data.itow[x] for x in summ_matrix[i]][:summ_len_arr[i]])
+            summ_arr.append(temp_sent)
+        score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
+        score_Rouge155 = Rouge155_obj.score(summ_arr, {'A':golden_summ_arr})
+        #score_Rouge155 = Rouge155_obj.score(' '.join(summ_arr), {'A':' '.join(golden_summ_arr)})
+        Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
+        Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
+        print(Rouge_list[-1])
+        print(Rouge155_list[-1])
+        #embed()
+        #print('-----')
+    print('='*60)
+    print(np.mean(Rouge_list))
+    print(np.mean(Rouge155_list))
 
 
 def genSentences(args):
@@ -34,8 +67,6 @@ def genSentences(args):
     sentenceEncoder = SentenceEmbedding(**vars(args))
     args.se_dim = sentenceEncoder.getDim() # sentence embedding dim
     channelModel = ChannelModel(**vars(args))
-    logging.info(sentenceEncoder)
-    logging.info(channelModel)
     print('Initializing word embeddings......')
     sentenceEncoder.word_embedding.weight.data.set_(data.weight)
     if not args.tune_word_embedding:
@@ -57,13 +88,10 @@ def genSentences(args):
     channelModel.load_state_dict(torch.load(os.path.join(args.save_dir, 'channel.pkl')))
 
     valid_count = 0
-    rouge_arr = [[],[],[]]
-    another_rouge_arr = []
+    Rouge_list, Rouge155_list = [], []
+    Rouge155_obj = Rouge155(stem=True)
     best_rouge1_arr = []
     for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        if(not(valid_count % 100 == 1)):
-            valid_count += 1
-            continue
         print(valid_count)
         sentenceEncoder.eval(); channelModel.eval()
         doc, sums, doc_len, sums_len = recursive_to_device(device, *valid_batch)
@@ -156,12 +184,6 @@ def genSentences(args):
 
         if args.method == 'random':
             selected_indexs = random.sample(range(l), min(num_sent_of_sum, l))
-
-        if args.method == 'lead-3':
-            if(l < 3):
-                selected_indexs = range(l)
-            else:
-                selected_indexs = [0,1,2]
         
         summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
         summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
@@ -181,32 +203,20 @@ def genSentences(args):
             index = np.argmax(temp)
             best_rouge_summ_arr.append(doc_arr[index])
 
-        logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
-        print("PROB_ARR: ", str(probs_arr))
-        print(rouge_atten_matrix(doc_arr, golden_summ_arr))
-        print(rouge_atten_matrix(doc_arr, summ_arr))
-        score = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
-        another_score = rouge_n(best_rouge_summ_arr, golden_summ_arr, 1)
-        
-        score_1 = Rouge155(n_words=100, average="sentence", stem=True).score_summary([sent.split() for sent in summ_arr],{'A':[sent.split() for sent in golden_summ_arr]})
-        print(score_1)
-        #logging.info("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nrouge summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, "\n\n".join(best_rouge_summ_arr)))riiieturn
-        rouge_arr[0].append(score[0]['rouge-1']['f'])
-        rouge_arr[1].append(score[0]['rouge-2']['f'])
-        rouge_arr[2].append(score[0]['rouge-l']['f'])
-        another_rouge_arr.append(another_score[0])
-        if(score_1['rouge_1_f_score'] > 0):
-            another_rouge_arr.append(score_1['rouge_1_f_score'])
-        else:
-            return
-        print("ROUGE: ",score, another_score)
+        #print("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
+        #print("PROB_ARR: ", str(probs_arr))
+        #print(rouge_atten_matrix(doc_arr, golden_summ_arr))
+        #print(rouge_atten_matrix(doc_arr, summ_arr))
+        score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
+        score_Rouge155 = Rouge155_obj.score_summary([sent.split() for sent in summ_arr],{'A':[sent.split() for sent in golden_summ_arr]})
+        Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
+        Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
+        print(Rouge_list[-1])
+        print(Rouge155_list[-1])
         valid_count += 1
-        #return
-    print("ROUGE : ", np.mean(rouge_arr,axis = 1))
-    print("ROUGE : ", np.max(rouge_arr,axis = 1))
-
-    print("ROUGE : ", np.mean(another_rouge_arr))
-    print("ROUGE : ", np.max(another_rouge_arr))
+    print('='*60)
+    print(np.mean(Rouge_list))
+    print(np.mean(Rouge155_list))
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -219,54 +229,28 @@ def parse_args():
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
     parser.add_argument('--kernel-num', type=int, default=64, help='kernel num/ output dim in CNN')
     parser.add_argument('--dropout', type=float, default=0)
-    parser.add_argument('--margin', type=float, default=1, help='margin of hinge loss, must >= 0')
 
-    parser.add_argument('--max-epoch', type=int, default=100)
     parser.add_argument('--cuda', action='store_true', default=True)
-    parser.add_argument('--optimizer', default='adam', choices=['adam', 'sgd', 'adadelta'])
-    parser.add_argument('--batch-size', type=int, default=1, help='batch size for training, not used now')
-    parser.add_argument('--tune-word-embedding', action='store_true', help='specified to fine tune glove vectors')
-    parser.add_argument('--anneal', action='store_true')
-    parser.add_argument('--debug', action='store_true')
-    parser.add_argument('--seed', type=int, default=666, help='random seed')
-    parser.add_argument('--alpha', type=float, default=0.1, help='weight of regularization term')
 
     parser.add_argument('--data-path', required=True, help='pickle file obtained by dataset dump or datadir for torchtext')
-    parser.add_argument('--save-dir', type=str, required=True, help='path to save checkpoints and logs')
+    parser.add_argument('--save-dir', type=str, help='path to save checkpoints and logs')
     parser.add_argument('--load-previous-model', action='store_true')
-    parser.add_argument('--validation', action='store_true')
     args = parser.parse_args()
     return args
 
 
 def prepare():
-    # dir preparation
     args = parse_args()
-    if not args.load_previous_model:
-        if os.path.isdir(args.save_dir):
-            shutil.rmtree(args.save_dir)
-            os.mkdir(args.save_dir)
-    # seed setting
-    torch.manual_seed(args.seed)
-    random.seed(args.seed)
-    np.random.seed(args.seed)
-    if torch.cuda.is_available():
-        if not args.cuda:
-            print("WARNING: You have a CUDA device, so you should probably run with --cuda")
-        else:
-            torch.cuda.manual_seed(args.seed)
-    # make logging.info display into both shell and file
-    fileHandler = logging.FileHandler(os.path.join(args.save_dir, 'stdout.log'))
-    fileHandler.setFormatter(logFormatter)
-    rootLogger.addHandler(fileHandler)
-    # args display
     for k, v in vars(args).items():
-        logging.info(k+':'+str(v))
+        print(k+':'+str(v))
     return args
 
 def main():
     args = prepare()
-    genSentences(args)
+    if args.method == 'lead-3':
+        evalLead3(args)
+    else:
+        genSentences(args)
 
 if __name__ == "__main__":
     main()

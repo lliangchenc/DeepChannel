@@ -106,7 +106,6 @@ class Dataset(object):
 
     def gen_valid_minibatch(self):
         combined = list(zip(self.valid_set, self.valid_len))
-        random.shuffle(combined)
         self.valid_set[:], self.valid_len[:] = zip(*combined)
         for d, s, d_len, s_len in map(lambda _: _[0]+_[1], zip(self.valid_set, self.valid_len)):
             s_batch = [s]
@@ -123,8 +122,22 @@ class Dataset(object):
             
 
     def gen_test_minibatch(self):
+#        for d, s, d_len, s_len in map(lambda _: _[0]+_[1], zip(self.test_set, self.test_len)):
+#            yield wrap_numpy_to_longtensor(d, s, d_len, s_len)
+#        else:
+#            raise StopIteration
+        combined = list(zip(self.test_set, self.test_len))
+        self.test_set[:], self.test_len[:] = zip(*combined)
         for d, s, d_len, s_len in map(lambda _: _[0]+_[1], zip(self.test_set, self.test_len)):
-            yield wrap_numpy_to_longtensor(d, s, d_len, s_len)
+            s_batch = [s]
+            s_len_batch = [s_len]
+            d_index = random.randint(0, len(d) - 1)
+            end_j = min(s.shape[1], d_len[d_index])
+            neg_sent = np.int32(np.zeros([1, s.shape[1]]))
+            neg_sent[0, :end_j] = d[d_index, :end_j]
+            s_batch.append(neg_sent)
+            s_len_batch.append(np.int32([end_j]))
+            yield wrap_numpy_to_longtensor(d, s_batch, d_len, s_len_batch)
         else:
             raise StopIteration
 

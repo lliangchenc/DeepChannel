@@ -1,4 +1,6 @@
 visualize.txt
+tmp*
+*.swp
 
 led / optimized / DLL files
 __pycache__/
