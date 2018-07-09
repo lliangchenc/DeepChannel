@@ -69,11 +69,8 @@ def genSentences(args):
     channelModel = ChannelModel(**vars(args))
     print('Initializing word embeddings......')
     sentenceEncoder.word_embedding.weight.data.set_(data.weight)
-    if not args.tune_word_embedding:
-        sentenceEncoder.word_embedding.weight.requires_grad = False
-        print('Fix word embeddings')
-    else:
-        print('Tune word embeddings')
+    sentenceEncoder.word_embedding.weight.requires_grad = False
+    print('Fix word embeddings')
     device = torch.device('cuda' if args.cuda else 'cpu')
     if args.cuda:
         print('Transfer models to cuda......')
@@ -91,8 +88,8 @@ def genSentences(args):
     Rouge_list, Rouge155_list = [], []
     Rouge155_obj = Rouge155(stem=True)
     best_rouge1_arr = []
-    for batch_iter, valid_batch in enumerate(data.gen_valid_minibatch()):
-        print(valid_count)
+    for batch_iter, valid_batch in tqdm(enumerate(data.gen_test_minibatch()), total = data.test_size):
+        #print(valid_count)
         sentenceEncoder.eval(); channelModel.eval()
         doc, sums, doc_len, sums_len = recursive_to_device(device, *valid_batch)
         num_sent_of_sum = sums[0].size(0)
@@ -208,15 +205,16 @@ def genSentences(args):
         #print(rouge_atten_matrix(doc_arr, golden_summ_arr))
         #print(rouge_atten_matrix(doc_arr, summ_arr))
         score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
-        score_Rouge155 = Rouge155_obj.score_summary([sent.split() for sent in summ_arr],{'A':[sent.split() for sent in golden_summ_arr]})
+        #score_Rouge155 = Rouge155_obj.score_summary([sent.split() for sent in summ_arr],{'A':[sent.split() for sent in golden_summ_arr]})
         Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
-        Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
+        #Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
+        os.system("clear")
         print(Rouge_list[-1])
-        print(Rouge155_list[-1])
+        #print(Rouge155_list[-1])
         valid_count += 1
     print('='*60)
     print(np.mean(Rouge_list))
-    print(np.mean(Rouge155_list))
+    #print(np.mean(Rouge155_list))
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -234,7 +232,6 @@ def parse_args():
 
     parser.add_argument('--data-path', required=True, help='pickle file obtained by dataset dump or datadir for torchtext')
     parser.add_argument('--save-dir', type=str, help='path to save checkpoints and logs')
-    parser.add_argument('--load-previous-model', action='store_true')
     args = parser.parse_args()
     return args
 

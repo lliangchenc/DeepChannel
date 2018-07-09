@@ -8,12 +8,14 @@ rootLogger = logging.getLogger()
 import random
 import shutil
 import os
+import heapq
 from model.noisyChannel import ChannelModel
 from model.sentence import SentenceEmbedding
 from dataset.data import Dataset
 from torch import nn
 from torch import nn, optim
 from torch.autograd import Variable
+from rouge import Rouge
 import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor, genPowerSet
@@ -63,6 +65,7 @@ def trainChannelModel(args):
             }[args.optimizer]
     optimizer = optimizer_class(params=params, lr=args.lr, weight_decay=args.weight_decay)
     #scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=5, verbose=True)
+    scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[1],gamma = 0.1)
     train_writer = SummaryWriter(os.path.join(args.save_dir, 'log', 'train'))
     tic = time.time()
     iter_count = 0
@@ -83,15 +86,17 @@ def trainChannelModel(args):
 
 
     for epoch_num in range(args.max_epoch):
+        scheduler.step()
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
 
         if(epoch_num % 1 == 0):
-            valid_loss, valid_all_loss, valid_acc, valid_all_acc = validate(data, sentenceEncoder, channelModel, device, args)
+            valid_loss, valid_all_loss, valid_acc, valid_all_acc, rouge_score = validate(data, sentenceEncoder, channelModel, device, args)
             train_writer.add_scalar('validation/loss', valid_loss, epoch_num)
             train_writer.add_scalar('validation/all_loss', valid_all_loss, epoch_num)
             train_writer.add_scalar('validation/acc', valid_acc, epoch_num)
             train_writer.add_scalar('validation/all_acc', valid_all_acc, epoch_num)
+            train_writer.add_scalar('validation/rouge', rouge_score, epoch_num)
 
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
             sentenceEncoder.train(); channelModel.train()
@@ -105,74 +110,49 @@ def trainChannelModel(args):
             S_good = sentenceEncoder(sums[0], sums_len[0])
             neg_sent_embed = sentenceEncoder(sums[1], sums_len[1])
 
-            l = S_good.size(0)        
+            l = S_good.size(0)   
+
+            ## train sample selection strategy:
+            ## 0. good case: rouge max, bad case: random
+            ## 1. good case: origin, bad case: random
+            ## 2. good case: rouge max, bad case: one ranking in the second half
+            ## 3. good case: origin, bad case: one ranking in the second half
+
             S_bads = []
-            if(args.neg_sample == 'rouge'):
-                doc_matrix = doc.cpu().data.numpy()
-                doc_len_arr = doc_len.cpu().data.numpy()
-                summ_matrix = sums[0].cpu().data.numpy()
-                summ_len_arr = sums_len[0].cpu().data.numpy()
-                doc_ = []
-                summ_ = []
-                for i in range(np.shape(doc_matrix)[0]):
-                    doc_.append(" ".join([data.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]))
+            doc_matrix = doc.cpu().data.numpy()
+            doc_len_arr = doc_len.cpu().data.numpy()
+            summ_matrix = sums[0].cpu().data.numpy()
+            summ_len_arr = sums_len[0].cpu().data.numpy()
+            doc_ = []
+            summ_ = []
+            for i in range(np.shape(doc_matrix)[0]):
+                doc_.append(" ".join([data.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]))
 
-                index = random.randint(0, l - 1) 
-                summ_.append(" ".join([data.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
-                 
-                atten_mat = rouge_atten_matrix(summ_, doc_)
-                best_index = np.argmax(atten_mat[0])
-                #worst_index= np.argmin(atten_mat[0])
-                worst_index = random.randint(0, D.size(0) - 1)
-                #atten_mat[0][best_index] = -10000000
-                #minor_index = np.argmax(atten_mat[0])
-                temp_good = []
-                temp_bad = []
-                temp_delete = []
-                temp_minor = []
-                for i in range(l):
-                    if(not i == index):
-                        temp_good.append(S_good[i])
-                        temp_bad.append(S_good[i])
-                        #temp_delete.append(S_good[i])
-                        #temp_minor.append(S_good[i])
-                    else:
-                        temp_good.append(D[best_index])
-                        temp_bad.append(D[worst_index])
-                        #temp_minor.append(D[minor_index])
-                S_good = torch.stack(temp_good)
-                S_bads.append(torch.stack(temp_bad))
-                #S_bads.append(torch.stack(temp_delete))
-                #S_bads.append(torch.stack(temp_minor))
-
+            index = random.randint(0, l - 1) 
+            summ_.append(" ".join([data.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
+             
+            atten_mat = rouge_atten_matrix(summ_, doc_)
+            best_index = np.argmax(atten_mat[0])
+            worse_index = 0
+            if args.train_sample % 2 == 0:
+                worse_index = random.randint(0, D.size(0) - 1)
             else:
-                for i in range(l):
-                    temp_replace = []
-                    temp_delete = []
-                    if(args.neg_sample == 'full_delete'):
-                        powerset = genPowerSet(range(l))[1:][:-1]
-                        for subset in powerset:
-                            temp = []
-                            for j in subset:
-                                temp.append(S_good[j])
-                            S_bads.append(torch.stack(temp))
-                    else:
-                        for j in range(i):
-                            temp_replace.append(S_good[j])
-                            temp_delete.append(S_good[j])
-                        temp_replace.append(neg_sent_embed[0])
-                        for j in range(i+1, l):
-                            temp_replace.append(S_good[j])
-                            temp_delete.append(S_good[j])
-                        if(args.neg_sample == 'replace'):
-                            S_bads.append(torch.stack(temp_replace))
-                        elif(args.neg_sample == 'delete'):
-                            S_bads.append(torch.stack(temp_delete))
-                        else:
-                            S_bads.append(torch.stack(temp_replace))
-                            S_bads.append(torch.stack(temp_delete))
-                
+                ind = random.randint(1, int(D.size(0) / 2) + 1)
+                worse_index = list(map(list(atten_mat[0]).index, heapq.nsmallest(ind, list(atten_mat[0]))))[-1]
+            temp_good = []
+            temp_bad = []
+            for i in range(l):
+                if(not i == index):
+                    temp_good.append(S_good[i])
+                    temp_bad.append(S_good[i])
+                else:
+                    temp_good.append(D[best_index])
+                    temp_bad.append(D[worse_index])
 
+            if args.train_sample % 2 == 0:
+                S_good = torch.stack(temp_good)
+
+            S_bads.append(torch.stack(temp_bad))
             # prob calculation
             good_prob, addition = channelModel(D, S_good)
             good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
@@ -257,7 +237,80 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
     sent_count = 0
     loss_arr = []
     all_loss_arr = []
+    Rouge_list = []
+
+    for batch_iter, valid_batch in enumerate(data_.gen_test_minibatch()):
+        if not(batch_iter % 100 == 0):
+            continue
+        sentenceEncoder_.eval(); channelModel_.eval()
+        doc, sums, doc_len, sums_len = recursive_to_device(device_, *valid_batch)
+        num_sent_of_sum = sums[0].size(0)
+        D = sentenceEncoder_(doc, doc_len)
+        l = D.size(0)
+        if(l < num_sent_of_sum):
+            continue
+        doc_matrix = doc.cpu().data.numpy()
+        doc_len_arr = doc_len.cpu().data.numpy()
+        golden_summ_matrix = sums[0].cpu().data.numpy()
+        golden_summ_len_arr = sums_len[0].cpu().data.numpy()
+
+        doc_ = ""
+        doc_arr = []
+        for i in range(np.shape(doc_matrix)[0]):
+            temp_sent = " ".join([data_.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]])
+            doc_ += str(i) + ": " + temp_sent + "\n\n"
+            doc_arr.append(temp_sent)
+
+        golden_summ_ = ""
+        golden_summ_arr = []
+        for i in range(np.shape(golden_summ_matrix)[0]):
+            temp_sent = " ".join([data_.itow[x] for x in golden_summ_matrix[i]][:golden_summ_len_arr[i]])
+            golden_summ_ += str(i) + ": " + temp_sent + "\n\n"
+            golden_summ_arr.append(temp_sent)
+
+        selected_indexs = []
+        probs_arr = []
+
+        for _ in range(num_sent_of_sum):
+            probs = []
+            for i in range(l):
+                temp = [D[x] for x in selected_indexs]
+                temp.append(D[i])
+                temp_prob, addition = channelModel_(D, torch.stack(temp))
+                probs.append(temp_prob.item())
+            probs_arr.append(probs)
+            best_index = np.argmax(probs)
+            while(best_index in selected_indexs):
+                probs[best_index] = -100000
+                best_index = np.argmax(probs)
+            selected_indexs.append(best_index)
+        summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
+        summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
+        
+        summ_ = ""
+        summ_arr = []
+        for i in range(np.shape(summ_matrix)[0]):
+            temp_sent = " ".join([data_.itow[x] for x in summ_matrix[i]][:summ_len_arr[i]])
+            summ_ += str(i) + ": " + temp_sent + "\n\n"
+            summ_arr.append(temp_sent)
+        
+        best_rouge_summ_arr = []
+        for s in golden_summ_arr:
+            temp = []
+            for d in doc_arr:
+                temp.append(Rouge().get_scores(s, d)[0]['rouge-1']['f'])
+            index = np.argmax(temp)
+            best_rouge_summ_arr.append(doc_arr[index])
+
+        score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
+        Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
+    
+    rouge_score = np.mean(Rouge_list)
+    print("ROUGE 1/100 sample : ", rouge_score)
+
     for batch_iter, valid_batch in enumerate(data_.gen_valid_minibatch()):
+        if not(batch_iter % 10 == 0):
+            continue
         sentenceEncoder_.eval(); channelModel_.eval()
         valid_iter_count += 1
         doc, sums, doc_len, sums_len = recursive_to_device(device_, *valid_batch)
@@ -271,69 +324,32 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
         l = S_good.size(0)        
         S_bads = []
         
-        if(args.neg_sample == 'rouge'):
-            doc_matrix = doc.cpu().data.numpy()
-            doc_len_arr = doc_len.cpu().data.numpy()
-            summ_matrix = sums[0].cpu().data.numpy()
-            summ_len_arr = sums_len[0].cpu().data.numpy()
-            doc_ = []
-            summ_ = []
-            for i in range(np.shape(doc_matrix)[0]):
-                doc_.append(" ".join([data_.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]))
+        doc_matrix = doc.cpu().data.numpy()
+        doc_len_arr = doc_len.cpu().data.numpy()
+        summ_matrix = sums[0].cpu().data.numpy()
+        summ_len_arr = sums_len[0].cpu().data.numpy()
+        doc_ = []
+        summ_ = []
+        for i in range(np.shape(doc_matrix)[0]):
+            doc_.append(" ".join([data_.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]))
 
-            index = random.randint(0, l - 1) 
-            summ_.append(" ".join([data_.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
-             
-            atten_mat = rouge_atten_matrix(summ_, doc_)
-            best_index = np.argmax(atten_mat[0])
-            worst_index= np.argmin(atten_mat[0])
-            atten_mat[0][best_index] = -10000000
-            minor_index = np.argmax(atten_mat[0])
-            temp_good = []
-            temp_bad = []
-            temp_delete = []
-            temp_minor = []
-            for i in range(l):
-                if(not i == index):
-                    temp_good.append(S_good[i])
-                    temp_bad.append(S_good[i])
-                    temp_delete.append(S_good[i])
-                    temp_minor.append(S_good[i])
-                else:
-                    temp_good.append(D[best_index])
-                    temp_bad.append(D[worst_index])
-                    temp_minor.append(D[minor_index])
-            S_good = torch.stack(temp_good)
-            S_bads.append(torch.stack(temp_bad))
-            #S_bads.append(torch.stack(temp_delete))
-            #S_bads.append(torch.stack(temp_minor))
-        elif(args.neg_sample == 'full_delete'):
-            powerset = genPowerSet(range(l))[1:][:-1]
-            for subset in powerset:
-                temp = []
-                for j in subset:
-                    temp.append(S_good[j])
-                S_bads.append(torch.stack(temp))
-        else:
-            for i in range(l):
-                temp = []
-                temp_delete = []
-                for j in range(i):
-                    temp.append(S_good[j])
-                    temp_delete.append(S_good[j])
-                temp.append(neg_sent_embed[0])
-                for j in range(i+1, l):
-                    temp.append(S_good[j])
-                    temp_delete.append(S_good[j])
-
-                if(args.neg_sample == 'replace'):
-                    S_bads.append(torch.stack(temp))
-                elif(args.neg_sample == 'delete'):
-                    S_bads.append(torch.stack(temp_delete))
-                else:
-                    S_bads.append(torch.stack(temp))
-                    S_bads.append(torch.stack(temp_delete))
-
+        index = random.randint(0, l - 1) 
+        summ_.append(" ".join([data_.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
+         
+        atten_mat = rouge_atten_matrix(summ_, doc_)
+        best_index = np.argmax(atten_mat[0])
+        worst_index= np.argmin(atten_mat[0])
+        temp_good = []
+        temp_bad = []
+        for i in range(l):
+            if(not i == index):
+                temp_good.append(S_good[i])
+                temp_bad.append(S_good[i])
+            else:
+                temp_good.append(D[best_index])
+                temp_bad.append(D[worst_index])
+        S_good = torch.stack(temp_good)
+        S_bads.append(torch.stack(temp_bad))
         # prob calculation
         good_prob, addition = channelModel_(D, S_good)
         good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
@@ -371,7 +387,7 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
     logging.info("avg loss: %4f, avg all_loss: %4f, acc: %4f, all_acc: %4f" % (valid_loss, valid_all_loss, valid_acc, valid_all_acc))
 
 
-    return valid_loss, valid_all_loss, valid_acc, valid_all_acc
+    return valid_loss, valid_all_loss, valid_acc, valid_all_acc, rouge_score
 
 
 
@@ -379,18 +395,18 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
     parser.add_argument('--neg-case', default = 'max', choices=['max', 'random', 'randmax'])
-    parser.add_argument('--neg-sample', default = 'mix', choices=['rouge', 'mix', 'delete', 'full_delete', 'replace'])
+    parser.add_argument('--train-sample', type=int, default=0, help='train sample selection strategy')
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
     parser.add_argument('--kernel-num', type=int, default=64, help='kernel num/ output dim in CNN')
     parser.add_argument('--dropout', type=float, default=0)
-    parser.add_argument('--margin', type=float, default=1, help='margin of hinge loss, must >= 0')
+    parser.add_argument('--margin', type=float, default=3, help='margin of hinge loss, must >= 0')
     
     parser.add_argument('--clip', type=float, default=.5, help='clip to prevent the too large grad')
     parser.add_argument('--lr', type=float, default=0.0001, help='initial learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-5, help='weight decay rate per batch')
-    parser.add_argument('--max-epoch', type=int, default=50)
+    parser.add_argument('--max-epoch', type=int, default=100)
     parser.add_argument('--cuda', action='store_true', default=True)
     parser.add_argument('--optimizer', default='adam', choices=['adam', 'sgd', 'adadelta'])
     parser.add_argument('--batch-size', type=int, default=1, help='batch size for training, not used now')
@@ -398,7 +414,7 @@ def parse_args():
     parser.add_argument('--anneal', action='store_true')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--seed', type=int, default=666, help='random seed')
-    parser.add_argument('--alpha', type=float, default=0.1, help='weight of regularization term')
+    parser.add_argument('--alpha', type=float, default=0.01, help='weight of regularization term')
 
     parser.add_argument('--data-path', required=True, help='pickle file obtained by dataset dump or datadir for torchtext')
     parser.add_argument('--save-dir', type=str, required=True, help='path to save checkpoints and logs')

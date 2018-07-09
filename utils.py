@@ -64,3 +64,4 @@ def genSubset(items, element_num):
         if len(x) == element_num:
             result.append(x)
     return result
+
