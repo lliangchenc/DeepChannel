@@ -1,3 +1,4 @@
+#encoding=utf-8
 import os
 import re
 import argparse
@@ -6,10 +7,12 @@ import pickle
 import spacy
 import random
 import hashlib
+import copy
 from tqdm import tqdm
 from collections import Counter
 #from IPython import embed
 import xml.etree.ElementTree as et
+from data import Dataset
 
 random.seed(666)
 
@@ -103,46 +106,31 @@ def read_cnn_dailymail(data_type, data_dir):
     return data, length
 
 
-def read_duc2007(data_dir):
-    duc2007_doc_dir = data_dir + "/main/"
-    duc2007_eval_dir = data_dir + "/mainEval/mainEval/ROUGE/models/"
-    doc_dirs = [duc2007_doc_dir + x + "/" for x in os.listdir(duc2007_doc_dir)]
-
+def read_duc2007(data_type, data_dir):
     data = [[], [], []]
     length = [[], [], []]
-
-    raw_data = []
-    d_length = []
-    raw_summ = [[],[],[],[]]
-    s_length = [[],[],[],[]]
-    for d in doc_dirs:
-        filenames = os.listdir(d)
-        temp = []
-        for filename in filenames:
-            content = open(d + filename).read().replace("&","")
-            root = et.fromstring(content)
-            raw = "".join([x.text.replace("\n", "").replace("\t", "") for x in root.findall("BODY/TEXT/P")])
-            doc = [sent_dealer(x.strip(" ")) for x in raw.split(".")]
-            
-        raw_data.append(doc)
-        d_length.append([len(x) for x in doc])
-
-        temp = []
-        temp_l = []
-        for filename in os.listdir(duc2007_eval_dir):
-            if(filename[:5] == prefix):
-                raw = open(duc2007_eval_dir + filename).read().replace("\n")
-                doc = [sent_dealer(x.strip(" ")) for x in raw.split(".")]
-                temp.append(open(duc2007_eval_dir + filename).read().replace("\n"))
-                temp_l.append([len(x) for x in temp[-1]])
-
-        for i in range(4):
-            raw_summ[i].append(temp[i])
-            s_length[i].append(temp_l[i])
-
-    data[2].append(raw_data).extend(raw_summ)
-    length[2].append(d_length).extend(s_length)
-
+    for i in range(45):
+        doc_names = []
+        for filename in os.listdir(data_dir):
+            if int(filename.split(".")[0][1:]) == 701 + i:
+                doc_names.append(filename)
+        doc = ""
+        summs = []
+        for filename in doc_names:
+            corpus = open(os.path.join(data_dir, filename)).read()
+            is_summ = len(pattern_of_num.findall(filename.split(".")[-1])) == 0
+            if is_summ:
+                summs.append(corpus)
+            else:
+                doc += corpus
+        doc_ = process_document(doc, 3)
+        summs_ = [process_document(s, 3) for s in summs]
+        for summ_ in summs_:
+            temp_doc_ = copy.deepcopy(doc_)
+            docu_len = [len(s) for s in temp_doc_]
+            summ_len = [len(s) for s in summ_]
+            data[2].append([temp_doc_,summ_])
+            length[2].append([docu_len, summ_len])
     return data, length
 
 
@@ -169,16 +157,21 @@ def main():
     print('Reading data......')
     data, length = datasets[args.data](args.data, args.data_dir)
     print('train/valid/test: %d/%d/%d' % tuple([len(_) for _ in data]))
+    
+
     print('Count word frequency only from train set......')
     wtof = {}
-    for j in range(len(data[0])): # j-th sample of train set
-        for k in range(2): # 0: content, 1: summary
-            for l in range(len(data[0][j][k])): # l-th sentence
-                for word in data[0][j][k][l]:
-                    wtof[word] = wtof.get(word, 0) + 1
-    wtof = Counter(wtof).most_common(args.max_word_num)
-    needed_words = { w[0]: w[1] for w in wtof }
-    print('Preserve word num: %d. Examples: %s %s' % (len(needed_words), wtof[0][0], wtof[1][0]))
+    if(args.data == 'duc2007'):
+        pass
+    else:
+        for j in range(len(data[0])): # j-th sample of train set
+            for k in range(2): # 0: content, 1: summary
+                for l in range(len(data[0][j][k])): # l-th sentence
+                    for word in data[0][j][k][l]:
+                        wtof[word] = wtof.get(word, 0) + 1
+        wtof = Counter(wtof).most_common(args.max_word_num)
+        needed_words = { w[0]: w[1] for w in wtof }
+        print('Preserve word num: %d. Examples: %s %s' % (len(needed_words), wtof[0][0], wtof[1][0]))
 
 
     itow = ['<pad>', '<unk>']
@@ -189,44 +182,68 @@ def main():
     missing_word_neighbors = {}
 
     print('Replace word string with word index......')
-    for i in range(len(data)):
-        for j in range(len(data[i])):
-            for k in range(2): # 0: content, 1: summary
-                max_len = max([len(s) for s in data[i][j][k]]) # max length of sentences for padding
-                for l in range(len(data[i][j][k])): # l-th sentence
-                    for m, word in enumerate(data[i][j][k][l]): # m-th word
-                        if word not in needed_words:
-                            word = '<unk>'
-                        elif word not in wtoi:
-                            itow.append(word)
-                            wtoi[word] = count
-                            count += 1
-                        data[i][j][k][l][m] = wtoi[word]
-                        # Find neighbor vectors for those words not in glove
-                        if word not in glove:
-                            if word not in missing_word_neighbors:
-                                missing_word_neighbors[word] = []
-                            for neighbor in data[i][j][k][l][m-5:m+6]: # window size: 10
-                                if neighbor in glove:
-                                    missing_word_neighbors[word].append(glove[neighbor])
-                    data[i][j][k][l] += [0]*(max_len - len(data[i][j][k][l])) # padding l-th sentence
-                data[i][j][k] = np.asarray(data[i][j][k], dtype='int32')
-                length[i][j][k] = np.asarray(length[i][j][k], dtype='int32')
-                # np.array for all documents/summaries
-                # shape of each document/summary: (# sentence, max length)
+    if(args.data == 'duc2007'):
+        cnn_data = Dataset(path='/data/c-liang/data/cnndaily_5w_100d.pkl')
+        needed_words = cnn_data.wtoi
+        wtoi = cnn_data.wtoi
+        itow = cnn_data.itow
+        for i in range(len(data)):
+            for j in range(len(data[i])):
+                for k in range(2): # 0: content, 1: summary
+                    max_len = max([len(s) for s in data[i][j][k]]) # max length of sentences for padding
+                    for l in range(len(data[i][j][k])): # l-th sentence
+                        for m, word in enumerate(data[i][j][k][l]): # m-th word
+                            if word not in wtoi:
+                                word = '<unk>'
+                            data[i][j][k][l][m] = wtoi[word]
+                        data[i][j][k][l] += [0]*(max_len - len(data[i][j][k][l])) # padding l-th sentence
+                    data[i][j][k] = np.asarray(data[i][j][k], dtype='int32')
+                    length[i][j][k] = np.asarray(length[i][j][k], dtype='int32')
+                    # np.array for all documents/summaries
+                    # shape of each document/summary: (# sentence, max length)
+    else:
+        for i in range(len(data)):
+            for j in range(len(data[i])):
+                for k in range(2): # 0: content, 1: summary
+                    max_len = max([len(s) for s in data[i][j][k]]) # max length of sentences for padding
+                    for l in range(len(data[i][j][k])): # l-th sentence
+                        for m, word in enumerate(data[i][j][k][l]): # m-th word
+                            if word not in needed_words:
+                                word = '<unk>'
+                            elif word not in wtoi:
+                                itow.append(word)
+                                wtoi[word] = count
+                                count += 1
+                            data[i][j][k][l][m] = wtoi[word]
+                            # Find neighbor vectors for those words not in glove
+                            if word not in glove:
+                                if word not in missing_word_neighbors:
+                                    missing_word_neighbors[word] = []
+                                for neighbor in data[i][j][k][l][m-5:m+6]: # window size: 10
+                                    if neighbor in glove:
+                                        missing_word_neighbors[word].append(glove[neighbor])
+                        data[i][j][k][l] += [0]*(max_len - len(data[i][j][k][l])) # padding l-th sentence
+                    data[i][j][k] = np.asarray(data[i][j][k], dtype='int32')
+                    length[i][j][k] = np.asarray(length[i][j][k], dtype='int32')
+                    # np.array for all documents/summaries
+                    # shape of each document/summary: (# sentence, max length)
     print('Calculate vectors for missing words by averaging neighbors......')
-    for word in missing_word_neighbors:
-        vectors = missing_word_neighbors[word]
-        if len(vectors) > 0:
-            glove[word] = sum(vectors) / len(vectors)
-        else:
-            glove[word] = np.zeros((word_dim, ))
 
-    weight_matrix = np.vstack([glove[w] for w in itow])
+    if(args.data == 'duc2007'):
+        weight_matrix = cnn_data.weight
+    else:
+        for word in missing_word_neighbors:
+            vectors = missing_word_neighbors[word]
+            if len(vectors) > 0:
+                glove[word] = sum(vectors) / len(vectors)
+            else:
+                glove[word] = np.zeros((word_dim, ))
+        weight_matrix = np.vstack([glove[w] for w in itow])
     print('Shape of weight matrix:')
     print(weight_matrix.shape)
 
     print('Dumping......')
+    #print(data[2][0][0], data[2][1][0])
     save_file = open(args.save_path, 'wb')
     pickle.dump(data, save_file)
     pickle.dump(length, save_file)

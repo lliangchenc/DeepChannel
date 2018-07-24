@@ -95,13 +95,16 @@ def genSentences(args):
         num_sent_of_sum = sums[0].size(0)
         D = sentenceEncoder(doc, doc_len)
         l = D.size(0)
-        if(l < num_sent_of_sum):
-            continue
         doc_matrix = doc.cpu().data.numpy()
         doc_len_arr = doc_len.cpu().data.numpy()
         golden_summ_matrix = sums[0].cpu().data.numpy()
         golden_summ_len_arr = sums_len[0].cpu().data.numpy()
-
+        
+        candidate_indexes = [i for i in range(len(doc_len_arr)) if doc_len_arr[i] >=0 and doc_len_arr[i] <= 10000]
+        
+        if(len(candidate_indexes) < 3):
+            continue
+        
         doc_ = ""
         doc_arr = []
         for i in range(np.shape(doc_matrix)[0]):
@@ -117,18 +120,18 @@ def genSentences(args):
             golden_summ_arr.append(temp_sent)
 
         selected_indexs = []
-        probs_arr = []
+        #probs_arr = []
 
         if args.method == 'iterative':
-            for _ in range(num_sent_of_sum):
-                probs = []
-                for i in range(l):
+            for _ in range(3):
+                probs = np.zeros([l]) - 100000
+                for i in candidate_indexes:
                     temp = [D[x] for x in selected_indexs]
                     temp.append(D[i])
                     temp_prob, addition = channelModel(D, torch.stack(temp))
-                    probs.append(temp_prob.item())
+                    probs[i] = temp_prob.item()
                     #print(i, selected_indexs, probs)
-                probs_arr.append(probs)
+                #probs_arr.append(probs)
                 best_index = np.argmax(probs)
                 while(best_index in selected_indexs):
                     probs[best_index] = -100000
@@ -191,7 +194,7 @@ def genSentences(args):
             temp_sent = " ".join([data.itow[x] for x in summ_matrix[i]][:summ_len_arr[i]])
             summ_ += str(i) + ": " + temp_sent + "\n\n"
             summ_arr.append(temp_sent)
-        
+        '''
         best_rouge_summ_arr = []
         for s in golden_summ_arr:
             temp = []
@@ -199,7 +202,7 @@ def genSentences(args):
                 temp.append(Rouge().get_scores(s, d)[0]['rouge-1']['f'])
             index = np.argmax(temp)
             best_rouge_summ_arr.append(doc_arr[index])
-
+        '''
         #print("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
         #print("PROB_ARR: ", str(probs_arr))
         #print(rouge_atten_matrix(doc_arr, golden_summ_arr))
@@ -208,7 +211,7 @@ def genSentences(args):
         #score_Rouge155 = Rouge155_obj.score_summary([sent.split() for sent in summ_arr],{'A':[sent.split() for sent in golden_summ_arr]})
         Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
         #Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
-        os.system("clear")
+        #os.system("clear")
         print(Rouge_list[-1])
         #print(Rouge155_list[-1])
         valid_count += 1

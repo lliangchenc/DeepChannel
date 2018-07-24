@@ -55,7 +55,7 @@ class ChannelModel(nn.Module):
         ## --------------------------------------------------------------- ##
 
         # P(D|S) on the independent assumption. TODO: 0.5 trick not elegant;
-        log_prob = torch.sum(torch.log(prob_vector + 0.5))
+        log_prob = torch.sum(torch.log(0.5 + prob_vector))
         addition = {
                 'prob_vector': prob_vector,
                 'att_weight': att_weight,

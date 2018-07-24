@@ -19,7 +19,6 @@ from rouge import Rouge
 import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor, genPowerSet
-from dataset.rouge_not_a_wrapper import rouge_n
 #from IPython import embed
 
 
@@ -29,7 +28,7 @@ def rouge_atten_matrix(doc, summ):
     temp_mat = np.zeros([doc_len, summ_len])
     for i in range(doc_len):
         for j in range(summ_len):
-            temp_mat[i, j] = rouge_n([doc[i]], [summ[j]], 1)[0]
+            temp_mat[i, j] = Rouge().get_scores(doc[i], summ[j])[0]['rouge-1']['f']
     return temp_mat
 
 def trainChannelModel(args):
@@ -65,7 +64,7 @@ def trainChannelModel(args):
             }[args.optimizer]
     optimizer = optimizer_class(params=params, lr=args.lr, weight_decay=args.weight_decay)
     #scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=5, verbose=True)
-    scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[1],gamma = 0.1)
+    scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[5,10,20,30],gamma = 0.5)
     train_writer = SummaryWriter(os.path.join(args.save_dir, 'log', 'train'))
     tic = time.time()
     iter_count = 0
@@ -83,7 +82,10 @@ def trainChannelModel(args):
     if(args.validation):
         validate(data, sentenceEncoder, channelModel, device, args)
         return 0
-
+    try:
+        os.mkdir(os.path.join(args.save_dir, "checkpoints"))
+    except:
+        pass
 
     for epoch_num in range(args.max_epoch):
         scheduler.step()
@@ -133,26 +135,32 @@ def trainChannelModel(args):
              
             atten_mat = rouge_atten_matrix(summ_, doc_)
             best_index = np.argmax(atten_mat[0])
-            worse_index = 0
-            if args.train_sample % 2 == 0:
-                worse_index = random.randint(0, D.size(0) - 1)
+            worse_indexes = []
+            if args.train_sample / 2 == 0:
+                #worse_index = random.randint(0, D.size(0) - 1)
+                worse_indexes = random.sample(range(D.size(0)), min(D.size(0), 1))
             else:
                 ind = random.randint(1, int(D.size(0) / 2) + 1)
-                worse_index = list(map(list(atten_mat[0]).index, heapq.nsmallest(ind, list(atten_mat[0]))))[-1]
+                worse_indexes = [list(map(list(atten_mat[0]).index, heapq.nsmallest(ind, list(atten_mat[0]))))[-1]]
+
             temp_good = []
-            temp_bad = []
             for i in range(l):
                 if(not i == index):
                     temp_good.append(S_good[i])
-                    temp_bad.append(S_good[i])
                 else:
                     temp_good.append(D[best_index])
-                    temp_bad.append(D[worse_index])
 
             if args.train_sample % 2 == 0:
                 S_good = torch.stack(temp_good)
 
-            S_bads.append(torch.stack(temp_bad))
+            for worse_index in worse_indexes:
+                temp_bad = []
+                for i in range(l):
+                    if not i == index:
+                        temp_bad.append(S_good[i])
+                    else:
+                        temp_bad.append(D[worse_index])
+                S_bads.append(torch.stack(temp_bad))
             # prob calculation
             good_prob, addition = channelModel(D, S_good)
             good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
@@ -169,6 +177,13 @@ def trainChannelModel(args):
                 bad_index = random.randint(0, len(S_bads) - 1)
                 bad_prob, addition = channelModel(D, S_bads[bad_index])
                 bad_probs_vector.append(addition['prob_vector'])
+            elif(args.neg_case == 'mean'):
+                tmp = 0.
+                for S_bad in S_bads:
+                    bad_prob, addition = channelModel(D, S_bad)
+                    tmp = bad_prob + tmp
+                bad_prob = tmp / (len(S_bads) + 0.)
+
             else:
                 bad_num = min(8, len(S_bads))
                 S_bads_sample = random.sample(S_bads, bad_num)
@@ -194,20 +209,21 @@ def trainChannelModel(args):
             if loss_prob_term.item() > -args.margin:
                 optimizer.zero_grad()
                 loss.backward()
-                nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
+                #nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
+                nn.utils.clip_grad_value_(parameters=params, clip_value=args.clip)
                 optimizer.step()
             ###################################
             # summary
-            train_writer.add_scalar('loss/total', loss, iter_count)
-            train_writer.add_scalar('loss/prob_term', loss_prob_term, iter_count)
-            train_writer.add_scalar('loss/regulation_term', regulation_term, iter_count)
-            train_writer.add_scalar('prob/good_prob', good_prob, iter_count)
-            if(iter_count % 1000 == 0):
-                train_writer.add_histogram('good_prob_vector', good_prob_vector.clone().cpu().data.numpy(), iter_count)
-                for name, param in list(sentenceEncoder.named_parameters()) + list(channelModel.named_parameters()):
-                    if param.requires_grad and name not in ['word_embedding.weight']:
-                        train_writer.add_histogram(name, param.clone().cpu().data.numpy(), iter_count)
-                        train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
+            # train_writer.add_scalar('loss/total', loss, iter_count)
+            # train_writer.add_scalar('loss/prob_term', loss_prob_term, iter_count)
+            # train_writer.add_scalar('loss/regulation_term', regulation_term, iter_count)
+            # train_writer.add_scalar('prob/good_prob', good_prob, iter_count)
+            # if(iter_count % 1000 == 0):
+            #    train_writer.add_histogram('good_prob_vector', good_prob_vector.clone().cpu().data.numpy(), iter_count)
+            #    for name, param in list(sentenceEncoder.named_parameters()) + list(channelModel.named_parameters()):
+            #        if param.requires_grad and name not in ['word_embedding.weight']:
+            #            train_writer.add_histogram(name, param.clone().cpu().data.numpy(), iter_count)
+            #            train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
             #scheduler.step(valid_acc)
             if iter_count % 100 == 0:
                 logging.info('Epoch %.2f, loss_prob: %.4f, bad_prob: %.4f, good_prob: %.4f, regulation_value: %.4f' % (progress, loss_prob_term.item(), bad_prob.item(), good_prob.item(), regulation_term.item()))
@@ -223,10 +239,14 @@ def trainChannelModel(args):
                 #print('-'*33)
                 #print(visualize_tensor(torch.norm(S_good, p=2, dim=0)))
                 print('='*66)
-        #scheduler.step(valid_acc)
+        
         if(epoch_num % 1 == 0):
-            torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'se.pkl'))
-            torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'channel.pkl'))
+            try:
+                os.mkdir(os.path.join(args.save_dir, 'checkpoints/'+str(epoch_num)))
+            except:
+                pass
+            torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'checkpoints/'+ str(epoch_num) + '/se.pkl'))
+            torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'checkpoints/'+ str(epoch_num) + '/channel.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
 
 
@@ -240,7 +260,7 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
     Rouge_list = []
 
     for batch_iter, valid_batch in enumerate(data_.gen_test_minibatch()):
-        if not(batch_iter % 100 == 0):
+        if not(batch_iter % 10 == 0):
             continue
         sentenceEncoder_.eval(); channelModel_.eval()
         doc, sums, doc_len, sums_len = recursive_to_device(device_, *valid_batch)
@@ -309,7 +329,7 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
     print("ROUGE 1/100 sample : ", rouge_score)
 
     for batch_iter, valid_batch in enumerate(data_.gen_valid_minibatch()):
-        if not(batch_iter % 10 == 0):
+        if not(batch_iter % 100 == 0):
             continue
         sentenceEncoder_.eval(); channelModel_.eval()
         valid_iter_count += 1
@@ -394,7 +414,7 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
-    parser.add_argument('--neg-case', default = 'max', choices=['max', 'random', 'randmax'])
+    parser.add_argument('--neg-case', default = 'max', choices=['max', 'mean', 'random', 'randmax'])
     parser.add_argument('--train-sample', type=int, default=0, help='train sample selection strategy')
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
