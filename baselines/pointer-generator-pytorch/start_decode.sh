@@ -1,4 +1,2 @@
-export PYTHONPATH=`pwd`
-MODEL=$1
-python training_ptr_gen/decode.py $MODEL >& ../log/decode_log &
+python3.6 -m training_ptr_gen.decode ckpt/model_60W.pt
 

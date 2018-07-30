@@ -64,8 +64,11 @@ class BeamSearch(object):
 
     def rouge_eval(self):
         print("Now starting ROUGE eval...")
-        results_dict = rouge_eval(self._rouge_ref_dir, self._rouge_dec_dir)
-        rouge_log(results_dict, self._decode_dir)
+        n_bytes = [75, 275, None]
+        for n_byte in n_bytes:
+            print(" ****************** n_bytes=%s *****************" % str(n_byte))
+            results_dict = rouge_eval(self._rouge_ref_dir, self._rouge_dec_dir, n_bytes=n_byte)
+            rouge_log(results_dict, self._decode_dir)
 
     def decode(self):
         start = time.time()

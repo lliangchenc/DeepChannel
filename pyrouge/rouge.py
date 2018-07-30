@@ -168,6 +168,32 @@ class Rouge155(object):
             shutil.rmtree(self._config_dir)
             raise e
 
+    def evaluate_folder_macro_average(self, summary_folder, reference_folder, summary_file_suffix='_decoded.txt', reference_file_suffix='_reference.txt'):
+        """
+        Evaluate multiple pairs which have been written into files.
+        Each file in summary_folder must have a corresponding file in reference_folder. That is, there must be <id>[reference_file_suffix] in reference_folder if there is a summary named <id>[summary_file_suffix].
+        Call self.score for each pair, and then average results of all pairs.
+        """
+        total_score = None
+        count = 0
+        for f in os.listdir(summary_folder):
+            id = f[:-len(summary_file_suffix)]
+            summary_file = os.path.join(summary_folder, f)
+            reference_file = os.path.join(reference_folder, id+reference_file_suffix)
+            summary = open(summary_file).readlines()
+            references = {'A': open(reference_file).readlines()}
+            one_score = self.score(summary, references)
+            count += 1
+            if total_score is None:
+                total_score = one_score
+            else:
+                for k in one_score:
+                    total_score[k] += one_score[k]
+        for k in total_score:
+            total_score[k] /= count
+        return total_score
+
+
 
 #if __name__ == '__main__':
 

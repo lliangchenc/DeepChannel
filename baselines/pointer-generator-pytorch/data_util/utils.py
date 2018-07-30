@@ -21,28 +21,28 @@ def make_html_safe(s):
   return s
 
 
-def rouge_eval(ref_dir, dec_dir):
-  r = pyrouge.Rouge155(n_bytes=275)
+def rouge_eval(ref_dir, dec_dir, n_bytes):
+  r = pyrouge.Rouge155(n_bytes=n_bytes)
   logging.getLogger('global').setLevel(logging.WARNING) # silence pyrouge logging
+  # return r.evaluate_folder_macro_average(dec_dir, ref_dir)
   return r.evaluate_folder(dec_dir, ref_dir)
 
 
 def rouge_log(results_dict, dir_to_write):
-  log_str = ""
-  for x in ["1","2","l"]:
-    log_str += "\nROUGE-%s:\n" % x
-    for y in ["f_score", "recall", "precision"]:
-      key = "rouge_%s_%s" % (x,y)
-      key_cb = key + "_cb"
-      key_ce = key + "_ce"
-      val = results_dict[key]
-      val_cb = results_dict[key_cb]
-      val_ce = results_dict[key_ce]
-      log_str += "%s: %.4f with confidence interval (%.4f, %.4f)\n" % (key, val, val_cb, val_ce)
-  print(log_str)
   results_file = os.path.join(dir_to_write, "ROUGE_results.txt")
-  print("Writing final ROUGE results to %s..."%(results_file))
-  with open(results_file, "w") as f:
+  with open(results_file, 'w') as f:
+    log_str = ""
+    for x in ["1","2","l"]:
+      log_str += "\nROUGE-%s:\n" % x
+      for y in ["f_score", "recall", "precision"]:
+        key = "rouge_%s_%s" % (x,y)
+        key_cb = key + "_cb"
+        key_ce = key + "_ce"
+        val = results_dict[key]
+        val_cb = results_dict[key_cb]
+        val_ce = results_dict[key_ce]
+        log_str += "%s: %.4f with confidence interval (%.4f, %.4f)\n" % (key, val, val_cb, val_ce)
+    print(log_str)
     f.write(log_str)
 
 
