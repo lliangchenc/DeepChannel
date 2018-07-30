@@ -1,6 +1,9 @@
 visualize.txt
-tmp*
+*tmp*
+*ckpt*
+*log*
 *.swp
+*.DS_Store
 
 led / optimized / DLL files
 __pycache__/
