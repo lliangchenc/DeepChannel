@@ -82,6 +82,7 @@ class GRU_wrapper(nn.Module):
             if 'bias' in name:
                 init.constant_(param, 0.0)
             elif 'weight' in name:
+                #init.kaiming_normal_(param)
                 init.normal_(param, mean=0, std=0.01)
 
     def forward(self, input, length):

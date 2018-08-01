@@ -45,17 +45,17 @@ def evalLead3(args):
             temp_sent = " ".join([data.itow[x] for x in summ_matrix[i]][:summ_len_arr[i]])
             summ_arr.append(temp_sent)
         score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
-        score_Rouge155 = Rouge155_obj.score(summ_arr, {'A':golden_summ_arr})
+        #score_Rouge155 = Rouge155_obj.score(summ_arr, {'A':golden_summ_arr})
         #score_Rouge155 = Rouge155_obj.score(' '.join(summ_arr), {'A':' '.join(golden_summ_arr)})
         Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
-        Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
+        #Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
         print(Rouge_list[-1])
-        print(Rouge155_list[-1])
+        #print(Rouge155_list[-1])
         #embed()
         #print('-----')
     print('='*60)
     print(np.mean(Rouge_list))
-    print(np.mean(Rouge155_list))
+    #print(np.mean(Rouge155_list))
 
 
 def genSentences(args):
@@ -86,7 +86,10 @@ def genSentences(args):
 
     valid_count = 0
     Rouge_list, Rouge155_list = [], []
-    Rouge155_obj = Rouge155(stem=True)
+    Rouge_list_2, Rouge_list_l = [], []
+    Rouge155_list_2, Rouge155_list_l = [], []
+    total_score = None
+    Rouge155_obj = Rouge155(n_bytes=75, stem=True, tmp='.tmp')
     best_rouge1_arr = []
     for batch_iter, valid_batch in tqdm(enumerate(data.gen_test_minibatch()), total = data.test_size):
         #print(valid_count)
@@ -163,9 +166,9 @@ def genSentences(args):
         #if(args.method == 'random-replace'):
         
 
-
+        probs_arr = []
         if args.method == 'top-k-simple':
-            for i in range(l):
+            for i in range(3):
                 temp_prob, addition = channelModel(D, torch.stack([D[i]]))
                 probs_arr.append(temp_prob.item())
             for _ in range(num_sent_of_sum):
@@ -183,7 +186,7 @@ def genSentences(args):
             selected_indexs = k_subset[index]
 
         if args.method == 'random':
-            selected_indexs = random.sample(range(l), min(num_sent_of_sum, l))
+            selected_indexs = random.sample(range(l), min(3, l))
         
         summ_matrix = torch.stack([doc[x] for x in selected_indexs]).cpu().data.numpy()
         summ_len_arr = torch.stack([doc_len[x] for x in selected_indexs]).cpu().data.numpy()
@@ -207,17 +210,32 @@ def genSentences(args):
         #print("PROB_ARR: ", str(probs_arr))
         #print(rouge_atten_matrix(doc_arr, golden_summ_arr))
         #print(rouge_atten_matrix(doc_arr, summ_arr))
+        
         score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
-        #score_Rouge155 = Rouge155_obj.score_summary([sent.split() for sent in summ_arr],{'A':[sent.split() for sent in golden_summ_arr]})
+        #score_Rouge155 = Rouge155_obj.score(summ_arr, {'A':golden_summ_arr})
+        
         Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
-        #Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
+        Rouge_list_2.append(score_Rouge[0]['rouge-2']['f'])
+        Rouge_list_l.append(score_Rouge[0]['rouge-l']['f'])
+
         #os.system("clear")
-        print(Rouge_list[-1])
-        #print(Rouge155_list[-1])
+        print(Rouge_list[-1], Rouge_list_2[-1], Rouge_list_l[-1])
+        #print(Rouge155_list[-1], Rouge155_list_2[-1], Rouge155_list_l[-1])
+        '''
+        if total_score is None:
+            total_score = score_Rouge155
+        else:
+            for k in score_Rouge155:
+                total_score[k] += score_Rouge155[k]
         valid_count += 1
+        '''
+
     print('='*60)
-    print(np.mean(Rouge_list))
-    #print(np.mean(Rouge155_list))
+    #for k in total_score:
+    #    total_score[k] /= valid_count
+    #print(total_score)
+    print(np.mean(Rouge_list), np.mean(Rouge_list_2), np.mean(Rouge_list_l))
+    #print(np.mean(Rouge155_list), np.mean(Rouge155_list_2), np.mean(Rouge155_list_l))
 
 def parse_args():
     parser = argparse.ArgumentParser()

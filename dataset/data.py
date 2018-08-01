@@ -23,6 +23,14 @@ class Dataset(object):
         self.itow = pickle.load(data_file)
         data_file.close()
         self.train_size, self.valid_size, self.test_size = len(self.train_set), len(self.valid_set), len(self.test_set)
+        
+        
+        ## used for small training set
+        self.train_set = self.train_set[:int(self.train_size / 1)]
+        self.train_len = self.train_len[:int(self.train_size / 1)]
+        self.train_size = len(self.train_set)
+
+
         print('Take %.2f seconds to load data. train/valid/test: %d/%d/%d.' % (time.time()-tic, self.train_size, self.valid_size, self.test_size))
         self.train_ptr = 0
 

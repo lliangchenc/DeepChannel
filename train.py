@@ -29,6 +29,8 @@ def rouge_atten_matrix(doc, summ):
     for i in range(doc_len):
         for j in range(summ_len):
             temp_mat[i, j] = Rouge().get_scores(doc[i], summ[j])[0]['rouge-1']['f']
+            #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-2']['f']\
+            #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-l']['f']
     return temp_mat
 
 def trainChannelModel(args):
@@ -61,6 +63,7 @@ def trainChannelModel(args):
     optimizer_class = {
             'adam': optim.Adam,
             'sgd': optim.SGD,
+            'adadelta': optim.Adadelta,
             }[args.optimizer]
     optimizer = optimizer_class(params=params, lr=args.lr, weight_decay=args.weight_decay)
     #scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=5, verbose=True)
@@ -209,8 +212,8 @@ def trainChannelModel(args):
             if loss_prob_term.item() > -args.margin:
                 optimizer.zero_grad()
                 loss.backward()
-                #nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
-                nn.utils.clip_grad_value_(parameters=params, clip_value=args.clip)
+                nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
+                #nn.utils.clip_grad_value_(parameters=params, clip_value=args.clip)
                 optimizer.step()
             ###################################
             # summary
@@ -441,6 +444,7 @@ def parse_args():
     parser.add_argument('--load-previous-model', action='store_true')
     parser.add_argument('--validation', action='store_true')
     parser.add_argument('--visualize', action='store_true')
+    parser.add_argument('--small', action='store_true')
     args = parser.parse_args()
     return args
 
