@@ -1,6 +1,11 @@
+#encoding=utf-8
 import torch
 import time
 import argparse
+import logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)-8s %(message)s')
+logFormatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
+rootLogger = logging.getLogger()
 import random
 import shutil
 import os
@@ -89,7 +94,8 @@ def genSentences(args):
     Rouge_list_2, Rouge_list_l = [], []
     Rouge155_list_2, Rouge155_list_l = [], []
     total_score = None
-    Rouge155_obj = Rouge155(n_bytes=75, stem=True, tmp='.tmp')
+    #Rouge155_obj = Rouge155(n_bytes=75, stem=True, tmp='.tmp')
+    Rouge155_obj = Rouge155(stem=True, tmp=".tmp")
     best_rouge1_arr = []
     for batch_iter, valid_batch in tqdm(enumerate(data.gen_test_minibatch()), total = data.test_size):
         #print(valid_count)
@@ -97,6 +103,7 @@ def genSentences(args):
         doc, sums, doc_len, sums_len = recursive_to_device(device, *valid_batch)
         num_sent_of_sum = sums[0].size(0)
         D = sentenceEncoder(doc, doc_len)
+        S = sentenceEncoder(sums[0], sums_len[0])
         l = D.size(0)
         doc_matrix = doc.cpu().data.numpy()
         doc_len_arr = doc_len.cpu().data.numpy()
@@ -140,7 +147,8 @@ def genSentences(args):
                     probs[best_index] = -100000
                     best_index = np.argmax(probs)
                 selected_indexs.append(best_index)
-
+            _,addition = channelModel(D, S)
+        selected_indexs.sort()
         if(args.method == 'iterative-delete'):
             current_sent_set = range(l)
             best_index = -1
@@ -206,20 +214,31 @@ def genSentences(args):
             index = np.argmax(temp)
             best_rouge_summ_arr.append(doc_arr[index])
         '''
+        f_ref = open("ref/"+str(batch_iter)+"_reference.txt","w")
+        f_sum = open("sum/"+str(batch_iter)+"_decoded.txt","w")
+        f_ref.write("\n".join(golden_summ_arr))
+        f_sum.write("\n".join(summ_arr))
+
         #print("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
         #print("PROB_ARR: ", str(probs_arr))
         #print(rouge_atten_matrix(doc_arr, golden_summ_arr))
         #print(rouge_atten_matrix(doc_arr, summ_arr))
         
-        score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
+        #score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
         #score_Rouge155 = Rouge155_obj.score(summ_arr, {'A':golden_summ_arr})
         
-        Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
-        Rouge_list_2.append(score_Rouge[0]['rouge-2']['f'])
-        Rouge_list_l.append(score_Rouge[0]['rouge-l']['f'])
-
+        #Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
+        #Rouge_list_2.append(score_Rouge[0]['rouge-2']['f'])
+        #Rouge_list_l.append(score_Rouge[0]['rouge-l']['f'])
         #os.system("clear")
-        print(Rouge_list[-1], Rouge_list_2[-1], Rouge_list_l[-1])
+        #print(Rouge_list[-1], Rouge_list_2[-1], Rouge_list_l[-1])
+        ''' 
+        if(Rouge_list[-1]>0.6):
+            #print(type(addition['att_weight'].cpu().data.numpy()))
+            logging.info("%d : %f\n\ndoc:\n%s\ngolden:\n%s\nmy:\n%s\nmat:\n%s\n\n"%(batch_iter, Rouge_list[-1], doc_, golden_summ_, summ_, str(addition['att_weight'].cpu().data.numpy())))
+        else:
+            continue
+        '''
         #print(Rouge155_list[-1], Rouge155_list_2[-1], Rouge155_list_l[-1])
         '''
         if total_score is None:
@@ -233,8 +252,9 @@ def genSentences(args):
     print('='*60)
     #for k in total_score:
     #    total_score[k] /= valid_count
-    #print(total_score)
-    print(np.mean(Rouge_list), np.mean(Rouge_list_2), np.mean(Rouge_list_l))
+    total_score = Rouge155_obj.evaluate_folder("./sum", "./ref")
+    print(total_score)
+    #print(np.mean(Rouge_list), np.mean(Rouge_list_2), np.mean(Rouge_list_l))
     #print(np.mean(Rouge155_list), np.mean(Rouge155_list_2), np.mean(Rouge155_list_l))
 
 def parse_args():
@@ -259,6 +279,9 @@ def parse_args():
 
 def prepare():
     args = parse_args()
+    fileHandler = logging.FileHandler(os.path.join(args.save_dir, 'examples.log'))
+    fileHandler.setFormatter(logFormatter)
+    rootLogger.addHandler(fileHandler)
     for k, v in vars(args).items():
         print(k+':'+str(v))
     return args

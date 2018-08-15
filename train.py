@@ -16,11 +16,13 @@ from torch import nn
 from torch import nn, optim
 from torch.autograd import Variable
 from rouge import Rouge
+from pyrouge import Rouge155
 import numpy as np
 from tensorboardX import SummaryWriter
 from utils import recursive_to_device, visualize_tensor, genPowerSet
 #from IPython import embed
 
+Rouge155_obj = Rouge155(stem=True, tmp='./tmp1')
 
 def rouge_atten_matrix(doc, summ):
     doc_len = len(doc)
@@ -28,9 +30,20 @@ def rouge_atten_matrix(doc, summ):
     temp_mat = np.zeros([doc_len, summ_len])
     for i in range(doc_len):
         for j in range(summ_len):
+            #temp_mat[i, j] = Rouge155_obj.score([doc[i]], {'A':[summ[j]]})['rouge_1_f_score']
             temp_mat[i, j] = Rouge().get_scores(doc[i], summ[j])[0]['rouge-1']['f']
             #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-2']['f']\
             #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-l']['f']
+    return temp_mat
+
+def pyrouge_atten_matrix(doc, summ):
+    doc_len = len(doc)
+    summ_len = len(summ)
+    temp_mat = np.zeros([doc_len, summ_len])
+    global Rouge155_obj
+    for i in range(doc_len):
+        for j in range(summ_len):
+            temp_mat[i, j] = Rouge155_obj.score([doc[i]], {'A':[summ[j]]})['rouge_1_f_score']
     return temp_mat
 
 def trainChannelModel(args):
@@ -95,15 +108,16 @@ def trainChannelModel(args):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
 
-        if(epoch_num % 1 == 0):
+        if(epoch_num % 100 == 90):
             valid_loss, valid_all_loss, valid_acc, valid_all_acc, rouge_score = validate(data, sentenceEncoder, channelModel, device, args)
             train_writer.add_scalar('validation/loss', valid_loss, epoch_num)
             train_writer.add_scalar('validation/all_loss', valid_all_loss, epoch_num)
             train_writer.add_scalar('validation/acc', valid_acc, epoch_num)
             train_writer.add_scalar('validation/all_acc', valid_all_acc, epoch_num)
             train_writer.add_scalar('validation/rouge', rouge_score, epoch_num)
-
+        eq = 0
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
+            t1 = time.time()
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
             iter_count += 1
@@ -130,14 +144,25 @@ def trainChannelModel(args):
             summ_len_arr = sums_len[0].cpu().data.numpy()
             doc_ = []
             summ_ = []
+            top_k_indexes = []
+            pyrouge_scores = []
             for i in range(np.shape(doc_matrix)[0]):
                 doc_.append(" ".join([data.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]))
 
             index = random.randint(0, l - 1) 
             summ_.append(" ".join([data.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
-             
+            
             atten_mat = rouge_atten_matrix(summ_, doc_)
-            best_index = np.argmax(atten_mat[0])
+            tmp_atten = atten_mat[0]
+            t2 = time.time()
+            for _ in range(2):
+                best_index = np.argmax(tmp_atten)
+                tmp_atten[best_index] = -1.
+                top_k_indexes.append(best_index)
+                pyrouge_scores.append(pyrouge_atten_matrix(summ_, [doc_[best_index]])[0][0])
+                
+            best_index = top_k_indexes[np.argmax(pyrouge_scores)]
+            t3 = time.time()
             worse_indexes = []
             if args.train_sample / 2 == 0:
                 #worse_index = random.randint(0, D.size(0) - 1)
@@ -242,7 +267,8 @@ def trainChannelModel(args):
                 #print('-'*33)
                 #print(visualize_tensor(torch.norm(S_good, p=2, dim=0)))
                 print('='*66)
-        
+            t4 = time.time()
+            print(t2-t1, t3-t2, t4-t3)
         if(epoch_num % 1 == 0):
             try:
                 os.mkdir(os.path.join(args.save_dir, 'checkpoints/'+str(epoch_num)))
