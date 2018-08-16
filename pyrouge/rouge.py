@@ -4,15 +4,37 @@ import os
 import re
 from subprocess import check_output, CalledProcessError
 from tempfile import mkdtemp
+import time
+import multiprocessing as mp
 
 ROUGE_EVAL_HOME = os.path.dirname(__file__) + '/tools/ROUGE-1.5.5'
+
+
+def t(pipe_in, cmd):
+    out = check_output(cmd)
+    pipe_in.send(out)
+
+def _run_cmd(cmd):
+    pipe_in, pipe_out = mp.Pipe()
+    #tic = time.time()
+    p = mp.Process(target=t, args=(pipe_in, cmd))
+    p.start()
+    p.join()
+    #print(time.time() - tic)
+    return pipe_out.recv().decode('utf-8')
+
+
 
 class Rouge155(object):
     def __init__(self,
                  rouge_home=ROUGE_EVAL_HOME,
+                 fast=False,
                  n_bytes=None,
                  stem=False,
-                 tmp='./tmp'):
+                 tmp='./tmp',
+                 trickyfork=False):
+        self.fast = fast
+        self.trickyfork = trickyfork
         self._stem = stem
         self._n_bytes = n_bytes # only take first n words, used for DUC
         self._discover_rouge(rouge_home)
@@ -23,9 +45,15 @@ class Rouge155(object):
             os.mkdir(self._config_dir)
             os.mkdir(self.summary_dir)
             os.mkdir(self.reference_dir)
-            print('*** NOTE that we will create a tmp dir in your current directory ***')
+            print('create a tmp dir %s, you can call clear() to delete it' % self._config_dir)
+        else:
+            if not os.path.isdir(self.summary_dir):
+                os.mkdir(self.summary_dir)
+            if not os.path.isdir(self.reference_dir):
+                os.mkdir(self.reference_dir)
         # for output parsing
         self.parse_pattern = re.compile(r"(\d+) (ROUGE-\S+) (Average_\w): (\d.\d+) \(95%-conf.int. (\d.\d+) - (\d.\d+)\)")
+        mp.set_start_method('forkserver', force=True) # use fork server to take in charge of fork every time
 
     def _discover_rouge(self, rouge_home):
         self._rouge_home = rouge_home
@@ -58,19 +86,32 @@ class Rouge155(object):
         return reference_basenames
 
     def _run_rouge(self):
-        options = [
-            '-e', self._rouge_data,
-            '-a', # evaluate all systems
-            '-n', 2,  # max-ngram
-            #'-2', 4, # max-gap-length
-            '-u', # include unigram in skip-bigram
-            '-c', 95, # confidence interval
-            '-r', 1000, # number-of-samples (for resampling)
-            '-f', 'A', # scoring formula
-            '-p', 0.5, # 0 <= alpha <=1
-            '-t', 0,
-            '-d', # print per evaluation scores
-        ]
+        if self.fast:
+            options = [
+                '-a',
+                '-e', self._rouge_data,
+                '-n', 1,  # max-ngram
+                '-x', # do not calculate ROUGE-L
+                '-c', 95, # confidence interval
+                '-r', 2, # number-of-samples (for resampling)
+                '-f', 'A', # scoring formula
+                '-p', 0.5, # 0 <= alpha <=1
+                '-t', 0,
+            ]
+        else:
+            options = [
+                '-e', self._rouge_data,
+                '-a', # evaluate all systems
+                '-n', 2,  # max-ngram
+                #'-2', 4, # max-gap-length
+                '-u', # include unigram in skip-bigram
+                '-c', 95, # confidence interval
+                '-r', 1000, # number-of-samples (for resampling)
+                '-f', 'A', # scoring formula
+                '-p', 0.5, # 0 <= alpha <=1
+                '-t', 0,
+                '-d', # print per evaluation scores
+            ]
 
         if self._n_bytes:
             options.extend(["-b", self._n_bytes])
@@ -78,7 +119,10 @@ class Rouge155(object):
             options.append("-m")
         options.append(os.path.join(self._config_dir, "settings.xml"))
         cmds = [self._rouge_bin] + list(map(str, options))
-        output = check_output(cmds).decode("utf-8")
+        if self.trickyfork:
+            output = _run_cmd(cmds)
+        else:
+            output = check_output(cmds).decode("utf-8")
         # parse output
         results = {}
         #0 ROUGE-1 Average_R: 0.02632 (95%-conf.int. 0.02632 - 0.02632)
@@ -193,7 +237,19 @@ class Rouge155(object):
             total_score[k] /= count
         return total_score
 
+    def clear(self):
+        if os.path.isdir(self._config_dir):
+            shutil.rmtree(self._config_dir)
+
+    def test(self):
+        output = _run_cmd(['pwd'])
 
 
-#if __name__ == '__main__':
-
+if __name__ == '__main__':
+    mp.set_start_method('forkserver', force=True) # use fork server to take in charge of fork every time
+    _=[1]*511111111
+    r = Rouge155(trickyfork=True)
+    r.test()
+    r.test()
+    r.score('abc', {'A':'abc'})
+    r.score('abc', {'A':'abc'})

@@ -1,24 +1,3 @@
-import torch
-import time
-import argparse
-import logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)-8s %(message)s')
-logFormatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
-rootLogger = logging.getLogger()
-import random
-import shutil
-import os
-import heapq
-import json
-from model.noisyChannel import ChannelModel
-from model.sentence import SentenceEmbedding
-from dataset.data import Dataset
-from torch import nn, optim
-import numpy as np
-from tensorboardX import SummaryWriter
-from utils import recursive_to_device, visualize_tensor, genPowerSet
-from rouge import Rouge
-#from IPython import embed
 
 def rouge_atten_matrix(doc, summ):
     doc_len = len(doc)
@@ -26,18 +5,26 @@ def rouge_atten_matrix(doc, summ):
     temp_mat = np.zeros([doc_len, summ_len])
     for i in range(doc_len):
         for j in range(summ_len):
+            #temp_mat[i, j] = Rouge155_obj.score([doc[i]], {'A':[summ[j]]})['rouge_1_f_score']
             temp_mat[i, j] = Rouge().get_scores(doc[i], summ[j])[0]['rouge-1']['f']
             #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-2']['f']\
             #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-l']['f']
     return temp_mat
 
+def pyrouge_atten_matrix(doc, summ):
+    doc_len = len(doc)
+    summ_len = len(summ)
+    temp_mat = np.zeros([doc_len, summ_len])
+    global Rouge155_obj
+    for i in range(doc_len):
+        for j in range(summ_len):
+            temp_mat[i, j] = Rouge155_obj.score([doc[i]], {'A':[summ[j]]})['rouge_1_f_score']
+    return temp_mat
+
 def trainChannelModel(args):
     np.set_printoptions(threshold=1e10) 
     print('Loading data......')
-    data = Dataset(path=args.data_path, fraction=args.fraction)
-    print('Loading offline pyrouge max index.....')
-    # the index of document sentence which has maximum pyrouge score with current summary sentence
-    pyrouge_max_index = json.load(open(args.offline_pyrouge_index_json)) 
+    data = Dataset(path=args.data_path)
     print('Building model......')
     args.num_words = len(data.weight) # number of words
     sentenceEncoder = SentenceEmbedding(**vars(args))
@@ -105,6 +92,7 @@ def trainChannelModel(args):
             train_writer.add_scalar('validation/rouge', rouge_score, epoch_num)
         eq = 0
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
+            t1 = time.time()
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
             iter_count += 1
@@ -114,7 +102,7 @@ def trainChannelModel(args):
                 continue
             D = sentenceEncoder(doc, doc_len)
             S_good = sentenceEncoder(sums[0], sums_len[0])
-            neg_sent_embed = sentenceEncoder(sums[1], sums_len[1]) # TODO remove extra
+            neg_sent_embed = sentenceEncoder(sums[1], sums_len[1])
 
             l = S_good.size(0)   
 
@@ -131,21 +119,27 @@ def trainChannelModel(args):
             summ_len_arr = sums_len[0].cpu().data.numpy()
             doc_ = []
             summ_ = []
+            top_k_indexes = []
+            pyrouge_scores = []
             for i in range(np.shape(doc_matrix)[0]):
                 doc_.append(" ".join([data.itow[x] for x in doc_matrix[i]][:doc_len_arr[i]]))
 
             index = random.randint(0, l - 1) 
             summ_.append(" ".join([data.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
             
-            # ----------- fetch best_index from pyrouge_max_index --------
-            ori_index = data.train_ori_index[batch_iter]
-            assert len(pyrouge_max_index[ori_index]) == l, "number of pyrouge_max_index[i] must be equal to the number of summary sentences"
-            best_index = pyrouge_max_index[ori_index][index]
-            # ------------
-
             atten_mat = rouge_atten_matrix(summ_, doc_)
+            tmp_atten = atten_mat[0]
+            t2 = time.time()
+            for _ in range(2):
+                best_index = np.argmax(tmp_atten)
+                tmp_atten[best_index] = -1.
+                top_k_indexes.append(best_index)
+                pyrouge_scores.append(pyrouge_atten_matrix(summ_, [doc_[best_index]])[0][0])
+                
+            best_index = top_k_indexes[np.argmax(pyrouge_scores)]
+            t3 = time.time()
             worse_indexes = []
-            if args.train_sample < 2:
+            if args.train_sample / 2 == 0:
                 #worse_index = random.randint(0, D.size(0) - 1)
                 worse_indexes = random.sample(range(D.size(0)), min(D.size(0), 1))
             else:
@@ -209,6 +203,10 @@ def trainChannelModel(args):
             loss_prob_term = bad_prob - good_prob
             n, m = good_attention_weight.size()
             regulation_term = torch.norm(torch.mm(good_attention_weight.t(), good_attention_weight) - n/m * torch.eye(m).to(device), 2)
+            regulation_weight = 0.
+            if(epoch_num < 30):
+                regulation_weight = args.alpha * (1 - epoch_num / 30.)
+            #loss = loss_prob_term
             loss = loss_prob_term + args.alpha * regulation_term
             #print(good_prob.item(), ', '.join([str(p.item()) for p in bad_probs]))
             if loss_prob_term.item() > -args.margin:
@@ -441,10 +439,8 @@ def parse_args():
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--seed', type=int, default=666, help='random seed')
     parser.add_argument('--alpha', type=float, default=0.01, help='weight of regularization term')
-    parser.add_argument('--fraction', type=float, default=1, help='fraction of training set reduction')
 
     parser.add_argument('--data-path', required=True, help='pickle file obtained by dataset dump or datadir for torchtext')
-    parser.add_argument('--offline-pyrouge-index-json', default='/data/sjx/Summarization-Exp/offline_pyrouge_max_index.json', help='json file of offline max pyrouge index')
     parser.add_argument('--save-dir', type=str, required=True, help='path to save checkpoints and logs')
     parser.add_argument('--load-previous-model', action='store_true')
     parser.add_argument('--validation', action='store_true')
@@ -485,5 +481,40 @@ def main():
 
 
 if __name__ == '__main__':
+    # for multiprocessing, packages must be imported in __main__
+    import torch
+    import time
+    import argparse
+    import logging
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)-8s %(message)s')
+    logFormatter = logging.Formatter('%(asctime)s %(levelname)-8s %(message)s')
+    rootLogger = logging.getLogger()
+    import random
+    import shutil
+    import os
+    import heapq
+    from model.noisyChannel import ChannelModel
+    from model.sentence import SentenceEmbedding
+    from dataset.data import Dataset
+    from torch import nn
+    from torch import nn, optim
+    from torch.autograd import Variable
+    from rouge import Rouge
+    from pyrouge import Rouge155
+    import numpy as np
+    from tensorboardX import SummaryWriter
+    from utils import recursive_to_device, visualize_tensor, genPowerSet
+    import multiprocessing as mp
+    #from IPython import embed
+
+
+    mp.set_start_method('forkserver', force=True) # use fork server to take in charge of fork every time
+    from pyrouge import Rouge155
+    r = Rouge155(trickyfork=True)
+    r.test()
+    r.test()
+    r.score('abc', {'A':'abc'})
+    r.score('abc', {'A':'abc'})
+    Rouge155_obj = Rouge155(fast=True, stem=True, tmp='./tmp1')
     main()
 

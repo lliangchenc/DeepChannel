@@ -10,7 +10,7 @@ def wrap_numpy_to_longtensor(*args):
 
 class Dataset(object):
 
-    def __init__(self, path, batch_size=1):
+    def __init__(self, path, batch_size=1, fraction=1):
         self.batch_size = batch_size
         #sys.exit(1)
 
@@ -26,9 +26,11 @@ class Dataset(object):
         
         
         ## used for small training set
-        self.train_set = self.train_set[:int(self.train_size / 1)]
-        self.train_len = self.train_len[:int(self.train_size / 1)]
+        self.train_set = self.train_set[:int(self.train_size * fraction)]
+        self.train_len = self.train_len[:int(self.train_size * fraction)]
         self.train_size = len(self.train_set)
+        self.train_ori_index = list(range(self.train_size)) 
+        # self.train_ori_index[i] is the original index of self.train_set[i]
 
 
         print('Take %.2f seconds to load data. train/valid/test: %d/%d/%d.' % (time.time()-tic, self.train_size, self.valid_size, self.test_size))
@@ -71,11 +73,12 @@ class Dataset(object):
 #            self.train_set_bucket_shuffle()
 #            raise StopIteration
 
-    def gen_train_minibatch(self):
+    def gen_train_minibatch(self, shuffle=True):
         # random shuffle both train_set and train_len
-        combined = list(zip(self.train_set, self.train_len))
-        random.shuffle(combined)
-        self.train_set[:], self.train_len[:] = zip(*combined)
+        if shuffle:
+            combined = list(zip(self.train_set, self.train_len, self.train_ori_index))
+            random.shuffle(combined)
+            self.train_set[:], self.train_len[:], self.train_ori_index[:] = zip(*combined)
         for d, s, d_len, s_len in map(lambda _: _[0]+_[1], zip(self.train_set, self.train_len)):
             s_batch = [s]
             s_len_batch = [s_len]
