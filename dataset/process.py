@@ -5,7 +5,6 @@ import argparse
 import numpy as np
 import pickle
 import spacy
-import random
 import hashlib
 import copy
 from tqdm import tqdm
@@ -13,8 +12,6 @@ from collections import Counter
 #from IPython import embed
 import xml.etree.ElementTree as et
 from data import Dataset
-
-random.seed(666)
 
 pattern_of_num = re.compile(r'[0-9]+')
 nlp = None
