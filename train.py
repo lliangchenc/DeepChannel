@@ -108,7 +108,7 @@ def trainChannelModel(args):
         if args.anneal:
             channelModel.temperature = 1 - epoch_num * 0.99 / (args.max_epoch-1) # from 1 to 0.01 as the epoch_num increases
 
-        if(epoch_num % 100 == 90):
+        if(epoch_num % 1 == 0):
             valid_loss, valid_all_loss, valid_acc, valid_all_acc, rouge_score = validate(data, sentenceEncoder, channelModel, device, args)
             train_writer.add_scalar('validation/loss', valid_loss, epoch_num)
             train_writer.add_scalar('validation/all_loss', valid_all_loss, epoch_num)
@@ -159,9 +159,9 @@ def trainChannelModel(args):
                 best_index = np.argmax(tmp_atten)
                 tmp_atten[best_index] = -1.
                 top_k_indexes.append(best_index)
-                pyrouge_scores.append(pyrouge_atten_matrix(summ_, [doc_[best_index]])[0][0])
+                #pyrouge_scores.append(pyrouge_atten_matrix(summ_, [doc_[best_index]])[0][0])
                 
-            best_index = top_k_indexes[np.argmax(pyrouge_scores)]
+            best_index = top_k_indexes[random.randint(0,1)]
             t3 = time.time()
             worse_indexes = []
             if args.train_sample / 2 == 0:
@@ -268,7 +268,7 @@ def trainChannelModel(args):
                 #print(visualize_tensor(torch.norm(S_good, p=2, dim=0)))
                 print('='*66)
             t4 = time.time()
-            print(t2-t1, t3-t2, t4-t3)
+            #print(t2-t1, t3-t2, t4-t3)
         if(epoch_num % 1 == 0):
             try:
                 os.mkdir(os.path.join(args.save_dir, 'checkpoints/'+str(epoch_num)))
