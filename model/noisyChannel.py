@@ -11,21 +11,15 @@ class ChannelModel(nn.Module):
         self.se_dim = kwargs['se_dim'] # dim of sentence embedding
         self.p_producer = nn.Sequential(
                 nn.Dropout(kwargs['dropout']),
-                nn.Linear(self.se_dim * 2, 1024),
+                nn.Linear(self.se_dim * 3, 1024),
                 nn.ReLU(),
-                #nn.Dropout(kwargs['dropout']),
-                #nn.Linear(512, 512),
-                #nn.ReLU(),
-                #nn.Dropout(kwargs['dropout']),
                 nn.Linear(1024, 256),
                 nn.ReLU(),
-                #nn.Dropout(kwargs['dropout']),
                 nn.Linear(256, 1),
                 nn.Sigmoid()
                 )
         self.temperature = 1 # for annealing
         self.reset_parameters()
-
     def reset_parameters(self):
         for name, param in list(self.p_producer.named_parameters()):
             if 'bias' in name:
@@ -44,13 +38,13 @@ class ChannelModel(nn.Module):
         S_T = torch.transpose(S, 0, 1).contiguous() # [Ds, m]
         att_weight = functional.softmax(
                 torch.mm(D, S_T) / self.temperature,
-                #torch.mm(D, S_T) / math.sqrt(self.se_dim) / self.temperature,
                 dim=1
                 ) # [n, m]
         att_S = torch.mm(att_weight, S) # [n, Ds]
 
+
         ## --------------------------------------------------------------- ##
-        d_s_feat = torch.cat([D, att_S], dim=1)
+        d_s_feat = torch.cat([D, att_S, torch.mul(D, att_S)], dim=1)
         prob_vector = self.p_producer(d_s_feat) # P(d|S) in each row
         ## --------------------------------------------------------------- ##
 

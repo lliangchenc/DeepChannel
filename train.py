@@ -101,6 +101,7 @@ def trainChannelModel(args):
             train_writer.add_scalar('validation/all_acc', valid_all_acc, epoch_num)
             train_writer.add_scalar('validation/rouge', rouge_score, epoch_num)
         eq = 0
+        rouge_arr = []
         for batch_iter, train_batch in enumerate(data.gen_train_minibatch()):
             sentenceEncoder.train(); channelModel.train()
             progress = epoch_num + batch_iter / data.train_size
@@ -133,13 +134,19 @@ def trainChannelModel(args):
 
             index = random.randint(0, l - 1) 
             summ_.append(" ".join([data.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
-            
+            '''
+            atten_mat = rouge_atten_matrix(summ_, doc_)
+            best_index = np.argmax(atten_mat[0])
+            best_rouge = atten_mat[0][best_index]
+            rouge_arr.append(best_rouge)
+            '''
             # ----------- fetch best_index from pyrouge_max_index --------
+            
             ori_index = data.train_ori_index[batch_iter]
             assert len(pyrouge_max_index[ori_index]) == l, "number of pyrouge_max_index[i] must be equal to the number of summary sentences"
             best_index = pyrouge_max_index[ori_index][index]
             # ------------
-
+            
             worse_indexes = []
             if args.train_sample < 2:
                 worse_indexes = random.sample(range(D.size(0)), min(D.size(0), 1))
@@ -229,6 +236,7 @@ def trainChannelModel(args):
                 print('='*66)
 
             t4 = time.time()
+        print("ROUGE: ", np.mean(rouge_arr))
         if(epoch_num % 1 == 0):
             try:
                 os.mkdir(os.path.join(args.save_dir, 'checkpoints/'+str(epoch_num)))
@@ -248,15 +256,15 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
     all_loss_arr = []
     Rouge_list = []
 
-    for batch_iter, valid_batch in enumerate(data_.gen_test_minibatch()):
-        if not(batch_iter % 10 == 0):
+    for batch_iter, valid_batch in enumerate(data_.gen_valid_minibatch()):
+        if not(batch_iter % 100 == 0):
             continue
         sentenceEncoder_.eval(); channelModel_.eval()
         doc, sums, doc_len, sums_len = recursive_to_device(device_, *valid_batch)
         num_sent_of_sum = sums[0].size(0)
         D = sentenceEncoder_(doc, doc_len)
         l = D.size(0)
-        if(l < num_sent_of_sum):
+        if(l < 2):
             continue
         doc_matrix = doc.cpu().data.numpy()
         doc_len_arr = doc_len.cpu().data.numpy()
@@ -280,7 +288,7 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
         selected_indexs = []
         probs_arr = []
 
-        for _ in range(num_sent_of_sum):
+        for _ in range(3):
             probs = []
             for i in range(l):
                 temp = [D[x] for x in selected_indexs]
@@ -310,7 +318,6 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
                 temp.append(Rouge().get_scores(s, d)[0]['rouge-1']['f'])
             index = np.argmax(temp)
             best_rouge_summ_arr.append(doc_arr[index])
-
         score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
         Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
     

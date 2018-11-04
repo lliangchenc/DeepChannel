@@ -21,13 +21,24 @@ import copy
 from tqdm import tqdm
 from IPython import embed
 
+def rouge_atten_matrix(doc, summ):
+    doc_len = len(doc)
+    summ_len = len(summ)
+    temp_mat = np.zeros([doc_len, summ_len])
+    for i in range(doc_len):
+        for j in range(summ_len):
+            temp_mat[i, j] = Rouge().get_scores(doc[i], summ[j])[0]['rouge-1']['f']
+    return temp_mat
+
 def evalLead3(args):
     data = Dataset(path=args.data_path)
     Rouge_list, Rouge155_list = [], []
     Rouge155_obj = Rouge155(stem=True, tmp='./tmp2')
-    for batch_iter, valid_batch in tqdm(enumerate(data.gen_test_minibatch()), total=data.test_size):
+    for batch_iter, valid_batch in tqdm(enumerate(data.gen_train_minibatch()), total=data.test_size):
+        if not(batch_iter % 100 == 0):
+            continue
         doc, sums, doc_len, sums_len = valid_batch
-        selected_indexs = range(min(doc.size(0), 3))
+        selected_indexs = range(min(doc.size(0), 1))
         doc_matrix = doc.data.numpy()
         doc_len_arr = doc_len.data.numpy()
         golden_summ_matrix = sums[0].data.numpy()
@@ -51,9 +62,8 @@ def evalLead3(args):
             summ_arr.append(temp_sent)
         score_Rouge = Rouge().get_scores(" ".join(summ_arr), " ".join(golden_summ_arr))
         #score_Rouge155 = Rouge155_obj.score(summ_arr, {'A':golden_summ_arr})
-        #score_Rouge155 = Rouge155_obj.score(' '.join(summ_arr), {'A':' '.join(golden_summ_arr)})
-        Rouge_list.append(score_Rouge[0]['rouge-1']['f'])
-        #Rouge155_list.append(score_Rouge155['rouge_1_f_score'])
+        Rouge_list.append(score_Rouge[0]['rouge-l']['f'])
+        #Rouge155_list.append(score_Rouge155['rouge_l_f_score'])
         print(Rouge_list[-1])
         #print(Rouge155_list[-1])
         #embed()
@@ -97,6 +107,7 @@ def genSentences(args):
     #Rouge155_obj = Rouge155(n_bytes=75, stem=True, tmp='.tmp')
     Rouge155_obj = Rouge155(stem=True, tmp=".tmp")
     best_rouge1_arr = []
+    redundancy_arr = []
     for batch_iter, valid_batch in tqdm(enumerate(data.gen_test_minibatch()), total = data.test_size):
         #print(valid_count)
         sentenceEncoder.eval(); channelModel.eval()
@@ -128,7 +139,13 @@ def genSentences(args):
             temp_sent = " ".join([data.itow[x] for x in golden_summ_matrix[i]][:golden_summ_len_arr[i]])
             golden_summ_ += str(i) + ": " + temp_sent + "\n\n"
             golden_summ_arr.append(temp_sent)
-
+        ''' 
+        if(num_sent_of_sum == 1):
+            continue
+        redundancy_mat = rouge_atten_matrix(golden_summ_arr, golden_summ_arr)
+        redundancy_arr.append((np.sum(redundancy_mat) - num_sent_of_sum) / num_sent_of_sum / (num_sent_of_sum - 1))
+        continue
+        '''
         selected_indexs = []
         #probs_arr = []
 
@@ -148,7 +165,7 @@ def genSentences(args):
                     best_index = np.argmax(probs)
                 selected_indexs.append(best_index)
             _,addition = channelModel(D, S)
-        selected_indexs.sort()
+            selected_indexs.sort()
         if(args.method == 'iterative-delete'):
             current_sent_set = range(l)
             best_index = -1
@@ -176,10 +193,10 @@ def genSentences(args):
 
         probs_arr = []
         if args.method == 'top-k-simple':
-            for i in range(3):
+            for i in range(l):
                 temp_prob, addition = channelModel(D, torch.stack([D[i]]))
                 probs_arr.append(temp_prob.item())
-            for _ in range(num_sent_of_sum):
+            for _ in range(3):
                 best_index = np.argmax(probs_arr)
                 probs_arr[best_index] = - 1000000
                 selected_indexs.append(best_index)
@@ -219,6 +236,9 @@ def genSentences(args):
         f_ref.write("\n".join(golden_summ_arr))
         f_sum.write("\n".join(summ_arr))
 
+        #redundancy_mat = rouge_atten_matrix(summ_arr, summ_arr)
+        #redundancy_arr.append(np.sum(redundancy_mat))
+
         #print("\nsample case %d:\n\ndocument:\n\n%s\n\ngolden summary:\n\n%s\n\nmy summary:\n\n%s\n\n"%(valid_count, doc_, golden_summ_, summ_))
         #print("PROB_ARR: ", str(probs_arr))
         #print(rouge_atten_matrix(doc_arr, golden_summ_arr))
@@ -232,8 +252,8 @@ def genSentences(args):
         #Rouge_list_l.append(score_Rouge[0]['rouge-l']['f'])
         #os.system("clear")
         #print(Rouge_list[-1], Rouge_list_2[-1], Rouge_list_l[-1])
-        ''' 
-        if(Rouge_list[-1]>0.6):
+        '''
+        if(Rouge_list[-1]>0.3):
             #print(type(addition['att_weight'].cpu().data.numpy()))
             logging.info("%d : %f\n\ndoc:\n%s\ngolden:\n%s\nmy:\n%s\nmat:\n%s\n\n"%(batch_iter, Rouge_list[-1], doc_, golden_summ_, summ_, str(addition['att_weight'].cpu().data.numpy())))
         else:
@@ -254,6 +274,7 @@ def genSentences(args):
     #    total_score[k] /= valid_count
     total_score = Rouge155_obj.evaluate_folder("./sum", "./ref")
     print(total_score)
+    #print("Redundancy : ", np.mean(redundancy_arr))
     #print(np.mean(Rouge_list), np.mean(Rouge_list_2), np.mean(Rouge_list_l))
     #print(np.mean(Rouge155_list), np.mean(Rouge155_list_2), np.mean(Rouge155_list_l))
 

@@ -1,12 +1,15 @@
 #encoding=utf-8
 import os
 import re
+import sys
 import argparse
 import numpy as np
 import pickle
 import spacy
 import hashlib
 import copy
+import codecs
+import json
 from tqdm import tqdm
 from collections import Counter
 #from IPython import embed
@@ -14,7 +17,9 @@ import xml.etree.ElementTree as et
 from data import Dataset
 
 pattern_of_num = re.compile(r'[0-9]+')
+pattern_unicode = re.compile(r'\\u[\w]{4}')
 nlp = None
+
 def process_document(d, sentence_len_limit):
     '''
     functions:
@@ -63,6 +68,56 @@ def hashhex(s):
     h.update(s)
     return h.hexdigest()
 
+def read_bytecup(data_type, data_dir):
+    data_ = []
+    length_ = []
+    data = [[], [], []]
+    length = [[], [], []]# length of each sentence, whose index is corresponding to data
+    files = [data_dir + x for x in os.listdir(data_dir)]
+    count = 0
+    num_files = 0
+    for filename in files:
+        num_files += 1
+        if num_files < 1:
+            continue
+        print("reading ", filename)
+        lines = codecs.open(filename, "r", "utf-8", errors="ignore").readlines()
+        error = 0
+        for line in tqdm(lines):
+            count += 1
+            try:
+                line_ = re.sub(pattern_unicode, " ", line)
+                line_dict = json.loads(line_)
+                content = line_dict["content"].replace(".", ". ")
+                #content = re.sub(pattern_unicode, " ", content)
+                #content = content.replace("\\", " ")
+                title = line_dict["title"].replace(".", ". ")
+                #title = re.sub(pattern_unicode, " ", title)
+                #title = title.replace("\\", " ")
+                docu = process_document(content, 3)
+                summ = process_document(title, 3)
+                if len(docu)==0 or len(summ)==0:
+                    continue
+                docu_len = [len(s) for s in docu]
+                summ_len = [len(s) for s in summ]
+                #print(docu, summ)
+                data_.append([docu, summ])
+                length_.append([docu_len, summ_len])
+            except:
+                error += 1
+                print("error", error)
+                continue
+            #if(count > 50):          
+            #    break
+    l = len(data_)
+    #print(data_)
+    data[0] = data_[:l * 9 // 10]
+    data[1] = data_[l * 9 // 10:]
+    data[2] = data_[l * 9 // 10:]
+    length[0] = length_[:l * 9 // 10]
+    length[1] = length_[l * 9 // 10:]
+    length[2] = length_[l * 9 // 10:]
+    return data, length
 
 def read_cnn_dailymail(data_type, data_dir):
     def key2File(data_dir, key2file):
@@ -137,13 +192,14 @@ def main():
             'cnn': read_cnn_dailymail,
             'daily': read_cnn_dailymail,
             'duc2007': read_duc2007,
+            'bytecup':read_bytecup,
             }
     parser = argparse.ArgumentParser()
     parser.add_argument('--glove', default='/data/sjx/glove.6B.100d.py36.pkl', help='pickle file of glove')
     parser.add_argument('--data', default='cnn+dailymail', choices=datasets.keys())
     parser.add_argument('--data-dir', default='/data/share/cnn_stories/stories;/data/share/dailymail_stories/stories', help='If data=cnn+dailimail, then data-dir must contain two paths for cnn and dailymail seperated by ;.')
     parser.add_argument('--save-path', required=True)
-    parser.add_argument('--max-word-num', type=int, default=50000)
+    parser.add_argument('--max-word-num', type=int, default=500000)
     args = parser.parse_args()
 
     print('Loading glove......')
@@ -168,7 +224,7 @@ def main():
                         wtof[word] = wtof.get(word, 0) + 1
         wtof = Counter(wtof).most_common(args.max_word_num)
         needed_words = { w[0]: w[1] for w in wtof }
-        print('Preserve word num: %d. Examples: %s %s' % (len(needed_words), wtof[0][0], wtof[1][0]))
+        # print('Preserve word num: %d. Examples: %s %s' % (len(needed_words), wtof[0][0], wtof[1][0]))
 
 
     itow = ['<pad>', '<unk>']
@@ -211,6 +267,7 @@ def main():
                                 itow.append(word)
                                 wtoi[word] = count
                                 count += 1
+                            #print(word)
                             data[i][j][k][l][m] = wtoi[word]
                             # Find neighbor vectors for those words not in glove
                             if word not in glove:
@@ -219,13 +276,14 @@ def main():
                                 for neighbor in data[i][j][k][l][m-5:m+6]: # window size: 10
                                     if neighbor in glove:
                                         missing_word_neighbors[word].append(glove[neighbor])
-                        data[i][j][k][l] += [0]*(max_len - len(data[i][j][k][l])) # padding l-th sentence
+                        if(max_len > len(data[i][j][k][l])):
+                            data[i][j][k][l] += [0]*int(max_len - len(data[i][j][k][l])) # padding l-th sentence
                     data[i][j][k] = np.asarray(data[i][j][k], dtype='int32')
                     length[i][j][k] = np.asarray(length[i][j][k], dtype='int32')
                     # np.array for all documents/summaries
                     # shape of each document/summary: (# sentence, max length)
     print('Calculate vectors for missing words by averaging neighbors......')
-
+    #print(data)
     if(args.data == 'duc2007'):
         weight_matrix = cnn_data.weight
     else:
