@@ -112,15 +112,9 @@ def trainChannelModel(args):
                 continue
             D = sentenceEncoder(doc, doc_len)
             S_good = sentenceEncoder(sums[0], sums_len[0])
-            neg_sent_embed = sentenceEncoder(sums[1], sums_len[1]) # TODO remove extra
+            neg_sent_embed = sentenceEncoder(sums[1], sums_len[1])
 
             l = S_good.size(0)   
-
-            ## train sample selection strategy:
-            ## 0. good case: rouge max, bad case: random
-            ## 1. good case: origin, bad case: random
-            ## 2. good case: rouge max, bad case: one ranking in the second half
-            ## 3. good case: origin, bad case: one ranking in the second half
 
             S_bads = []
             doc_matrix = doc.cpu().data.numpy()
@@ -134,26 +128,12 @@ def trainChannelModel(args):
 
             index = random.randint(0, l - 1) 
             summ_.append(" ".join([data.itow[x] for x in summ_matrix[index]][:summ_len_arr[index]]))
-            '''
-            atten_mat = rouge_atten_matrix(summ_, doc_)
-            best_index = np.argmax(atten_mat[0])
-            best_rouge = atten_mat[0][best_index]
-            rouge_arr.append(best_rouge)
-            '''
-            # ----------- fetch best_index from pyrouge_max_index --------
             
+            # ----------- fetch best_index from pyrouge_max_index --------
             ori_index = data.train_ori_index[batch_iter]
             assert len(pyrouge_max_index[ori_index]) == l, "number of pyrouge_max_index[i] must be equal to the number of summary sentences"
             best_index = pyrouge_max_index[ori_index][index]
-            # ------------
-            
-            worse_indexes = []
-            if args.train_sample < 2:
-                worse_indexes = random.sample(range(D.size(0)), min(D.size(0), 1))
-            else:
-                atten_mat = rouge_atten_matrix(summ_, doc_)
-                ind = random.randint(1, int(D.size(0) / 2) + 1)
-                worse_indexes = [list(map(list(atten_mat[0]).index, heapq.nsmallest(ind, list(atten_mat[0]))))[-1]]
+            worse_indexes = random.sample(range(D.size(0)), min(D.size(0), 1))
 
             temp_good = []
             for i in range(l):
@@ -162,8 +142,7 @@ def trainChannelModel(args):
                 else:
                     temp_good.append(D[best_index])
 
-            if args.train_sample % 2 == 0:
-                S_good = torch.stack(temp_good)
+            S_good = torch.stack(temp_good)
 
             for worse_index in worse_indexes:
                 temp_bad = []
@@ -173,41 +152,19 @@ def trainChannelModel(args):
                     else:
                         temp_bad.append(D[worse_index])
                 S_bads.append(torch.stack(temp_bad))
+
             # prob calculation
             good_prob, addition = channelModel(D, S_good)
             good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
             bad_probs, bad_probs_vector = [], []
             bad_prob = 0.
 
-            if(args.neg_case == 'max'):
-                for S_bad in S_bads:
-                    bad_prob, addition = channelModel(D, S_bad)
-                    bad_probs.append(bad_prob)
-                    bad_probs_vector.append(addition['prob_vector'])
-                bad_index = np.argmax([p.item() for p in bad_probs])
-                bad_prob = bad_probs[bad_index]
-            elif(args.neg_case == 'random'):
-                bad_index = random.randint(0, len(S_bads) - 1)
-                bad_prob, addition = channelModel(D, S_bads[bad_index])
+            for S_bad in S_bads:
+                bad_prob, addition = channelModel(D, S_bad)
+                bad_probs.append(bad_prob)
                 bad_probs_vector.append(addition['prob_vector'])
-            elif(args.neg_case == 'mean'):
-                tmp = 0.
-                for S_bad in S_bads:
-                    bad_prob, addition = channelModel(D, S_bad)
-                    tmp = bad_prob + tmp
-                bad_prob = tmp / (len(S_bads) + 0.)
-
-            else:
-                bad_num = min(8, len(S_bads))
-                S_bads_sample = random.sample(S_bads, bad_num)
-                for S_bad in S_bads_sample:
-                    bad_prob, addition = channelModel(D, S_bad)
-                    bad_probs.append(bad_prob)
-                    bad_probs_vector.append(addition['prob_vector'])
-                bad_index = np.argmax([p.item() for p in bad_probs])
-                bad_prob = bad_probs[bad_index]
-
-
+            bad_index = np.argmax([p.item() for p in bad_probs])
+            bad_prob = bad_probs[bad_index]
 
             ########### loss ############
             loss_prob_term = bad_prob - good_prob
@@ -224,19 +181,6 @@ def trainChannelModel(args):
             if iter_count % 100 == 0:
                 logging.info('Epoch %.2f, loss_prob: %.4f, bad_prob: %.4f, good_prob: %.4f, regulation_value: %.4f' % (progress, loss_prob_term.item(), bad_prob.item(), good_prob.item(), regulation_term.item()))
 
-            if args.debug and iter_count % 100 == 0:
-                print(visualize_tensor(good_prob_vector))
-                print('-'*33)
-                for i in range(len(bad_probs)):
-                    print(visualize_tensor(bad_probs_vector[i]))
-                    if i == bad_index:
-                        print(' @#@')
-                print('-'*33)
-                print(visualize_tensor(good_attention_weight))
-                print('='*66)
-
-            t4 = time.time()
-        print("ROUGE: ", np.mean(rouge_arr))
         if(epoch_num % 1 == 0):
             try:
                 os.mkdir(os.path.join(args.save_dir, 'checkpoints/'+str(epoch_num)))
@@ -410,8 +354,6 @@ def validate(data_, sentenceEncoder_, channelModel_, device_, args):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
-    parser.add_argument('--neg-case', default = 'max', choices=['max', 'mean', 'random', 'randmax'])
-    parser.add_argument('--train-sample', type=int, default=0, help='train sample selection strategy')
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
     parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
@@ -438,8 +380,6 @@ def parse_args():
     parser.add_argument('--save-dir', type=str, required=True, help='path to save checkpoints and logs')
     parser.add_argument('--load-previous-model', action='store_true')
     parser.add_argument('--validation', action='store_true')
-    parser.add_argument('--visualize', action='store_true')
-    parser.add_argument('--small', action='store_true')
     args = parser.parse_args()
     return args
 
