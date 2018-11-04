@@ -10,7 +10,7 @@ import shutil
 import os
 import heapq
 import json
-from model.noisyChannel import ChannelModel
+from model.anotherChannel import ChannelModel
 from model.sentence import SentenceEmbedding
 from dataset.data import Dataset
 from torch import nn, optim
@@ -20,7 +20,6 @@ from utils import recursive_to_device, visualize_tensor, genPowerSet
 from rouge import Rouge
 #from IPython import embed
 
-
 def rouge_atten_matrix(doc, summ):
     doc_len = len(doc)
     summ_len = len(summ)
@@ -28,6 +27,8 @@ def rouge_atten_matrix(doc, summ):
     for i in range(doc_len):
         for j in range(summ_len):
             temp_mat[i, j] = Rouge().get_scores(doc[i], summ[j])[0]['rouge-1']['f']
+            #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-2']['f']\
+            #                 + Rouge().get_scores(doc[i], summ[j])[0]['rouge-l']['f']
     return temp_mat
 
 def trainChannelModel(args):
@@ -55,6 +56,7 @@ def trainChannelModel(args):
     if args.cuda:
         print('Transfer models to cuda......')
     sentenceEncoder, channelModel = sentenceEncoder.to(device), channelModel.to(device)
+    channelModel.trans_matrix = channelModel.trans_matrix.to(device)
     identityMatrix = torch.eye(100).to(device)
 
     print('Initializing optimizer and summary writer......')
@@ -66,6 +68,7 @@ def trainChannelModel(args):
             'adadelta': optim.Adadelta,
             }[args.optimizer]
     optimizer = optimizer_class(params=params, lr=args.lr, weight_decay=args.weight_decay)
+    #scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer, mode='max', factor=0.5, patience=5, verbose=True)
     scheduler = optim.lr_scheduler.MultiStepLR(optimizer,milestones=[5,10,20,30],gamma = 0.5)
     train_writer = SummaryWriter(os.path.join(args.save_dir, 'log', 'train'))
     tic = time.time()
@@ -76,6 +79,7 @@ def trainChannelModel(args):
     valid_acc = 0
     valid_all_acc = 0
     print('Start training......')
+    #print(data.itow[123])
     if(args.load_previous_model):
         sentenceEncoder.load_state_dict(torch.load(os.path.join(args.save_dir, 'se.pkl')))
         channelModel.load_state_dict(torch.load(os.path.join(args.save_dir, 'channel.pkl')))
@@ -113,7 +117,7 @@ def trainChannelModel(args):
             S_good = sentenceEncoder(sums[0], sums_len[0])
             neg_sent_embed = sentenceEncoder(sums[1], sums_len[1]) # TODO remove extra
 
-            l = S_good.size(0)   
+            l = S_good.size(0)  
 
             ## train sample selection strategy:
             ## 0. good case: rouge max, bad case: random
@@ -142,6 +146,7 @@ def trainChannelModel(args):
 
             worse_indexes = []
             if args.train_sample < 2:
+                #worse_index = random.randint(0, D.size(0) - 1)
                 worse_indexes = random.sample(range(D.size(0)), min(D.size(0), 1))
             else:
                 atten_mat = rouge_atten_matrix(summ_, doc_)
@@ -171,7 +176,6 @@ def trainChannelModel(args):
             good_prob_vector, good_attention_weight = addition['prob_vector'], addition['att_weight']
             bad_probs, bad_probs_vector = [], []
             bad_prob = 0.
-
             if(args.neg_case == 'max'):
                 for S_bad in S_bads:
                     bad_prob, addition = channelModel(D, S_bad)
@@ -207,16 +211,28 @@ def trainChannelModel(args):
             n, m = good_attention_weight.size()
             regulation_term = torch.norm(torch.mm(good_attention_weight.t(), good_attention_weight) - n/m * torch.eye(m).to(device), 2)
             loss = loss_prob_term + args.alpha * regulation_term
-
+            #print(good_prob.item(), ', '.join([str(p.item()) for p in bad_probs]))
             if loss_prob_term.item() > -args.margin:
                 optimizer.zero_grad()
                 loss.backward()
                 nn.utils.clip_grad_norm_(parameters=params, max_norm=args.clip)
+                #nn.utils.clip_grad_value_(parameters=params, clip_value=args.clip)
                 optimizer.step()
-
+            ###################################
+            # summary
+            # train_writer.add_scalar('loss/total', loss, iter_count)
+            # train_writer.add_scalar('loss/prob_term', loss_prob_term, iter_count)
+            # train_writer.add_scalar('loss/regulation_term', regulation_term, iter_count)
+            # train_writer.add_scalar('prob/good_prob', good_prob, iter_count)
+            # if(iter_count % 1000 == 0):
+            #    train_writer.add_histogram('good_prob_vector', good_prob_vector.clone().cpu().data.numpy(), iter_count)
+            #    for name, param in list(sentenceEncoder.named_parameters()) + list(channelModel.named_parameters()):
+            #        if param.requires_grad and name not in ['word_embedding.weight']:
+            #            train_writer.add_histogram(name, param.clone().cpu().data.numpy(), iter_count)
+            #            train_writer.add_histogram(name+'/grad', param.grad.clone().cpu().data.numpy(), iter_count)
+            #scheduler.step(valid_acc)
             if iter_count % 100 == 0:
                 logging.info('Epoch %.2f, loss_prob: %.4f, bad_prob: %.4f, good_prob: %.4f, regulation_value: %.4f' % (progress, loss_prob_term.item(), bad_prob.item(), good_prob.item(), regulation_term.item()))
-
             if args.debug and iter_count % 100 == 0:
                 print(visualize_tensor(good_prob_vector))
                 print('-'*33)
@@ -226,8 +242,9 @@ def trainChannelModel(args):
                         print(' @#@')
                 print('-'*33)
                 print(visualize_tensor(good_attention_weight))
+                #print('-'*33)
+                #print(visualize_tensor(torch.norm(S_good, p=2, dim=0)))
                 print('='*66)
-
             t4 = time.time()
         if(epoch_num % 1 == 0):
             try:
@@ -236,6 +253,7 @@ def trainChannelModel(args):
                 pass
             torch.save(sentenceEncoder.state_dict(), os.path.join(args.save_dir, 'checkpoints/'+ str(epoch_num) + '/se.pkl'))
             torch.save(channelModel.state_dict(), os.path.join(args.save_dir, 'checkpoints/'+ str(epoch_num) + '/channel.pkl'))
+            torch.save(channelModel.trans_matrix, os.path.join(args.save_dir, 'checkpoints/'+ str(epoch_num) + '/trans_mat.pkl'))
     [rootLogger.removeHandler(h) for h in rootLogger.handlers if isinstance(h, logging.FileHandler)]
 
 
