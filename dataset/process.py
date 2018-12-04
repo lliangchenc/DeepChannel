@@ -51,73 +51,11 @@ def process_document(d, sentence_len_limit):
         results.append(sentence)
     return results 
 
-
-
-#def read_official_split(data_dir):
-#    data = [[], [], []] # train/valid/test
-#    split_dirs = [os.path.join(data_dir, d) for d in ['train', 'valid', 'test']]
-#    for i, dir in enumerate(split_dirs):
-#        for f in tqdm(os.listdir(dir)):
-#            f = open(os.path.join(dir, f)).read().replace('\n', ' ').split('@highlight') # (content, summary)
-#            data[i].append(list(map(sent_dealer, [f[0], ' '.join(f[1:])])))
-#    return data
-
 def hashhex(s):
     """Returns a heximal formated SHA1 hash of the input string."""
     h = hashlib.sha1()
     h.update(s)
     return h.hexdigest()
-
-def read_bytecup(data_type, data_dir):
-    data_ = []
-    length_ = []
-    data = [[], [], []]
-    length = [[], [], []]# length of each sentence, whose index is corresponding to data
-    files = [data_dir + x for x in os.listdir(data_dir)]
-    count = 0
-    num_files = 0
-    for filename in files:
-        num_files += 1
-        if num_files < 1:
-            continue
-        print("reading ", filename)
-        lines = codecs.open(filename, "r", "utf-8", errors="ignore").readlines()
-        error = 0
-        for line in tqdm(lines):
-            count += 1
-            try:
-                line_ = re.sub(pattern_unicode, " ", line)
-                line_dict = json.loads(line_)
-                content = line_dict["content"].replace(".", ". ")
-                #content = re.sub(pattern_unicode, " ", content)
-                #content = content.replace("\\", " ")
-                title = line_dict["title"].replace(".", ". ")
-                #title = re.sub(pattern_unicode, " ", title)
-                #title = title.replace("\\", " ")
-                docu = process_document(content, 3)
-                summ = process_document(title, 3)
-                if len(docu)==0 or len(summ)==0:
-                    continue
-                docu_len = [len(s) for s in docu]
-                summ_len = [len(s) for s in summ]
-                #print(docu, summ)
-                data_.append([docu, summ])
-                length_.append([docu_len, summ_len])
-            except:
-                error += 1
-                print("error", error)
-                continue
-            #if(count > 50):          
-            #    break
-    l = len(data_)
-    #print(data_)
-    data[0] = data_[:l * 9 // 10]
-    data[1] = data_[l * 9 // 10:]
-    data[2] = data_[l * 9 // 10:]
-    length[0] = length_[:l * 9 // 10]
-    length[1] = length_[l * 9 // 10:]
-    length[2] = length_[l * 9 // 10:]
-    return data, length
 
 def read_cnn_dailymail(data_type, data_dir):
     def key2File(data_dir, key2file):
@@ -192,7 +130,6 @@ def main():
             'cnn': read_cnn_dailymail,
             'daily': read_cnn_dailymail,
             'duc2007': read_duc2007,
-            'bytecup':read_bytecup,
             }
     parser = argparse.ArgumentParser()
     parser.add_argument('--glove', default='/data/sjx/glove.6B.100d.py36.pkl', help='pickle file of glove')

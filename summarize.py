@@ -214,17 +214,11 @@ def genSentences(args):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--SE-type', default='GRU', choices=['GRU', 'BiGRU', 'AVG'])
-    parser.add_argument('--neg-case', default = 'max', choices=['max', 'random'])
-    parser.add_argument('--neg-sample', default = 'mix', choices=['mix', 'delete', 'replace'])
-    parser.add_argument('--method', default = 'random', choices=['random', 'top-k-simple', 'top-k', 'iterative', 'iterative-delete', 'lead-3'])
+    parser.add_argument('--method', default = 'iterative', choices=['random', 'top-k-simple', 'top-k', 'iterative', 'iterative-delete', 'lead-3'])
     parser.add_argument('--word-dim', type=int, default=300, help='dimension of word embeddings')
-    parser.add_argument('--hidden-dim', type=int, default=300, help='dimension of hidden units per layer')
+    parser.add_argument('--hidden-dim', type=int, default=1024, help='dimension of hidden units per layer')
     parser.add_argument('--num-layers', type=int, default=1, help='number of layers in LSTM/BiLSTM')
-    parser.add_argument('--kernel-num', type=int, default=64, help='kernel num/ output dim in CNN')
-    parser.add_argument('--dropout', type=float, default=0)
-
     parser.add_argument('--cuda', action='store_true', default=True)
-
     parser.add_argument('--data-path', required=True, help='pickle file obtained by dataset dump or datadir for torchtext')
     parser.add_argument('--save-dir', type=str, help='path to save checkpoints and logs')
     args = parser.parse_args()
