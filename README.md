@@ -2,7 +2,7 @@
 This repository is the pytorch implementation of paper
 
 [DeepChannel: Salience Estimation by Contrastive Learning for Extractive Document Summarization](https://arxiv.org/abs/1811.02394).
-> Jiaxin Shi, Chen Liang, Lei Hou, Juanzi Li, [Zhiyuan Liu](http://nlp.csai.tsinghua.edu.cn/~lzy/index.html), [Hanwang Zhang](http://www.ntu.edu.sg/home/hanwangzhang/#aboutme).
+> Jiaxin Shi*, Chen Liang*, Lei Hou, Juanzi Li, [Zhiyuan Liu](http://nlp.csai.tsinghua.edu.cn/~lzy/index.html), [Hanwang Zhang](http://www.ntu.edu.sg/home/hanwangzhang/#aboutme).
 
 In this paper, we propose DeepChannel, a robust, data-efficient, and interpretable neural model for extractive document summarization. Given any document-summary pair, we estimate a salience score, which is modeled using an attention-based deep neural network, to represent the salience degree of the summary for yielding the document. We devise a contrastive training strategy to learn the salience estimation network, and then use the learned salience score as a guide and iteratively extract the most salient sentences from the document as our generated summary.
 
@@ -10,7 +10,7 @@ If you find this code useful in your research, please cite
 ``` tex
 @Inproceedings{Shi2018DeepChannel,
 title={DeepChannel: Salience Estimation by Contrastive Learning for Extractive Document Summarization},
-author={Jiaxin Shi*, Chen Liang*, Lei Hou, Juanzi Li, Zhiyuan Liu, Hanwang Zhang},
+author={Jiaxin Shi, Chen Liang, Lei Hou, Juanzi Li, Zhiyuan Liu, Hanwang Zhang},
 booktitle = {AAAI},
 year = {2019}
 }
