@@ -1,4 +1,4 @@
-# Document-Summarization
+# DeepChannel
 This repository is the pytorch implementation of paper
 
 [DeepChannel: Salience Estimation by Contrastive Learning for Extractive Document Summarization](https://arxiv.org/abs/1811.02394).
@@ -10,7 +10,7 @@ If you find this code useful in your research, please cite
 ``` tex
 @Inproceedings{Shi2018DeepChannel,
 title={DeepChannel: Salience Estimation by Contrastive Learning for Extractive Document Summarization},
-author={Jiaxin Shi, Chen Liang, Lei Hou, Juanzi Li, Zhiyuan Liu, Hanwang Zhang},
+author={Jiaxin Shi*, Chen Liang*, Lei Hou, Juanzi Li, Zhiyuan Liu, Hanwang Zhang},
 booktitle = {AAAI},
 year = {2019}
 }
