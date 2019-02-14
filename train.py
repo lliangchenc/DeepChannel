@@ -375,7 +375,7 @@ def parse_args():
     parser.add_argument('--fraction', type=float, default=1, help='fraction of training set reduction')
 
     parser.add_argument('--data-path', required=True, help='pickle file obtained by dataset dump or datadir for torchtext')
-    parser.add_argument('--offline-pyrouge-index-json', default='/data/sjx/Summarization-Exp/offline_pyrouge_max_index.json', help='json file of offline max pyrouge index')
+    parser.add_argument('--offline-pyrouge-index-json', help='json file of offline max pyrouge index')
     parser.add_argument('--save-dir', type=str, required=True, help='path to save checkpoints and logs')
     parser.add_argument('--load-previous-model', action='store_true')
     parser.add_argument('--validation', action='store_true')

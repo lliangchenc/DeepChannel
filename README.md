@@ -35,7 +35,8 @@ Please download the [GloVe 300d pretrained vector](http://nlp.stanford.edu/data/
 1. Download the [CNN-Daily story corpus](https://cs.nyu.edu/~kcho/DMQA/).
 2. Preprocess the original CNN-Daily story corpus and generate the data file:
 ``` shell
-python dataset/process.py --glove </path/to/the/pickle/file> --data cnn+dailymail --data-dir </path/to/the/corpus> --save-path </path/to/the/output/file> --max-word-num MAX_WORD_NUM
+cd dataset
+python process.py --glove </path/to/the/pickle/file> --data cnn+dailymail --data-dir </path/to/the/corpus> --save-path </path/to/the/output/file> --max-word-num MAX_WORD_NUM
 ```
 The output file will be used in the data loader when training or testing. To reproduce state-of-the-art result, please use the 300d glove file and use the default max-word-num
 
@@ -43,7 +44,8 @@ The output file will be used in the data loader when training or testing. To rep
 1. Download the [DUC2007 corpus](https://duc.nist.gov/duc2007/tasks.html).
 2. Preprocess the original DUC2007 corpus and generate the data file:
 ``` shell
-python dataset/process.py --glove </path/to/the/pickle/file> --data duc2007 --data-dir </path/to/the/corpus> --save-path </path/to/the/output/file> 
+cd dataset
+python process.py --glove </path/to/the/pickle/file> --data duc2007 --data-dir </path/to/the/corpus> --save-path </path/to/the/output/file> 
 ```
 The output file will be used in testing.
 

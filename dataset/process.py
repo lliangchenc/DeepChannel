@@ -136,7 +136,7 @@ def main():
     parser.add_argument('--data', default='cnn+dailymail', choices=datasets.keys())
     parser.add_argument('--data-dir', default='/data/share/cnn_stories/stories;/data/share/dailymail_stories/stories', help='If data=cnn+dailimail, then data-dir must contain two paths for cnn and dailymail seperated by ;.')
     parser.add_argument('--save-path', required=True)
-    parser.add_argument('--max-word-num', type=int, default=500000)
+    parser.add_argument('--max-word-num', type=int, default=50000)
     args = parser.parse_args()
 
     print('Loading glove......')
